@@ -1,0 +1,20 @@
+{
+  "files": {
+    "Role.js": [
+      {
+        "id": "a0c329c2-e302-4a81-b8fb-43fad57d7650",
+        "line": 6,
+        "version": 87,
+        "index": 88
+      }
+    ],
+    "bot.js": [
+      {
+        "id": "781da39b-a77a-477e-8d69-403d7b51ad10",
+        "line": 258,
+        "version": 28787,
+        "index": 9066
+      }
+    ]
+  }
+}
