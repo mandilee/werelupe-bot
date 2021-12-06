@@ -1,3 +1,11 @@
+// don't edit these lines!
+// needed for heroku to bring life!
+const express = require('express')
+const path = require('path')
+const PORT = process.env.PORT || 5000
+const server = express().listen(PORT, () => console.log(`Listening on ${ PORT }`))
+
+
 const { Client, Intents, MessageEmbed } = require('discord.js');
 
 const client = new Client({
