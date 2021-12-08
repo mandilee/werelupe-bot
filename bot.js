@@ -5,7 +5,6 @@ const path = require('path')
 const PORT = process.env.PORT || 5000
 const server = express().listen(PORT, () => console.log(`Listening on ${ PORT }`))
 
-
 const { Client, Intents, MessageEmbed } = require('discord.js');
 
 const client = new Client({
@@ -35,6 +34,9 @@ const cg = require('./ComplimentGiver/ComplimentGiver.js');
 
 //import Insult Giver
 const ig = require('./InsultGiver/InsultGiver.js');
+
+//import EpicRPG
+const rpg = require('./EpicRPG/EpicRPG.js');
 
 //Function to check if a string matches regardless of case
 function sameCase(str) {
@@ -77,15 +79,7 @@ client.on("messageCreate", (message) => {//Do Not Close This Function Till Later
   let lowerCaseMessageContent = message.content.toLowerCase();
 
   /* EPIC RPG */ //Moved up to avoid bot excluder
-  // Add a warning heart react if HP drops below 30%
-  // Add a warning triangle if (lost HP*2) > remaining HP
-  if (message.content.indexOf('remaining HP is') > 0) {
-    let str = message.content.split('HP, remaining HP is');
-    let lostHp = str[0].split('Lost');
-    let health = str[1].split('/');
-    if ((health[0] / health[1]) < 0.3) { message.react("❣️"); }
-    if ((lostHp[1] * 2) > health[0]) { message.react("⚠️"); }
-  }
+  (new rpg.EpicRPG(message)).check();
 
   //Don't have the bot react to itself
   if (message.author.bot) return
@@ -201,8 +195,9 @@ client.on("messageCreate", (message) => {//Do Not Close This Function Till Later
       else {
 
         //import responses need to fix this so the + variables work
-        //const response = require('./NeopetCaptions.json');
+        const response = require('./NeopetFetcher/NeopetCaptions.json');
 
+        /*
         const response = [
           "That's a cute one!",
           "I love " + colorCap + " pets!",
@@ -220,11 +215,12 @@ client.on("messageCreate", (message) => {//Do Not Close This Function Till Later
           "If only I could afford a " + colorCap + " Paint Brush...",
           "You should definitely give your neopoints to Rodolfo so he can make this pet"
         ];
+        //*/
         
         //RNG the response
         var rng = getRandomInt(response.length);
-        //get the response here
-        finalCaption = response[rng];
+        //get the response here; replace the %c and %p placeholders as needed
+        finalCaption = response[rng].replace('%c', colorCap).replace('%p', petCap);
 
         //special caption for aubergine chia
         if (pet === "chia" && color === "aubergine") finalCaption = "🍆🍆 Sexy Time 🍆🍆";
@@ -382,7 +378,6 @@ client.on("messageCreate", (message) => {//Do Not Close This Function Till Later
 
 
 }); //End bracket for 'do things when messages are sent to server'
-
 
 
 //Start the bot
