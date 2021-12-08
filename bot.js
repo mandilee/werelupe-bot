@@ -196,26 +196,6 @@ client.on("messageCreate", (message) => {//Do Not Close This Function Till Later
 
         //import responses need to fix this so the + variables work
         const response = require('./NeopetFetcher/NeopetCaptions.json');
-
-        /*
-        const response = [
-          "That's a cute one!",
-          "I love " + colorCap + " pets!",
-          "I don't know how I feel about that " + petCap + "...",
-          "That's one ugly " + petCap + "...",
-          "What a beautiful pet!",
-          "Is this is the pet you're looking for? *jedi hand swish*",
-          "This " + colorCap + " " + petCap + " loves you!",
-          "This pet is sexy...just like you",
-          "Never ever piss one of these off.",
-          "Bruh",
-          "This " + colorCap + " " + petCap + " swings by and says, \"**I hope you're having fun!**\"",
-          "Uhhh...",
-          "So pretty omg! 🤩",
-          "If only I could afford a " + colorCap + " Paint Brush...",
-          "You should definitely give your neopoints to Rodolfo so he can make this pet"
-        ];
-        //*/
         
         //RNG the response
         var rng = getRandomInt(response.length);
@@ -312,8 +292,8 @@ client.on("messageCreate", (message) => {//Do Not Close This Function Till Later
   }
   
   //TM react to Ruby
-  if (message.content.indexOf("ruby") >= 0 &&
-    message.content.indexOf("list") >= 0) {
+  if (lowerCaseMessageContent.indexOf("ruby") >= 0 &&
+    lowerCaseMessageContent.indexOf("list") >= 0) {
     message.react("™️");
   }
   //End Reactions Rules
