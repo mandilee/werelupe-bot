@@ -38,6 +38,9 @@ const ig = require('./InsultGiver/InsultGiver.js');
 //import EpicRPG
 const rpg = require('./EpicRPG/EpicRPG.js');
 
+//import starboard
+const sb = require('./Starboard/starboard.js');
+
 //Function to check if a string matches regardless of case
 function sameCase(str) {
   return /^[A-Z]+$/.test(str) || /^[a-z]+$/.test(str);
@@ -232,6 +235,17 @@ client.on("messageCreate", (message) => {//Do Not Close This Function Till Later
   // message.content.toLowerCase().includes("TEXTHERE") does not work in IE fun fact
 
   //Random React Rules
+
+  if (lowerCaseMessageContent.indexOf("bad bot") >= 0) {
+    message.channel.send({
+          embeds: [
+            {
+              title: 'Please forgive Werelupe-bot',
+              description: 'Werelupe-bot is sorry ☹️'
+            }
+          ],
+        })
+  }
 
   if (lowerCaseMessageContent.indexOf("werelupe") >= 0) {
     console.log("Someone Said Werelupe!!");
