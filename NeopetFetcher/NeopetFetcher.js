@@ -2,13 +2,13 @@
 const response = require('./NeopetCaptions.json');
 const { MessageEmbed } = require('discord.js');
 
-function NeopetFetcher(message){
+function NeopetFetcher(message) {
 
   this.message = message;
   this.lowerCaseMessageContent = this.message.content.toLowerCase();
 
   //new Regex to determine a neopet is mentioned
-  this.neopet = /.*(8-bit|Agueena|Alien|Apple|Asparagus|Aubergine|Avocado|Baby|Biscuit|Blue|Blueberry|Brown|Burlap|Camouflage|Candy|Carrot|Checkered|Chocolate|Chokato|Christmas|Clay|Cloud|Coconut|Coffee|Corn|Custard|Darigan|Desert|Dimensional|Disco|Durian|Elderlyboy|Elderlygirl|Electric|Eventide|Faerie|Fire|Garlic|Ghost|Glass|Glowing|Gold|Gooseberry|Grape|Green|Grey|Halloween|Ice|Invisible|Island|Jelly|Juppieswirl|Lemon|Lime|Magma|Mallow|Maractite|Maraquan|Marble|Mosaic|Msp|Mutant|Oilpaint|Onion|Orange|Origami|Pastel|Pea|Peach|Pear|Pepper|Pineapple|Pink|Pirate|Plum|Plushie|Polkadot|Purple|Quigukiboy|Quigukigir|Rainbow|Red|Relic|Robot|Royal|Royalboy|Royalgirl|Shadow|Silver|Sketch|Skunk|Slushie|Snot|Snow|Speckled|Split|Sponge|Spotted|Starry|Stealthy|Steampunk|Stone|Strawberry|Striped|Swampgas|Thornberry|Tomato|Toy|Transparent|Tyrannian|Ummagine|Usukiboy|Usukigirl|Water|White|Woodland|Wraith|Yellow|Zombie)\s(Acara|Aisha|Blumaroo|Bori|Bruce|Buzz|Chia|Chomby|Cybunny|Draik|Elephante|Eyrie|Flotsam|Gelert|Gnorbu|Grarrl|Grundo|Hissi|Ixi|Jetsam|Jubjub|Kacheek|Kau|Kiko|Koi|Korbat|Kougra|Krawk|Kyrii|Lenny|Lupe|Lutari|Meerca|Moehog|Mynci|Nimmo|Ogrin|Peophin|Poogle|Pteri|Quiggle|Ruki|Scorchio|Shoyru|Skeith|SlushieChia|Techo|Tonu|Tuskaninny|Uni|Usul|Vandagyre|Wocky|Xweetok|Yurble|Zafara).*/i;
+  this.neopet = /.*(8-bit|Agueena|Alien|Angel|Apple|Asparagus|Aubergine|Avocado|Baby|Biscuit|Blue|Blueberry|Brown|Burlap|Camouflage|Candy|Carrot|Checkered|Chocolate|Chokato|Christmas|Clay|Cloud|Coconut|Coffee|Corn|Custard|Darigan|Desert|Dimensional|Disco|Durian|Elderlyboy|Elderlygirl|Electric|Eventide|Faerie|Fire|Garlic|Ghost|Glass|Glowing|Gold|Gooseberry|Grape|Green|Grey|Halloween|Ice|Invisible|Island|Jelly|Juppieswirl|Lemon|Lime|Magma|Mallow|Maractite|Maraquan|Marble|Mosaic|Msp|Mutant|Oilpaint|Onion|Orange|Origami|Pastel|Pea|Peach|Pear|Pepper|Pineapple|Pink|Pirate|Plum|Plushie|Polkadot|Purple|Quigukiboy|Quigukigir|Rainbow|Red|Relic|Robot|Royal|Royalboy|Royalgirl|Shadow|Silver|Sketch|Skunk|Slushie|Snot|Snow|Speckled|Split|Sponge|Spotted|Starry|Stealthy|Steampunk|Stone|Strawberry|Striped|Swampgas|Thornberry|Tomato|Toy|Transparent|Tyrannian|Ummagine|Usukiboy|Usukigirl|Water|White|Woodland|Wraith|Yellow|Zombie)\s(Acara|Aisha|Blumaroo|Bori|Bruce|Buzz|Chia|Chomby|Cybunny|Draik|Elephante|Eyrie|Flotsam|Gelert|Gnorbu|Grarrl|Grundo|Hissi|Ixi|Jetsam|Jubjub|Kacheek|Kau|Kiko|Koi|Korbat|Kougra|Krawk|Kyrii|Lenny|Lupe|Lutari|Meerca|Moehog|Mynci|Nimmo|Ogrin|Peophin|Poogle|Pteri|Quiggle|Ruki|Scorchio|Shoyru|Skeith|SlushieChia|Techo|Tonu|Tuskaninny|Uni|Usul|Vandagyre|Wocky|Xweetok|Yurble|Zafara).*/i;
 
   if (this.neopet.exec(this.message.content)) {
 
@@ -64,7 +64,7 @@ function NeopetFetcher(message){
 
         //import responses need to fix this so the + variables work
         const response = require('./NeopetFetcher/NeopetCaptions.json');
-        
+
         //RNG the response
         var rng = getRandomInt(response.length);
         //get the response here; replace the %c and %p placeholders as needed
