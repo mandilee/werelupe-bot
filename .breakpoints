@@ -1,5 +1,13 @@
 {
   "files": {
+    "InsultGiver/Insults.json": [
+      {
+        "id": "22c40907-7463-4302-bf9c-cc9f2c5a75ea",
+        "line": 12,
+        "version": 329,
+        "index": 302
+      }
+    ],
     "Role.js": [
       {
         "id": "a0c329c2-e302-4a81-b8fb-43fad57d7650",
