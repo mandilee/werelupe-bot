@@ -3,9 +3,9 @@
     "InsultGiver/Insults.json": [
       {
         "id": "22c40907-7463-4302-bf9c-cc9f2c5a75ea",
-        "line": 12,
-        "version": 329,
-        "index": 302
+        "line": 15,
+        "version": 653,
+        "index": 674
       }
     ],
     "Role.js": [
