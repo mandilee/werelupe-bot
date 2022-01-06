@@ -34,19 +34,19 @@ function EpicRPG(message) {
           fullText += field.value + ' ' + field.name;
         }
 
-        if (fullText.includes('Type join to join the arena')) {
+        if (fullText.includes('started an arena event')) {
           this.action = 'join';
-        } else if (fullText.includes('Type fight to help and get a reward')) {
+        } else if (fullText.includes('to help and get a reward')) {
           this.action = 'fight';
-        } else if (fullText.includes('Type CATCH (once) to collect some coins')) {
+        } else if (fullText.includes(`IT'S RAINING COINS`)) {
           this.action = 'catch';
-        } else if (fullText.includes('Type FISH (once) to collect some fish')) {
+        } else if (fullText.includes(`A MEGALODON HAS SPAWNED IN THE RIVER`)) {
           this.action = 'fish';
-        } else if (fullText.includes('Type SUMMON (once) to join the summoning')) {
+        } else if (fullText.includes(`A LOOTBOX SUMMONING HAS STARTED`)) {
           this.action = 'summon';
-        } else if (fullText.includes('Type CHOP (once) to collect some wooden logs')) {
+        } else if (fullText.includes(`AN EPIC TREE HAS JUST GROWN`)) {
           this.action = 'chop';
-        } else if (fullText.includes('Type TIME TO FIGHT (once) to join the battle')) {
+        } else if (fullText.includes(`A LEGENDARY BOSS JUST SPAWNED`)) {
           this.action = 'time to fight';
         } 
 
