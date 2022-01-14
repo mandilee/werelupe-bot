@@ -312,8 +312,7 @@ client.on("messageCreate", (message) => {//Do Not Close This Function Till Later
   }
 
   //panda react to panpan
-  if (lowerCaseMessageContent.indexOf("pan") >= 0 ||
-    lowerCaseMessageContent.indexOf("panpan") >= 0) {
+  if (lowerCaseMessageContent.indexOf("panpan") >= 0) {
     message.react("931286481262215178");
   }
   //End Reactions Rules
