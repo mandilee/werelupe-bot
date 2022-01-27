@@ -7,11 +7,11 @@ const token = process.env['token']
 const CLIENT_ID = process.env['client_id']
 const GUILD_ID = process.env['guild_id']
 
-//Commands
+/*/Commands (disabling for now bc its annoying me with wordle)
 const commands = [{
   name: 'ping',
   description: 'Replies with Pong!'
-}]; 
+}]; */
 
 (async () => {
   try {
