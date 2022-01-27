@@ -2,7 +2,6 @@
   "name": "werelupe-bot",
   "description": "A Fantastical Bot",
   "engines": {
-    "node": "16.x",
     "npm": "8.x"
   },
   "main": "bot.js",
@@ -18,6 +17,7 @@
     "dotenv": "^10.0.0",
     "ejs": "^3.1.5",
     "express": "^4.15.2",
+    "node": "16.6.x",
     "mongodb": "^4.2.1",
     "mongoose": "^6.0.14",
     "node-fetch": "^3.1.0"
