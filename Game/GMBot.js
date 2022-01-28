@@ -9,6 +9,7 @@ function GMBot() {
 
 this.gameOwner;
 this.gameChannel;
+this.gameGuild;
 
   this.start = function(ogMessage) {
     
@@ -18,9 +19,10 @@ this.gameChannel;
       //set game fields
       this.gameOwner = ogMessage.author;
       this.gameChannel = ogMessage.channel;
-      //create a new game
-      this.game = new g.Game(this.gameOwner, 1, 1, "[Instructions Go Here]");
+      this.gameGuild = ogMessage.guild;
 
+      //create a new game - game owner, round time, night time, player cap, and instructions
+      this.game = new g.Game(this.gameOwner, 1, 1, 3, "React 🟢 To Start The Game. \nReact 🔴 to End the Game.");
       gameStarted=true;
     }
     else{
@@ -66,24 +68,64 @@ this.gameChannel;
       
       if (!user.bot){////ensure reactor is not a bot
          if(reaction.emoji.id === "902350295215005726") { //ensure wolf emoji
-        //add user that reacted to ghost list
-        this.game.players.push(user);
 
-        //create player embed
-        playerEmbed = createPlayerEmbed(this.game.players,this.game.ghosts, this.startEmbed);
+         //ensure player cap is not reached yet
+          if(this.game.players.length < this.game.playerCap){
+            //console.log(this.game.playerCap + " pc");
+              //ensure player is not a ghost 
+              let isGhost = this.game.ghosts.find(o => o.id === user.id);
+              if(!isGhost){
+                //add user that reacted to player list
+                this.game.players.push(user);
 
-        //update player list in message
-        gameStartMessage.edit({ embeds: [playerEmbed] }); // end message edit
+                //give player Wereluper role - this can be adjusted to only happen once game start
+                //find role
+                let role = this.gameGuild.roles.cache.find(r => r.id === "902346527756927017");
+
+                //retrieve guild member
+                let member = this.gameGuild.members.cache.get(user.id);
+
+                // Add role to the member
+                member.roles.add(role);
+
+                //create player embed
+                playerEmbed = createPlayerEmbed(this.game.players,this.game.ghosts, this.startEmbed, this.game.playerCap);
+
+                //update player list in message
+                gameStartMessage.edit({ embeds: [playerEmbed] }); // end message edit
+              }//end if ghost
+            }//end if player cap not reached
+          
+
+          //If more players try to join but full
+          if(this.game.players.length >= this.game.playerCap){
+            playerEmbed = createPlayerEmbed(this.game.players,this.game.ghosts, this.startEmbed, this.game.playerCap);
+            //edit message to indicate full game
+          }//if cap reached end
         } //end if wolf react
-         if(reaction.emoji.name === "👻") { //ensure ghost emoji
-        //add user that reacted to ghost list
-        this.game.ghosts.push(user);
+        if(reaction.emoji.name === "👻") { //ensure ghost emoji
+            //ensure ghost is not a player
+            let isPlayer = this.game.players.find(o => o.id === user.id);
+            if(!isPlayer){
+              //add user that reacted to ghost list
+              this.game.ghosts.push(user);
 
-        //create player embed
-        playerEmbed = createPlayerEmbed(this.game.players, this.game.ghosts,this.startEmbed);
+              //give player Ghost role - this can be adjusted to only happen once game starts
+              //find role
+              let role = this.gameGuild.roles.cache.find(r => r.id === "902341069059018815");
 
-        //update player list in message
-        gameStartMessage.edit({ embeds: [playerEmbed] }); // end message edit
+              //retrieve guild member
+              let member = this.gameGuild.members.cache.get(user.id);
+
+              // Add role to the member
+              member.roles.add(role);
+
+              //create player embed
+              playerEmbed = createPlayerEmbed(this.game.players, this.game.ghosts,this.startEmbed, this.game.playerCap);
+
+              //update player list in message
+              gameStartMessage.edit({ embeds: [playerEmbed] }); // end message edit
+            }//end if not player
         } //end if ghost react
       } //end if user is not a bot
     });// end collector for adding
@@ -96,18 +138,38 @@ this.gameChannel;
         //remove player that removed reaction from list
         this.game.players = this.game.players.filter(obj => obj.id !== user.id);
 
+        //find player role
+        let role = this.gameGuild.roles.cache.find(r => r.id === "902346527756927017");
+
+        //retrieve guild member
+        let member = this.gameGuild.members.cache.get(user.id);
+
+        // Remove role from the member
+        member.roles.remove(role);
+
         //create player embed
-        playerEmbed = createPlayerEmbed(this.game.players, this.game.ghosts, this.startEmbed);
+        playerEmbed = createPlayerEmbed(this.game.players, this.game.ghosts, this.startEmbed,this.game.playerCap);
 
         //update player list in message
         gameStartMessage.edit({ embeds: [playerEmbed] });
       }
+
        if(reaction.emoji.name === "👻") { //ensure ghost emoji
+
         //remove player that removed reaction from list
         this.game.ghosts = this.game.ghosts.filter(obj => obj.id !== user.id);
 
+        //find Ghost role
+        let role = this.gameGuild.roles.cache.find(r => r.id === "902341069059018815");
+
+        //retrieve guild member
+        let member = this.gameGuild.members.cache.get(user.id);
+
+        //remove role from the member
+        member.roles.remove(role);
+
         //create player embed
-        playerEmbed = createPlayerEmbed(this.game.players, this.game.ghosts,this.startEmbed);
+        playerEmbed = createPlayerEmbed(this.game.players, this.game.ghosts,this.startEmbed,this.game.playerCap);
 
         //update player list in message
         gameStartMessage.edit({ embeds: [playerEmbed] }); // end message edit
@@ -124,6 +186,7 @@ this.gameChannel;
     //check if game already began??
     //this.listenForEnd(gameStartMessage);
     //Getting start time
+
     this.game.startTime = getTime(0);
 
     //Get the time when round ends
@@ -145,9 +208,12 @@ this.gameChannel;
 
     
     //send a post with the start time
-    gameStartMessage.channel.send("Werelupe Starting with " + this.game.players.length + " players at " + this.game.startTime + " NST.\nAll roles have been sent! \nAll votes due by " + this.game.nextRoundTime + " NST."); //<-- break this up and sent the all roles do part with the round start.
+    //gameStartMessage.channel.send("Werelupe Starting with " + this.game.players.length + " players at " + this.game.startTime + " NST.\nAll roles have been sent! \nAll votes due by " + this.game.nextRoundTime + " NST."); //<-- break this up and sent the all roles do part with the round start.
     //make this pretty ^^ 
-     console.log("game begins with " + this.game.players.length + " players");
+
+    gameStartMessage.channel.send("Werelupe Starting with " + this.game.players.length + " players at " + this.game.startTime + " NST.\nSign Ups Closed!"); 
+
+    console.log("game begins with " + this.game.players.length + " players");
 
     //while villager count is greater than wolves.. start rounds
     //this.startRound();
@@ -178,6 +244,7 @@ this.gameChannel;
     //update count
     //this function will be called again
   };
+
   this.end = function(gameStartMessage){
     //some of this isn't needed since the bot will make a new object later
     gameStarted = false; //tell the bot the next game hasn't started
@@ -213,10 +280,11 @@ this.gameChannel;
 }
 
 //takes reference to players and orignal messageEmbed
-function createPlayerEmbed(players, ghosts, messageEmbed) {
+function createPlayerEmbed(players, ghosts, messageEmbed, pc) {
   //Reset Pretty List - used for displaying the text
   let prettyListPlayers = "";
   let prettyListGhosts = "";
+  let playerCap = pc;
 
   //make the list a nice list for players
   for (let i = 0; i < players.length; i++) {
@@ -261,6 +329,12 @@ function createPlayerEmbed(players, ghosts, messageEmbed) {
     messageEmbed.setFields(); //if there are no players set Fields to empty
   }//end else list is empty
 
+  if(playerCap <= players.length){
+    messageEmbed.setFooter("This Game is Full with " + players.length + "/" + playerCap + " Players.")
+  }
+  else{
+    messageEmbed.setFooter(players.length + "/" + playerCap + " Players");
+  }
   return messageEmbed;
 }
 

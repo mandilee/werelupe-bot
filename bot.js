@@ -99,7 +99,7 @@ client.on("messageCreate", (message) => {//Do Not Close This Function Till Later
   }
 
   //Listen if someone wants to start a Werelupe Game
-  if (message.content === "$r2") {
+  if (message.content === "$r3") {
     gameRunner.start(message);
   }
 

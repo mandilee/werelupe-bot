@@ -1,4 +1,4 @@
-function Game(gameOwner, rt, nt, instructions) {
+function Game(gameOwner, rt, nt, pc, instructions) {
   this.initialized= true; //flag determining if the game is initialized
   this.collectionDone = false; //flag for determining if player collection is done
   this.gameStarted = false; //flag indicating if the game has started
@@ -7,9 +7,9 @@ function Game(gameOwner, rt, nt, instructions) {
 
   this.players = [];   //array for player list //players needs tp be an array of objects
   this.ghosts = []; //array for ghost
-  this.playerCap;
   this.numWolves;
   this.numVillagers;
+  this.playerCap = pc;
   this.roundTime = rt;
   this.nightTime = nt;
   //this.remainingRounds;
