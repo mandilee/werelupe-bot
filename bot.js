@@ -119,28 +119,6 @@ client.on("messageCreate", (message) => {//Do Not Close This Function Till Later
     insulter.give();
   }
 
-
-  //Compliment Giver for Neo
-  if (lowerCaseMessageContent === "compliment neo") {
-    //Response List
-    const response = [
-      "Neo, you will NOT flunk out!",
-      "Neo you're wonderful",
-      "Neo everything will be awesome :D",
-      "Neo! Hugs!"
-    ];
-
-    //RNG
-    var rng = getRandomInt(response.length);
-    message.channel.send({
-      embeds: [
-        {
-          title: response[rng]
-        }
-      ]
-    });
-  }
-
   //Neopet Responder Starts Here - Rodaddy 2021
   //new Regex to determine a neopet is mentioned
   let neopet = /.*(8-bit|Agueena|Alien|Angel|Apple|Asparagus|Aubergine|Avocado|Baby|Biscuit|Blue|Blueberry|Brown|Burlap|Camouflage|Candy|Carrot|Checkered|Chocolate|Chokato|Christmas|Clay|Cloud|Coconut|Coffee|Corn|Custard|Darigan|Desert|Dimensional|Disco|Durian|Elderlyboy|Elderlygirl|Electric|Eventide|Faerie|Fire|Garlic|Ghost|Glass|Glowing|Gold|Gooseberry|Grape|Green|Grey|Halloween|Ice|Invisible|Island|Jelly|Juppieswirl|Lemon|Lime|Magma|Mallow|Maractite|Maraquan|Marble|Mosaic|Msp|Mutant|Oilpaint|Onion|Orange|Origami|Pastel|Pea|Peach|Pear|Pepper|Pineapple|Pink|Pirate|Plum|Plushie|Polkadot|Purple|Quigukiboy|Quigukigir|Rainbow|Red|Relic|Robot|Royal|Royalboy|Royalgirl|Shadow|Silver|Sketch|Skunk|Slushie|Snot|Snow|Speckled|Split|Sponge|Spotted|Starry|Stealthy|Steampunk|Stone|Strawberry|Striped|Swampgas|Thornberry|Tomato|Toy|Transparent|Tyrannian|Ummagine|Usukiboy|Usukigirl|Water|White|Woodland|Wraith|Yellow|Zombie)\s(Acara|Aisha|Blumaroo|Bori|Bruce|Buzz|Chia|Chomby|Cybunny|Draik|Elephante|Eyrie|Flotsam|Gelert|Gnorbu|Grarrl|Grundo|Hissi|Ixi|Jetsam|Jubjub|Kacheek|Kau|Kiko|Koi|Korbat|Kougra|Krawk|Kyrii|Lenny|Lupe|Lutari|Meerca|Moehog|Mynci|Nimmo|Ogrin|Peophin|Poogle|Pteri|Quiggle|Ruki|Scorchio|Shoyru|Skeith|SlushieChia|Techo|Tonu|Tuskaninny|Uni|Usul|Vandagyre|Wocky|Xweetok|Yurble|Zafara).*/i;
@@ -247,6 +225,24 @@ client.on("messageCreate", (message) => {//Do Not Close This Function Till Later
         })
   }
 
+  //Vote Dani as a twist
+  if (lowerCaseMessageContent.indexOf("dani") >= 0) {
+    //Response List
+    const response = [
+      "Vote Dani, as a twist"
+    ];
+
+    //RNG
+    var rng = getRandomInt(response.length);
+    message.channel.send({
+      embeds: [
+        {
+          title: "response[rng]"
+        }
+      ]
+    });
+  }
+
   if (lowerCaseMessageContent.indexOf("werelupe") >= 0) {
     console.log("Someone Said Werelupe!!");
     message.react("902357197382631514")
@@ -316,8 +312,6 @@ client.on("messageCreate", (message) => {//Do Not Close This Function Till Later
     message.react("931286481262215178");
   }
   //End Reactions Rules
-
-
 
   //Post message to specific channel
   if (lowerCaseMessageContent.indexOf("alexuh") >= 0) {

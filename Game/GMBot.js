@@ -25,6 +25,7 @@ this.gameGuild;
       this.game = new g.Game(this.gameOwner, 1, 1, 3, "React 🟢 To Start The Game. \nReact 🔴 to End the Game.");
       gameStarted=true;
     }
+    
     else{
       let sorryEmbed = new MessageEmbed();
       sorryEmbed.setDescription("Sorry " + ogMessage.author.toString() + ", but " + this.gameOwner.toString() + " already started a game! You should join or watch that one!");
