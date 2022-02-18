@@ -144,7 +144,7 @@ client.on("messageCreate", (message) => {//Do Not Close This Function Till Later
     var usukis = ["usukiboy", "usukigirl"];
     //special quiguki case
     if (pet === "quiggle") usukis = ["quigukiboy", "quigukigirl"];
-    
+
     if (color === "usuki" || color === "quiguki") color = usukis[getRandomInt(usukis.length)];
 
     //special case for pineapple since it contains "apple"
@@ -256,7 +256,7 @@ client.on("messageCreate", (message) => {//Do Not Close This Function Till Later
     message.channel.send({
       embeds: [
         {
-          title: "response[rng]"
+          title: response[rng]
         }
       ]
     });
