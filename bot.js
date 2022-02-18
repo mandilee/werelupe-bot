@@ -185,10 +185,14 @@ client.on("messageCreate", (message) => {//Do Not Close This Function Till Later
     checkImage().then(d => {
       //if pet is not found 
       if (d.indexOf("Not Found") >= 0) {
+
+        var notFoundText = colorCap + " " + petCap + " doesn't Exist...Yet"
+        if(color === "hoe") notFoundText = notFoundText + " but you should ask Amy to make it 😏"
+
         message.channel.send({
           embeds: [
             {
-              title: colorCap + " " + petCap + " doesn't Exist...Yet"
+              title: notFoundText 
             }
           ],
         }).then(m => {
@@ -198,19 +202,19 @@ client.on("messageCreate", (message) => {//Do Not Close This Function Till Later
 
       else {
 
-        //import responses need to fix this so the + variables work
-        const response = require('./NeopetFetcher/NeopetCaptions.json');
+        //import responses 
+        var response = require('./NeopetFetcher/NeopetCaptions.json');
         
+        if (color === "hoe") response = require('./NeopetFetcher/HoeCaptions.json');
+
         //RNG the response
         var rng = getRandomInt(response.length);
+
         //get the response here; replace the %c and %p placeholders as needed
         finalCaption = response[rng].replace('%c', colorCap).replace('%p', petCap);
 
         //special caption for aubergine chia
         if (pet === "chia" && color === "aubergine") finalCaption = "🍆🍆 Sexy Time 🍆🍆";
-
-        //special caption for hoe chia
-        if (pet === "chia" && color === "hoe") finalCaption = "\"You've cured my demisexuality\" - Tasha\n Photo Cred: Amy";
 
         //Send Message
         message.channel.send({
