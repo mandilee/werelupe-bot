@@ -78,6 +78,10 @@ client.on('interactionCreate', async interaction => {
 //initialize Game Runner
 gameRunner = new gameBot.GMBot();
 
+function getRandomInt(max) {
+    return Math.floor(Math.random() * max);
+}
+
 //Do things when users send messages to the server:
 client.on("messageCreate", (message) => {//Do Not Close This Function Till Later
 

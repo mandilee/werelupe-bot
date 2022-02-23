@@ -1,6 +1,6 @@
 function sbtest()
 {
-  console.log("sbtest is working")
+  //console.log("sbtest is working")
 }
 
 sbtest()
