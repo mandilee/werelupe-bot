@@ -41,6 +41,9 @@ const rpg = require('./EpicRPG/EpicRPG.js');
 //import starboard
 const sb = require('./Starboard/starboard.js');
 
+//import Neopet Fetcher
+const nf = require('./NeopetFetcher/NeopetFetcher.js');
+
 //Function to check if a string matches regardless of case
 function sameCase(str) {
   return /^[A-Z]+$/.test(str) || /^[a-z]+$/.test(str);
@@ -118,132 +121,10 @@ client.on("messageCreate", (message) => {//Do Not Close This Function Till Later
     insulter = new ig.InsultGiver (message);
     insulter.give();
   }
-
-  //Neopet Responder Starts Here - Rodaddy 2021
-  //new Regex to determine a neopet is mentioned
-  let neopet = /.*(8-bit|Agueena|Alien|Angel|Apple|Asparagus|Aubergine|Avocado|Baby|Biscuit|Blue|Blueberry|Brown|Burlap|Camouflage|Candy|Carrot|Checkered|Chocolate|Chokato|Christmas|Clay|Cloud|Coconut|Coffee|Corn|Custard|Darigan|Desert|Dimensional|Disco|Durian|Elderlyboy|Elderlygirl|Electric|Eventide|Faerie|Fire|Garlic|Ghost|Glass|Glowing|Gold|Gooseberry|Grape|Green|Grey|Halloween|Hoe|Ice|Invisible|Island|Jelly|Juppieswirl|Lemon|Lime|Magma|Mallow|Maractite|Maraquan|Marble|Mosaic|Msp|Mutant|Nugget|Oilpaint|Onion|Orange|Origami|Pastel|Pea|Peach|Pear|Pepper|Pineapple|Pink|Pirate|Plum|Plushie|Polkadot|Purple|Quiguki|Rainbow|Red|Relic|Robot|Royal|Royalboy|Royalgirl|Shadow|Silver|Sketch|Skunk|Slushie|Snot|Snow|Speckled|Split|Sponge|Spotted|Starry|Stealthy|Steampunk|Stone|Strawberry|Striped|Swampgas|Thornberry|Tomato|Toy|Transparent|Tyrannian|Ummagine|Usuki|Valentine|Water|White|Woodland|Wraith|Yellow|Zombie)\s(Acara|Aisha|Blumaroo|Bori|Bruce|Buzz|Chia|Chomby|Cybunny|Draik|Elephante|Eyrie|Flotsam|Gelert|Gnorbu|Grarrl|Grundo|Hissi|Ixi|Jetsam|Jubjub|Kacheek|Kau|Kiko|Koi|Korbat|Kougra|Krawk|Kyrii|Lenny|Lupe|Lutari|Meerca|Moehog|Mynci|Nimmo|Ogrin|Peophin|Poogle|Pteri|Quiggle|Ruki|Scorchio|Shoyru|Skeith|SlushieChia|Techo|Tonu|Tuskaninny|Uni|Usul|Vandagyre|Wocky|Xweetok|Yurble|Zafara).*/i;
-
-  if (neopet.exec(message.content)) {
-
-    //extract color and pet from message in lowercase
-    var color = neopet.exec(message.content)[1].toLowerCase();
-    var pet = neopet.exec(message.content)[2].toLowerCase();
-
-    //special case for usuki
-    if (lowerCaseMessageContent.indexOf("usukiboy") >= 0 || lowerCaseMessageContent.indexOf("usuki boy") >= 0  || lowerCaseMessageContent.indexOf("quigukiboy") >= 0  || lowerCaseMessageContent.indexOf("quiguki boy") >= 0  ){
-      if (pet === "quiggle") color = "quigukiboy";
-      else color = "usukiboy";
-    }
-
-    if (lowerCaseMessageContent.indexOf("usukigirl") >= 0 || lowerCaseMessageContent.indexOf("usuki girl") >= 0 || lowerCaseMessageContent.indexOf("quigukigirl") >= 0  || lowerCaseMessageContent.indexOf("quiguki girl") >= 0 ){
-      if (pet === "quiggle") color = "quigukigirl";
-      else color = "usukigirl";
-    }
-
-    //if someone mentions usuki - rng boy or girl
-    var usukis = ["usukiboy", "usukigirl"];
-    //special quiguki case
-    if (pet === "quiggle") usukis = ["quigukiboy", "quigukigirl"];
-
-    if (color === "usuki" || color === "quiguki") color = usukis[getRandomInt(usukis.length)];
-
-    //special case for pineapple since it contains "apple"
-    if (lowerCaseMessageContent.indexOf("pineapple") >= 0) {
-      color = "pineapple";
-    }
-    //if someone mentions royal - rng boy or girl
-    var royals = ["royalboy", "royalgirl"];
-    if (color === "royal") color = royals[getRandomInt(royals.length)];
-
-    //Capitalize Certain Pet Names
-    var petCap = pet.charAt(0).toUpperCase() + pet.slice(1);
-    //special case for JubJub
-    if (pet === "jubjub") petCap = "JubJub";
-    //special case for Slushie Chia
-    if (pet === "slushiechia") petCap = "SlushieChia";
-    //Capitalize Color Name
-    var colorCap = color.charAt(0).toUpperCase() + color.slice(1);
-
-    //Create Pet URL
-    var petUrl = "http://neopetsclassic.com/images/pets/" + petCap + "/circle/" + pet + "_" + color + "_baby.gif";
-
-    if(pet === "chia" && color === "nugget") petUrl = "https://media.discordapp.net/attachments/911666334050451507/944090945287254066/Screen_Shot_2022-02-17_at_11.39.42_PM.png";
-
-    if(pet === "chia" && color === "hoe")petUrl = "https://media.discordapp.net/attachments/917538490118467624/943544804762075246/Screenshot_20220211-191754-309.png";
-
-    //Have to check if this pet exists
-    //Async Function to check if the Pet Exists
-    //Calls the URL - Images will return the image
-    //No Image returns HTML Text saying not found
-    async function checkImage() {
-      let response = await fetch(petUrl);
-      let data = response.text();
-      return data;
-    }
-
-    //run the check image function
-    checkImage().then(d => {
-      //if pet is not found 
-      if (d.indexOf("Not Found") >= 0) {
-
-        var notFoundText = colorCap + " " + petCap + " doesn't Exist...Yet"
-        if(color === "hoe") notFoundText = notFoundText + " but you should ask Amy to make it 😏"
-
-        message.channel.send({
-          embeds: [
-            {
-              title: notFoundText 
-            }
-          ],
-        }).then(m => {
-          m.react("🥺");
-        });
-      }
-
-      else {
-
-        //import responses 
-        var response = require('./NeopetFetcher/NeopetCaptions.json');
-        
-        if (color === "hoe") response = require('./NeopetFetcher/HoeCaptions.json');
-
-        //RNG the response
-        var rng = getRandomInt(response.length);
-
-        //get the response here; replace the %c and %p placeholders as needed
-        finalCaption = response[rng].replace('%c', colorCap).replace('%p', petCap);
-
-        //special caption for aubergine chia
-        if (pet === "chia" && color === "aubergine") finalCaption = "🍆🍆 Sexy Time 🍆🍆";
-
-        //Send Message
-        message.channel.send({
-          embeds: [
-            {
-              title: finalCaption
-            }
-          ],
-          files: [petUrl],
-        }).then(m => {
-          //if this was a halloween lupe react with werewolf emoji
-          if (pet === "lupe" && color === "halloween") {
-            m.react("902350295215005726");
-          }
-          //if hoe chia react with stuff
-          if (pet === "chia" && color === "hoe") {
-            m.react("915437195731546182");
-            m.react("😏");
-          }
-        });
-      }
-    });
-  } //end of big if statement and bulk of neopet responder
-
-  //function to get a random Int in a range
-  function getRandomInt(max) {
-    return Math.floor(Math.random() * max);
-  }
-  //End Neopet Responder
+  
+  //listen for neopets
+  neoFetcher = new nf.NeopetFetcher();
+  neoFetcher.respond(message);
 
   // message.content.toLowerCase().includes("TEXTHERE") does not work in IE fun fact
 
