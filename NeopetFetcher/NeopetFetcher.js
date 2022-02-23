@@ -1,5 +1,5 @@
 //RodoYolo - Rodaddy 2021
-//import Compliment List
+//import Caption List
 const neoResponse = require('./NeopetCaptions.json');
 const hoeResponse = require('./HoeCaptions.json');
 const neopetRegex = require('./NeoRegex.json');
