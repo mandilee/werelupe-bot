@@ -18,9 +18,9 @@ const db = new Database("https://kv.replit.com/v0/eyJhbGciOiJIUzUxMiIsImlzcyI6Im
 const MAX_HUNGER = 11;
 const MAX_HAPPINESS = 9;
 const NAME_REGEX = /^[A-Za-z0-9_-]+$/;
-const FEED_COST = 50;
+const FEED_COST = 20;
 const POUND = "pound";
-const SHH_INTERVAL = 7;
+const SHH_INTERVAL = 5;
 const ZAP_INTERVAL = 60;
 const RANDOM_RARITY = 15;
 const HEAL_INTERVAL = 15;
@@ -391,7 +391,7 @@ function NeoRPG() {
      //initialize embed
       let embed = new MessageEmbed();
       embed.setTitle(`NeoRPG Help`);
-      embed.setDescription("\*\*Thanks for playing NeoRPG! Here are some helpful tips:\*\*\n\n `/join` - use this to join NeoRPG\n `/create` - use this to create a Neopet\n `/adopt` - use this to adopt a pet from the Neopian Pound\n `/setactive` - use this to set your active Neopet\n `/abandon` - use this to abandon a Neopet\n `/pound` - use this to view the Neopian Pound\n `/view` - use this to view the pet profile of the specified pet\n `/getstats` - use this to view a user profile\n `/feed` - use this to feed one of your Neopets\n `/excitement` - spin the Wheel of Excitement\n `/zap` - use this to zap a Neopet\n `/shh` - use this receive a random event\n `/inventory` - use this to view your inventory\n `/paint` - use this to paint a pet if you have the Paint Brush\n `/heal` - to visit the healing springs\n `/quit` - use this to quit NeoRPG and give up all your progress\n `/help` - use this to get a list of commands and help with NeoRPG");
+      embed.setDescription("\*\*Thanks for playing NeoRPG! Here are some helpful tips:\*\*\n\n `/join` - use this to join NeoRPG\n `/create` - use this to create a Neopet\n `/adopt` - use this to adopt a pet from the Neopian Pound\n `/setactive` - use this to set your active Neopet\n `/abandon` - use this to abandon a Neopet\n `/pound` - use this to view the Neopian Pound\n `/view` - use this to view the pet profile of the specified pet\n `/getstats` - use this to view a user profile\n `/feed` - use this to feed one of your Neopets\n `/excitement` - spin the Wheel of Excitement\n `/zap` - use this to zap a Neopet\n `/shh` - use this receive a random event\n `/inventory` - use this to view your inventory\n `/paint` - use this to paint a pet if you have the Paint Brush\n `/morph` - use this to morph the specified pet (Magic Potion Required)\n `/heal` - to visit the healing springs\n `/quit` - use this to quit NeoRPG and give up all your progress\n `/help` - use this to get a list of commands and help with NeoRPG");
       return embed;
     } 
   
@@ -812,7 +812,7 @@ function NeoRPG() {
       return embed
     }
     //if no index is found then the pet cannot be painted cause that color doesn't exist
-    if(paintIndex < 0){
+    if(colorIndex < 0){
       embed.setTitle(`Sorry ${color} doesn't exist..yet`);
       embed.setDescription("");
       return embed
@@ -836,6 +836,78 @@ function NeoRPG() {
     value.pets[paintIndex].color = color;
     //remove the paint brush from the inventory
     value.inventory.splice(brushIndex, 1);
+    embed.setTitle(`I love my new look!!`);
+    embed.setImage(getPetURL(value.pets[paintIndex]));
+    await db.set(user.id, value);
+    return embed;
+  }//end paint function
+
+  //paints the specified pet the color specified
+  this.morph = async function(user, petName, color, species){
+    //get user
+    value = await db.get(user.id);
+    let embed = new MessageEmbed();
+
+    //start most functions with checking if the player is playing
+    if(!value){
+      embed.setTitle("You can't paint a pet if you haven't joined NeoRPG!");
+      embed.setDescription("");
+      return embed;
+    }
+    //check if the player even has pets
+    if(value.totalPets <= 0){
+      embed.setTitle("You have no pets to morph!");
+      embed.setDescription("");
+      return embed
+    }
+    //find the pet that the user wants to paint
+    paintIndex = value.pets.findIndex(x => x.name.toLowerCase() === petName.toLowerCase());
+    //find the color that the user wants to paint
+    colorIndex = neoList.color.findIndex(x => x.toLowerCase() === color.toLowerCase());
+    //find the species of the pet the user wants to morph to
+    speciesIndex = neoList.allSpecies.findIndex(x => x.toLowerCase() === species.toLowerCase());
+    //if no index is returned then the user does not own this pet 
+    if(paintIndex < 0){
+      embed.setTitle("You don't own " + petName + " - so you can't morph them :(");
+      embed.setDescription("");
+      return embed
+    }
+    //if no paintindex is found then the pet cannot be painted cause that color doesn't exist
+    if(colorIndex < 0){
+      embed.setTitle(`Sorry ${color} doesn't exist..yet`);
+      embed.setDescription("");
+      return embed
+    }
+    //if no index is found then the pet cannot be painted cause that species doesn't exist
+    if(speciesIndex < 0){
+      embed.setTitle(`Sorry ${species} doesn't exist..yet`);
+      embed.setDescription("");
+      return embed
+    }
+    //check to see if the pet is available at this color
+    let isAvail = await this.isPetColorAvailable(color, species);
+    if(!isAvail){
+      embed.setTitle(`Sorry for some reason this morphing potion is not usable...`);
+      embed.setDescription("");
+      return embed
+    }
+    //check to see if the user has the right morphing potion
+    mpIndex = value.inventory.findIndex(x => x.color?.toLowerCase() === color.toLowerCase() && x.species?.toLowerCase() === species.toLowerCase() );
+    if(mpIndex < 0){
+      embed.setTitle(`Sorry you don't have the right potion to create a ${color} ${species}`);
+      embed.setDescription("");
+      return embed
+    }
+    //if we made it here then all the conditions are right to paint the pet
+    //set the color to the right color
+    color = color.toLowerCase();
+    color = color.charAt(0).toUpperCase() + color.slice(1);
+    species = species.toLowerCase();
+    species = species.charAt(0).toUpperCase() + species.slice(1);
+    value.pets[paintIndex].color = color;
+    value.pets[paintIndex].species = species;
+    //remove the morphing potion from the inventory
+    value.inventory.splice(mpIndex, 1);
     embed.setTitle(`I love my new look!!`);
     embed.setImage(getPetURL(value.pets[paintIndex]));
     await db.set(user.id, value);

@@ -1,22 +1,20 @@
 {
-  "color": 
-  [
-    "8-bit","Agueena","Alien","Angel","Apple","Asparagus","Aubergine","Avocado","Baby","Biscuit","Blue","Blueberry","Brown","Burlap","Camouflage","Candy","Carrot","Checkered","Chocolate","Chokato","Christmas","Clay","Cloud","Coconut","Coffee","Corn","Custard","Darigan","Desert","Dimensional","Disco","Durian","Electric","Eventide","Faerie","Fire","Garlic","Ghost","Glass","Glowing","Gold","Gooseberry","Grape","Green","Grey","Halloween","Hoe","Ice","Invisible","Island","Jelly","Juppieswirl","Lemon","Lime","Magma","Mallow","Maractite","Maraquan","Marble","Mosaic","Msp","Mutant","Nugget","Oilpaint","Onion","Orange","Origami","Pastel","Pea","Peach","Pear","Pepper","Pineapple","Pink","Pirate","Plum","Plushie","Polkadot","Purple","Quiguki","Rainbow","Red","Relic","Robot","Royal","Royalboy","Royalgirl","Shadow","Silver","Sketch","Skunk","Slushie","Snot","Snow","Speckled","Split","Sponge","Spotted","Starry","Stealthy","Steampunk","Stone","Strawberry","Striped","Swampgas","Thornberry","Tomato","Toy","Transparent","Tyrannian","Ummagine","Usuki","Valentine","Water","White","Woodland","Wraith","Yellow","Zombie"
-  ],
-  "basicColor":
-  [
-    "Blue","Red","Green","Yellow"
-  ],
-  "regularSpecies":
-  [
-"Acara","Aisha","Blumaroo","Bori","Bruce","Buzz","Chia","Elephante","Eyrie","Flotsam","Gelert","Gnorbu","Grarrl","Ixi","Jubjub","Kacheek","Kau","Korbat","Kougra","Kyrii","Lenny","Lupe","Meerca","Moehog","Mynci","Nimmo","Ogrin","Peophin","Poogle","Pteri","Quiggle","Ruki","Scorchio","Shoyru","Skeith","Techo","Tuskaninny","Uni","Usul","Wocky","Xweetok","Yurble","Zafara"
-  ],
-  "limitedSpecies":
-  [
-    "Chomby","Cybunny","Kiko","Koi","Hissi","Jetsam","Lutari","Tonu"
-  ],
-  "restrictedSpecies":
-  [
-    "SlushieChia","Draik","Grundo","Krawk"
-  ]
+	"color": [
+		"8-bit", "Agueena", "Alien", "Angel", "Apple", "Asparagus", "Aubergine", "Avocado", "Baby", "Biscuit", "Blue", "Blueberry", "Brown", "Burlap", "Camouflage", "Candy", "Carrot", "Checkered", "Chocolate", "Chokato", "Christmas", "Clay", "Cloud", "Coconut", "Coffee", "Corn", "Custard", "Darigan", "Desert", "Dimensional", "Disco", "Durian", "Electric", "Eventide", "Faerie", "Fire", "Garlic", "Ghost", "Glass", "Glowing", "Gold", "Gooseberry", "Grape", "Green", "Grey", "Halloween", "Hoe", "Ice", "Invisible", "Island", "Jelly", "Juppieswirl", "Lemon", "Lime", "Magma", "Mallow", "Maractite", "Maraquan", "Marble", "Mosaic", "Msp", "Mutant", "Nugget", "Oilpaint", "Onion", "Orange", "Origami", "Pastel", "Pea", "Peach", "Pear", "Pepper", "Pineapple", "Pink", "Pirate", "Plum", "Plushie", "Polkadot", "Purple", "Quiguki", "Rainbow", "Red", "Relic", "Robot", "Royal", "Royalboy", "Royalgirl", "Shadow", "Silver", "Sketch", "Skunk", "Slushie", "Snot", "Snow", "Speckled", "Split", "Sponge", "Spotted", "Starry", "Stealthy", "Steampunk", "Stone", "Strawberry", "Striped", "Swampgas", "Thornberry", "Tomato", "Toy", "Transparent", "Tyrannian", "Ummagine", "Usuki", "Valentine", "Water", "White", "Woodland", "Wraith", "Yellow", "Zombie"
+	],
+	"basicColor": [
+		"Blue", "Red", "Green", "Yellow"
+	],
+	"regularSpecies": [
+		"Acara", "Aisha", "Blumaroo", "Bori", "Bruce", "Buzz", "Chia", "Elephante", "Eyrie", "Flotsam", "Gelert", "Gnorbu", "Grarrl", "Ixi", "Jubjub", "Kacheek", "Kau", "Korbat", "Kougra", "Kyrii", "Lenny", "Lupe", "Meerca", "Moehog", "Mynci", "Nimmo", "Ogrin", "Peophin", "Poogle", "Pteri", "Quiggle", "Ruki", "Scorchio", "Shoyru", "Skeith", "Techo", "Tuskaninny", "Uni", "Usul", "Wocky", "Xweetok", "Yurble", "Zafara"
+	],
+	"limitedSpecies": [
+		"Chomby", "Cybunny", "Kiko", "Koi", "Hissi", "Jetsam", "Lutari", "Tonu"
+	],
+	"restrictedSpecies": [
+		"SlushieChia", "Draik", "Grundo", "Krawk"
+	],
+	"allSpecies": [
+		"Acara", "Aisha", "Blumaroo", "Bori", "Bruce", "Buzz", "Chia", "Elephante", "Eyrie", "Flotsam", "Gelert", "Gnorbu", "Grarrl", "Ixi", "Jubjub", "Kacheek", "Kau", "Korbat", "Kougra", "Kyrii", "Lenny", "Lupe", "Meerca", "Moehog", "Mynci", "Nimmo", "Ogrin", "Peophin", "Poogle", "Pteri", "Quiggle", "Ruki", "Scorchio", "Shoyru", "Skeith", "Techo", "Tuskaninny", "Uni", "Usul", "Wocky", "Xweetok", "Yurble", "Zafara", "Chomby", "Cybunny", "Kiko", "Koi", "Hissi", "Jetsam", "Lutari", "Tonu", "SlushieChia", "Draik", "Grundo", "Krawk"
+	]
 }

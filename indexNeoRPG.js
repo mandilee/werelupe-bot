@@ -64,6 +64,8 @@ const commands = [
   new SlashCommandBuilder().setName('inventory').setDescription('View your inventory'),
   //heal
   new SlashCommandBuilder().setName('heal').setDescription('Visit the healing springs'),
+   //morph a pet
+  new SlashCommandBuilder().setName('morph').setDescription('Paint the pet with the name and color provided! (Morphing Potion Required)').addStringOption(option => option.setName('petname').setDescription('Enter pet name').setRequired(true)).addStringOption(option => option.setName('color').setDescription('Enter the color you wish you paint this pet').setRequired(true)).addStringOption(option => option.setName('species').setDescription('Enter the species this pet will morph to').setRequired(true)),
   //paint a pet
   new SlashCommandBuilder().setName('paint').setDescription('Paint the pet with the name and color provided! (Paint Brush Required)').addStringOption(option => option.setName('petname').setDescription('Enter pet name').setRequired(true)).addStringOption(option => option.setName('color').setDescription('Enter the color you wish you paint this pet').setRequired(true))
 ];

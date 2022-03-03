@@ -183,6 +183,18 @@ client.on('interactionCreate', async interaction => {
     content = await neoRPG.paint(interaction.user, petName, color);
     await interaction.editReply({ embeds: [content] });
   }
+
+   //morph pet
+  if (interaction.commandName === 'morph') {
+    const petName = interaction.options.getString('petname')
+    const color = interaction.options.getString('color')
+    const species = interaction.options.getString('species')
+    let content = new MessageEmbed();
+    content.setTitle("Working on it..");
+    await interaction.reply({ embeds: [content] });
+    content = await neoRPG.morph(interaction.user, petName, color, species);
+    await interaction.editReply({ embeds: [content] });
+  }
   
   //healing springs
   if (interaction.commandName === 'heal') {
