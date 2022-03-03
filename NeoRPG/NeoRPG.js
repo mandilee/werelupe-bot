@@ -978,7 +978,7 @@ function NeoRPG() {
       await db.set(user.id, userZapping);
       //Date and Time blocks finish here
       //ensure this pet is owned
-      zapIndex = userZapping.pets.findIndex(x => x.name === petName);
+      zapIndex = userZapping.pets.findIndex(x => x.name.toLowerCase() === petName.toLowerCase());
       //if the pet at the active index exists
         if(userZapping.pets[zapIndex]){
          //zapping happens here
