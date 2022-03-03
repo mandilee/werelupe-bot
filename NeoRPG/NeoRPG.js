@@ -19,8 +19,9 @@ const MAX_HAPPINESS = 9;
 const NAME_REGEX = /^[A-Za-z0-9_-]+$/;
 const FEED_COST = 20;
 const POUND = "pound";
-const SHH_INTERVAL = 1;
-const RANDOM_RARITY = 15;
+const SHH_INTERVAL = 5;
+const ZAP_INTERVAL = 60;
+const RANDOM_RARITY = 10;
 //constructor
 function NeoRPG() {
 
@@ -33,38 +34,40 @@ function NeoRPG() {
   //   console.log("Pound Cleared/Created");
   // }
 
-  // //Rodo Test Stuff 
-  // this.test = async function(message){
-  //   //add boochie shield soon
-  //   userList = await db.list()
-  //   petChosen = "Daddy"
-  //   userChosen = "Rodolfo#8003"
-  //   //traverse the db for all users
-  //   for(let i =0;i<userList.length;i++){
-  //     user = await db.get(userList[i]); //get user
-  //     user.inventory = [];
-  //     if(user.ownerTag.toLowerCase() === userChosen.toLowerCase()){
-  //       user.maxPets = 10; //adjusts specific user stats
-  //       //user.np = 10000000;
-  //       user.lastSHH = null;
-  //     }
+ // Rodo Test Stuff 
+  this.test = async function(message){
+    //add boochie shield soon
+    userList = await db.list()
+    petChosen = "Milo"
+    userChosen = "marsw#0003"
+    //traverse the db for all users
+    for(let i =0;i<userList.length;i++){
+      user = await db.get(userList[i]); //get user
+      user.inventory = [];
+      if(user.ownerTag.toLowerCase() === userChosen.toLowerCase()){
+        //user.maxPets = 3; //adjusts specific user stats
+        //user.np = 10000;
+        user.labAccess = true;
+      }
       
-  //     for(let j=0;j<user.pets.length;j++){ //look at users pets
-  //         //user.pets[j].mood = 0;//set hp to 10 //this adjusts all pets
-  //         //user.pets[j].hunger = 0;//set every pet to max hunger to 10 //this adjusts all pets
-  //         //user.pets[j].level = 1;
+      for(let j=0;j<user.pets.length;j++){ //look at users pets
+          //user.pets[j].mood = 0;//set hp to 10 //this adjusts all pets
+          //user.pets[j].hunger = 0;//set every pet to max hunger to 10 //this adjusts all pets
+          //user.pets[j].level = 1;
         
-  //         //adjusts one specific pet - pet Chosen
-  //         if(user.pets[j].name.toLowerCase() === petChosen.toLowerCase()){
-  //           user.pets[j].species = "Chomby";
-  //           user.pets[j].color = "Red";
-  //           user.pets[j].gender = "Male";
-  //         }
-  //     }
-  //     await db.set(user.id, user);
-  //   }
-  //   console.log("Done");
-  // }
+          //adjusts one specific pet - pet Chosen
+          if(user.pets[j].name.toLowerCase() === petChosen.toLowerCase()){
+            user.pets[j].species = "Kougra";
+            user.pets[j].color = "Baby";
+            user.pets[j].gender = "Male";
+          }
+      }
+      await db.set(user.id, user);
+    }
+    console.log("Done");
+  }
+
+  
 
   //join NeoRPG takes in user information
   this.join = async function(user){
@@ -395,7 +398,7 @@ function NeoRPG() {
      ///if the user exists in the database
       if(userToSetActive){
         //if the user even has pets
-        if(userToSetActive.totalPets > 0){
+        if(userToSetActive.totalPets >= 0){
           //ensure this pet is owned
           newActiveIndex = userToSetActive.pets.findIndex(x => x.name === petName);
           //if the pet at the active index exists
@@ -411,7 +414,7 @@ function NeoRPG() {
           }
         }  
         else{
-          embed.setTitle("You have no pets to set as active! Adopt one using /adopt");
+          embed.setTitle("You have no pets to set as active! Adopt one using /adopt or create one using /create");
           embed.setDescription("");
           return embed
         }
@@ -554,7 +557,6 @@ function NeoRPG() {
           embed.setDescription(`${value.pets[value.activePet].name} has been zapped by Boochi!`);   embed.setImage("https://static.wikia.nocookie.net/guilds/images/5/52/BOOCHI.png/revision/latest/scale-to-width-down/246?cb=20160709191118");
           return embed;
         }
-          
         else{
          embed.setTitle("Something Has Happened");
         embed.setDescription(`Boochi takes aim at ${value.pets[value.activePet].name} but thankfully he misses!`);   embed.setImage("https://static.wikia.nocookie.net/guilds/images/5/52/BOOCHI.png/revision/latest/scale-to-width-down/246?cb=20160709191118");
@@ -799,6 +801,31 @@ function NeoRPG() {
           embed.setImage("https://bookofages.jellyneo.net/assets/imgs/characters/lg/400.png");
           return embed
       }
+     //Date and Time blocks are here
+      //get today's time
+      var today = new Date();
+      //if there is a value for last SHH (AKA The User got an SHH Before)
+      if(userZapping.lastZap){
+        //calcuate time remaining
+        const timeRemaining = dateDiffInMinutes(userZapping.lastZap, today)
+        //if more than designated minutes reset the last shh value
+        if(timeRemaining >=ZAP_INTERVAL){
+          userZapping.lastZap = today;
+        }
+        //otherwise tell the user it is too soon
+        else{
+          embed.setTitle("Too Soon");
+          embed.setDescription(`You can get your next zap in ${ZAP_INTERVAL-timeRemaining} minutes.`);
+          return embed;
+        }
+      }
+      //if never received a SHH set the value to now
+      else{
+        userZapping.lastZap = today;
+      }
+      //update the datebase
+      await db.set(user.id, userZapping);
+      //Date and Time blocks finish here
       //ensure this pet is owned
       zapIndex = userZapping.pets.findIndex(x => x.name === petName);
       //if the pet at the active index exists
