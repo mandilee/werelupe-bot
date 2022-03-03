@@ -20,8 +20,9 @@ const NAME_REGEX = /^[A-Za-z0-9_-]+$/;
 const FEED_COST = 20;
 const POUND = "pound";
 const SHH_INTERVAL = 5;
-const ZAP_INTERVAL = 30;
+const ZAP_INTERVAL = 60;
 const RANDOM_RARITY = 10;
+
 //constructor
 function NeoRPG() {
 
@@ -796,7 +797,7 @@ function NeoRPG() {
       }
       //if the user has no lab access return
       if(!userZapping.labAccess){
-          embed.setTitle("You don't have access to the lab ray! Try your look with random events to get access.");
+          embed.setTitle("You don't have access to the lab ray! Try your luck with random events to get access.");
           embed.setDescription("");
           embed.setImage("https://bookofages.jellyneo.net/assets/imgs/characters/lg/400.png");
           return embed
