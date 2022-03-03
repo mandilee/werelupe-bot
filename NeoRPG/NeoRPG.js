@@ -11,7 +11,7 @@ const fetch = (...args) => import('node-fetch').then(({ default: fetch }) => fet
 //import message embed functionality from node
 const { MessageEmbed } = require('discord.js');
 
-const db = new Database();
+const db = new Database("https://kv.replit.com/v0/eyJhbGciOiJIUzUxMiIsImlzcyI6ImNvbm1hbiIsImtpZCI6InByb2Q6MSIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJjb25tYW4iLCJleHAiOjE2NDYzOTA3ODEsImlhdCI6MTY0NjI3OTE4MSwiZGF0YWJhc2VfaWQiOiJkMzZkMzVkOC02OGQyLTQyMWUtYTZmMy05M2M5OTcxNTNkM2MifQ.LjjZLBF2IWEIYwhGaPzICuBpBhAE9NFUPJnyzS7XLe6oX7L6PCvo2_ihhG4GsK5iAZQAp7Y1eDyzO90kYJZQrw");
 
 //declare constants
 const MAX_HUNGER = 11;
@@ -20,7 +20,7 @@ const NAME_REGEX = /^[A-Za-z0-9_-]+$/;
 const FEED_COST = 20;
 const POUND = "pound";
 const SHH_INTERVAL = 5;
-const ZAP_INTERVAL = 60;
+const ZAP_INTERVAL = 30;
 const RANDOM_RARITY = 10;
 //constructor
 function NeoRPG() {
@@ -34,41 +34,41 @@ function NeoRPG() {
   //   console.log("Pound Cleared/Created");
   // }
 
- // Rodo Test Stuff 
-  this.test = async function(message){
-    //add boochie shield soon
-    userList = await db.list()
-    petChosen = "Milo"
-    userChosen = "marsw#0003"
-    //traverse the db for all users
-    for(let i =0;i<userList.length;i++){
-      user = await db.get(userList[i]); //get user
-      user.inventory = [];
-      if(user.ownerTag.toLowerCase() === userChosen.toLowerCase()){
-        //user.maxPets = 3; //adjusts specific user stats
-        //user.np = 10000;
-        user.labAccess = true;
-      }
+ // // Rodo Test Stuff 
+ //  this.test = async function(message){
+ //    //add boochie shield soon
+ //    userList = await db.list()
+ //    petChosen = "Milo"
+ //    userChosen = "marsw#0003"
+ //    //traverse the db for all users
+ //    for(let i =0;i<userList.length;i++){
+ //      user = await db.get(userList[i]); //get user
+ //      user.inventory = [];
+ //      if(user.ownerTag.toLowerCase() === userChosen.toLowerCase()){
+ //        //user.maxPets = 3; //adjusts specific user stats
+ //        //user.np = 10000;
+ //        user.labAccess = true;
+ //      }
       
-      for(let j=0;j<user.pets.length;j++){ //look at users pets
-          //user.pets[j].mood = 0;//set hp to 10 //this adjusts all pets
-          //user.pets[j].hunger = 0;//set every pet to max hunger to 10 //this adjusts all pets
-          //user.pets[j].level = 1;
+ //      for(let j=0;j<user.pets.length;j++){ //look at users pets
+ //          //user.pets[j].mood = 0;//set hp to 10 //this adjusts all pets
+ //          //user.pets[j].hunger = 0;//set every pet to max hunger to 10 //this adjusts all pets
+ //          //user.pets[j].level = 1;
         
-          //adjusts one specific pet - pet Chosen
-          if(user.pets[j].name.toLowerCase() === petChosen.toLowerCase()){
-            user.pets[j].species = "Kougra";
-            user.pets[j].color = "Baby";
-            user.pets[j].gender = "Male";
-          }
-      }
-      await db.set(user.id, user);
-    }
-    console.log("Done");
+ //          //adjusts one specific pet - pet Chosen
+ //          if(user.pets[j].name.toLowerCase() === petChosen.toLowerCase()){
+ //            user.pets[j].species = "Kougra";
+ //            user.pets[j].color = "Baby";
+ //            user.pets[j].gender = "Male";
+ //          }
+ //      }
+ //      await db.set(user.id, user);
+ //    }
+ //    console.log("Done");
+ //  }
+  this.test = async function(message){
+    console.log(process.env.REPLIT_DB_URL)
   }
-
-  
-
   //join NeoRPG takes in user information
   this.join = async function(user){
     
