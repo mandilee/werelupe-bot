@@ -950,6 +950,191 @@
 		"species": "Draik"
 	}
   ],
+  "transpots":
+  [
+    {
+		"name":"Aisha Transmogrification Potion", 
+		"category": "mp", 
+		"url": "https://neopetsclassic.com/images/items/7951.gif", 
+		"color": "Mutant", 
+		"species": "Aisha" 
+	},
+	{
+		"name":"Blumaroo Transmogrification Potion", 
+		"category": "mp", 
+		"url": "https://neopetsclassic.com/images/items/2441.gif", 
+		"color": "Mutant", 
+		"species": "Blumaroo" 
+	},
+	{
+		"name":"Bruce Transmogrification Potion", 
+		"category": "mp", 
+		"url": "https://neopetsclassic.com/images/items/2448.gif", 
+		"color": "Mutant", 
+		"species": "Bruce" 
+	},
+	{
+		"name":"Chia Transmogrification Potion", 
+		"category": "mp", 
+		"url": "https://neopetsclassic.com/images/items/17090.gif", 
+		"color": "Mutant", 
+		"species": "Chia" 
+	},
+	{
+		"name":"Cybunny Transmogrification Potion", 
+		"category": "mp", 
+		"url": "https://neopetsclassic.com/images/items/2443.gif", 
+		"color": "Mutant", 
+		"species": "Cybunny" 
+	},
+	{
+		"name":"Draik Transmogrification Potion", 
+		"category": "mp", 
+		"url": "https://neopetsclassic.com/images/items/2454.gif", 
+		"color": "Mutant", 
+		"species": "Draik" 
+	},
+	{
+		"name":"Gnorbu Transmogrification Potion", 
+		"category": "mp", 
+		"url": "https://neopetsclassic.com/images/items/10391.gif", 
+		"color": "Mutant", 
+		"species": "Gnorbu" 
+	},
+	{
+		"name":"Grarrl Transmogrification Potion", 
+		"category": "mp", 
+		"url": "https://neopetsclassic.com/images/items/2445.gif", 
+		"color": "Mutant", 
+		"species": "Grarrl" 
+	},
+	{
+		"name":"Grundo Transmogrification Potion", 
+		"category": "mp", 
+		"url": "https://neopetsclassic.com/images/items/2440.gif", 
+		"color": "Mutant", 
+		"species": "Grundo"
+	},
+	{
+		"name":"Ixi Transmogrification Potion", 
+		"category": "mp", 
+		"url": "https://neopetsclassic.com/images/items/7196.gif", 
+		"color": "Mutant", 
+		"species": "Ixi" 
+	},
+	{
+		"name":"Jetsam Transmogrification Potion", 
+		"category": "mp", 
+		"url": "https://neopetsclassic.com/images/items/15607.gif", 
+		"color": "Mutant", 
+		"species": "Jetsam" 
+	},
+	{
+		"name":"Kacheek Transmogrification Potion", 
+		"category": "mp", 
+		"url": "https://neopetsclassic.com/images/items/2438.gif", 
+		"color": "Mutant", 
+		"species": "Kacheek" 
+	},
+	{
+		"name":"Kiko Transmogrification Potion", 
+		"category": "mp", 
+		"url": "https://neopetsclassic.com/images/items/2439.gif", 
+		"color": "Mutant", 
+		"species": "Kiko" 
+	},
+	{
+		"name":"Koi Transmogrification Potion", 
+		"category": "mp", 
+		"url": "https://neopetsclassic.com/images/items/2449.gif", 
+		"color": "Mutant", 
+		"species": "Koi"
+	},
+	{
+		"name":"Krawk Transmogrification Potion", 
+		"category": "mp", 
+		"url": "https://neopetsclassic.com/images/items/2452.gif", 
+		"color": "Mutant", 
+		"species": "Krawk"
+	},
+	{
+		"name":"Kyrii Transmogrification Potion", 
+		"category": "mp", 
+		"url": "https://neopetsclassic.com/images/items/2447.gif", 
+		"color": "Mutant", 
+		"species": "Kyrii" 
+	},
+	{
+		"name":"Moehog Transmogrification Potion", 
+		"category": "mp", 
+		"url": "https://neopetsclassic.com/images/items/7953.gif", 
+		"color": "Mutant", 
+		"species": "Moehog"
+	},
+	{
+		"name":"Quiggle Transmogrification Potion", 
+		"category": "mp", 
+		"url": "https://neopetsclassic.com/images/items/4884.gif", 
+		"color": "Mutant", 
+		"species": "Quiggle" 
+	},
+	{
+		"name":"Ruki Transmogrification Potion", 
+		"category": "mp", 
+		"url": "https://neopetsclassic.com/images/items/20402.gif", 
+		"color": "Mutant", 
+		"species": "Ruki"
+	},
+	{
+		"name":"Scorchio Transmogrification Potion", 
+		"category": "mp", 
+		"url": "https://neopetsclassic.com/images/items/17160.gif", 
+		"color": "Mutant", 
+		"species": "Scorchio"
+	},
+	{
+		"name":"Skeith Transmogrification Potion", 
+		"category": "mp", 
+		"url": "https://neopetsclassic.com/images/items/20421.gif", 
+		"color": "Mutant", 
+		"species": "Skeith"
+	},
+	{
+		"name":"Tonu Transmogrification Potion", 
+		"category": "mp", 
+		"url": "https://neopetsclassic.com/images/items/7197.gif", 
+		"color": "Mutant", 
+		"species": "Tonu"
+	},
+	{
+		"name":"Tuskaninny Transmogrification Potion", 
+		"category": "mp", 
+		"url": "https://neopetsclassic.com/images/items/13698.gif", 
+		"color": "Mutant", 
+		"species": "Tuskaninny" 
+	},
+	{
+		"name":"Usul Transmogrification Potion", 
+		"category": "mp", 
+		"url": "https://neopetsclassic.com/images/items/2442.gif", 
+		"color": "Mutant", 
+		"species": "Usul"
+	},
+	{
+		"name":"Xweetok Transmogrification Potion", 
+		"category": "mp", 
+		"url": "https://neopetsclassic.com/images/items/10393.gif", 
+		"color": "Mutant", 
+		"species": "Xweetok"
+	},
+	{
+		"name":"Zafara Transmogrification Potion", 
+		"category": "mp", 
+		"url": "https://neopetsclassic.com/images/items/20142.gif", 
+		"color": "Mutant", 
+		"species": "Zafara"
+	}
+  ],
   "food":
   [
     

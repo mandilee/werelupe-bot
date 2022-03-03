@@ -18,11 +18,11 @@ const db = new Database("https://kv.replit.com/v0/eyJhbGciOiJIUzUxMiIsImlzcyI6Im
 const MAX_HUNGER = 11;
 const MAX_HAPPINESS = 9;
 const NAME_REGEX = /^[A-Za-z0-9_-]+$/;
-const FEED_COST = 20;
+const FEED_COST = 50;
 const POUND = "pound";
-const SHH_INTERVAL = 5;
+const SHH_INTERVAL = 7;
 const ZAP_INTERVAL = 60;
-const RANDOM_RARITY = 10;
+const RANDOM_RARITY = 15;
 const HEAL_INTERVAL = 15;
 const EXCITEMENT_INTERVAL = 30;
 const EXCITEMENT_COST = 150;
@@ -74,6 +74,7 @@ function NeoRPG() {
   // this.test = async function(message){
   //   console.log(process.env.REPLIT_DB_URL)
   // }
+  
   //join NeoRPG takes in user information
   this.join = async function(user){
     
@@ -549,7 +550,7 @@ function NeoRPG() {
     
     //randoms that require an active pet
     if(rareRandom==0){//if rare random is exactly 0 then get a random event from this list
-      let random = getRandomInt(5);
+      let random = getRandomInt(6);
       //Boochi
       if(random == 0){
         //check for an active pet
@@ -625,10 +626,21 @@ function NeoRPG() {
         embed.setImage(itemList.pbs[randomPB].url);
         return embed;
       }
+      //Random Transpot
+      if(random==5){
+        let randomTP = getRandomInt(itemList.transpots.length);
+        value.inventory.push(itemList.transpots[randomTP]);
+        //adjust db
+        await db.set(user.id, value);
+        embed.setTitle("Something Has Happened");
+        embed.setDescription(`Dr. Sloth hands you his latest invention - a ${itemList.transpots[randomTP].name}!`);
+        embed.setImage(itemList.transpots[randomTP].url);
+        return embed;
+      }
     }
     else{
       //regular randoms
-      let random = getRandomInt(11);
+      let random = getRandomInt(14);
       //add NP
       if(random==0){
         await this.addNP(user, 50);
@@ -706,12 +718,7 @@ function NeoRPG() {
         embed.setDescription(`Boochi takes aim at ${value.pets[value.activePet].name} but thankfully he misses!`);   embed.setImage("https://static.wikia.nocookie.net/guilds/images/5/52/BOOCHI.png/revision/latest/scale-to-width-down/246?cb=20160709191118");
         return embed;
       }
-      //Boochi Miss
-      if(random==8){
-        embed.setTitle("Something Has Happened");
-        embed.setDescription(`Boochi takes aim at ${value.pets[value.activePet].name} but thankfully he misses!`);   embed.setImage("https://static.wikia.nocookie.net/guilds/images/5/52/BOOCHI.png/revision/latest/scale-to-width-down/246?cb=20160709191118");
-        return embed;
-      }
+      //crazy chia in a lambo
       if(random==9){
         //check for an active pet
         if(value.activePet < 0) return nothingSHH();
@@ -724,6 +731,7 @@ function NeoRPG() {
       embed.setImage("http://images.neopets.com/images/nigel_car.gif");
       return embed;
       }
+      //hungry
       if(random==10){
         //check for an active pet
         if(value.activePet < 0) return nothingSHH();
@@ -735,6 +743,29 @@ function NeoRPG() {
       embed.setDescription("");
       embed.setImage("https://items.jellyneo.net/assets/imgs/items/3477.gif?487");
       return embed;
+      }
+      //codestones
+      if(random==11){
+        let randomCS = getRandomInt(itemList.codestones.length);
+        value.inventory.push(itemList.codestones[randomCS]);
+        //adjust db
+        await db.set(user.id, value);
+        embed.setTitle("Something Has Happened");
+        embed.setDescription(`You found a mythical codestone on the floor!`);
+        embed.setImage(itemList.codestones[randomCS].url);
+        return embed;
+      }
+      //Red Poogle
+      if(random==12){
+        embed.setTitle("Something Has Happened");
+        embed.setDescription(`A Red Poogle Comes by and says \"**Hey! I hope you're having fun!!**\"`);   embed.setImage("https://neopetsclassic.com/images/pets/Poogle/poogle_red_baby.gif");
+        return embed;
+      }
+      //Lupe Ghost
+      if(random==13){
+        embed.setTitle("Something Has Happened");
+        embed.setDescription(`A Ghost Lupe appears and says \"**Stay away from Mystery Island!**\"`);   embed.setImage("https://bookofages.jellyneo.net/assets/imgs/characters/lg/294.png");
+        return embed;
       }
       
     }
@@ -1329,7 +1360,7 @@ function NeoRPG() {
           }
           //nothing
           if(random==7){
-            embed.setTitle("The ray is shot at " + userZapping.pets[zapIndex].name + " - and nothing happened :(");
+            embed.setTitle("The ray is fired at " + userZapping.pets[zapIndex].name + " - and nothing happened :(");
             embed.setDescription("");
             embed.setImage(getSadPetURL(userZapping.pets[zapIndex]));
             return embed;
@@ -1365,7 +1396,7 @@ function NeoRPG() {
         }
      
         function nothingHappens(){
-            embed.setTitle("The ray is shot at " + userZapping.pets[zapIndex].name + " - and nothing happened :(");
+            embed.setTitle("The ray is fired at " + userZapping.pets[zapIndex].name + " - and nothing happened :(");
             embed.setDescription("");
             embed.setImage(getSadPetURL(userZapping.pets[zapIndex]));
             return embed;
@@ -1451,7 +1482,7 @@ function NeoRPG() {
 }//end constructor
 
 //this get the embed with the user information
-getUserEmbed = function(player, caption){
+function getUserEmbed(player, caption){
   //sample data for player
   //{"np": 0, "pet": [], "totalPets": 0, "maxPets": 1, "activePet": -1, "ownerTag": user.tag}
   //create new message Embed
