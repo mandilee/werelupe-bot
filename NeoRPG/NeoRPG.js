@@ -1267,7 +1267,7 @@ getUserEmbed = function(player, caption){
     }
   }
   else{//otherwise set pets do display no active pets
-    pets = "You don't have any pets! Use /adopt to adopt one!";
+    pets = "You don't have any pets! Use /create to create one or /adopt to adopt one from the pound!";
   }
   
   let active = "";

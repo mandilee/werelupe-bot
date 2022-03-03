@@ -1,12 +1,6 @@
 { 
   "pbs":
   [
-    { 
-      "name": "Pirate Paint Brush",
-      "category": "pb",
-      "url": "https://items.jellyneo.net/assets/imgs/items/19302.gif?324",
-      "color": "Pirate"
-    },
    { 
       "name": "Baby Paint Brush",
       "category": "pb",
@@ -36,21 +30,411 @@
       "category": "pb",
       "url": "https://items.jellyneo.net/assets/imgs/items/2813.gif?805",
        "color": "Halloween"
-    },
+    }
+
+  ],
+  "rarepbs":
+  [
     { 
       "name": "Grey Paint Brush",
       "category": "pb",
       "url": "https://items.jellyneo.net/assets/imgs/items/19306.gif?514",
        "color": "Grey"
+    },
+    { 
+      "name": "Pirate Paint Brush",
+      "category": "pb",
+      "url": "https://items.jellyneo.net/assets/imgs/items/19302.gif?324",
+      "color": "Pirate"
     }
-  ],
-  "fancypbs":
-  [
-    
   ],
   "basicmps":
   [
-    
+	{
+		"name":"Green Elephante Morphing Potion", 
+		"category": "mp", 
+		"url": "https://neopetsclassic.com/images/items/14763.gif", 
+		"color": "Green ", 
+		"species": "Elephante"
+	},
+	{
+		"name":"Red Aisha Morphing Potion", 
+		"category": "mp", 
+		"url": "https://neopetsclassic.com/images/items/3340.gif", 
+		"color": "Red ", 
+		"species": "Aisha"
+	},
+	{
+		"name":"Yellow Hissi Morphing Potion", 
+		"category": "mp", 
+		"url": "https://neopetsclassic.com/images/items/29197.gif", 
+		"color": "Yellow ", 
+		"species": "Hissi"
+	},
+	{
+		"name":"Yellow Elephante Morphing Potion", 
+		"category": "mp", 
+		"url": "https://neopetsclassic.com/images/items/15483.gif", 
+		"color": "Yellow ", 
+		"species": "Elephante"
+	},
+	{
+		"name":"Green Cybunny Morphing Potion", 
+		"category": "mp", 
+		"url": "https://neopetsclassic.com/images/items/21978.gif", 
+		"color": "Green ", 
+		"species": "Cybunny"
+	},
+	{
+		"name":"Red Cybunny Morphing Potion", 
+		"category": "mp", 
+		"url": "https://neopetsclassic.com/images/items/17894.gif", 
+		"color": "Red ", 
+		"species": "Cybunny"
+	},
+	{
+		"name":"Yellow Cybunny Morphing Potion", 
+		"category": "mp", 
+		"url": "https://neopetsclassic.com/images/items/21977.gif", 
+		"color": "Yellow ", 
+		"species": "Cybunny"
+	},
+	{
+		"name":"Green Usul Morphing Potion", 
+		"category": "mp", 
+		"url": "https://neopetsclassic.com/images/items/15697.gif", 
+		"color": "Green ", 
+		"species": "Usul"
+	},
+	{
+		"name":"Yellow Techo Morphing Potion", 
+		"category": "mp", 
+		"url": "https://neopetsclassic.com/images/items/13668.gif", 
+		"color": "Yellow ", 
+		"species": "Techo"
+	},
+	{
+		"name":"Red Chia Morphing Potion", 
+		"category": "mp", 
+		"url": "https://neopetsclassic.com/images/items/pot_chi_red_2x.png", 
+		"color": "Red ", 
+		"species": "Chia"
+	},
+	{
+		"name":"Blue Poogle Morphing Potion", 
+		"category": "mp", 
+		"url": "https://neopetsclassic.com/images/items/blue-poogle-morphing-potion.gif", 
+		"color": "Blue ", 
+		"species": "Poogle"
+	},
+	{
+		"name":"Blue Blumaroo Morphing Potion", 
+		"category": "mp", 
+		"url": "https://neopetsclassic.com/images/items/blue-blumaroo-morphing-potion.gif", 
+		"color": "Blue ", 
+		"species": "Blumaroo"
+	},
+	{
+		"name":"Green Grundo Morphing Potion", 
+		"category": "mp", 
+		"url": "https://neopetsclassic.com/images/items/17659.gif", 
+		"color": "Green ", 
+		"species": "Grundo"
+	},
+	{
+		"name":"Blue Pteri Morphing Potion", 
+		"category": "mp", 
+		"url": "https://neopetsclassic.com/images/items/blue-pteri-morphing-potion.gif", 
+		"color": "Blue ", 
+		"species": "Pteri"
+	},
+	{
+		"name":"Yellow Chia Morphing Potion", 
+		"category": "mp", 
+		"url": "https://neopetsclassic.com/images/items/15682.gif", 
+		"color": "Yellow ", 
+		"species": "Chia"
+	},
+	{
+		"name":"Red Kacheek Morphing Potion", 
+		"category": "mp", 
+		"url": "https://neopetsclassic.com/images/items/15692.gif", 
+		"color": "Red ", 
+		"species": "Kacheek"
+	},
+	{
+		"name":"Blue Kyrii Morphing Potion", 
+		"category": "mp", 
+		"url": "https://neopetsclassic.com/images/items/blue-kyrii-morphing-potion.gif", 
+		"color": "Blue ", 
+		"species": "Kyrii"
+	},
+	{
+		"name":"Red Kiko Morphing Potion", 
+		"category": "mp", 
+		"url": "https://neopetsclassic.com/images/items/potion66_2x.png", 
+		"color": "Red ", 
+		"species": "Kiko"
+	},
+	{
+		"name":"Blue Chia Morphing Potion", 
+		"category": "mp", 
+		"url": "https://neopetsclassic.com/images/items/blue-chia-morphing-potion.gif", 
+		"color": "Blue ", 
+		"species": "Chia"
+	},
+	{
+		"name":"Green Kiko Morphing Potion", 
+		"category": "mp", 
+		"url": "https://neopetsclassic.com/images/items/17663.gif", 
+		"color": "Green ", 
+		"species": "Kiko"
+	},
+	{
+		"name":"Red Hissi Morphing Potion", 
+		"category": "mp", 
+		"url": "https://neopetsclassic.com/images/items/pot_hissi_red.gif", 
+		"color": "Red ", 
+		"species": "Hissi"
+	},
+	{
+		"name":"Red Skeith Morphing Potion", 
+		"category": "mp", 
+		"url": "https://neopetsclassic.com/images/items/15046.gif", 
+		"color": "Red ", 
+		"species": "Skeith"
+	},
+	{
+		"name":"Yellow Wocky Morphing Potion", 
+		"category": "mp", 
+		"url": "https://neopetsclassic.com/images/items/15676.gif", 
+		"color": "Yellow ", 
+		"species": "Wocky"
+	},
+	{
+		"name":"Yellow Kiko Morphing Potion", 
+		"category": "mp", 
+		"url": "https://neopetsclassic.com/images/items/17989.gif", 
+		"color": "Yellow ", 
+		"species": "Kiko"
+	},
+	{
+		"name":"Yellow Quiggle Morphing Potion", 
+		"category": "mp", 
+		"url": "https://neopetsclassic.com/images/items/24527.gif", 
+		"color": "Yellow ", 
+		"species": "Quiggle"
+	},
+	{
+		"name":"Blue Kacheek Morphing Potion", 
+		"category": "mp", 
+		"url": "https://neopetsclassic.com/images/items/blue-kacheek-morphing-potion.gif", 
+		"color": "Blue ", 
+		"species": "Kacheek"
+	},
+	{
+		"name":"Blue Cybunny Morphing Potion", 
+		"category": "mp", 
+		"url": "https://neopetsclassic.com/images/items/blue-cybunny-morphing-potion.gif", 
+		"color": "Blue ", 
+		"species": "Cybunny"
+	},
+	{
+		"name":"Green Peophin Morphing Potion", 
+		"category": "mp", 
+		"url": "https://neopetsclassic.com/images/items/17729.gif", 
+		"color": "Green ", 
+		"species": "Peophin"
+	},
+	{
+		"name":"Yellow Blumaroo Morphing Potion", 
+		"category": "mp", 
+		"url": "https://neopetsclassic.com/images/items/14759.gif", 
+		"color": "Yellow ", 
+		"species": "Blumaroo"
+	},
+	{
+		"name":"Green Chomby Morphing Potion", 
+		"category": "mp", 
+		"url": "https://neopetsclassic.com/images/items/22536.gif", 
+		"color": "Green ", 
+		"species": "Chomby"
+	},
+	{
+		"name":"Green Flotsam Morphing Potion", 
+		"category": "mp", 
+		"url": "https://neopetsclassic.com/images/items/17646.gif", 
+		"color": "Green ", 
+		"species": "Flotsam"
+	},
+	{
+		"name":"Red Jetsam Morphing Potion", 
+		"category": "mp", 
+		"url": "https://neopetsclassic.com/images/items/pot_red_jet_2x.png", 
+		"color": "Red ", 
+		"species": "Jetsam"
+	},
+	{
+		"name":"Green Jetsam Morphing Potion", 
+		"category": "mp", 
+		"url": "https://neopetsclassic.com/images/items/17662.gif", 
+		"color": "Green ", 
+		"species": "Jetsam"
+	},
+	{
+		"name":"Green JubJub Morphing Potion", 
+		"category": "mp", 
+		"url": "https://neopetsclassic.com/images/items/14874.gif", 
+		"color": "Green ", 
+		"species": "JubJub"
+	},
+	{
+		"name":"Red Mynci Morphing Potion", 
+		"category": "mp", 
+		"url": "https://neopetsclassic.com/images/items/14734.gif", 
+		"color": "Red ", 
+		"species": "Mynci"
+	},
+	{
+		"name":"Blue Acara Morphing Potion", 
+		"category": "mp", 
+		"url": "https://neopetsclassic.com/images/items/blue-acara-morphing-potion.gif", 
+		"color": "Blue ", 
+		"species": "Acara"
+	},
+	{
+		"name":"Blue Koi Morphing Potion", 
+		"category": "mp", 
+		"url": "https://neopetsclassic.com/images/items/blue-koi-morphing-potion.gif", 
+		"color": "Blue ", 
+		"species": "Koi"
+	},
+	{
+		"name":"Yellow Bruce Morphing Potion", 
+		"category": "mp", 
+		"url": "https://neopetsclassic.com/images/items/21593.gif", 
+		"color": "Yellow ", 
+		"species": "Bruce"
+	},
+	{
+		"name":"Green Blumaroo Morphing Potion", 
+		"category": "mp", 
+		"url": "https://neopetsclassic.com/images/items/15055.gif", 
+		"color": "Green ", 
+		"species": "Blumaroo"
+	},
+	{
+		"name":"Green Buzz Morphing Potion", 
+		"category": "mp", 
+		"url": "https://neopetsclassic.com/images/items/15060.gif", 
+		"color": "Green ", 
+		"species": "Buzz"
+	},
+	{
+		"name":"Blue Grundo Morphing Potion", 
+		"category": "mp", 
+		"url": "https://neopetsclassic.com/images/items/blue-grundo-morphing-potion.gif", 
+		"color": "Blue ", 
+		"species": "Grundo"
+	},
+	{
+		"name":"Yellow Yurble Morphing Potion", 
+		"category": "mp", 
+		"url": "https://neopetsclassic.com/images/items/17998.gif", 
+		"color": "Yellow ", 
+		"species": "Yurble"
+	},
+	{
+		"name":"Blue Eyrie Morphing Potion", 
+		"category": "mp", 
+		"url": "https://neopetsclassic.com/images/items/blue-eyrie-morphing-potion.gif", 
+		"color": "Blue ", 
+		"species": "Eyrie"
+	},
+	{
+		"name":"Red Lupe Morphing Potion", 
+		"category": "mp", 
+		"url": "https://neopetsclassic.com/images/items/14710.gif", 
+		"color": "Red ", 
+		"species": "Lupe"
+	},
+	{
+		"name":"Blue Hissi Morphing Potion", 
+		"category": "mp", 
+		"url": "https://neopetsclassic.com/images/items/pot_hissi_blue.gif", 
+		"color": "Blue ", 
+		"species": "Hissi"
+	},
+	{
+		"name":"Green Bruce Morphing Potion", 
+		"category": "mp", 
+		"url": "https://neopetsclassic.com/images/items/21595.gif", 
+		"color": "Green ", 
+		"species": "Bruce"
+	},
+	{
+		"name":"Yellow Grundo Morphing Potion", 
+		"category": "mp", 
+		"url": "https://neopetsclassic.com/images/items/17987.gif", 
+		"color": "Yellow ", 
+		"species": "Grundo"
+	},
+	{
+		"name":"Red Blumaroo Morphing Potion", 
+		"category": "mp", 
+		"url": "https://neopetsclassic.com/images/items/15058.gif", 
+		"color": "Red ", 
+		"species": "Blumaroo"
+	},
+	{
+		"name":"Green Aisha Morphing Potion", 
+		"category": "mp", 
+		"url": "https://neopetsclassic.com/images/items/3337.gif", 
+		"color": "Green ", 
+		"species": "Aisha"
+	},
+	{
+		"name":"Blue Uni Morphing Potion", 
+		"category": "mp", 
+		"url": "https://neopetsclassic.com/images/items/blue-uni-morphing-potion.gif", 
+		"color": "Blue ", 
+		"species": "Uni"
+	},
+	{
+		"name":"Red Nimmo Morphing Potion", 
+		"category": "mp", 
+		"url": "https://neopetsclassic.com/images/items/14862.gif", 
+		"color": "Red ", 
+		"species": "Nimmo"
+	},
+	{
+		"name":"Red Eyrie Morphing Potion", 
+		"category": "mp", 
+		"url": "https://neopetsclassic.com/images/items/potion88_2x.png", 
+		"color": "Red ", 
+		"species": "Eyrie"
+	},
+	{
+		"name":"Green Koi Morphing Potion", 
+		"category": "mp", 
+		"url": "https://neopetsclassic.com/images/items/17725.gif", 
+		"color": "Green ", 
+		"species": "Koi"
+	},
+	{
+		"name":"Red Kau Morphing Potion", 
+		"category": "mp", 
+		"url": "https://neopetsclassic.com/images/items/pot_kau_red_2x.png", 
+		"color": "Red ", 
+		"species": "Kau"
+	},
+	{
+		"name":"Blue Yurble Morphing Potion", 
+		"category": "mp", 
+		"url": "https://neopetsclassic.com/images/items/blue-yurble-morphing-potion.gif", 
+		"color": "Blue ", 
+		"species": "Yurble"
+	}
   ],
   "mps":
   [
