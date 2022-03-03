@@ -12,6 +12,7 @@ const fetch = (...args) => import('node-fetch').then(({ default: fetch }) => fet
 const { MessageEmbed } = require('discord.js');
 
 const db = new Database("https://kv.replit.com/v0/eyJhbGciOiJIUzUxMiIsImlzcyI6ImNvbm1hbiIsImtpZCI6InByb2Q6MSIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJjb25tYW4iLCJleHAiOjE2NDYzOTA3ODEsImlhdCI6MTY0NjI3OTE4MSwiZGF0YWJhc2VfaWQiOiJkMzZkMzVkOC02OGQyLTQyMWUtYTZmMy05M2M5OTcxNTNkM2MifQ.LjjZLBF2IWEIYwhGaPzICuBpBhAE9NFUPJnyzS7XLe6oX7L6PCvo2_ihhG4GsK5iAZQAp7Y1eDyzO90kYJZQrw");
+//const db = new Database();
 
 //declare constants
 const MAX_HUNGER = 11;
@@ -22,6 +23,7 @@ const POUND = "pound";
 const SHH_INTERVAL = 5;
 const ZAP_INTERVAL = 60;
 const RANDOM_RARITY = 10;
+const HEAL_INTERVAL = 15;
 
 //constructor
 function NeoRPG() {
@@ -386,7 +388,7 @@ function NeoRPG() {
      //initialize embed
       let embed = new MessageEmbed();
       embed.setTitle(`NeoRPG Help`);
-      embed.setDescription("\*\*Thanks for playing NeoRPG! Here are some helpful tips:\*\*\n\n `/join` - use this to join NeoRPG\n `/create` - use this to create a Neopet\n `/adopt` - use this to adopt a pet from the Neopian Pound\n `/setactive` - use this to set your active Neopet\n `/abandon` - use this to abandon a Neopet\n `/pound` - use this to view the Neopian Pound\n `/view` - use this to view the pet profile of the specified pet\n `/getstats` - use this to view a user profile\n `/feed` - use this to feed one of your Neopets\n `/zap` - use this to zap a Neopet\n `/shh` - use this receive a random event\n `/inventory` - use this to view your inventory\n `/paint` - use this to paint a pet if you have the Paint Brush\n `/quit` - use this to quit NeoRPG and give up all your progress\n `/help` - use this to get a list of commands and help with NeoRPG");
+      embed.setDescription("\*\*Thanks for playing NeoRPG! Here are some helpful tips:\*\*\n\n `/join` - use this to join NeoRPG\n `/create` - use this to create a Neopet\n `/adopt` - use this to adopt a pet from the Neopian Pound\n `/setactive` - use this to set your active Neopet\n `/abandon` - use this to abandon a Neopet\n `/pound` - use this to view the Neopian Pound\n `/view` - use this to view the pet profile of the specified pet\n `/getstats` - use this to view a user profile\n `/feed` - use this to feed one of your Neopets\n `/zap` - use this to zap a Neopet\n `/shh` - use this receive a random event\n `/inventory` - use this to view your inventory\n `/paint` - use this to paint a pet if you have the Paint Brush\n `/heal` - to visit the healing springs\n `/quit` - use this to quit NeoRPG and give up all your progress\n `/help` - use this to get a list of commands and help with NeoRPG");
       return embed;
     } 
   
@@ -726,7 +728,7 @@ function NeoRPG() {
 
     //start most functions with checking if the player is playing
     if(!value){
-      embed.setTitle("You can't abandon a pet if you haven't joined NeoRPG!");
+      embed.setTitle("You can't paint a pet if you haven't joined NeoRPG!");
       embed.setDescription("");
       return embed;
     }
@@ -776,6 +778,154 @@ function NeoRPG() {
     await db.set(user.id, value);
     return embed;
   }//end paint function
+
+  //heal pet
+   this.heal = async function(user){
+    //get user
+    value = await db.get(user.id);
+    let embed = new MessageEmbed();
+
+    //start most functions with checking if the player is playing
+    if(!value){
+      embed.setTitle("You can't heal pets if you haven't joined NeoRPG!");
+      embed.setDescription("");
+      return embed;
+    }
+    //check if the player even has pets
+    if(value.totalPets <= 0){
+      embed.setTitle("You have no pets to heal!");
+      embed.setDescription("");
+      embed.setImage("https://neopetsclassic.com/images/misc/healing_springs_faerie.gif");
+      return embed
+    }
+    //Date and Time blocks are here
+    //get today's time
+      var today = new Date();
+      //if there is a value for last SHH (AKA The User got an SHH Before)
+      if(value.lastHeal){
+        //calcuate time remaining
+        const timeRemaining = dateDiffInMinutes(value.lastHeal, today)
+        //if more than designated minutes reset the last shh value
+        if(timeRemaining >=HEAL_INTERVAL){
+          value.lastHeal = today;
+        }
+        //otherwise tell the user it is too soon
+        else{
+          embed.setTitle("Too Soon");
+          embed.setDescription(`You can get your next visit to the healing springs in ${HEAL_INTERVAL-timeRemaining} minutes.`);
+          embed.setImage("https://neopetsclassic.com/images/misc/healing_springs_faerie.gif");
+          return embed;
+        }
+      }
+      //if never received a SHH set the value to now
+      else{
+        value.lastHeal = today;
+      }
+      //update the datebase
+      await db.set(user.id, value);
+      //Date and Time blocks finish here
+     
+     let random = getRandomInt(6);
+     if(random == 0){
+       value.pets[value.activePet].hp += 10;
+       await db.set(user.id, value);
+      embed.setTitle(`${value.pets[value.activePet].name} gained 10 hit points`);
+      embed.setDescription("");
+      embed.setImage("https://neopetsclassic.com/images/misc/healing_springs_faerie2.gif");
+      return embed;
+     }
+    if(random == 1){
+      value.pets[value.activePet].hp += 10;
+      for(let j=0;j<value.pets.length;j++){ //look at users pets
+          value.pets[j].hp = value.pets[j].maxhp;//set hp to 10 //this adjusts all pets
+          value.pets[j].hunger = 10;
+      }
+      await db.set(user.id, value);
+      embed.setTitle(`All your pets are completely healed!`);
+      embed.setDescription("");
+      embed.setImage("https://neopetsclassic.com/images/misc/healing_springs_faerie2.gif");
+      return embed;
+     }
+     if(random == 2){
+      value.pets[value.activePet].hp += 10;
+      for(let j=0;j<value.pets.length;j++){ //look at users pets
+          value.pets[j].hp += 15;//set hp to 10 //this adjusts all pets
+      }
+      await db.set(user.id, value);
+      embed.setTitle(`All your neopets gained 10 HP!`);
+      embed.setDescription("");
+      embed.setImage("https://neopetsclassic.com/images/misc/healing_springs_faerie2.gif");
+      return embed;
+     } 
+     if(random == 3){
+      value.pets[value.activePet].hp = value.pets[value.activePet].maxhp;
+      value.pets[value.activePet].hunger = MAX_HUNGER;
+      await db.set(user.id, value);
+      embed.setTitle(`${value.pets[value.activePet].name} regained all their hit points and is not hungry anymore`);
+      embed.setDescription("");
+      embed.setImage("https://neopetsclassic.com/images/misc/healing_springs_faerie2.gif");
+      return embed;
+     }
+      if(random == 4){
+        value.pets[value.activePet].hp += 3;
+        for(let j=0;j<value.pets.length;j++){ //look at users pets
+            value.pets[j].hp += 3;//set hp to 10 //this adjusts all pets
+        }
+        await db.set(user.id, value);
+        embed.setTitle(`All your neopets gained 3 HP!`);
+        embed.setDescription("");
+        embed.setImage("https://neopetsclassic.com/images/misc/healing_springs_faerie2.gif");
+        return embed;
+     }
+    if(random == 5){
+        value.pets[value.activePet].hp += 5;
+        for(let j=0;j<value.pets.length;j++){ //look at users pets
+            value.pets[j].hp += 5;//set hp to 10 //this adjusts all pets
+        }
+        await db.set(user.id, value);
+        embed.setTitle(`All your neopets gained 5 HP!`);
+        embed.setDescription("");
+        embed.setImage("https://neopetsclassic.com/images/misc/healing_springs_faerie2.gif");
+        return embed;
+     }
+     if(random == 6){
+       value.pets[value.activePet].hp += 5;
+      await db.set(user.id, value);
+      embed.setTitle(`${value.pets[value.activePet].name} gained 5 hit points`);
+      embed.setDescription("");
+      embed.setImage("https://neopetsclassic.com/images/misc/healing_springs_faerie2.gif");
+      return embed;
+     }
+    if(random == 7){
+        value.pets[value.activePet].hp += 15;
+        await db.set(user.id, value);
+        embed.setTitle(`${value.pets[value.activePet].name} gained 15 hit points`);
+        embed.setDescription("");
+        embed.setImage("https://neopetsclassic.com/images/misc/healing_springs_faerie2.gif");
+        return embed;
+     }
+    if(random == 8){
+        value.pets[value.activePet].hp += 1;
+        await db.set(user.id, value);
+        embed.setTitle(`${value.pets[value.activePet].name} gained 1 hit point`);
+        embed.setDescription("");
+        embed.setImage("https://neopetsclassic.com/images/misc/healing_springs_faerie2.gif");
+        return embed;
+     }
+    if(random == 4){
+        value.pets[value.activePet].hp += 1;
+        await db.set(user.id, value);
+        for(let j=0;j<value.pets.length;j++){ //look at users pets
+            value.pets[j].hp += 1;//set hp to 10 //this adjusts all pets
+        }
+        embed.setTitle(`All your neopets gained 1 HP!`);
+        embed.setDescription("");
+        embed.setImage("https://neopetsclassic.com/images/misc/healing_springs_faerie2.gif");
+        return embed;
+     }
+
+   }
+  
   
   //zap a pet
    this.zap = async function(user, petName){

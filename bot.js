@@ -177,6 +177,12 @@ client.on('interactionCreate', async interaction => {
     content = await neoRPG.paint(interaction.user, petName, color);
     await interaction.editReply({ embeds: [content] });
   }
+  
+  //healing springs
+  if (interaction.commandName === 'heal') {
+    content = await neoRPG.heal(interaction.user);
+    await interaction.reply({ embeds: [content] });
+  }
 
   //get help
   if (interaction.commandName === 'help') {
