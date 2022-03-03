@@ -40,6 +40,8 @@ const commands = [
   //join slash command /join
   //adds user the game
   new SlashCommandBuilder().setName('join').setDescription('Lets you join NeoRPG!'),
+  //wheel of excitement
+    new SlashCommandBuilder().setName('excitement').setDescription('Lets you spin the wheel of excitement!'),
   //quit slash command /quit 
   //removes user from game
   new SlashCommandBuilder().setName('quit').setDescription('Quit playing NeoRPG and give everything up'),

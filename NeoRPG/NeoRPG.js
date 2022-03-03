@@ -24,6 +24,8 @@ const SHH_INTERVAL = 5;
 const ZAP_INTERVAL = 60;
 const RANDOM_RARITY = 10;
 const HEAL_INTERVAL = 15;
+const EXCITEMENT_INTERVAL = 30;
+const EXCITEMENT_COST = 150;
 
 //constructor
 function NeoRPG() {
@@ -69,9 +71,9 @@ function NeoRPG() {
  //    }
  //    console.log("Done");
  //  }
-  this.test = async function(message){
-    console.log(process.env.REPLIT_DB_URL)
-  }
+  // this.test = async function(message){
+  //   console.log(process.env.REPLIT_DB_URL)
+  // }
   //join NeoRPG takes in user information
   this.join = async function(user){
     
@@ -388,7 +390,7 @@ function NeoRPG() {
      //initialize embed
       let embed = new MessageEmbed();
       embed.setTitle(`NeoRPG Help`);
-      embed.setDescription("\*\*Thanks for playing NeoRPG! Here are some helpful tips:\*\*\n\n `/join` - use this to join NeoRPG\n `/create` - use this to create a Neopet\n `/adopt` - use this to adopt a pet from the Neopian Pound\n `/setactive` - use this to set your active Neopet\n `/abandon` - use this to abandon a Neopet\n `/pound` - use this to view the Neopian Pound\n `/view` - use this to view the pet profile of the specified pet\n `/getstats` - use this to view a user profile\n `/feed` - use this to feed one of your Neopets\n `/zap` - use this to zap a Neopet\n `/shh` - use this receive a random event\n `/inventory` - use this to view your inventory\n `/paint` - use this to paint a pet if you have the Paint Brush\n `/heal` - to visit the healing springs\n `/quit` - use this to quit NeoRPG and give up all your progress\n `/help` - use this to get a list of commands and help with NeoRPG");
+      embed.setDescription("\*\*Thanks for playing NeoRPG! Here are some helpful tips:\*\*\n\n `/join` - use this to join NeoRPG\n `/create` - use this to create a Neopet\n `/adopt` - use this to adopt a pet from the Neopian Pound\n `/setactive` - use this to set your active Neopet\n `/abandon` - use this to abandon a Neopet\n `/pound` - use this to view the Neopian Pound\n `/view` - use this to view the pet profile of the specified pet\n `/getstats` - use this to view a user profile\n `/feed` - use this to feed one of your Neopets\n `/excitement` - spin the Wheel of Excitement\n `/zap` - use this to zap a Neopet\n `/shh` - use this receive a random event\n `/inventory` - use this to view your inventory\n `/paint` - use this to paint a pet if you have the Paint Brush\n `/heal` - to visit the healing springs\n `/quit` - use this to quit NeoRPG and give up all your progress\n `/help` - use this to get a list of commands and help with NeoRPG");
       return embed;
     } 
   
@@ -446,7 +448,7 @@ function NeoRPG() {
               embed.setDescription("");
               return embed
             }
-            value.np = value.np - 20;
+            value.np = value.np - FEED_COST;
             await db.set(user.id, value);
             return getPetEmbed(value.pets[feedMeIndex], `Thank you for feeding me!`);
             }
@@ -626,7 +628,7 @@ function NeoRPG() {
     }
     else{
       //regular randoms
-      let random = getRandomInt(9);
+      let random = getRandomInt(11);
       //add NP
       if(random==0){
         await this.addNP(user, 50);
@@ -695,7 +697,7 @@ function NeoRPG() {
         value.pets[value.activePet].defense++
         await db.set(user.id, value);
         embed.setTitle("Something Has Happened");
-        embed.setDescription(`${value.pets[value.activePet].name} got Stronger!`); embed.setImage("https://images.neopets.com/randomevents/images/battle_faerie2.png");
+        embed.setDescription(`${value.pets[value.activePet].name} gained a point of Defense!`); embed.setImage("https://images.neopets.com/randomevents/images/battle_faerie2.png");
         return embed
       }
       //Boochi Miss
@@ -703,6 +705,36 @@ function NeoRPG() {
         embed.setTitle("Something Has Happened");
         embed.setDescription(`Boochi takes aim at ${value.pets[value.activePet].name} but thankfully he misses!`);   embed.setImage("https://static.wikia.nocookie.net/guilds/images/5/52/BOOCHI.png/revision/latest/scale-to-width-down/246?cb=20160709191118");
         return embed;
+      }
+      //Boochi Miss
+      if(random==8){
+        embed.setTitle("Something Has Happened");
+        embed.setDescription(`Boochi takes aim at ${value.pets[value.activePet].name} but thankfully he misses!`);   embed.setImage("https://static.wikia.nocookie.net/guilds/images/5/52/BOOCHI.png/revision/latest/scale-to-width-down/246?cb=20160709191118");
+        return embed;
+      }
+      if(random==9){
+        //check for an active pet
+        if(value.activePet < 0) return nothingSHH();
+        for(let j=0;j<value.pets.length;j++){ //look at users pets
+          value.pets[j].hp = 0;//set hp to 0 //this adjusts all pets
+      }
+      await db.set(user.id, value);
+      embed.setTitle(`Oh No! Your pets got hit by a crazy chia in a Lambo!!`);
+      embed.setDescription("");
+      embed.setImage("http://images.neopets.com/images/nigel_car.gif");
+      return embed;
+      }
+      if(random==10){
+        //check for an active pet
+        if(value.activePet < 0) return nothingSHH();
+        for(let j=0;j<value.pets.length;j++){ //look at users pets
+          value.pets[j].hunger = 0;//set hunger to zero
+      }
+      await db.set(user.id, value);
+      embed.setTitle(`Your neopets all suddenly feel very hungry`);
+      embed.setDescription("");
+      embed.setImage("https://items.jellyneo.net/assets/imgs/items/3477.gif?487");
+      return embed;
       }
       
     }
@@ -779,6 +811,155 @@ function NeoRPG() {
     return embed;
   }//end paint function
 
+  //Wheel of excitement
+  this.excitement = async function(user){
+  //get user
+    value = await db.get(user.id);
+    let embed = new MessageEmbed();
+    //start most functions with checking if the player is playing
+    if(!value){
+      embed.setTitle("You can't spin the wheel of excitement if you haven't joined NeoRPG!");
+      embed.setDescription("");
+      return embed;
+    }
+    //Date and Time blocks are here
+    //get today's time
+    var today = new Date();
+    //if there is a value for last SHH (AKA The User got an SHH Before)
+    if(value.lastExcitement){
+      //calcuate time remaining
+      const timeRemaining = dateDiffInMinutes(value.lastExcitement, today)
+      //if more than designated minutes reset the last shh value
+      if(timeRemaining >=EXCITEMENT_INTERVAL){
+        value.lastExcitement = today;
+      }
+      //otherwise tell the user it is too soon
+      else{
+        embed.setTitle("Too Soon");
+        embed.setDescription(`You can get your next spin of the Wheel of Excitement in ${EXCITEMENT_INTERVAL-timeRemaining} minutes.`);
+        embed.setImage("https://thedailyneopets.com/uploads/articles/dailies/excitement/Oldwheel.jpg");
+        return embed;
+      }
+    }
+    //if never received a SHH set the value to now
+    else{
+      value.lastExcitement = today;
+    }
+    //update the datebase
+    await db.set(user.id, value);
+    //Date and Time blocks finish here
+    //check for NP
+    if(value.np < EXCITEMENT_COST){
+     embed.setTitle(`Sorry you do not have enough Neopoints to Feed Your Pet!\nCost: ${EXCITEMENT_COST}\nYour NP:${value.np}`);
+     embed.setDescription("");
+     return embed
+    }
+    
+    value.np = value.np - EXCITEMENT_COST;
+    //update the NP
+    await db.set(user.id, value);
+
+    //spin the wheel and get a random number
+    let random = getRandomInt(9);
+    //Lava Ghoul
+    if(random == 0){
+      for(let j=0;j<value.pets.length;j++){ //look at users pets
+          value.pets[j].hp = Math.floor(value.pets[j].maxhp/2);//set hp to half of the hp
+      }
+      await db.set(user.id, value);
+      embed.setTitle("THUNDER!");
+      embed.setDescription(`A Bolt of Lightning comes and zaps your pets!!!`);
+      embed.setImage("https://thedailyneopets.com/uploads/articles/dailies/excitement/Oldwheel.jpg");
+      return embed;
+    }
+    //Full Heal
+    if(random == 1){
+      for(let j=0;j<value.pets.length;j++){ //look at users pets
+          value.pets[j].hp = value.pets[j].maxhp;//set hp full hp
+      }
+      await db.set(user.id, value);
+      embed.setTitle("Healed!");
+      embed.setDescription(`All your neopets are completely healed!`);
+      embed.setImage("http://images.neopets.com/faerieland/win_magic.gif");
+      return embed;
+    }
+    //Mystery Prize
+    if(random == 2){
+      let randomNP = getRandomInt(100) + 25;
+      value.np = value.np + randomNP;
+      await db.set(user.id, value);
+      embed.setTitle("Mystery Prize!");
+      embed.setDescription(`You earned ${randomNP} NP`);
+      embed.setImage("https://thedailyneopets.com/uploads/articles/dailies/excitement/Oldwheel.jpg");
+      return embed;
+    }
+    //Pant Devil
+    if(random == 3){
+      // if(value.inventory.length <= 0){
+      //   embed.setTitle("Pant Devil!");
+      //   embed.setDescription(`The Pant Devil tried to steal your shit but saw you were poor af and ran off`);
+      //   embed.setImage("https://bookofages.jellyneo.net/assets/imgs/characters/lg/381.png");
+      // }
+      // await db.set(user.id, value);
+      // embed.setTitle("Pant Devil!");
+      // embed.setDescription(`You earned ${randomNP}`);
+      // embed.setImage("https://thedailyneopets.com/uploads/articles/dailies/excitement/Oldwheel.jpg");
+      embed.setTitle("Pant Devil!");
+      embed.setDescription(`The Pant Devil tried to steal your shit but saw you were poor af and ran off`); embed.setImage("https://bookofages.jellyneo.net/assets/imgs/characters/lg/381.png");
+      return embed;    
+    }
+    //Lava Ghoul More Aggressive
+    if(random == 4){
+      for(let j=0;j<value.pets.length;j++){ //look at users pets
+          value.pets[j].hp = 0;//set hp to 0
+      }
+      await db.set(user.id, value);
+      embed.setTitle("Lava Ghoul!");
+      embed.setDescription(`The Lava Ghoul Comes and Breathes Fire all over your pets!!!`);
+      embed.setImage("https://bookofages.jellyneo.net/assets/imgs/characters/lg/584.png");
+      return embed;
+    }
+    //Random MP
+    if(random == 5){
+      let randomMPIndex = getRandomInt(itemList.basicmps.length);
+      let randomMP = itemList.basicmps[randomMPIndex];
+      value.inventory.push(randomMP);
+      //adjust db
+      await db.set(user.id, value);
+      embed.setTitle("Magic Item!");
+      embed.setDescription(`The Light Faerie Appears and Hands you a ${randomMP.name}`);
+      embed.setImage("http://images.neopets.com/faerieland/win_magic.gif");
+      return embed;
+    }
+    //2000 NP
+    if(random == 6){;
+      value.np = value.np + 2000;
+      await db.set(user.id, value);
+      embed.setTitle("WIN!");
+      embed.setDescription(`You win 2000 NP!!`);
+      embed.setImage("https://thedailyneopets.com/uploads/articles/dailies/excitement/Oldwheel.jpg");
+      return embed;
+    }
+    //5000 NP
+    if(random == 7){;
+      value.np = value.np + 500;
+      await db.set(user.id, value);
+      embed.setTitle("WIN!");
+      embed.setDescription(`You win 500 NP!!`);
+      embed.setImage("https://thedailyneopets.com/uploads/articles/dailies/excitement/Oldwheel.jpg");
+      return embed;
+    }
+    //10000 NP
+    if(random == 8){;
+      value.np = value.np + 10000;
+      await db.set(user.id, value);
+      embed.setTitle("WIN!");
+      embed.setDescription(`You win 10000 NP!! WOW!`);
+      embed.setImage("https://thedailyneopets.com/uploads/articles/dailies/excitement/Oldwheel.jpg");
+      return embed;
+    }
+  }
+  
   //heal pet
    this.heal = async function(user){
     //get user
@@ -825,17 +1006,22 @@ function NeoRPG() {
       await db.set(user.id, value);
       //Date and Time blocks finish here
      
-     let random = getRandomInt(6);
+     let random = getRandomInt(10);
      if(random == 0){
-       value.pets[value.activePet].hp += 10;
-       await db.set(user.id, value);
+      if(value.activePet < 0){
+        embed.setTitle(`I would have healed your active pet but you don't have one :(`);
+        embed.setDescription("");
+        embed.setImage("https://neopetsclassic.com/images/misc/healing_springs_faerie2.gif");
+        return embed
+      }
+      value.pets[value.activePet].hp += 10;
+      await db.set(user.id, value);
       embed.setTitle(`${value.pets[value.activePet].name} gained 10 hit points`);
       embed.setDescription("");
       embed.setImage("https://neopetsclassic.com/images/misc/healing_springs_faerie2.gif");
       return embed;
      }
     if(random == 1){
-      value.pets[value.activePet].hp += 10;
       for(let j=0;j<value.pets.length;j++){ //look at users pets
           value.pets[j].hp = value.pets[j].maxhp;//set hp to 10 //this adjusts all pets
           value.pets[j].hunger = 10;
@@ -847,7 +1033,6 @@ function NeoRPG() {
       return embed;
      }
      if(random == 2){
-      value.pets[value.activePet].hp += 10;
       for(let j=0;j<value.pets.length;j++){ //look at users pets
           value.pets[j].hp += 15;//set hp to 10 //this adjusts all pets
       }
@@ -858,6 +1043,12 @@ function NeoRPG() {
       return embed;
      } 
      if(random == 3){
+      if(value.activePet < 0){
+        embed.setTitle(`I would have healed your active pet but you don't have one :(`);
+        embed.setDescription("");
+        embed.setImage("https://neopetsclassic.com/images/misc/healing_springs_faerie2.gif");
+        return embed
+      }
       value.pets[value.activePet].hp = value.pets[value.activePet].maxhp;
       value.pets[value.activePet].hunger = MAX_HUNGER;
       await db.set(user.id, value);
@@ -867,7 +1058,6 @@ function NeoRPG() {
       return embed;
      }
       if(random == 4){
-        value.pets[value.activePet].hp += 3;
         for(let j=0;j<value.pets.length;j++){ //look at users pets
             value.pets[j].hp += 3;//set hp to 10 //this adjusts all pets
         }
@@ -878,7 +1068,6 @@ function NeoRPG() {
         return embed;
      }
     if(random == 5){
-        value.pets[value.activePet].hp += 5;
         for(let j=0;j<value.pets.length;j++){ //look at users pets
             value.pets[j].hp += 5;//set hp to 10 //this adjusts all pets
         }
@@ -889,7 +1078,13 @@ function NeoRPG() {
         return embed;
      }
      if(random == 6){
-       value.pets[value.activePet].hp += 5;
+      if(value.activePet < 0){
+        embed.setTitle(`I would have healed your active pet but you don't have one :(`);
+        embed.setDescription("");
+        embed.setImage("https://neopetsclassic.com/images/misc/healing_springs_faerie2.gif");
+        return embed
+      }
+      value.pets[value.activePet].hp += 5;
       await db.set(user.id, value);
       embed.setTitle(`${value.pets[value.activePet].name} gained 5 hit points`);
       embed.setDescription("");
@@ -897,23 +1092,34 @@ function NeoRPG() {
       return embed;
      }
     if(random == 7){
-        value.pets[value.activePet].hp += 15;
-        await db.set(user.id, value);
-        embed.setTitle(`${value.pets[value.activePet].name} gained 15 hit points`);
+      if(value.activePet < 0){
+        embed.setTitle(`I would have healed your active pet but you don't have one :(`);
         embed.setDescription("");
         embed.setImage("https://neopetsclassic.com/images/misc/healing_springs_faerie2.gif");
-        return embed;
+        return embed
+      }
+      value.pets[value.activePet].hp += 15;
+      await db.set(user.id, value);
+      embed.setTitle(`${value.pets[value.activePet].name} gained 15 hit points`);
+      embed.setDescription("");
+      embed.setImage("https://neopetsclassic.com/images/misc/healing_springs_faerie2.gif");
+      return embed;
      }
     if(random == 8){
-        value.pets[value.activePet].hp += 1;
-        await db.set(user.id, value);
-        embed.setTitle(`${value.pets[value.activePet].name} gained 1 hit point`);
+      if(value.activePet < 0){
+        embed.setTitle(`I would have healed your active pet but you don't have one :(`);
         embed.setDescription("");
         embed.setImage("https://neopetsclassic.com/images/misc/healing_springs_faerie2.gif");
-        return embed;
+        return embed
+      }
+      value.pets[value.activePet].hp += 1;
+      await db.set(user.id, value);
+      embed.setTitle(`${value.pets[value.activePet].name} gained 1 hit point`);
+      embed.setDescription("");
+      embed.setImage("https://neopetsclassic.com/images/misc/healing_springs_faerie2.gif");
+      return embed;
      }
-    if(random == 4){
-        value.pets[value.activePet].hp += 1;
+    if(random == 9){
         await db.set(user.id, value);
         for(let j=0;j<value.pets.length;j++){ //look at users pets
             value.pets[j].hp += 1;//set hp to 10 //this adjusts all pets
@@ -925,7 +1131,6 @@ function NeoRPG() {
      }
 
    }
-  
   
   //zap a pet
    this.zap = async function(user, petName){

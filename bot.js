@@ -134,6 +134,12 @@ client.on('interactionCreate', async interaction => {
     content = await neoRPG.randomEvent(interaction.user);
     await interaction.editReply({ embeds: [content] });
   }
+
+  //wheel of excitement NeoRPG
+  if (interaction.commandName === 'excitement') {
+    content = await neoRPG.excitement(interaction.user);
+    await interaction.reply({ embeds: [content] });
+  }
   
   //Set Active Pet
   if (interaction.commandName === 'setactive') {

@@ -438,7 +438,517 @@
   ],
   "mps":
   [
-    
+    	{
+		"name":"Baby Acara Morphing Potion", 
+		"category": "mp", 
+		"url": "https://neopetsclassic.com/images/items/3321.gif", 
+		"color": "Baby ", 
+		"species": "Acara"
+	},
+	{
+		"name":"Baby Aisha Morphing Potion", 
+		"category": "mp", 
+		"url": "https://neopetsclassic.com/images/items/3335.gif", 
+		"color": "Baby ", 
+		"species": "Aisha"
+	},
+	{
+		"name":"Baby Kacheek Morphing Potion", 
+		"category": "mp", 
+		"url": "https://neopetsclassic.com/images/items/21912.gif", 
+		"color": "Baby ", 
+		"species": "Kacheek"
+	},
+	{
+		"name":"Baby Meerca Morphing Potion", 
+		"category": "mp", 
+		"url": "https://neopetsclassic.com/images/items/14807.gif", 
+		"color": "Baby ", 
+		"species": "Meerca"
+	},
+	{
+		"name":"Blue Draik Morphing Potion", 
+		"category": "mp", 
+		"url": "https://neopetsclassic.com/images/items/blue-draik-morphing-potion.gif", 
+		"color": "Blue ", 
+		"species": "Draik"
+	},
+	{
+		"name":"Blue Krawk Morphing Potion", 
+		"category": "mp", 
+		"url": "https://neopetsclassic.com/images/items/blue-krawk-morphing-potion.gif", 
+		"color": "Blue ", 
+		"species": "Krawk"
+	},
+	{
+		"name":"Brown Bruce Morphing Potion", 
+		"category": "mp", 
+		"url": "https://neopetsclassic.com/images/items/pot_brown_bruce.gif", 
+		"color": "Brown ", 
+		"species": "Bruce"
+	},
+	{
+		"name":"Brown Grundo Morphing Potion", 
+		"category": "mp", 
+		"url": "https://neopetsclassic.com/images/items/pot_grundo_brown.gif", 
+		"color": "Brown ", 
+		"species": "Grundo"
+	},
+	{
+		"name":"Brown Ixi Morphing Potion", 
+		"category": "mp", 
+		"url": "https://neopetsclassic.com/images/items/potion_ixi_brown.gif", 
+		"color": "Brown ", 
+		"species": "Ixi"
+	},
+	{
+		"name":"Brown Ruki Morphing Potion", 
+		"category": "mp", 
+		"url": "https://neopetsclassic.com/images/items/pot_ruki_brown.gif", 
+		"color": "Brown ", 
+		"species": "Ruki"
+	},
+	{
+		"name":"Checkered Aisha Morphing Potion", 
+		"category": "mp", 
+		"url": "https://neopetsclassic.com/images/items/pot_checkered_aisha.gif", 
+		"color": "Checkered ", 
+		"species": "Aisha"
+	},
+	{
+		"name":"Checkered Bori Morphing Potion", 
+		"category": "mp", 
+		"url": "https://neopetsclassic.com/images/items/pot_bori_checkered.gif", 
+		"color": "Checkered ", 
+		"species": "Bori"
+	},
+	{
+		"name":"Checkered Kiko Morphing Potion", 
+		"category": "mp", 
+		"url": "https://neopetsclassic.com/images/items/pot_kiko_checkered.gif", 
+		"color": "Checkered ", 
+		"species": "Kiko"
+	},
+	{
+		"name":"Checkered Koi Morphing Potion", 
+		"category": "mp", 
+		"url": "https://neopetsclassic.com/images/items/pot_koi_checkered.gif", 
+		"color": "Checkered ", 
+		"species": "Koi"
+	},
+	{
+		"name":"Checkered Poogle Morphing Potion", 
+		"category": "mp", 
+		"url": "https://neopetsclassic.com/images/items/pot_poogle_checkered.gif", 
+		"color": "Checkered ", 
+		"species": "Poogle"
+	},
+	{
+		"name":"Checkered Shoyru Morphing Potion", 
+		"category": "mp", 
+		"url": "https://neopetsclassic.com/images/items/pot_shoyru_checkered.gif", 
+		"color": "Checkered ", 
+		"species": "Shoyru"
+	},
+	{
+		"name":"Christmas Blumaroo Morphing Potion", 
+		"category": "mp", 
+		"url": "https://neopetsclassic.com/images/items/potion_blum_chris.gif", 
+		"color": "Christmas ", 
+		"species": "Blumaroo"
+	},
+	{
+		"name":"Christmas Bori Morphing Potion", 
+		"category": "mp", 
+		"url": "https://neopetsclassic.com/images/items/pot_bori_christmas.gif", 
+		"color": "Christmas ", 
+		"species": "Bori"
+	},
+	{
+		"name":"Christmas Bruce Morphing Potion", 
+		"category": "mp", 
+		"url": "https://neopetsclassic.com/images/items/pot_bruce_christmas.gif", 
+		"color": "Christmas ", 
+		"species": "Bruce"
+	},
+	{
+		"name":"Christmas Grundo Morphing Potion", 
+		"category": "mp", 
+		"url": "https://neopetsclassic.com/images/items/pot_grundo_christmas.gif", 
+		"color": "Christmas ", 
+		"species": "Grundo"
+	},
+	{
+		"name":"Christmas Kiko Morphing Potion", 
+		"category": "mp", 
+		"url": "https://neopetsclassic.com/images/items/potion_kiko_chris.gif", 
+		"color": "Christmas ", 
+		"species": "Kiko"
+	},
+	{
+		"name":"Christmas Kougra Morphing Potion", 
+		"category": "mp", 
+		"url": "https://neopetsclassic.com/images/items/pot_kougra_christmas.gif", 
+		"color": "Christmas ", 
+		"species": "Kougra"
+	},
+	{
+		"name":"Cloud Bruce Morphing Potion", 
+		"category": "mp", 
+		"url": "https://neopetsclassic.com/images/items/pot_bruce_cloud.gif", 
+		"color": "Cloud ", 
+		"species": "Bruce"
+	},
+	{
+		"name":"Cloud Gelert Morphing Potion", 
+		"category": "mp", 
+		"url": "https://neopetsclassic.com/images/items/potion73.gif", 
+		"color": "Cloud ", 
+		"species": "Gelert"
+	},
+	{
+		"name":"Cloud Grundo Morphing Potion", 
+		"category": "mp", 
+		"url": "https://neopetsclassic.com/images/items/pot_grundo_cloud.gif", 
+		"color": "Cloud ", 
+		"species": "Grundo"
+	},
+	{
+		"name":"Cloud Ixi Morphing Potion", 
+		"category": "mp", 
+		"url": "https://neopetsclassic.com/images/items/potion_ixi_cloud.gif", 
+		"color": "Cloud ", 
+		"species": "Ixi"
+	},
+	{
+		"name":"Cloud Ruki Morphing Potion", 
+		"category": "mp", 
+		"url": "https://neopetsclassic.com/images/items/pot_ruki_cloud.gif", 
+		"color": "Cloud ", 
+		"species": "Ruki"
+	},
+	{
+		"name":"Cloud Scorchio Morphing Potion", 
+		"category": "mp", 
+		"url": "https://neopetsclassic.com/images/items/potion_scorchio_cloud.gif", 
+		"color": "Cloud ", 
+		"species": "Scorchio"
+	},
+	{
+		"name":"Darigan Aisha Morphing Potion", 
+		"category": "mp", 
+		"url": "https://neopetsclassic.com/images/items/pot_aisha_darigan.gif", 
+		"color": "Darigan ", 
+		"species": "Aisha"
+	},
+	{
+		"name":"Darigan Blumaroo Morphing Potion", 
+		"category": "mp", 
+		"url": "https://neopetsclassic.com/images/items/pot_blumaroo_darigan.gif", 
+		"color": "Darigan ", 
+		"species": "Blumaroo"
+	},
+	{
+		"name":"Darigan Bori Morphing Potion", 
+		"category": "mp", 
+		"url": "https://neopetsclassic.com/images/items/pot_bori_darigan.gif", 
+		"color": "Darigan ", 
+		"species": "Bori"
+	},
+	{
+		"name":"Darigan Eyrie Morphing Potion", 
+		"category": "mp", 
+		"url": "https://neopetsclassic.com/images/items/pot_eyriedarigan.gif", 
+		"color": "Darigan ", 
+		"species": "Eyrie"
+	},
+	{
+		"name":"Darigan Grundo Morphing Potion", 
+		"category": "mp", 
+		"url": "https://neopetsclassic.com/images/items/pot_grundo_darigan.gif", 
+		"color": "Darigan ", 
+		"species": "Grundo"
+	},
+	{
+		"name":"Darigan Kyrii Morphing Potion", 
+		"category": "mp", 
+		"url": "https://neopetsclassic.com/images/items/pot_kyrii_darigan.gif", 
+		"color": "Darigan ", 
+		"species": "Kyrii"
+	},
+	{
+		"name":"Desert Aisha Morphing Potion", 
+		"category": "mp", 
+		"url": "https://neopetsclassic.com/images/items/moprh_aish_des.gif", 
+		"color": "Desert ", 
+		"species": "Aisha"
+	},
+	{
+		"name":"Desert Blumaroo Morphing Potion", 
+		"category": "mp", 
+		"url": "https://neopetsclassic.com/images/items/morph_blu_des.gif", 
+		"color": "Desert ", 
+		"species": "Blumaroo"
+	},
+	{
+		"name":"Desert Poogle Morphing Potion", 
+		"category": "mp", 
+		"url": "https://neopetsclassic.com/images/items/pot_poog_des.gif", 
+		"color": "Desert ", 
+		"species": "Poogle"
+	},
+	{
+		"name":"Disco Bruce Morphing Potion", 
+		"category": "mp", 
+		"url": "https://neopetsclassic.com/images/items/pot_disco_bruce.gif", 
+		"color": "Disco ", 
+		"species": "Bruce"
+	},
+	{
+		"name":"Disco Moehog Morphing Potion", 
+		"category": "mp", 
+		"url": "https://neopetsclassic.com/images/items/pot_moehog_disco.gif", 
+		"color": "Disco ", 
+		"species": "Moehog"
+	},
+	{
+		"name":"Faerie Blumaroo Morphing Potion", 
+		"category": "mp", 
+		"url": "https://neopetsclassic.com/images/items/pot_blum_faerie.gif", 
+		"color": "Faerie ", 
+		"species": "Blumaroo"
+	},
+	{
+		"name":"Faerie Grundo Morphing Potion", 
+		"category": "mp", 
+		"url": "https://neopetsclassic.com/images/items/pot_grundo_faerie.gif", 
+		"color": "Faerie ", 
+		"species": "Grundo"
+	},
+	{
+		"name":"Faerie Ixi Morphing Potion", 
+		"category": "mp", 
+		"url": "https://neopetsclassic.com/images/items/pot_ixi_faerie.gif", 
+		"color": "Faerie ", 
+		"species": "Ixi"
+	},
+	{
+		"name":"Faerie Poogle Morphing Potion", 
+		"category": "mp", 
+		"url": "https://neopetsclassic.com/images/items/pot_poogle_faerie.gif", 
+		"color": "Faerie ", 
+		"species": "Poogle"
+	},
+	{
+		"name":"Faerie Shoyru Morphing Potion", 
+		"category": "mp", 
+		"url": "https://neopetsclassic.com/images/items/pot_shoyru_faerie.gif", 
+		"color": "Faerie ", 
+		"species": "Shoyru"
+	},
+	{
+		"name":"Faerie Tuskaninny Morphing Potion", 
+		"category": "mp", 
+		"url": "https://neopetsclassic.com/images/items/pot_tusk_faerie.gif", 
+		"color": "Faerie ", 
+		"species": "Tuskaninny"
+	},
+	{
+		"name":"Faerie Usul Morphing Potion", 
+		"category": "mp", 
+		"url": "https://neopetsclassic.com/images/items/potion69.gif", 
+		"color": "Faerie ", 
+		"species": "Usul"
+	},
+	{
+		"name":"Fire Acara Morphing Potion", 
+		"category": "mp", 
+		"url": "https://neopetsclassic.com/images/items/3328.gif", 
+		"color": "Fire ", 
+		"species": "Acara"
+	},
+	{
+		"name":"Fire Blumaroo Morphing Potion", 
+		"category": "mp", 
+		"url": "https://neopetsclassic.com/images/items/15054.gif", 
+		"color": "Fire ", 
+		"species": "Blumaroo"
+	},
+	{
+		"name":"Fire Chia Morphing Potion", 
+		"category": "mp", 
+		"url": "https://neopetsclassic.com/images/items/15681.gif", 
+		"color": "Fire ", 
+		"species": "Chia"
+	},
+	{
+		"name":"Fire Chomby Morphing Potion", 
+		"category": "mp", 
+		"url": "https://neopetsclassic.com/images/items/22538.gif", 
+		"color": "Fire ", 
+		"species": "Chomby"
+	},
+	{
+		"name":"Fire Kiko Morphing Potion", 
+		"category": "mp", 
+		"url": "https://neopetsclassic.com/images/items/14760.gif", 
+		"color": "Fire ", 
+		"species": "Kiko"
+	},
+	{
+		"name":"Fire Nimmo Morphing Potion", 
+		"category": "mp", 
+		"url": "https://neopetsclassic.com/images/items/14866.gif", 
+		"color": "Fire ", 
+		"species": "Nimmo"
+	},
+	{
+		"name":"Fire Skeith Morphing Potion", 
+		"category": "mp", 
+		"url": "https://neopetsclassic.com/images/items/14747.gif", 
+		"color": "Fire ", 
+		"species": "Skeith"
+	},
+	{
+		"name":"Ghost Draik Morphing Potion", 
+		"category": "mp", 
+		"url": "https://neopetsclassic.com/images/items/15620.gif", 
+		"color": "Ghost ", 
+		"species": "Draik"
+	},
+	{
+		"name":"Ghost Hissi Morphing Potion", 
+		"category": "mp", 
+		"url": "https://neopetsclassic.com/images/items/pot_hissi_ghost.gif", 
+		"color": "Ghost ", 
+		"species": "Hissi"
+	},
+	{
+		"name":"Glowing Korbat Morphing Potion", 
+		"category": "mp", 
+		"url": "https://neopetsclassic.com/images/items/15484.gif", 
+		"color": "Glowing ", 
+		"species": "Korbat"
+	},
+	{
+		"name":"Gold Tonu Morphing Potion", 
+		"category": "mp", 
+		"url": "https://neopetsclassic.com/images/items/22142.gif", 
+		"color": "Gold ", 
+		"species": "Tonu"
+	},
+	{
+		"name":"Green Draik Morphing Potion", 
+		"category": "mp", 
+		"url": "https://neopetsclassic.com/images/items/15615.gif", 
+		"color": "Green ", 
+		"species": "Draik"
+	},
+	{
+		"name":"Grey Techo Morphing Potion", 
+		"category": "mp", 
+		"url": "https://neopetsclassic.com/images/items/15696.gif", 
+		"color": "Grey ", 
+		"species": "Techo"
+	},
+	{
+		"name":"Grey Zafara Morphing Potion", 
+		"category": "mp", 
+		"url": "https://neopetsclassic.com/images/items/17735.gif", 
+		"color": "Grey ", 
+		"species": "Zafara"
+	},
+	{
+		"name":"Halloween Blumaroo Morphing Potion", 
+		"category": "mp", 
+		"url": "https://neopetsclassic.com/images/items/15056.gif", 
+		"color": "Halloween ", 
+		"species": "Blumaroo"
+	},
+	{
+		"name":"Halloween Grarrl Morphing Potion", 
+		"category": "mp", 
+		"url": "https://neopetsclassic.com/images/items/16904.gif", 
+		"color": "Halloween ", 
+		"species": "Grarrl"
+	},
+	{
+		"name":"Halloween Tonu Morphing Potion", 
+		"category": "mp", 
+		"url": "https://neopetsclassic.com/images/items/22141.gif", 
+		"color": "Halloween ", 
+		"species": "Tonu"
+	},
+	{
+		"name":"Maraquan Korbat Morphing Potion", 
+		"category": "mp", 
+		"url": "https://neopetsclassic.com/images/items/pot_korbat_maraquan_2x.png", 
+		"color": "Maraquan ", 
+		"species": "Korbat"
+	},
+	{
+		"name":"Pirate Eyrie Morphing Potion", 
+		"category": "mp", 
+		"url": "https://neopetsclassic.com/images/items/3319.gif", 
+		"color": "Pirate ", 
+		"species": "Eyrie"
+	},
+	{
+		"name":"Pirate Kacheek Morphing Potion", 
+		"category": "mp", 
+		"url": "https://neopetsclassic.com/images/items/14726.gif", 
+		"color": "Pirate ", 
+		"species": "Kacheek"
+	},
+	{
+		"name":"Plushie Flotsam Morphing Potion", 
+		"category": "mp", 
+		"url": "https://neopetsclassic.com/images/items/8100.gif", 
+		"color": "Plushie ", 
+		"species": "Flotsam"
+	},
+	{
+		"name":"Plushie Kiko Morphing Potion", 
+		"category": "mp", 
+		"url": "https://neopetsclassic.com/images/items/17743.gif", 
+		"color": "Plushie ", 
+		"species": "Kiko"
+	},
+	{
+		"name":"Plushie Poogle Morphing Potion", 
+		"category": "mp", 
+		"url": "https://neopetsclassic.com/images/items/17744.gif", 
+		"color": "Plushie ", 
+		"species": "Poogle"
+	},
+	{
+		"name":"Plushie Techo Morphing Potion", 
+		"category": "mp", 
+		"url": "https://neopetsclassic.com/images/items/15602.gif", 
+		"color": "Plushie ", 
+		"species": "Techo"
+	},
+	{
+		"name":"Plushie Yurble Morphing Potion", 
+		"category": "mp", 
+		"url": "https://neopetsclassic.com/images/items/17747.gif", 
+		"color": "Plushie ", 
+		"species": "Yurble"
+	},
+	{
+		"name":"Red Draik Morphing Potion", 
+		"category": "mp", 
+		"url": "https://neopetsclassic.com/images/items/pot_draik_red_2x.png", 
+		"color": "Red ", 
+		"species": "Draik"
+	},
+	{
+		"name":"Yellow Draik Morphing Potion", 
+		"category": "mp", 
+		"url": "https://neopetsclassic.com/images/items/15618.gif", 
+		"color": "Yellow ", 
+		"species": "Draik"
+	}
   ],
   "food":
   [
@@ -462,6 +972,55 @@
   ],
   "codestones":
   [
-    
+    {
+		"name":"Bri Codestone", 
+		"category": "codestone", 
+		"url": "https://neopetsclassic.com/images/items/codestone10.gif"
+	},
+	{
+		"name":"Lu Codestone", 
+		"category": "codestone", 
+		"url": "https://neopetsclassic.com/images/items/codestone3.gif" 
+	},
+	{
+		"name":"Orn Codestone", 
+		"category": "codestone", 
+		"url": "https://neopetsclassic.com/images/items/codestone8.gif"
+	},
+	{
+		"name":"Mau Codestone", 
+		"category": "codestone", 
+		"url": "https://neopetsclassic.com/images/items/codestone1.gif"
+	},
+	{
+		"name":"Zei Codestone", 
+		"category": "codestone", 
+		"url": "https://neopetsclassic.com/images/items/codestone7.gif" 
+	},
+	{
+		"name":"Main Codestone", 
+		"category": "codestone", 
+		"url": "https://neopetsclassic.com/images/items/codestone6.gif"
+	},
+	{
+		"name":"Eo Codestone", 
+		"category": "codestone", 
+		"url": "https://neopetsclassic.com/images/items/codestone5.gif"
+	},
+	{
+		"name":"Tai-Kai Codestone", 
+		"category": "codestone", 
+		"url": "https://neopetsclassic.com/images/items/codestone2.gif" 
+	},
+	{
+		"name":"Har Codestone", 
+		"category": "codestone", 
+		"url": "https://neopetsclassic.com/images/items/codestone9.gif"
+	},
+	{
+		"name":"Vo Codestone", 
+		"category": "codestone", 
+		"url": "https://neopetsclassic.com/images/items/codestone4.gif" 
+	}
   ]
 }
