@@ -346,7 +346,7 @@ function NeoRPG() {
       poundUser = await db.get(POUND);
      //case 1 pound has no pets
      if(poundUser.pets.length == 0){
-       embed.setTitle(`There are not pets in the pound! <3`);
+       embed.setTitle(`There are no pets in the pound! <3`);
        embed.setDescription("");
        return embed;
      }
