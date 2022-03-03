@@ -65,13 +65,125 @@ client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
 });
 
-//Slash Commands
+//import the NeoRPG
+const nr = require('./NeoRPG/NeoRPG.js');
+neoRPG = new nr.NeoRPG();
+
+//Neo RPG Slash Commands Responding
 client.on('interactionCreate', async interaction => {
   if (!interaction.isCommand()) return;
 
- // if (interaction.commandName === 'ping') {
-  //  await interaction.reply('Pong!');
-  //}
+  //adopt a pet
+  if (interaction.commandName === 'adopt') {
+    const petName = interaction.options.getString('petname');
+    content = await neoRPG.adopt(interaction.user, petName);
+    await interaction.reply({ embeds: [content] });
+  }
+  
+  //create a pet
+  if (interaction.commandName === 'create') {
+    const petName = interaction.options.getString('petname');
+    content = await neoRPG.create(interaction.user, petName);
+    await interaction.reply({ embeds: [content] });
+  }
+
+  //abandon a pet
+  if (interaction.commandName === 'abandon') {
+    const petName = interaction.options.getString('petname');
+    content = await neoRPG.abandon(interaction.user, petName);
+    await interaction.reply({ embeds: [content] });
+  }
+
+  //view a pet
+  if (interaction.commandName === 'view') {
+    const petName = interaction.options.getString('petname');
+    content = await neoRPG.view(interaction.user, petName);
+    await interaction.reply({ embeds: [content] });
+  }
+
+  //view the pound
+  if (interaction.commandName === 'pound') {
+    content = await neoRPG.pound(interaction.user);
+    await interaction.reply({ embeds: [content] });
+  }
+
+  //feed a pet
+  if (interaction.commandName === 'feed') {
+    const petName = interaction.options.getString('petname');
+    content = await neoRPG.feed(interaction.user, petName);
+    await interaction.reply({ embeds: [content] });
+  }
+  
+  //join NeoRPG
+  if (interaction.commandName === 'join') {
+    content = await neoRPG.join(interaction.user);
+    await interaction.reply({ embeds: [content] });
+  }
+
+  //quit NeoRPG
+  if (interaction.commandName === 'quit') {
+    content = await neoRPG.quit(interaction.user);
+    await interaction.reply({ embeds: [content] });
+  }
+
+  //Get a Random Event
+  if (interaction.commandName === 'shh') {
+    let content = new MessageEmbed();
+    content.setTitle("Working on it..");
+    await interaction.reply({ embeds: [content] });
+    content = await neoRPG.randomEvent(interaction.user);
+    await interaction.editReply({ embeds: [content] });
+  }
+  
+  //Set Active Pet
+  if (interaction.commandName === 'setactive') {
+    const petName = interaction.options.getString('petname')
+    content = await neoRPG.setActive(interaction.user, petName);
+    await interaction.reply({ embeds: [content] });
+  }
+
+  //zap a pet
+  if (interaction.commandName === 'zap') {
+    const petName = interaction.options.getString('petname')
+    let content = new MessageEmbed();
+    content.setTitle("Working on it..");
+    await interaction.reply({ embeds: [content] });
+    content = await neoRPG.zap(interaction.user, petName);
+    await interaction.editReply({ embeds: [content] });
+  }
+
+  //get user stats
+  if (interaction.commandName === 'getstats') {
+    let profile = interaction.user
+    if(interaction.options.getUser('user')){
+      profile = interaction.options.getUser('user')
+    }
+    content = await neoRPG.getStats(profile);
+    await interaction.reply({ embeds: [content] });
+  }
+
+  //view inventory
+  if (interaction.commandName === 'inventory') {
+    content = await neoRPG.inventory(interaction.user);
+    await interaction.reply({ embeds: [content], ephemeral: true});
+  }
+  //paint Pet
+  if (interaction.commandName === 'paint') {
+    const petName = interaction.options.getString('petname')
+    const color = interaction.options.getString('color')
+    let content = new MessageEmbed();
+    content.setTitle("Working on it..");
+    await interaction.reply({ embeds: [content] });
+    content = await neoRPG.paint(interaction.user, petName, color);
+    await interaction.editReply({ embeds: [content] });
+  }
+
+  //get help
+  if (interaction.commandName === 'help') {
+    content = await neoRPG.help();
+    await interaction.reply({ embeds: [content], ephemeral: true});
+  }
+  
 });
 
 //RoDaddy Stuff
@@ -95,6 +207,9 @@ client.on("messageCreate", (message) => {//Do Not Close This Function Till Later
   if (message.author.bot) return
 
   //Rodaddy's Den LOL
+    if (message.content === "$test") {
+    neoRPG.test(message).then(()=>{});
+  }
   if (message.content === "$rodotest") {
     //Replies
     message.channel.send("Sup Hoes");

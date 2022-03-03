@@ -1,0 +1,47 @@
+{ 
+  "pbs":
+  [
+    { 
+      "name": "Pirate Paint Brush",
+      "category": "pb",
+      "url": "https://items.jellyneo.net/assets/imgs/items/19302.gif?324",
+      "color": "Pirate"
+    },
+   { 
+      "name": "Baby Paint Brush",
+      "category": "pb",
+      "url": "https://items.jellyneo.net/assets/imgs/items/2288.gif?999",
+     "color": "Baby"
+    },
+     { 
+      "name": "Biscuit Paint Brush",
+      "category": "pb",
+      "url": "https://items.jellyneo.net/assets/imgs/items/9415.gif?863",
+       "color": "Biscuit"
+    },
+     { 
+      "name": "Electric Blue Paint Brush",
+      "category": "pb",
+      "url": "https://items.jellyneo.net/assets/imgs/items/14186.gif?5",
+       "color": "Electric"
+    },
+    { 
+      "name": "Fire, Fire, Your Pants On Fire Paint Brush",
+      "category": "pb",
+      "url": "https://items.jellyneo.net/assets/imgs/items/8967.gif?69",
+       "color": "Fire"
+    },
+    { 
+      "name": "Halloween Paint Brush",
+      "category": "pb",
+      "url": "https://items.jellyneo.net/assets/imgs/items/2813.gif?805",
+       "color": "Halloween"
+    },
+    { 
+      "name": "Grey Paint Brush",
+      "category": "pb",
+      "url": "https://items.jellyneo.net/assets/imgs/items/19306.gif?514",
+       "color": "Grey"
+    }
+  ]
+}
