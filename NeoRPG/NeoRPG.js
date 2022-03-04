@@ -11,7 +11,7 @@ const fetch = (...args) => import('node-fetch').then(({ default: fetch }) => fet
 //import message embed functionality from node
 const { MessageEmbed } = require('discord.js');
 
-const db = new Database("https://kv.replit.com/v0/eyJhbGciOiJIUzUxMiIsImlzcyI6ImNvbm1hbiIsImtpZCI6InByb2Q6MSIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJjb25tYW4iLCJleHAiOjE2NDYzOTA3ODEsImlhdCI6MTY0NjI3OTE4MSwiZGF0YWJhc2VfaWQiOiJkMzZkMzVkOC02OGQyLTQyMWUtYTZmMy05M2M5OTcxNTNkM2MifQ.LjjZLBF2IWEIYwhGaPzICuBpBhAE9NFUPJnyzS7XLe6oX7L6PCvo2_ihhG4GsK5iAZQAp7Y1eDyzO90kYJZQrw");
+const db = new Database("https://kv.replit.com/v0/eyJhbGciOiJIUzUxMiIsImlzcyI6ImNvbm1hbiIsImtpZCI6InByb2Q6MSIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJjb25tYW4iLCJleHAiOjE2NDY1MTc0MjUsImlhdCI6MTY0NjQwNTgyNSwiZGF0YWJhc2VfaWQiOiJkMzZkMzVkOC02OGQyLTQyMWUtYTZmMy05M2M5OTcxNTNkM2MifQ.cB6U_ghnZe0kVWtVvJAXTh5QZsmMhn_HeL_MXtVUaxP6J3KWyXOaMd3JiXG_bhnnicDdR5nn0UBYFZfQQJgOJQ");
 //const db = new Database();
 
 //declare constants
@@ -41,8 +41,8 @@ const EXCITEMENT_INTERVAL = 30;
 const EXCITEMENT_COST = 150;
 
 //Kauvara Constants
-const BASICMP_COST = 5000;
-const RAREMP_COST = 10000;
+const BASICMP_COST = 10000;
+const RAREMP_COST = 20000;
 const KAU_RARITY = 10;
 const KAU_INTERVAL = 1;
 const KAU_PRICE_BUFFER = 5000;
@@ -63,12 +63,13 @@ function NeoRPG() {
  //  this.test = async function(message){
  //    //add boochie shield soon
  //    userList = await db.list()
- //    petChosen = "Milo"
- //    userChosen = "marsw#0003"
+ //    petChosen = ""
+ //    userChosen = ""
  //    //traverse the db for all users
  //    for(let i =0;i<userList.length;i++){
  //      user = await db.get(userList[i]); //get user
- //      user.inventory = [];
+ //      //user.inventory = [];
+ //      console.log(user);
  //      if(user.ownerTag.toLowerCase() === userChosen.toLowerCase()){
  //        //user.maxPets = 3; //adjusts specific user stats
  //        //user.np = 10000;
@@ -82,18 +83,18 @@ function NeoRPG() {
         
  //          //adjusts one specific pet - pet Chosen
  //          if(user.pets[j].name.toLowerCase() === petChosen.toLowerCase()){
- //            user.pets[j].species = "Kougra";
- //            user.pets[j].color = "Baby";
- //            user.pets[j].gender = "Male";
+ //            // user.pets[j].species = "Kougra";
+ //            // user.pets[j].color = "Baby";
+ //            // user.pets[j].gender = "Male";
  //          }
  //      }
  //      await db.set(user.id, user);
  //    }
  //    console.log("Done");
  //  }
-  // this.test = async function(message){
-  //   console.log(process.env.REPLIT_DB_URL)
-  // }
+ //  this.test = async function(message){
+ //    console.log(process.env.REPLIT_DB_URL)
+ //  }
   
   //join NeoRPG takes in user information
   this.join = async function(user){
