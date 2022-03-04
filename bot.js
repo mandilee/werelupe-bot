@@ -167,7 +167,16 @@ client.on('interactionCreate', async interaction => {
     content = await neoRPG.getStats(profile);
     await interaction.reply({ embeds: [content] });
   }
-
+  
+  //send gift
+  if (interaction.commandName === 'gift') {
+    const itemName = interaction.options.getString('itemname')
+    let user1 = interaction.user
+    let user2 = interaction.options.getUser('user')
+    content = await neoRPG.gift(user1, user2, itemName);
+    await interaction.reply({ embeds: [content] });
+  }
+  
   //view inventory
   if (interaction.commandName === 'inventory') {
     content = await neoRPG.inventory(interaction.user);

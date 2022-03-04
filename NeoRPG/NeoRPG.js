@@ -411,7 +411,7 @@ function NeoRPG() {
      //initialize embed
       let embed = new MessageEmbed();
       embed.setTitle(`NeoRPG Help`);
-      embed.setDescription("\*\*Thanks for playing NeoRPG! Here are some helpful tips:\*\*\n\n `/join` - use this to join NeoRPG\n `/create` - use this to create a Neopet\n `/adopt` - use this to adopt a pet from the Neopian Pound\n `/setactive` - use this to set your active Neopet\n `/abandon` - use this to abandon a Neopet\n `/pound` - use this to view the Neopian Pound\n `/view` - use this to view the pet profile of the specified pet\n `/getstats` - use this to view a user profile\n `/feed` - use this to feed one of your Neopets\n `/excitement` - spin the Wheel of Excitement\n `/kauvara` - visit Kauvara's magic shop in hopes for a good morphing potion!\n `/zap` - use this to zap a Neopet\n `/shh` - use this receive a random event\n `/inventory` - use this to view your inventory\n `/paint` - use this to paint a pet if you have the Paint Brush\n `/morph` - use this to morph the specified pet (Magic Potion Required)\n `/heal` - to visit the healing springs\n `/quit` - use this to quit NeoRPG and give up all your progress\n `/help` - use this to get a list of commands and help with NeoRPG");
+      embed.setDescription("\*\*Thanks for playing NeoRPG! Here are some helpful tips:\*\*\n\n `/join` - use this to join NeoRPG\n `/create` - use this to create a Neopet\n `/adopt` - use this to adopt a pet from the Neopian Pound\n `/setactive` - use this to set your active Neopet\n `/abandon` - use this to abandon a Neopet\n `/pound` - use this to view the Neopian Pound\n `/view` - use this to view the pet profile of the specified pet\n `/getstats` - use this to view a user profile\n `/feed` - use this to feed one of your Neopets\n `/excitement` - spin the Wheel of Excitement\n `/kauvara` - visit Kauvara's magic shop in hopes for a good morphing potion!\n `/zap` - use this to zap a Neopet\n `/shh` - use this receive a random event\n `/inventory` - use this to view your inventory\n `/gift` - use this to send a gift to someone\n `/paint` - use this to paint a pet if you have the Paint Brush\n `/morph` - use this to morph the specified pet (Magic Potion Required)\n `/heal` - to visit the healing springs\n `/quit` - use this to quit NeoRPG and give up all your progress\n `/help` - use this to get a list of commands and help with NeoRPG");
       return embed;
     } 
   
@@ -661,7 +661,6 @@ function NeoRPG() {
     else{
       //regular randoms
       let random = getRandomInt(15);
-      random = 14;
       //add NP
       if(random==0){
         await this.addNP(user, 50);
@@ -815,9 +814,34 @@ function NeoRPG() {
     }
   }
 
-  //ToDo Gifting
+  //Gifting User1 sends User 2 receives
   this.gift = async function(user1, user2, itemName){
+    //get users
+    value1 = await db.get(user1.id);
+    value2 = await db.get(user2.id);
+    let embed = new MessageEmbed();
+    //start most functions with checking if the player is playing
+    if(!value1 || !value2){
+      embed.setTitle("Both players need to be playing NeoRPG to send/receive gifts");
+      embed.setDescription("");
+      return embed;
+    }
+    //check to see if the user has the item in question
+    itemIndex = value1.inventory.findIndex(x => x.name?.toLowerCase() === itemName.toLowerCase());
+    if(itemIndex < 0){
+      embed.setTitle(`Sorry you don't have any ${itemName}s in your inventory`);
+      embed.setDescription("");
+      return embed
+    }
     
+    tempItem = value1.inventory.splice(itemIndex, 1);
+    value2.inventory.push(tempItem[0]);
+    await db.set(user1.id, value1);
+    await db.set(user2.id, value2);
+    embed.setTitle("So generous!");
+    embed.setDescription(`You gave <@${user2.id}> a ${tempItem[0].name}! ❤️`);
+    embed.setImage(tempItem[0].url);
+    return embed;
   }
 
   //paints the specified pet the color specified

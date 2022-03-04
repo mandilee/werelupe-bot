@@ -53,18 +53,20 @@ const commands = [
   new SlashCommandBuilder().setName('setactive').setDescription('Sets the entered pet as your active pet').addStringOption(option => option.setName('petname').setDescription('Enter pet name').setRequired(true)),
   //zaps your pet
   new SlashCommandBuilder().setName('zap').setDescription('Zaps your selected pet').addStringOption(option => option.setName('petname').setDescription('Enter pet name').setRequired(true)),
-  //getStats slash command - /getstats 
-  //shows user own stats 
-  new SlashCommandBuilder().setName('getstats').setDescription('See your or a user\'s stats in NeoRPG').addUserOption(option => option.setName('user').setDescription('Select a user')),
+  //give a gift
+  new SlashCommandBuilder().setName('gift').setDescription('See your or a user\'s stats in NeoRPG').addUserOption(option => option.setName('user').setDescription('Select a user').setRequired(true)).addStringOption(option => option.setName('itemname').setDescription('Enter the item name exactly as it appears').setRequired(true)),
   //shows user own stats 
   new SlashCommandBuilder().setName('help').setDescription('Provides the user with general information about NeoRPG'),
+  //shows stats of u or user
+  new SlashCommandBuilder().setName('getstats').setDescription('Give a gift in NeoRPG').addUserOption(option => option.setName('user').setDescription('Select a user')),
     //magic shop 
   new SlashCommandBuilder().setName('kauvara').setDescription('Buy an item from Kauvara\'s Magic Shop! - NP Required'),
     //fruit machine
   new SlashCommandBuilder().setName('fruits').setDescription('Try your luck at the fruit machine'),
     //buy a pet slot
   new SlashCommandBuilder().setName('pettoken').setDescription('Buy a pet slot - NP Required'),
-  
+     //buy a pet slot
+  new SlashCommandBuilder().setName('checktimes').setDescription('Check how much time is left for each activity'),
   //gets a random event
   new SlashCommandBuilder().setName('shh').setDescription('Get A Random Event!'),
   //view inventory
