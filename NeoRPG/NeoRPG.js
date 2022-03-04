@@ -1036,7 +1036,6 @@ function NeoRPG() {
       mpCost = BASICMP_COST + priceBuffer;
       let randomMPIndex = getRandomInt(itemList.basicmps.length);
       let randomMP = itemList.basicmps[randomMPIndex];
-      value.inventory.push(randomMP);
       //return if not enough np
       if(value.np < mpCost){
         embed.setTitle("No Money :(");
