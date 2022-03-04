@@ -43,7 +43,7 @@ const EXCITEMENT_COST = 150;
 //Kauvara Constants
 const BASICMP_COST = 10000;
 const RAREMP_COST = 20000;
-const KAU_RARITY = 50;
+const KAU_RARITY = 15;
 const KAU_INTERVAL = 30;
 const KAU_PRICE_BUFFER = 5000;
 
@@ -1092,7 +1092,7 @@ function NeoRPG() {
     //Date and Time blocks finish here
     //check for NP
     if(value.np < EXCITEMENT_COST){
-     embed.setTitle(`Sorry you do not have enough Neopoints to Feed Your Pet!\nCost: ${EXCITEMENT_COST}\nYour NP:${value.np}`);
+     embed.setTitle(`Sorry you do not have enough Neopoints to spin the Wheel of Excitement!\nCost: ${EXCITEMENT_COST}\nYour NP:${value.np}`);
      embed.setDescription("");
      return embed
     }
