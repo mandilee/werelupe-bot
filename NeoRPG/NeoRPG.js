@@ -31,8 +31,8 @@ const POUND = "pound";
 const ZAP_INTERVAL = 60;
 
 //Random Event
-const RANDOM_RARITY = 20;
-const SHH_INTERVAL = 5;
+const RANDOM_RARITY = 10;
+const SHH_INTERVAL = 3;
 
 //Healing Springs Interval
 const HEAL_INTERVAL = 15;
@@ -41,10 +41,10 @@ const EXCITEMENT_INTERVAL = 30;
 const EXCITEMENT_COST = 150;
 
 //Kauvara Constants
-const BASICMP_COST = 10000;
-const RAREMP_COST = 20000;
-const KAU_RARITY = 15;
-const KAU_INTERVAL = 30;
+const BASICMP_COST = 5000;
+const RAREMP_COST = 10000;
+const KAU_RARITY = 10;
+const KAU_INTERVAL = 1;
 const KAU_PRICE_BUFFER = 5000;
 
 //constructor
