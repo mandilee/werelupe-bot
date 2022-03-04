@@ -43,8 +43,8 @@ const EXCITEMENT_COST = 150;
 //Kauvara Constants
 const BASICMP_COST = 10000;
 const RAREMP_COST = 20000;
-const KAU_RARITY = 20;
-const KAU_INTERVAL = 2;
+const KAU_RARITY = 50;
+const KAU_INTERVAL = 30;
 const KAU_PRICE_BUFFER = 5000;
 
 //constructor
@@ -660,7 +660,8 @@ function NeoRPG() {
     }
     else{
       //regular randoms
-      let random = getRandomInt(14);
+      let random = getRandomInt(15);
+      random = 14;
       //add NP
       if(random==0){
         await this.addNP(user, 50);
@@ -786,6 +787,22 @@ function NeoRPG() {
         embed.setTitle("Something Has Happened");
         embed.setDescription(`A Ghost Lupe appears and says \"**Stay away from Mystery Island!**\"`);   embed.setImage("https://bookofages.jellyneo.net/assets/imgs/characters/lg/294.png");
         return embed;
+      }
+      if(random==14){
+         if(value.activePet < 0) return nothingSHH();
+       //check baby is an avaialble color
+        isAvail = await this.isPetColorAvailable("Invisible",value.pets[value.activePet].species); 
+        if(isAvail && value.pets[value.activePet].hunger == 0){
+          await this.paintPet(user, "Invisible", value.activePet)
+          embed.setTitle("Something Has Happened");
+          embed.setDescription(`${value.pets[value.activePet].name} hasn't been eating and they simply disappeared...you should really feed your pets`);   embed.setImage("http://images.neopets.com/pets/happy/acara_invisible_baby.gif");
+          return embed;
+        }
+        else{
+         embed.setTitle("Something Has Happened");
+        embed.setDescription(`${value.pets[value.activePet].name} looks at you with wide eyes and says "**I love you**"!`);   embed.setImage(value.pets[value.activePet].url);
+        return embed;
+        }
       }
       
     }
