@@ -41,7 +41,7 @@ const commands = [
   //adds user the game
   new SlashCommandBuilder().setName('join').setDescription('Lets you join NeoRPG!'),
   //wheel of excitement
-    new SlashCommandBuilder().setName('excitement').setDescription('Lets you spin the wheel of excitement!'),
+    new SlashCommandBuilder().setName('excitement').setDescription('Lets you spin the wheel of excitement! - NP Required'),
   //quit slash command /quit 
   //removes user from game
   new SlashCommandBuilder().setName('quit').setDescription('Quit playing NeoRPG and give everything up'),
@@ -58,13 +58,20 @@ const commands = [
   new SlashCommandBuilder().setName('getstats').setDescription('See your or a user\'s stats in NeoRPG').addUserOption(option => option.setName('user').setDescription('Select a user')),
   //shows user own stats 
   new SlashCommandBuilder().setName('help').setDescription('Provides the user with general information about NeoRPG'),
+    //magic shop 
+  new SlashCommandBuilder().setName('kauvara').setDescription('Buy an item from Kauvara\'s Magic Shop! - NP Required'),
+    //fruit machine
+  new SlashCommandBuilder().setName('fruits').setDescription('Try your luck at the fruit machine'),
+    //buy a pet slot
+  new SlashCommandBuilder().setName('pettoken').setDescription('Buy a pet slot - NP Required'),
+  
   //gets a random event
   new SlashCommandBuilder().setName('shh').setDescription('Get A Random Event!'),
   //view inventory
   new SlashCommandBuilder().setName('inventory').setDescription('View your inventory'),
   //heal
   new SlashCommandBuilder().setName('heal').setDescription('Visit the healing springs'),
-   //morph a pet
+    //morph a pet
   new SlashCommandBuilder().setName('morph').setDescription('Paint the pet with the name and color provided! (Morphing Potion Required)').addStringOption(option => option.setName('petname').setDescription('Enter pet name').setRequired(true)).addStringOption(option => option.setName('color').setDescription('Enter the color you wish you paint this pet').setRequired(true)).addStringOption(option => option.setName('species').setDescription('Enter the species this pet will morph to').setRequired(true)),
   //paint a pet
   new SlashCommandBuilder().setName('paint').setDescription('Paint the pet with the name and color provided! (Paint Brush Required)').addStringOption(option => option.setName('petname').setDescription('Enter pet name').setRequired(true)).addStringOption(option => option.setName('color').setDescription('Enter the color you wish you paint this pet').setRequired(true))

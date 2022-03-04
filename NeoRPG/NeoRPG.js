@@ -15,17 +15,37 @@ const db = new Database("https://kv.replit.com/v0/eyJhbGciOiJIUzUxMiIsImlzcyI6Im
 //const db = new Database();
 
 //declare constants
+
+//PET CONSTANTS
 const MAX_HUNGER = 11;
 const MAX_HAPPINESS = 9;
 const NAME_REGEX = /^[A-Za-z0-9_-]+$/;
+
+//Feeding Costs
 const FEED_COST = 20;
+
+//The Pound
 const POUND = "pound";
-const SHH_INTERVAL = 5;
+
+//interval between zaps
 const ZAP_INTERVAL = 60;
-const RANDOM_RARITY = 15;
+
+//Random Event
+const RANDOM_RARITY = 20;
+const SHH_INTERVAL = 5;
+
+//Healing Springs Interval
 const HEAL_INTERVAL = 15;
+//WoE Constants
 const EXCITEMENT_INTERVAL = 30;
 const EXCITEMENT_COST = 150;
+
+//Kauvara Constants
+const BASICMP_COST = 10000;
+const RAREMP_COST = 20000;
+const KAU_RARITY = 20;
+const KAU_INTERVAL = 2;
+const KAU_PRICE_BUFFER = 5000;
 
 //constructor
 function NeoRPG() {
@@ -391,7 +411,7 @@ function NeoRPG() {
      //initialize embed
       let embed = new MessageEmbed();
       embed.setTitle(`NeoRPG Help`);
-      embed.setDescription("\*\*Thanks for playing NeoRPG! Here are some helpful tips:\*\*\n\n `/join` - use this to join NeoRPG\n `/create` - use this to create a Neopet\n `/adopt` - use this to adopt a pet from the Neopian Pound\n `/setactive` - use this to set your active Neopet\n `/abandon` - use this to abandon a Neopet\n `/pound` - use this to view the Neopian Pound\n `/view` - use this to view the pet profile of the specified pet\n `/getstats` - use this to view a user profile\n `/feed` - use this to feed one of your Neopets\n `/excitement` - spin the Wheel of Excitement\n `/zap` - use this to zap a Neopet\n `/shh` - use this receive a random event\n `/inventory` - use this to view your inventory\n `/paint` - use this to paint a pet if you have the Paint Brush\n `/morph` - use this to morph the specified pet (Magic Potion Required)\n `/heal` - to visit the healing springs\n `/quit` - use this to quit NeoRPG and give up all your progress\n `/help` - use this to get a list of commands and help with NeoRPG");
+      embed.setDescription("\*\*Thanks for playing NeoRPG! Here are some helpful tips:\*\*\n\n `/join` - use this to join NeoRPG\n `/create` - use this to create a Neopet\n `/adopt` - use this to adopt a pet from the Neopian Pound\n `/setactive` - use this to set your active Neopet\n `/abandon` - use this to abandon a Neopet\n `/pound` - use this to view the Neopian Pound\n `/view` - use this to view the pet profile of the specified pet\n `/getstats` - use this to view a user profile\n `/feed` - use this to feed one of your Neopets\n `/excitement` - spin the Wheel of Excitement\n `/kauvara` - visit Kauvara's magic shop in hopes for a good morphing potion!\n `/zap` - use this to zap a Neopet\n `/shh` - use this receive a random event\n `/inventory` - use this to view your inventory\n `/paint` - use this to paint a pet if you have the Paint Brush\n `/morph` - use this to morph the specified pet (Magic Potion Required)\n `/heal` - to visit the healing springs\n `/quit` - use this to quit NeoRPG and give up all your progress\n `/help` - use this to get a list of commands and help with NeoRPG");
       return embed;
     } 
   
@@ -914,6 +934,85 @@ function NeoRPG() {
     return embed;
   }//end paint function
 
+  this.kauvara = async function(user){
+    //get user
+    value = await db.get(user.id);
+    let embed = new MessageEmbed();
+    //start most functions with checking if the player is playing
+    if(!value){
+      embed.setTitle("You can't visit the magic shop if you haven't joined NeoRPG!");
+      embed.setDescription("");
+      return embed;
+    }
+    //Date and Time blocks are here
+    //get today's time
+    var today = new Date();
+    //if there is a value for last SHH (AKA The User got an SHH Before)
+    if(value.lastKau){
+      //calcuate time remaining
+      const timeRemaining = dateDiffInMinutes(value.lastKau, today)
+      //if more than designated minutes reset the last shh value
+      if(timeRemaining >=KAU_INTERVAL){
+        value.lastKau = today;
+      }
+      //otherwise tell the user it is too soon
+      else{
+        embed.setTitle("Too Soon");
+        embed.setDescription(`You can visit Kauvara again in ${KAU_INTERVAL-timeRemaining} minutes.`); embed.setImage("https://neopetsclassic.com/images/shopkeepers/1.gif");
+        return embed;
+      }
+    }
+    //if never received a magic set the value to now
+    else{
+      value.lastKau = today;
+    }
+    //update the datebase
+    await db.set(user.id, value);
+    //Date and Time blocks finish here
+    //calculate Kauvara magic shop rarity
+    let random = getRandomInt(KAU_RARITY);
+    let = randomMP = {};
+    let mpCost = 0
+    let priceBuffer = getRandomInt(KAU_PRICE_BUFFER);
+    if(random == 0){//the rare potions
+      mpCost = RAREMP_COST + priceBuffer;
+      let randomMPIndex = getRandomInt(itemList.mps.length);
+      let randomMP = itemList.mps[randomMPIndex];
+      //return if not enough np
+      if(value.np < mpCost){
+        embed.setTitle("No Money :(");
+        embed.setDescription(`Kauvara was going to give you a ${randomMP.name} in exchange for ${mpCost} NP but you don't have enough np :(`); 
+        embed.setImage("http://images.neopets.com/images/frontpage/sad_kauvara.gif");
+        return embed;
+      }
+      value.np -= mpCost;
+      value.inventory.push(randomMP)
+      embed.setTitle("Sold");
+      embed.setDescription(`Kauvara hands you a ${randomMP.name} in exchange for ${mpCost} NP`); 
+      embed.setImage(randomMP.url);
+    }
+    else{
+      mpCost = BASICMP_COST + priceBuffer;
+      let randomMPIndex = getRandomInt(itemList.basicmps.length);
+      let randomMP = itemList.basicmps[randomMPIndex];
+      value.inventory.push(randomMP);
+      //return if not enough np
+      if(value.np < mpCost){
+        embed.setTitle("No Money :(");
+        embed.setDescription(`Kauvara was going to give you a ${randomMP.name} in exchange for ${mpCost} NP but you don't have enough np :(`); 
+        embed.setImage("http://images.neopets.com/images/frontpage/sad_kauvara.gif");
+        return embed;
+      }
+      value.np -= mpCost;
+      value.inventory.push(randomMP)
+      embed.setTitle("Sold");
+      embed.setDescription(`Kauvara hands you a ${randomMP.name} in exchange for ${mpCost} NP`); 
+      embed.setImage(randomMP.url);
+    //adjust db
+    }
+    await db.set(user.id, value);
+    return embed;
+  }
   //Wheel of excitement
   this.excitement = async function(user){
   //get user

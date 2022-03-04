@@ -207,7 +207,12 @@ client.on('interactionCreate', async interaction => {
     content = await neoRPG.help();
     await interaction.reply({ embeds: [content], ephemeral: true});
   }
-  
+
+  //kauvara's magic shop
+  if (interaction.commandName === 'kauvara') {
+    content = await neoRPG.kauvara(interaction.user);
+    await interaction.reply({ embeds: [content] });
+  } 
 });
 
 //RoDaddy Stuff
