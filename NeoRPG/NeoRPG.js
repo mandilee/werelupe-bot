@@ -31,7 +31,7 @@ const POUND = "pound";
 const ZAP_INTERVAL = 60;
 
 //Random Event
-const RANDOM_RARITY = 10;
+const RANDOM_RARITY = 22;
 const SHH_INTERVAL = 3;
 
 //Healing Springs Interval
