@@ -1291,18 +1291,8 @@ function NeoRPG() {
         if(userZapping.pets[zapIndex]){
          //zapping happens here
           let random = getRandomInt(8);
-          //strength
-          if(random==0){
-            let change = getRandomInt(4);
-            change++//because random starts with 0
-            userZapping.pets[zapIndex].strength += change;
-            embed.setTitle(`The ray is fired at ${userZapping.pets[zapIndex].name} and they gained ${change} strength points`);
-            embed.setDescription("");
-            embed.setImage(getSadPetURL(userZapping.pets[zapIndex]));
-            return embed;
-          }
           //hp
-          if(random==1){
+          if(random==0){
             let change = getRandomInt(4);
             change++//because random starts with 0
             userZapping.pets[zapIndex].maxhp += change;
@@ -1313,7 +1303,7 @@ function NeoRPG() {
             return embed;
           }
           //defense
-          if(random==2){
+          if(random==1){
             let loseGain = getRandomInt(2);
             let change = getRandomInt(4);
             change++//because random starts with 0
@@ -1340,7 +1330,7 @@ function NeoRPG() {
             }
           }
           //movement
-          if(random==3){
+          if(random==2){
             let loseGain = getRandomInt(2);
             let change = getRandomInt(4);
             change++//because random starts with 0
@@ -1367,7 +1357,7 @@ function NeoRPG() {
             }
           }
           //species
-          if(random==4){
+          if(random==3){
             let random = getRandomInt(5);//I want a 1/5 chance the species is limited edition
             if(random == 0){
               userZapping.pets[zapIndex].species = neoList.limitedSpecies[getRandomInt(neoList.limitedSpecies.length)];
@@ -1384,7 +1374,7 @@ function NeoRPG() {
             return embed;
           }
           //color //ToDo Adjust so no royal,pirate, plushie etc.
-          if(random==5){
+          if(random==4){
             //asume the color is not available
             let isAvail = false;
             //init newColor
@@ -1404,7 +1394,7 @@ function NeoRPG() {
             return embed;
           }
           //strength
-          if(random==6){
+          if(random==5){
             let loseGain = getRandomInt(2);
             let change = getRandomInt(4);
             change++//because random starts with 0
@@ -1431,14 +1421,14 @@ function NeoRPG() {
             }
           }
           //nothing
-          if(random==7){
+          if(random==6){
             embed.setTitle("The ray is fired at " + userZapping.pets[zapIndex].name + " - and nothing happened :(");
             embed.setDescription("");
             embed.setImage(getSadPetURL(userZapping.pets[zapIndex]));
             return embed;
           }
           //level
-          if(random==8){
+          if(random==7){
             let loseGain = getRandomInt(5);
             let change = getRandomInt(4);
             change++//because random starts with 0
