@@ -825,7 +825,7 @@ function NeoRPG() {
       return embed
     }
     //check to see if the user has the right paintbrush
-    brushIndex = value.inventory.findIndex(x => x.color?.toLowerCase() === color.toLowerCase());
+    brushIndex = value.inventory.findIndex(x => x.color?.toLowerCase() === color.toLowerCase() && x.category === "pb");
     if(brushIndex < 0){
       embed.setTitle(`Sorry you don't have the right paint brush to paint your pet ${color}`);
       embed.setDescription("");
@@ -892,7 +892,7 @@ function NeoRPG() {
       return embed
     }
     //check to see if the user has the right morphing potion
-    mpIndex = value.inventory.findIndex(x => x.color?.toLowerCase() === color.toLowerCase() && x.species?.toLowerCase() === species.toLowerCase() );
+    mpIndex = value.inventory.findIndex(x => x.color?.toLowerCase().replace(/\s/g, '') === color.toLowerCase() && x.species?.toLowerCase() === species.toLowerCase() && x.category === "mp");
     if(mpIndex < 0){
       embed.setTitle(`Sorry you don't have the right potion to create a ${color} ${species}`);
       embed.setDescription("");

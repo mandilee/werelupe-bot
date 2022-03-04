@@ -1,51 +1,249 @@
 { 
   "pbs":
   [
-   { 
-      "name": "Baby Paint Brush",
-      "category": "pb",
-      "url": "https://items.jellyneo.net/assets/imgs/items/2288.gif?999",
-     "color": "Baby"
+   {
+    	"name":"Baby Paint Brush", 
+    	"category": "pb", 
+    	"url": "https://neopetsclassic.com/images/items/2288_dn6C3Z2.png", 
+    	"color": "Baby" 
     },
-     { 
-      "name": "Biscuit Paint Brush",
-      "category": "pb",
-      "url": "https://items.jellyneo.net/assets/imgs/items/9415.gif?863",
-       "color": "Biscuit"
+    {
+    	"name":"Biscuit Paint Brush", 
+    	"category": "pb", 
+    	"url": "https://neopetsclassic.com/images/items/9415.gif", 
+    	"color": "Biscuit" 
     },
-     { 
-      "name": "Electric Blue Paint Brush",
-      "category": "pb",
-      "url": "https://items.jellyneo.net/assets/imgs/items/14186.gif?5",
-       "color": "Electric"
+    {
+    	"name":"Blue Paint Brush", 
+    	"category": "pb", 
+    	"url": "https://neopetsclassic.com/images/items/92.gif", 
+    	"color": "Blue" 
     },
-    { 
-      "name": "Fire, Fire, Your Pants On Fire Paint Brush",
-      "category": "pb",
-      "url": "https://items.jellyneo.net/assets/imgs/items/8967.gif?69",
-       "color": "Fire"
+    {
+    	"name":"Camouflage Paint Brush", 
+    	"category": "pb", 
+    	"url": "https://neopetsclassic.com/images/items/2816.gif", 
+    	"color": "Camouflage" 
     },
-    { 
-      "name": "Halloween Paint Brush",
-      "category": "pb",
-      "url": "https://items.jellyneo.net/assets/imgs/items/2813.gif?805",
-       "color": "Halloween"
+    {
+    	"name":"Checkered Paint Brush", 
+    	"category": "pb", 
+    	"url": "https://neopetsclassic.com/images/items/3259.gif", 
+    	"color": "Checkered"
+    },
+    {
+    	"name":"Christmas Paint Brush", 
+    	"category": "pb", 
+    	"url": "https://neopetsclassic.com/images/items/481.gif", 
+    	"color": "Christmas"
+    },
+    {
+    	"name":"Cloud Paint Brush", 
+    	"category": "pb", 
+    	"url": "https://neopetsclassic.com/images/items/19298.gif", 
+    	"color": "Cloud"
+    },
+    {
+    	"name":"Disco Fever Paint Brush", 
+    	"category": "pb", 
+    	"url": "https://neopetsclassic.com/images/items/1722.gif", 
+    	"color": "Disco Fever" 
+    },
+    {
+    	"name":"Electric Blue Paint Brush", 
+    	"category": "pb", 
+    	"url": "https://neopetsclassic.com/images/items/14186.gif", 
+    	"color": "Electric"
+    },
+    {
+    	"name":"Fire, Fire, Your Pants On Fire Paint Brush", 
+    	"category": "pb", 
+    	"url": "https://neopetsclassic.com/images/items/8967.gif", 
+    	"color": "Fire"
+    },
+    {
+    	"name":"Glass Paint Brush", 
+    	"category": "pb", 
+    	"url": "https://neopetsclassic.com/images/items/gkasspntbrush_2x.png", 
+    	"color": "Glass" 
+    },
+    {
+    	"name":"Glowing Paint Brush", 
+    	"category": "pb", 
+    	"url": "https://neopetsclassic.com/images/items/94.gif", 
+    	"color": "Glowing" 
+    },
+    {
+    	"name":"Golden Paint Brush", 
+    	"category": "pb", 
+    	"url": "https://neopetsclassic.com/images/items/2815.gif", 
+    	"color": "Golden"
+    },
+    {
+    	"name":"Green Paint Brush", 
+    	"category": "pb", 
+    	"url": "https://neopetsclassic.com/images/items/91.gif", 
+    	"color": "Green" 
+    },
+    {
+    	"name":"Halloween Paint Brush", 
+    	"category": "pb", 
+    	"url": "https://neopetsclassic.com/images/items/2813.gif", 
+    	"color": "Halloween" 
+    },
+    {
+    	"name":"Lost Desert Paint Brush", 
+    	"category": "pb", 
+    	"url": "https://neopetsclassic.com/images/items/4493.gif", 
+    	"color": "Desert" 
+    },
+    {
+    	"name":"Mystery Island Paint Brush", 
+    	"category": "pb", 
+    	"url": "https://neopetsclassic.com/images/items/16166.gif", 
+    	"color": "Island"
+    },
+    {
+    	"name":"Orange Paint Brush", 
+    	"category": "pb", 
+    	"url": "https://neopetsclassic.com/images/items/17200.gif", 
+    	"color": "Orange"
+    },
+    {
+    	"name":"Pink Paint Brush", 
+    	"category": "pb", 
+    	"url": "https://neopetsclassic.com/images/items/18999.gif", 
+    	"color": "Pink"
+    },
+    {
+    	"name":"Purple Paint Brush", 
+    	"category": "pb", 
+    	"url": "https://neopetsclassic.com/images/items/88.gif", 
+    	"color": "Purple"
+    },
+    {
+    	"name":"Rainbow Paint Brush", 
+    	"category": "pb", 
+    	"url": "https://neopetsclassic.com/images/items/93.gif", 
+    	"color": "Rainbow"
+    },
+    {
+    	"name":"Shadow Paint Brush", 
+    	"category": "pb", 
+    	"url": "https://neopetsclassic.com/images/items/3258.gif", 
+    	"color": "Shadow"
+    },
+    {
+    	"name":"Silver Paint Brush", 
+    	"category": "pb", 
+    	"url": "https://neopetsclassic.com/images/items/2812_tndzDUH.gif", 
+    	"color": "Silver" 
+    },
+    {
+    	"name":"Skunk Paint Brush", 
+    	"category": "pb", 
+    	"url": "https://neopetsclassic.com/images/items/19300.gif", 
+    	"color": "Skunk"
+    },
+    {
+    	"name":"Speckled Paint Brush", 
+    	"category": "pb", 
+    	"url": "https://neopetsclassic.com/images/items/greenwhitedotspntbrush.gif", 
+    	"color": "Speckled" 
+    },
+    {
+    	"name":"Split Paint Brush", 
+    	"category": "pb", 
+    	"url": "https://neopetsclassic.com/images/items/19297.gif", 
+    	"color": "Split"
+    },
+    {
+    	"name":"Starry Paint Brush", 
+    	"category": "pb", 
+    	"url": "https://neopetsclassic.com/images/items/11000.gif", 
+    	"color": "Starry" 
+    },
+    {
+    	"name":"Stone Paint Brush", 
+    	"category": "pb", 
+    	"url": "https://neopetsclassic.com/images/items/202.gif", 
+    	"color": "Stone" 
+    },
+    {
+    	"name":"Strawberry Fields Forever Paint Brush", 
+    	"category": "pb", 
+    	"url": "https://neopetsclassic.com/images/items/4829.gif", 
+    	"color": "Strawberry"
+    },
+    {
+    	"name":"Striped Paint Brush", 
+    	"category": "pb", 
+    	"url": "https://neopetsclassic.com/images/items/19296.gif", 
+    	"color": "Striped" 
+    },
+    {
+    	"name":"Tyrannian Paint Brush", 
+    	"category": "pb", 
+    	"url": "https://neopetsclassic.com/images/items/2814.png", 
+    	"color": "Tyrannian"
     }
 
   ],
   "rarepbs":
   [
-    { 
-      "name": "Grey Paint Brush",
-      "category": "pb",
-      "url": "https://items.jellyneo.net/assets/imgs/items/19306.gif?514",
-       "color": "Grey"
+    {
+    	"name":"Darigan Paint Brush", 
+    	"category": "pb", 
+    	"url": "https://neopetsclassic.com/images/items/4211.gif", 
+    	"color": "Darigan"
     },
-    { 
-      "name": "Pirate Paint Brush",
-      "category": "pb",
-      "url": "https://items.jellyneo.net/assets/imgs/items/19302.gif?324",
-      "color": "Pirate"
+    {
+    	"name":"Faerie Paint Brush", 
+    	"category": "pb", 
+    	"url": "https://neopetsclassic.com/images/items/faeriepntbrush.png", 
+    	"color": "Faerie"
+    },
+    {
+    	"name":"Grey Paint Brush", 
+    	"category": "pb", 
+    	"url": "https://neopetsclassic.com/images/items/19306.gif", 
+    	"color": "Grey" 
+    },
+    {
+    	"name":"Pirate Paint Brush", 
+    	"category": "pb", 
+    	"url": "https://neopetsclassic.com/images/items/19302.gif", 
+    	"color": "Pirate" 
+    },
+    {
+    	"name":"Plushie Paint Brush", 
+    	"category": "pb", 
+    	"url": "https://neopetsclassic.com/images/items/19304.gif", 
+    	"color": "Plushie" 
+    },
+    {
+    	"name":"Royal Paint Brush", 
+    	"category": "pb", 
+    	"url": "https://neopetsclassic.com/images/items/7280.png", 
+    	"color": "Royal"
+    },
+    {
+    	"name":"Snow Paint Brush", 
+    	"category": "pb", 
+    	"url": "https://neopetsclassic.com/images/items/19305.gif", 
+    	"color": "Snow"
+    },
+    {
+    	"name":"Usuki Paint Brush", 
+    	"category": "pb", 
+    	"url": "https://neopetsclassic.com/images/items/4321.gif", 
+    	"color": "Usuki"
+    },
+    {
+    	"name":"Valentines Paint Brush", 
+    	"category": "pb", 
+    	"url": "https://neopetsclassic.com/images/items/valentines_pb_2x.png", 
+    	"color": "Valentine" 
     }
   ],
   "basicmps":
@@ -54,7 +252,7 @@
 		"name":"Green Elephante Morphing Potion", 
 		"category": "mp", 
 		"url": "https://neopetsclassic.com/images/items/14763.gif", 
-		"color": "Green ", 
+		"color": "Green", 
 		"species": "Elephante"
 	},
 	{
