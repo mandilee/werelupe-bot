@@ -476,48 +476,72 @@ function NeoRPG() {
     }
     
   //feed the pet searched for 
-   this.feed = async function(user, petName){
+   this.feed = async function(user, petName, feedTimes){
      value = await db.get(user.id);
       let embed = new MessageEmbed();
-      if(value){
-        if(value.totalPets > 0){
-          //ensure this pet is owned
-          feedMeIndex = value.pets.findIndex(x => x.name.toLowerCase() === petName.toLowerCase());
-          if(value.pets[feedMeIndex]){
-            if(value.pets[feedMeIndex].hunger < MAX_HUNGER){
-            value.pets[feedMeIndex].hunger++;
-            //To Do Check NP or Inventory
-            if(value.np < FEED_COST){
-               embed.setTitle(`Sorry you do not have enough Neopoints to Feed Your Pet!\nCost: ${FEED_COST}\nYour NP:${value.np}`);
-              embed.setDescription("");
-              return embed
-            }
-            value.np = value.np - FEED_COST;
-            await db.set(value.id, value);
-            return getPetEmbed(value.pets[feedMeIndex], `Thank you for feeding me!`);
-            }
-            else{
-              return getPetEmbed(value.pets[feedMeIndex], `I can't eat anymore - I'm so full!`);
-            }
-            
-          }
-          else{
-            embed.setTitle("You don't own " + petName + " - so you can't feed them :(");
-            embed.setDescription("");
-            return embed
-          }
-        }  
-        else{
-          embed.setTitle("You have no pets to feed! Adopt one using /adopt");
-          embed.setDescription("");
-          return embed
-        }
-      } 
-      else{
+      if(!value){
         embed.setTitle("You can't feed a pet if you haven't joined NeoRPG!");
         embed.setDescription("");
         return embed;
       } 
+      if(value.totalPets < 0){
+        embed.setTitle("You have no pets to feed! Adopt or create one!");
+        embed.setDescription("");
+        return embed
+      }
+  
+      //ensure this pet is owned
+      feedMeIndex = value.pets.findIndex(x => x.name.toLowerCase() === petName.toLowerCase());
+     
+      if(value.pets[feedMeIndex]){
+        embed.setTitle("You don't own " + petName + " - so you can't feed them :(");
+        embed.setDescription("");
+        return embed 
+      }
+      //ensure pet is not already full
+      if(value.pets[feedMeIndex].hunger < MAX_HUNGER){
+        return getPetEmbed(value.pets[feedMeIndex], `I can't eat anymore - I'm so full!`);
+      }
+      //check if there is a feedTime Integer
+      if(!feedTimes){
+          //To Do Check NP or Inventory
+          if(value.np < FEED_COST){
+           embed.setTitle(`Sorry you do not have enough Neopoints to Feed Your Pet!\nCost: ${FEED_COST}\nYour NP:${value.np}`);
+            embed.setDescription("");
+            return embed
+          }
+          //if enough np just increment hunger once
+          value.pets[feedMeIndex].hunger++;
+          value.np = value.np - FEED_COST;
+          await db.set(value.id, value);
+          return getPetEmbed(value.pets[feedMeIndex], `Thank you for feeding me!`);
+      }
+     else{
+      //check that feedtimes in an ok value
+      amountOfFeed = parseInt(feedTimes);
+      if(!amountOfFeed){
+        embed.setTitle(`Please enter a valid amount of times to feed your pet!`);
+        embed.setDescription("");
+        return embed
+      }
+      //If you are feeding more than the max just feed max
+      if(amountOfFeed > MAX_HUNGER){
+        amountOfFeed = MAX_HUNGER
+      }
+       for(var i = 0; i<amountOfFeed; i++){
+         value.pets[feedMeIndex].hunger++;
+         if(value.np < FEED_COST){
+           embed.setTitle(`Sorry you do not have enough Neopoints to Feed Your Pet! ${amountOfFeed} times but you we able to feed them ${i} times! \nFeeding Cost: ${FEED_COST}\nYour NP:${value.np}`);
+          embed.setImage(value.pets[feedMeIndex].url);
+          embed.setDescription("");
+          await db.set(value.id, value);
+          return embed
+        }
+         value.np = value.np - FEED_COST;
+       }
+       await db.set(value.id, value);
+       return getPetEmbed(value.pets[feedMeIndex], `Thank you for feeding me!`);
+     }
     }
 
   //get User stats, like NP, Pet List, ETC

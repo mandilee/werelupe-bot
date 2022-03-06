@@ -115,7 +115,8 @@ client.on('interactionCreate', async interaction => {
   //feed a pet
   if (interaction.commandName === 'feed') {
     const petName = interaction.options.getString('petname');
-    content = await neoRPG.feed(interaction.user, petName);
+    const feedNum = interaction.options.getString('feedamount')
+    content = await neoRPG.feed(interaction.user, petName, feedNum);
     await interaction.reply({ embeds: [content] });
   }
   

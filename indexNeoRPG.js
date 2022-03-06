@@ -36,7 +36,7 @@ const commands = [
   new SlashCommandBuilder().setName('abandon').setDescription('Abandons the pet with the name provided!').addStringOption(option => option.setName('petname').setDescription('Enter the name of the pet you want to abandon').setRequired(true)),
   //feed slash command -/feed requires pet name
   //feeds the pet wit the name provided - if you're the owner
-    new SlashCommandBuilder().setName('feed').setDescription('Feeds the pet with the name provided!').addStringOption(option => option.setName('petname').setDescription('Enter the name of the pet you want to feed').setRequired(true)),
+    new SlashCommandBuilder().setName('feed').setDescription('Feeds the pet with the name provided!').addStringOption(option => option.setName('petname').setDescription('Enter the name of the pet you want to feed').setRequired(true)).addStringOption(option => option.setName('feedamount').setDescription('Enter the amount of times you would like to feed your pet (Max 11)')),
   //join slash command /join
   //adds user the game
   new SlashCommandBuilder().setName('join').setDescription('Lets you join NeoRPG!'),
