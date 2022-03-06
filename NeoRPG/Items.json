@@ -1339,7 +1339,61 @@
   ],
   "toys":
   [
-    
+      {
+    "name":"Red Bouncy Ball", 
+		"category": "toy", 
+		"url": "https://items.jellyneo.net/assets/imgs/items/2945.gif?165"
+    },
+    {
+    "name":"Red and White Toy Ball", 
+		"category": "toy", 
+		"url": "https://items.jellyneo.net/assets/imgs/old-versions/589.gif"
+    },
+    {
+    "name":"Maraquan Shoyru Float Ring", 
+		"category": "toy", 
+		"url": "https://items.jellyneo.net/assets/imgs/items/5982.gif?908"
+    },
+    {
+    "name":"Yellow Kiko Squeeze Toy", 
+		"category": "toy", 
+		"url": "https://items.jellyneo.net/assets/imgs/items/3961.gif?81"
+    },
+    {
+    "name":"Wind Up Florg", 
+		"category": "toy", 
+		"url": "https://items.jellyneo.net/assets/imgs/items/11425.gif?539"
+    },
+    {
+    "name":"Wind Up Geb", 
+		"category": "toy", 
+		"url": "https://items.jellyneo.net/assets/imgs/items/42667.gif?661"
+    },
+    {
+    "name":"Shoyru Boat Toy", 
+		"category": "toy", 
+		"url": "https://items.jellyneo.net/assets/imgs/items/33238.gif?853"
+    },
+    {
+    "name":"Pull Along Rock", 
+		"category": "toy", 
+		"url": "https://items.jellyneo.net/assets/imgs/items/18821.gif?655"
+    },
+    {
+    "name":"Origami Nova", 
+		"category": "toy", 
+		"url": "https://items.jellyneo.net/assets/imgs/items/29444.gif?704"
+    },
+    {
+    "name":"Origami Chomby", 
+		"category": "toy", 
+		"url": "https://items.jellyneo.net/assets/imgs/items/22527.gif?420"
+    },
+    {
+    "name":"Hannah Bobblehead", 
+		"category": "toy", 
+		"url": "https://items.jellyneo.net/assets/imgs/items/26396.gif?27"
+    }
   ],
   "basicplushies":
   [

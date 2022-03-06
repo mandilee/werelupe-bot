@@ -591,7 +591,8 @@ function NeoRPG() {
     
     //randoms that require an active pet
     if(rareRandom==0){//if rare random is exactly 0 then get a random event from this list
-      let random = getRandomInt(6);
+      let random = getRandomInt(6); 
+      random == 0;
       //Boochi
       if(random == 0){
         //check for an active pet
@@ -681,7 +682,8 @@ function NeoRPG() {
     }
     else{
       //regular randoms
-      let random = getRandomInt(15);
+      let random = getRandomInt(16);
+      random = 15;
       //add NP
       if(random==0){
         await this.addNP(user, 50);
@@ -808,6 +810,7 @@ function NeoRPG() {
         embed.setDescription(`A Ghost Lupe appears and says \"**Stay away from Mystery Island!**\"`);   embed.setImage("https://bookofages.jellyneo.net/assets/imgs/characters/lg/294.png");
         return embed;
       }
+      //disappearing pet
       if(random==14){
          if(value.activePet < 0) return nothingSHH();
        //check baby is an avaialble color
@@ -823,6 +826,17 @@ function NeoRPG() {
         embed.setDescription(`${value.pets[value.activePet].name} looks at you with wide eyes and says "**I love you**"!`);   embed.setImage(value.pets[value.activePet].url);
         return embed;
         }
+      }
+      //toys!
+      if(random==15){
+        let randomToy = getRandomInt(itemList.toys.length);
+        value.inventory.push(itemList.toys[randomToy]);
+        //adjust db
+        await db.set(value.id, value);
+        embed.setTitle("Something Has Happened");
+        embed.setDescription(`Santa Claus comes and gives you a ${itemList.toys[randomToy].name}!`);
+        embed.setImage(itemList.toys[randomToy].url);
+        return embed;
       }
       
     }
