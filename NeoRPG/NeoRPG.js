@@ -22,7 +22,7 @@ const MAX_HAPPINESS = 9;
 const NAME_REGEX = /^[A-Za-z0-9_-]+$/;
 
 //Feeding Costs
-const FEED_COST = 20;
+const FEED_COST = 50;
 
 //The Pound
 const POUND = "pound";
@@ -31,19 +31,20 @@ const POUND = "pound";
 const ZAP_INTERVAL = 60;
 
 //Random Event
-const RANDOM_RARITY = 22;
-const SHH_INTERVAL = 3;
+const RANDOM_RARITY = 15;
+const SHH_INTERVAL = 5;
 
 //Healing Springs Interval
 const HEAL_INTERVAL = 15;
+
 //WoE Constants
 const EXCITEMENT_INTERVAL = 30;
 const EXCITEMENT_COST = 150;
 
 //Kauvara Constants
-const BASICMP_COST = 10000;
+const BASICMP_COST = 8000;
 const RAREMP_COST = 20000;
-const KAU_RARITY = 10;
+const KAU_RARITY = 8;
 const KAU_INTERVAL = 1;
 const KAU_PRICE_BUFFER = 5000;
 
