@@ -100,6 +100,7 @@ client.on('interactionCreate', async interaction => {
     content = await neoRPG.view(interaction.user, petName);
     await interaction.reply({ embeds: [content] });
   }
+  
 
   //view the pound
   if (interaction.commandName === 'pound') {
@@ -226,6 +227,22 @@ client.on('interactionCreate', async interaction => {
     content = await neoRPG.kauvara(interaction.user);
     await interaction.reply({ embeds: [content] });
   } 
+  
+    //Play with specified pet
+  if (interaction.commandName === 'play') {
+    const petName = interaction.options.getString('petname')
+    content = await neoRPG.play(interaction.user, petName);
+    await interaction.reply({ embeds: [content] });
+  }
+
+  //send gift of np
+  if (interaction.commandName === 'giftnp') {
+    const np = interaction.options.getString('npamount')
+    let user1 = interaction.user
+    let user2 = interaction.options.getUser('user')
+    content = await neoRPG.giftnp(user1, user2, np);
+    await interaction.reply({ embeds: [content] });
+  }
 });
 
 //RoDaddy Stuff
@@ -303,7 +320,7 @@ client.on("messageCreate", (message) => {//Do Not Close This Function Till Later
   }
 
   //Vote Dani as a twist
-  if (lowerCaseMessageContent.indexOf("dani") >= 0) {
+  if (lowerCaseMessageContent.indexOf("dani") >= 0 && lowerCaseMessageContent.indexOf("vote") >= 0) {
     //Response List
     const response = [
       "Vote Dani, as a twist"

@@ -53,10 +53,15 @@ const commands = [
   //setactive slash commands - /setactive requires pet name
   //sets the active pet based on the name provided
   new SlashCommandBuilder().setName('setactive').setDescription('Sets the entered pet as your active pet').addStringOption(option => option.setName('petname').setDescription('Enter pet name').setRequired(true)),
+  //play with your pet
+  new SlashCommandBuilder().setName('play').setDescription('Play with your pet and increase their happiness - will require a toy for playing!').addStringOption(option => option.setName('petname').setDescription('Enter pet name').setRequired(true)),
   //zaps your pet
   new SlashCommandBuilder().setName('zap').setDescription('Zaps your selected pet').addStringOption(option => option.setName('petname').setDescription('Enter pet name').setRequired(true)),
   //give a gift
   new SlashCommandBuilder().setName('gift').setDescription('Send a gift to another NeoRPG player').addUserOption(option => option.setName('user').setDescription('Select a user').setRequired(true)).addStringOption(option => option.setName('itemname').setDescription('Enter the item name exactly as it appears').setRequired(true)),
+      //give np
+   //give a gift
+  new SlashCommandBuilder().setName('giftnp').setDescription('Send neopoints to another NeoRPG player').addUserOption(option => option.setName('user').setDescription('Select a user').setRequired(true)).addStringOption(option => option.setName('npamount').setDescription('Enter the amount of np you would like to give').setRequired(true)),
   //shows user own stats 
   new SlashCommandBuilder().setName('help').setDescription('Provides the user with general information about NeoRPG'),
   //shows stats of u or user

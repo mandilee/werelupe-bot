@@ -31,7 +31,7 @@ const POUND = "pound";
 const ZAP_INTERVAL = 60;
 
 //Random Event
-const RANDOM_RARITY = 15;
+const RANDOM_RARITY = 10;
 const SHH_INTERVAL = 5;
 
 //Healing Springs Interval
@@ -84,9 +84,9 @@ function NeoRPG() {
  //    }
  //    console.log("Done");
  //  }
-  this.test = async function(message){
-    console.log(process.env.REPLIT_DB_URL)
-  }
+  // this.test = async function(message){
+  //   console.log(process.env.REPLIT_DB_URL)
+  // }
   
   //join NeoRPG takes in user information
   this.join = async function(user){
@@ -404,7 +404,7 @@ function NeoRPG() {
      //initialize embed
       let embed = new MessageEmbed();
       embed.setTitle(`NeoRPG Help`);
-      embed.setDescription("\*\*Thanks for playing NeoRPG! Here are some helpful tips:\*\*\n\n `/join` - use this to join NeoRPG\n `/create` - use this to create a Neopet\n `/adopt` - use this to adopt a pet from the Neopian Pound\n `/setactive` - use this to set your active Neopet\n `/abandon` - use this to abandon a Neopet\n `/pound` - use this to view the Neopian Pound\n `/view` - use this to view the pet profile of the specified pet\n `/getstats` - use this to view a user profile\n `/feed` - use this to feed one of your Neopets\n `/excitement` - spin the Wheel of Excitement\n `/kauvara` - visit Kauvara's magic shop in hopes for a good morphing potion!\n `/zap` - use this to zap a Neopet\n `/shh` - use this receive a random event\n `/inventory` - use this to view your inventory\n `/gift` - use this to send a gift to someone\n `/paint` - use this to paint a pet if you have the Paint Brush\n `/morph` - use this to morph the specified pet (Magic Potion Required)\n `/heal` - to visit the healing springs\n `/quit` - use this to quit NeoRPG and give up all your progress\n `/help` - use this to get a list of commands and help with NeoRPG");
+      embed.setDescription("\*\*Thanks for playing NeoRPG! Here are some helpful tips:\*\*\n\n `/join` - use this to join NeoRPG\n `/create` - use this to create a Neopet\n `/adopt` - use this to adopt a pet from the Neopian Pound\n `/setactive` - use this to set your active Neopet\n `/abandon` - use this to abandon a Neopet\n `/pound` - use this to view the Neopian Pound\n `/view` - use this to view the pet profile of the specified pet\n `/getstats` - use this to view a user profile\n `/feed` - use this to feed one of your Neopets\n `/excitement` - spin the Wheel of Excitement\n `/kauvara` - visit Kauvara's magic shop in hopes for a good morphing potion!\n `/zap` - use this to zap a Neopet\n `/shh` - use this receive a random event\n `/inventory` - use this to view your inventory\n `/gift` - use this to send a gift to someone\n `/giftnp` - use this to send NP to someone\n `/play` - play with your pet and increase their happiness (toy required)\n `/paint` - use this to paint a pet if you have the Paint Brush\n `/morph` - use this to morph the specified pet (Magic Potion Required)\n `/heal` - to visit the healing springs\n `/quit` - use this to quit NeoRPG and give up all your progress\n `/help` - use this to get a list of commands and help with NeoRPG");
       return embed;
     } 
 
@@ -592,7 +592,7 @@ function NeoRPG() {
     //randoms that require an active pet
     if(rareRandom==0){//if rare random is exactly 0 then get a random event from this list
       let random = getRandomInt(6); 
-      random == 0;
+      random = 3;
       //Boochi
       if(random == 0){
         //check for an active pet
@@ -683,7 +683,7 @@ function NeoRPG() {
     else{
       //regular randoms
       let random = getRandomInt(16);
-      random = 15;
+      //random = 15;
       //add NP
       if(random==0){
         await this.addNP(user, 50);
@@ -740,6 +740,7 @@ function NeoRPG() {
         //check for an active pet
         if(value.activePet < 0) return nothingSHH();
         value.pets[value.activePet].hp = 0;
+        if(value.pets[value.activePet].mood != 0) value.pets[value.activePet].mood--;
         await db.set(value.id, value);
         embed.setTitle("Something Has Happened");
         embed.setDescription(`${value.pets[value.activePet].name} got attacked by the lava ghoul!`); embed.setImage("https://bookofages.jellyneo.net/assets/imgs/characters/lg/584.png");
@@ -779,8 +780,10 @@ function NeoRPG() {
         //check for an active pet
         if(value.activePet < 0) return nothingSHH();
         for(let j=0;j<value.pets.length;j++){ //look at users pets
+          if(value.pets[j].mood != 0) value.pets[j].mood--;
           value.pets[j].hunger = 0;//set hunger to zero
       }
+        
       await db.set(value.id, value);
       embed.setTitle(`Your neopets all suddenly feel very hungry`);
       embed.setDescription("");
@@ -849,6 +852,54 @@ function NeoRPG() {
     }
   }
 
+  //play with the pet searched for 
+   this.play= async function(user, petName){
+     value = await db.get(user.id);
+      let embed = new MessageEmbed();
+     //ensure user is playing
+      if(!value){
+        embed.setTitle("You can't play with a pet if you haven't joined NeoRPG!");
+        embed.setDescription("");
+        return embed;
+      }
+     //ensure the user has pets
+      if(value.totalPets < 0){
+          embed.setTitle("You have no pets to play with! Adopt or create one!");
+          embed.setDescription("");
+          return embed
+      }
+      //ensure this pet is owned
+      playIndex = value.pets.findIndex(x => x.name.toLowerCase() === petName.toLowerCase());
+      if(!value.pets[playIndex]){
+        embed.setTitle("You don't own " + petName + " - so you can't play with them :(");
+        embed.setDescription("");
+        return embed
+      }
+      //check to see if the user has any toys
+      toyIndex = value.inventory.findIndex(x => x.category === "toy");
+      //if not toys - no play
+      if(toyIndex < 0){
+      embed.setTitle(`Sorry you don't have any toys for your pets to play with! Try your luck with random events!`);
+      embed.setDescription("");
+      return embed
+      }
+     
+      value.pets[playIndex].mood = MAX_HAPPINESS;
+      
+      embed.setTitle(`Thank you for playing with me!!`);
+      embed.setDescription(`*${value.pets[playIndex].name} broke your ${value.inventory[toyIndex].name} while playing...*`);
+      embed.setImage(getPetURL(value.pets[playIndex]));
+
+      //remove the toy from the inventory
+      value.inventory.splice(toyIndex, 1);
+
+      await db.set(value.id, value);
+     return embed;
+    }
+
+
+
+  
   //Gifting User1 sends User 2 receives
   this.gift = async function(user1, user2, itemName){
     //get users
@@ -879,6 +930,43 @@ function NeoRPG() {
     return embed;
   }
 
+   //Gifting User1 sends User 2 receives
+  this.giftnp = async function(user1, user2, npAmount){
+    //get users
+    value1 = await db.get(user1.id);
+    value2 = await db.get(user2.id);
+    let embed = new MessageEmbed();
+    //start most functions with checking if the player is playing
+    if(!value1 || !value2){
+      embed.setTitle("Both players need to be playing NeoRPG to send/receive gifts");
+      embed.setDescription("");
+      return embed;
+    }
+
+    npAmountInt = parseInt(npAmount);
+    if(!npAmountInt){
+       embed.setTitle(`Please enter a valid amount of NP to Gift!`);
+      embed.setDescription("");
+      return embed
+    }
+
+    //check that the user has the correct amount of np
+    if(value1.np < npAmountInt){
+      embed.setTitle(`Sorry you don't have enough NP to send a gift of ${npAmountInt} NP`);
+      embed.setDescription("");
+      return embed
+    }
+
+    value1.np -= npAmountInt;
+    value2.np += npAmountInt;
+
+    await db.set(value1.id, value1);
+    await db.set(value2.id, value2);
+    embed.setTitle("So generous!");
+    embed.setDescription(`You gave <@${user2.id}> ${npAmountInt} NP! ❤️`); embed.setImage("https://images.neopets.com/randomevents/images/neopoint_bag.png");
+    return embed;
+  }
+  
   //paints the specified pet the color specified
   this.paint = async function(user, petName, color){
     //get user
@@ -1138,10 +1226,11 @@ function NeoRPG() {
 
     //spin the wheel and get a random number
     let random = getRandomInt(9);
-    //Lava Ghoul
+    //Zap
     if(random == 0){
       for(let j=0;j<value.pets.length;j++){ //look at users pets
           value.pets[j].hp = Math.floor(value.pets[j].maxhp/2);//set hp to half of the hp
+        if(value.pets[j].mood != 0) value.pets[j].mood--; // decrease mood
       }
       await db.set(value.id, value);
       embed.setTitle("THUNDER!");
@@ -1189,6 +1278,7 @@ function NeoRPG() {
     if(random == 4){
       for(let j=0;j<value.pets.length;j++){ //look at users pets
           value.pets[j].hp = 0;//set hp to 0
+          if(value.pets[j].mood != 0) value.pets[j].mood = 0; //set mood to zero
       }
       await db.set(value.id, value);
       embed.setTitle("Lava Ghoul!");
@@ -1909,7 +1999,7 @@ function translateHappiness(happiness){
     if(happiness == 6) return "Cheerful"
     if(happiness == 7) return "Extremely Happy"
     if(happiness == 8) return "Joyful"
-    if(happiness == 9) return "Delighted"
+    if(happiness == 9) return "Delighted!"
   }
   else{
     return "Weird" //shouldn't be hit
