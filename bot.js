@@ -106,7 +106,11 @@ client.on('interactionCreate', async interaction => {
     content = await neoRPG.pound(interaction.user);
     await interaction.reply({ embeds: [content] });
   }
-
+  //view remaining times
+  if (interaction.commandName === 'times') {
+    content = await neoRPG.times(interaction.user);
+    await interaction.reply({ embeds: [content] });
+  }
   //feed a pet
   if (interaction.commandName === 'feed') {
     const petName = interaction.options.getString('petname');

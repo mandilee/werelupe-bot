@@ -11,7 +11,7 @@ const fetch = (...args) => import('node-fetch').then(({ default: fetch }) => fet
 //import message embed functionality from node
 const { MessageEmbed } = require('discord.js');
 
-const db = new Database("https://kv.replit.com/v0/eyJhbGciOiJIUzUxMiIsImlzcyI6ImNvbm1hbiIsImtpZCI6InByb2Q6MSIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJjb25tYW4iLCJleHAiOjE2NDY1MTc0MjUsImlhdCI6MTY0NjQwNTgyNSwiZGF0YWJhc2VfaWQiOiJkMzZkMzVkOC02OGQyLTQyMWUtYTZmMy05M2M5OTcxNTNkM2MifQ.cB6U_ghnZe0kVWtVvJAXTh5QZsmMhn_HeL_MXtVUaxP6J3KWyXOaMd3JiXG_bhnnicDdR5nn0UBYFZfQQJgOJQ");
+const db = new Database("https://kv.replit.com/v0/eyJhbGciOiJIUzUxMiIsImlzcyI6ImNvbm1hbiIsImtpZCI6InByb2Q6MSIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJjb25tYW4iLCJleHAiOjE2NDY2NTI2NjEsImlhdCI6MTY0NjU0MTA2MSwiZGF0YWJhc2VfaWQiOiJkMzZkMzVkOC02OGQyLTQyMWUtYTZmMy05M2M5OTcxNTNkM2MifQ.h8tc3uIPc3hFqoFUffp6sCBWDWHVkVyTtefC2q1hZklROmQz_36j06MccEdDPWz8hgGGso9HuEkx7nI7BsLL_A");
 //const db = new Database();
 
 //declare constants
@@ -50,15 +50,6 @@ const KAU_PRICE_BUFFER = 5000;
 //constructor
 function NeoRPG() {
 
-  // //Creating / Emptying the Pound
-  // this.test = async function(message){
-  //   await db.delete("Pound"); //delete user and their info
-  //   //creating the pound
-  //   pound = {"np": 0, "pets": [], "totalPets": 0, "maxPets": Number.MAX_SAFE_INTEGER, "activePet": -1, "labAccess": false, "ownerTag": "In the **Pound**", "id": "pound"};
-  //   await db.set("pound", pound);
-  //   console.log("Pound Cleared/Created");
-  // }
-
  // // Rodo Test Stuff 
  //  this.test = async function(message){
  //    //add boochie shield soon
@@ -92,9 +83,9 @@ function NeoRPG() {
  //    }
  //    console.log("Done");
  //  }
- //  this.test = async function(message){
- //    console.log(process.env.REPLIT_DB_URL)
- //  }
+  this.test = async function(message){
+    console.log(process.env.REPLIT_DB_URL)
+  }
   
   //join NeoRPG takes in user information
   this.join = async function(user){
@@ -119,7 +110,7 @@ function NeoRPG() {
       //no active pet
       //user id and ownerTag
       member = {"np": 0, "pets": [], "totalPets": 0, "maxPets": 2, "activePet": -1, "inventory":[], "labAccess": false, "ownerTag": user.tag, "id": user.id};
-      await db.set(user.id, member);
+      await db.set(member.id, member);
       caption = `Welcome to NeoRPG!`;
       
       embed = getUserEmbed(member, "Welcome to NeoRPG!");
@@ -202,7 +193,7 @@ function NeoRPG() {
           activeIndex = value.pets.findIndex(x => x.name === petName);
           value.activePet = activeIndex;
           //set the database to add this new pet
-          db.set(user.id, value).then(() => {});
+          db.set(value.id, value).then(() => {});
           //get the embed of this pet with the caption below
           embed = getPetEmbed(pet, "Look at this beautiful new pet!");
           return embed;
@@ -259,7 +250,7 @@ function NeoRPG() {
     //push the adopted pet to the user
     value.pets.push(adoptedPet[0]);
     //set the adopted pet changes to the user
-    await db.set(user.id, value);
+    await db.set(value.id, value);
     //set active pet to the newly adopted pet
     await this.setActive(user, adoptedPet[0].name);
     //return success embed 
@@ -330,7 +321,7 @@ function NeoRPG() {
     value.totalPets--; 
     //set the user's pets with the adjustments
     console.log(value.pets)
-    await db.set(user.id, value);
+    await db.set(value.id, value);
     //return the succesfully completed embed
     embed.setTitle("You abandoned " + petName + " :(");
     embed.setImage(getSadPetURL(sadPet[0]));
@@ -415,11 +406,39 @@ function NeoRPG() {
       embed.setDescription("\*\*Thanks for playing NeoRPG! Here are some helpful tips:\*\*\n\n `/join` - use this to join NeoRPG\n `/create` - use this to create a Neopet\n `/adopt` - use this to adopt a pet from the Neopian Pound\n `/setactive` - use this to set your active Neopet\n `/abandon` - use this to abandon a Neopet\n `/pound` - use this to view the Neopian Pound\n `/view` - use this to view the pet profile of the specified pet\n `/getstats` - use this to view a user profile\n `/feed` - use this to feed one of your Neopets\n `/excitement` - spin the Wheel of Excitement\n `/kauvara` - visit Kauvara's magic shop in hopes for a good morphing potion!\n `/zap` - use this to zap a Neopet\n `/shh` - use this receive a random event\n `/inventory` - use this to view your inventory\n `/gift` - use this to send a gift to someone\n `/paint` - use this to paint a pet if you have the Paint Brush\n `/morph` - use this to morph the specified pet (Magic Potion Required)\n `/heal` - to visit the healing springs\n `/quit` - use this to quit NeoRPG and give up all your progress\n `/help` - use this to get a list of commands and help with NeoRPG");
       return embed;
     } 
+
+  //provides you with help with NeoRPG
+   this.times = async function(user){
+     //initialize embed
+      let embed = new MessageEmbed();
+      let timesUser = await db.get(user.id);
+     var today = new Date();
+     if(!timesUser.lastExcitement) timesUser.lastExcitement = 0;
+     if(!timesUser.lastZap) timesUser.lastZap = 0;
+     if(!timesUser.lastKau) timesUser.lastKau = 0;
+     if(!timesUser.lastSHH) timesUser.lastSHH = 0;
+     if(!timesUser.lastHeal) timesUser.lastHeal = 0;
+     var excitmentTime = EXCITEMENT_INTERVAL - dateDiffInMinutes(timesUser.lastExcitement, today);
+     if(excitmentTime < 0) excitmentTime = 0;
+     var zapTime = ZAP_INTERVAL - dateDiffInMinutes(timesUser.lastZap, today);
+     if(zapTime < 0) zapTime = 0;
+     var kauTime = KAU_INTERVAL - dateDiffInMinutes(timesUser.lastKau, today);
+     if(kauTime  < 0) kauTime  = 0;
+     var healTime = HEAL_INTERVAL - dateDiffInMinutes(timesUser.lastHeal, today);
+     if(healTime  < 0) healTime  = 0;
+     var sshTime = SHH_INTERVAL - dateDiffInMinutes(timesUser.lastSHH, today);
+     if(sshTime  < 0) sshTime  = 0;
+     
+
+      embed.setTitle(`Time Remaining`);
+      embed.setDescription(`\n 🎡 ${excitmentTime} Minutes - For Wheel of Excitement\n ⚡ ${zapTime} Minutes - For Lab Zap\n 🔮 ${kauTime } Minutes - To Visit Kauvara\n ❤️‍🩹 ${healTime} Minutes - For Healing Springs\n 🎲 ${sshTime} Minutes - For A Random Event`);
+      return embed;
+    } 
   
   //set active pet
    this.setActive = async function(user, petName){
      //get user
-     userToSetActive = await db.get(user.id);
+     let userToSetActive = await db.get(user.id);
      //get a new embed
       let embed = new MessageEmbed();
      ///if the user exists in the database
@@ -431,7 +450,7 @@ function NeoRPG() {
           //if the pet at the active index exists
           if(userToSetActive.pets[newActiveIndex]){//probably not necessary
             userToSetActive.activePet = newActiveIndex;
-            await db.set(user.id, userToSetActive);
+            await db.set(userToSetActive.id, userToSetActive);
             return getPetEmbed(userToSetActive.pets[newActiveIndex], `I'm so happy we'll be playing together now!`);
             }
           else{
@@ -471,7 +490,7 @@ function NeoRPG() {
               return embed
             }
             value.np = value.np - FEED_COST;
-            await db.set(user.id, value);
+            await db.set(value.id, value);
             return getPetEmbed(value.pets[feedMeIndex], `Thank you for feeding me!`);
             }
             else{
@@ -562,7 +581,7 @@ function NeoRPG() {
       value.lastSHH = today;
     }
     //update the datebase
-    await db.set(user.id, value);
+    await db.set(value.id, value);
     //Date and Time blocks finish here
 
     //Get a random event equal to SSH Count
@@ -630,7 +649,7 @@ function NeoRPG() {
         //increment maxPets
         value.maxPets++
         //adjust dp
-        await db.set(user.id, value);
+        await db.set(value.id, value);
         embed.setTitle("Something Has Happened");
         embed.setDescription(`You gained another Pet Slot!`);
         embed.setImage("https://neopetsclassic.com/images/items/pet_token.gif");
@@ -641,7 +660,7 @@ function NeoRPG() {
         let randomPB = getRandomInt(itemList.pbs.length);
         value.inventory.push(itemList.pbs[randomPB]);
         //adjust db
-        await db.set(user.id, value);
+        await db.set(value.id, value);
         embed.setTitle("Something Has Happened");
         embed.setDescription(`Jacko the Phantom Painter has dropped a ${itemList.pbs[randomPB].name} in your pocket`);
         embed.setImage(itemList.pbs[randomPB].url);
@@ -652,7 +671,7 @@ function NeoRPG() {
         let randomTP = getRandomInt(itemList.transpots.length);
         value.inventory.push(itemList.transpots[randomTP]);
         //adjust db
-        await db.set(user.id, value);
+        await db.set(value.id, value);
         embed.setTitle("Something Has Happened");
         embed.setDescription(`Dr. Sloth hands you his latest invention - a ${itemList.transpots[randomTP].name}!`);
         embed.setImage(itemList.transpots[randomTP].url);
@@ -707,7 +726,7 @@ function NeoRPG() {
         //check for an active pet
         if(value.activePet < 0) return nothingSHH();
         value.pets[value.activePet].strength++
-        await db.set(user.id, value);
+        await db.set(value.id, value);
         embed.setTitle("Something Has Happened");
         embed.setDescription(`${value.pets[value.activePet].name} got Stronger!`);
         embed.setImage("https://images.neopets.com/randomevents/images/battle_faerie2.png");
@@ -718,7 +737,7 @@ function NeoRPG() {
         //check for an active pet
         if(value.activePet < 0) return nothingSHH();
         value.pets[value.activePet].hp = 0;
-        await db.set(user.id, value);
+        await db.set(value.id, value);
         embed.setTitle("Something Has Happened");
         embed.setDescription(`${value.pets[value.activePet].name} got attacked by the lava ghoul!`); embed.setImage("https://bookofages.jellyneo.net/assets/imgs/characters/lg/584.png");
         return embed
@@ -728,7 +747,7 @@ function NeoRPG() {
         //check for an active pet
         if(value.activePet < 0) return nothingSHH();
         value.pets[value.activePet].defense++
-        await db.set(user.id, value);
+        await db.set(value.id, value);
         embed.setTitle("Something Has Happened");
         embed.setDescription(`${value.pets[value.activePet].name} gained a point of Defense!`); embed.setImage("https://images.neopets.com/randomevents/images/battle_faerie2.png");
         return embed
@@ -746,7 +765,7 @@ function NeoRPG() {
         for(let j=0;j<value.pets.length;j++){ //look at users pets
           value.pets[j].hp = 0;//set hp to 0 //this adjusts all pets
       }
-      await db.set(user.id, value);
+      await db.set(value.id, value);
       embed.setTitle(`Oh No! Your pets got hit by a crazy chia in a Lambo!!`);
       embed.setDescription("");
       embed.setImage("http://images.neopets.com/images/nigel_car.gif");
@@ -759,7 +778,7 @@ function NeoRPG() {
         for(let j=0;j<value.pets.length;j++){ //look at users pets
           value.pets[j].hunger = 0;//set hunger to zero
       }
-      await db.set(user.id, value);
+      await db.set(value.id, value);
       embed.setTitle(`Your neopets all suddenly feel very hungry`);
       embed.setDescription("");
       embed.setImage("https://items.jellyneo.net/assets/imgs/items/3477.gif?487");
@@ -770,7 +789,7 @@ function NeoRPG() {
         let randomCS = getRandomInt(itemList.codestones.length);
         value.inventory.push(itemList.codestones[randomCS]);
         //adjust db
-        await db.set(user.id, value);
+        await db.set(value.id, value);
         embed.setTitle("Something Has Happened");
         embed.setDescription(`You found a mythical codestone on the floor!`);
         embed.setImage(itemList.codestones[randomCS].url);
@@ -837,8 +856,8 @@ function NeoRPG() {
     
     tempItem = value1.inventory.splice(itemIndex, 1);
     value2.inventory.push(tempItem[0]);
-    await db.set(user1.id, value1);
-    await db.set(user2.id, value2);
+    await db.set(value1.id, value1);
+    await db.set(value2.id, value2);
     embed.setTitle("So generous!");
     embed.setDescription(`You gave <@${user2.id}> a ${tempItem[0].name}! ❤️`);
     embed.setImage(tempItem[0].url);
@@ -900,7 +919,7 @@ function NeoRPG() {
     value.inventory.splice(brushIndex, 1);
     embed.setTitle(`I love my new look!!`);
     embed.setImage(getPetURL(value.pets[paintIndex]));
-    await db.set(user.id, value);
+    await db.set(value.id, value);
     return embed;
   }//end paint function
 
@@ -972,7 +991,7 @@ function NeoRPG() {
     value.inventory.splice(mpIndex, 1);
     embed.setTitle(`I love my new look!!`);
     embed.setImage(getPetURL(value.pets[paintIndex]));
-    await db.set(user.id, value);
+    await db.set(value.id, value);
     return embed;
   }//end paint function
 
@@ -1009,7 +1028,7 @@ function NeoRPG() {
       value.lastKau = today;
     }
     //update the datebase
-    await db.set(user.id, value);
+    await db.set(value.id, value);
     //Date and Time blocks finish here
     //calculate Kauvara magic shop rarity
     let random = getRandomInt(KAU_RARITY);
@@ -1051,7 +1070,7 @@ function NeoRPG() {
       embed.setImage(randomMP.url);
     //adjust db
     }
-    await db.set(user.id, value);
+    await db.set(value.id, value);
     return embed;
   }
   //Wheel of excitement
@@ -1089,7 +1108,7 @@ function NeoRPG() {
       value.lastExcitement = today;
     }
     //update the datebase
-    await db.set(user.id, value);
+    await db.set(value.id, value);
     //Date and Time blocks finish here
     //check for NP
     if(value.np < EXCITEMENT_COST){
@@ -1100,7 +1119,7 @@ function NeoRPG() {
     
     value.np = value.np - EXCITEMENT_COST;
     //update the NP
-    await db.set(user.id, value);
+    await db.set(value.id, value);
 
     //spin the wheel and get a random number
     let random = getRandomInt(9);
@@ -1109,7 +1128,7 @@ function NeoRPG() {
       for(let j=0;j<value.pets.length;j++){ //look at users pets
           value.pets[j].hp = Math.floor(value.pets[j].maxhp/2);//set hp to half of the hp
       }
-      await db.set(user.id, value);
+      await db.set(value.id, value);
       embed.setTitle("THUNDER!");
       embed.setDescription(`A Bolt of Lightning comes and zaps your pets!!!`);
       embed.setImage("https://thedailyneopets.com/uploads/articles/dailies/excitement/Oldwheel.jpg");
@@ -1120,7 +1139,7 @@ function NeoRPG() {
       for(let j=0;j<value.pets.length;j++){ //look at users pets
           value.pets[j].hp = value.pets[j].maxhp;//set hp full hp
       }
-      await db.set(user.id, value);
+      await db.set(value.id, value);
       embed.setTitle("Healed!");
       embed.setDescription(`All your neopets are completely healed!`);
       embed.setImage("http://images.neopets.com/faerieland/win_magic.gif");
@@ -1130,7 +1149,7 @@ function NeoRPG() {
     if(random == 2){
       let randomNP = getRandomInt(100) + 25;
       value.np = value.np + randomNP;
-      await db.set(user.id, value);
+      await db.set(value.id, value);
       embed.setTitle("Mystery Prize!");
       embed.setDescription(`You earned ${randomNP} NP`);
       embed.setImage("https://thedailyneopets.com/uploads/articles/dailies/excitement/Oldwheel.jpg");
@@ -1143,7 +1162,7 @@ function NeoRPG() {
       //   embed.setDescription(`The Pant Devil tried to steal your shit but saw you were poor af and ran off`);
       //   embed.setImage("https://bookofages.jellyneo.net/assets/imgs/characters/lg/381.png");
       // }
-      // await db.set(user.id, value);
+      // await db.set(value.id, value);
       // embed.setTitle("Pant Devil!");
       // embed.setDescription(`You earned ${randomNP}`);
       // embed.setImage("https://thedailyneopets.com/uploads/articles/dailies/excitement/Oldwheel.jpg");
@@ -1156,7 +1175,7 @@ function NeoRPG() {
       for(let j=0;j<value.pets.length;j++){ //look at users pets
           value.pets[j].hp = 0;//set hp to 0
       }
-      await db.set(user.id, value);
+      await db.set(value.id, value);
       embed.setTitle("Lava Ghoul!");
       embed.setDescription(`The Lava Ghoul Comes and Breathes Fire all over your pets!!!`);
       embed.setImage("https://bookofages.jellyneo.net/assets/imgs/characters/lg/584.png");
@@ -1168,7 +1187,7 @@ function NeoRPG() {
       let randomMP = itemList.basicmps[randomMPIndex];
       value.inventory.push(randomMP);
       //adjust db
-      await db.set(user.id, value);
+      await db.set(value.id, value);
       embed.setTitle("Magic Item!");
       embed.setDescription(`The Light Faerie Appears and Hands you a ${randomMP.name}`);
       embed.setImage("http://images.neopets.com/faerieland/win_magic.gif");
@@ -1177,7 +1196,7 @@ function NeoRPG() {
     //2000 NP
     if(random == 6){;
       value.np = value.np + 2000;
-      await db.set(user.id, value);
+      await db.set(value.id, value);
       embed.setTitle("WIN!");
       embed.setDescription(`You win 2000 NP!!`);
       embed.setImage("https://thedailyneopets.com/uploads/articles/dailies/excitement/Oldwheel.jpg");
@@ -1186,7 +1205,7 @@ function NeoRPG() {
     //5000 NP
     if(random == 7){;
       value.np = value.np + 500;
-      await db.set(user.id, value);
+      await db.set(value.id, value);
       embed.setTitle("WIN!");
       embed.setDescription(`You win 500 NP!!`);
       embed.setImage("https://thedailyneopets.com/uploads/articles/dailies/excitement/Oldwheel.jpg");
@@ -1195,7 +1214,7 @@ function NeoRPG() {
     //10000 NP
     if(random == 8){;
       value.np = value.np + 10000;
-      await db.set(user.id, value);
+      await db.set(value.id, value);
       embed.setTitle("WIN!");
       embed.setDescription(`You win 10000 NP!! WOW!`);
       embed.setImage("https://thedailyneopets.com/uploads/articles/dailies/excitement/Oldwheel.jpg");
@@ -1246,7 +1265,7 @@ function NeoRPG() {
         value.lastHeal = today;
       }
       //update the datebase
-      await db.set(user.id, value);
+      await db.set(value.id, value);
       //Date and Time blocks finish here
      
      let random = getRandomInt(10);
@@ -1258,7 +1277,7 @@ function NeoRPG() {
         return embed
       }
       value.pets[value.activePet].hp += 10;
-      await db.set(user.id, value);
+      await db.set(value.id, value);
       embed.setTitle(`${value.pets[value.activePet].name} gained 10 hit points`);
       embed.setDescription("");
       embed.setImage("https://neopetsclassic.com/images/misc/healing_springs_faerie2.gif");
@@ -1269,7 +1288,7 @@ function NeoRPG() {
           value.pets[j].hp = value.pets[j].maxhp;//set hp to 10 //this adjusts all pets
           value.pets[j].hunger = 10;
       }
-      await db.set(user.id, value);
+      await db.set(value.id, value);
       embed.setTitle(`All your pets are completely healed!`);
       embed.setDescription("");
       embed.setImage("https://neopetsclassic.com/images/misc/healing_springs_faerie2.gif");
@@ -1279,7 +1298,7 @@ function NeoRPG() {
       for(let j=0;j<value.pets.length;j++){ //look at users pets
           value.pets[j].hp += 15;//set hp to 10 //this adjusts all pets
       }
-      await db.set(user.id, value);
+      await db.set(value.id, value);
       embed.setTitle(`All your neopets gained 10 HP!`);
       embed.setDescription("");
       embed.setImage("https://neopetsclassic.com/images/misc/healing_springs_faerie2.gif");
@@ -1294,7 +1313,7 @@ function NeoRPG() {
       }
       value.pets[value.activePet].hp = value.pets[value.activePet].maxhp;
       value.pets[value.activePet].hunger = MAX_HUNGER;
-      await db.set(user.id, value);
+      await db.set(value.id, value);
       embed.setTitle(`${value.pets[value.activePet].name} regained all their hit points and is not hungry anymore`);
       embed.setDescription("");
       embed.setImage("https://neopetsclassic.com/images/misc/healing_springs_faerie2.gif");
@@ -1304,7 +1323,7 @@ function NeoRPG() {
         for(let j=0;j<value.pets.length;j++){ //look at users pets
             value.pets[j].hp += 3;//set hp to 10 //this adjusts all pets
         }
-        await db.set(user.id, value);
+        await db.set(value.id, value);
         embed.setTitle(`All your neopets gained 3 HP!`);
         embed.setDescription("");
         embed.setImage("https://neopetsclassic.com/images/misc/healing_springs_faerie2.gif");
@@ -1314,7 +1333,7 @@ function NeoRPG() {
         for(let j=0;j<value.pets.length;j++){ //look at users pets
             value.pets[j].hp += 5;//set hp to 10 //this adjusts all pets
         }
-        await db.set(user.id, value);
+        await db.set(value.id, value);
         embed.setTitle(`All your neopets gained 5 HP!`);
         embed.setDescription("");
         embed.setImage("https://neopetsclassic.com/images/misc/healing_springs_faerie2.gif");
@@ -1328,7 +1347,7 @@ function NeoRPG() {
         return embed
       }
       value.pets[value.activePet].hp += 5;
-      await db.set(user.id, value);
+      await db.set(value.id, value);
       embed.setTitle(`${value.pets[value.activePet].name} gained 5 hit points`);
       embed.setDescription("");
       embed.setImage("https://neopetsclassic.com/images/misc/healing_springs_faerie2.gif");
@@ -1342,7 +1361,7 @@ function NeoRPG() {
         return embed
       }
       value.pets[value.activePet].hp += 15;
-      await db.set(user.id, value);
+      await db.set(value.id, value);
       embed.setTitle(`${value.pets[value.activePet].name} gained 15 hit points`);
       embed.setDescription("");
       embed.setImage("https://neopetsclassic.com/images/misc/healing_springs_faerie2.gif");
@@ -1356,14 +1375,14 @@ function NeoRPG() {
         return embed
       }
       value.pets[value.activePet].hp += 1;
-      await db.set(user.id, value);
+      await db.set(value.id, value);
       embed.setTitle(`${value.pets[value.activePet].name} gained 1 hit point`);
       embed.setDescription("");
       embed.setImage("https://neopetsclassic.com/images/misc/healing_springs_faerie2.gif");
       return embed;
      }
     if(random == 9){
-        await db.set(user.id, value);
+        await db.set(value.id, value);
         for(let j=0;j<value.pets.length;j++){ //look at users pets
             value.pets[j].hp += 1;//set hp to 10 //this adjusts all pets
         }
@@ -1423,20 +1442,26 @@ function NeoRPG() {
         userZapping.lastZap = today;
       }
       //update the datebase
-      await db.set(user.id, userZapping);
+      zapIndex = userZapping.pets.findIndex(x => x.name.toLowerCase() === petName.toLowerCase());
+      //if the pet at the active index does not exist - return
+      if(!userZapping.pets[zapIndex]){
+          embed.setTitle("You don't own " + petName + " - so you can't zap them :(");
+          embed.setDescription("");
+          return embed
+      }
+
+      await db.set(userZapping.id, userZapping);
       //Date and Time blocks finish here
       //ensure this pet is owned
-      zapIndex = userZapping.pets.findIndex(x => x.name.toLowerCase() === petName.toLowerCase());
-      //if the pet at the active index exists
-        if(userZapping.pets[zapIndex]){
+
          //zapping happens here
-          let random = getRandomInt(8);
+          let random = getRandomInt(9);
           //hp
           if(random==0){
             let change = getRandomInt(4);
             change++//because random starts with 0
             userZapping.pets[zapIndex].maxhp += change;
-            await db.set(user.id, userZapping);
+            await db.set(userZapping.id, userZapping);
             embed.setTitle(`The ray is fired at ${userZapping.pets[zapIndex].name} and they gained ${change} max hit points`);
             embed.setDescription("");
             embed.setImage(getSadPetURL(userZapping.pets[zapIndex]));
@@ -1449,7 +1474,7 @@ function NeoRPG() {
             change++//because random starts with 0
             if(loseGain == 0){
               userZapping.pets[zapIndex].defense += change;
-              await db.set(user.id, userZapping);
+              await db.set(userZapping.id, userZapping);
               embed.setTitle(`The ray is fired at ${userZapping.pets[zapIndex].name} and they gained ${change} defense points`);
               embed.setDescription("");
               embed.setImage(getSadPetURL(userZapping.pets[zapIndex]));
@@ -1461,7 +1486,7 @@ function NeoRPG() {
               }
               else{
                 userZapping.pets[zapIndex].defense -= change;
-                await db.set(user.id, userZapping);
+                await db.set(userZapping.id, userZapping);
                 embed.setTitle(`The ray is fired at ${userZapping.pets[zapIndex].name} and they lose ${change} defense points`);
                 embed.setDescription("");
                 embed.setImage(getSadPetURL(userZapping.pets[zapIndex]));
@@ -1476,7 +1501,7 @@ function NeoRPG() {
             change++//because random starts with 0
             if(loseGain == 0){
               userZapping.pets[zapIndex].movement += change;
-              await db.set(user.id, userZapping);
+              await db.set(userZapping.id, userZapping);
               embed.setTitle(`The ray is fired at ${userZapping.pets[zapIndex].name} and they gained ${change} movement points`);
               embed.setDescription("");
               embed.setImage(getSadPetURL(userZapping.pets[zapIndex]));
@@ -1488,7 +1513,7 @@ function NeoRPG() {
               }
               else{
                 userZapping.pets[zapIndex].movement -= change;
-                await db.set(user.id, userZapping);
+                await db.set(userZapping.id, userZapping);
                 embed.setTitle(`The ray is fired at ${userZapping.pets[zapIndex].name} and they lose ${change} movement points`);
                 embed.setDescription("");
                 embed.setImage(getSadPetURL(userZapping.pets[zapIndex]));
@@ -1507,7 +1532,7 @@ function NeoRPG() {
             } 
             //change to a basic color
             userZapping.pets[zapIndex].color = neoList.basicColor[getRandomInt(neoList.basicColor.length)];
-            await db.set(user.id, userZapping);
+            await db.set(userZapping.id, userZapping);
             embed.setTitle(`The ray is fired at ${userZapping.pets[zapIndex].name} and they turned into a  ${userZapping.pets[zapIndex].color} ${userZapping.pets[zapIndex].species}`);
             embed.setDescription("");
             embed.setImage(getSadPetURL(userZapping.pets[zapIndex]));
@@ -1527,7 +1552,7 @@ function NeoRPG() {
               isAvail = await this.isPetColorAvailable(newColor, userZapping.pets[zapIndex].species);
             }
             userZapping.pets[zapIndex].color = newColor;
-            await db.set(user.id, userZapping);
+            await db.set(userZapping.id, userZapping);
             embed.setTitle(`The ray is fired at ${userZapping.pets[zapIndex].name} and they changed color to ${newColor}`);
             embed.setDescription("");
             embed.setImage(getSadPetURL(userZapping.pets[zapIndex]));
@@ -1540,7 +1565,7 @@ function NeoRPG() {
             change++//because random starts with 0
             if(loseGain == 0){
               userZapping.pets[zapIndex].strength += change;
-              await db.set(user.id, userZapping);
+              await db.set(userZapping.id, userZapping);
               embed.setTitle(`The ray is fired at ${userZapping.pets[zapIndex].name} and they gained ${change} strength points`);
               embed.setDescription("");
               embed.setImage(getSadPetURL(userZapping.pets[zapIndex]));
@@ -1552,7 +1577,7 @@ function NeoRPG() {
               }
               else{
                 userZapping.pets[zapIndex].strength -= change;
-                await db.set(user.id, userZapping);
+                await db.set(userZapping.id, userZapping);
                 embed.setTitle(`The ray is fired at ${userZapping.pets[zapIndex].name} and they lose ${change} strength points`);
                 embed.setDescription("");
                 embed.setImage(getSadPetURL(userZapping.pets[zapIndex]));
@@ -1574,29 +1599,35 @@ function NeoRPG() {
             change++//because random starts with 0
             if(!loseGain == 0){ //if not zero
               userZapping.pets[zapIndex].level += change;
-              await db.set(user.id, userZapping);
+              await db.set(userZapping.id, userZapping);
               embed.setTitle(`The ray is fired at ${userZapping.pets[zapIndex].name} and they gained ${change} level(s)`);
               embed.setDescription("");
               embed.setImage(getSadPetURL(userZapping.pets[zapIndex]));
               return embed;
             }
             else{ //1/5 chance of going back to level 1
-               userZapping.pets[zapIndex].level = 1;
-                await db.set(user.id, userZapping);
+                userZapping.pets[zapIndex].level = 1;
+                await db.set(userZapping.id, userZapping);
                 embed.setTitle(`The ray is fired at ${userZapping.pets[zapIndex].name} and they went down to level 1`);
                 embed.setDescription("");
                 embed.setImage(getSadPetURL(userZapping.pets[zapIndex]));
                 return embed;
+            }  
+          }
+          if(random==8){
+            if(userZapping.pets[zapIndex].gender.toLowerCase() == "female"){
+              userZapping.pets[zapIndex].gender == "Male";
             }
+            else{
+              userZapping.pets[zapIndex].gender == "Female"
+            }
+            await db.set(userZapping.id, userZapping);
+            embed.setTitle("The ray is fired at " + userZapping.pets[zapIndex].name + " - and they changed gender!");
+            embed.setDescription("");
+            embed.setImage(getSadPetURL(userZapping.pets[zapIndex]));
+            return embed;
           }
           
-        }
-        else{
-          embed.setTitle("You don't own " + petName + " - so you can't zap them :(");
-          embed.setDescription("");
-          return embed
-        }
-     
         function nothingHappens(){
             embed.setTitle("The ray is fired at " + userZapping.pets[zapIndex].name + " - and nothing happened :(");
             embed.setDescription("");
@@ -1611,7 +1642,7 @@ function NeoRPG() {
     if(petIndex>=0){//ensure the pet index is valid
       if(player){//if the value is in the db then proceed
         player.pets[petIndex].color = color;
-        await db.set(user.id, player);
+        await db.set(player.id, player);
       }
       else{
         let embed = new MessageEmbed();
@@ -1627,7 +1658,7 @@ function NeoRPG() {
     value = await db.get(user.id)
       if(value){//if a value is in the db = then add np
         value.np = value.np + np;
-        await db.set(user.id, value);
+        await db.set(value.id, value);
       }
       else{
         let embed = new MessageEmbed();
@@ -1642,7 +1673,7 @@ function NeoRPG() {
     value = await db.get(user.id)
       if(value){//if a value is in the db = then add np
         value.labAccess = true;
-        await db.set(user.id, value);
+        await db.set(value.id, value);
       }
       else{
         let embed = new MessageEmbed();

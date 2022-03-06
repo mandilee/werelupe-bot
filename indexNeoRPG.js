@@ -40,6 +40,8 @@ const commands = [
   //join slash command /join
   //adds user the game
   new SlashCommandBuilder().setName('join').setDescription('Lets you join NeoRPG!'),
+   //check your remaining time
+  new SlashCommandBuilder().setName('times').setDescription('Lets you check your time remaining to do your activities'),
   //wheel of excitement
     new SlashCommandBuilder().setName('excitement').setDescription('Lets you spin the wheel of excitement! - NP Required'),
   //quit slash command /quit 
@@ -54,11 +56,11 @@ const commands = [
   //zaps your pet
   new SlashCommandBuilder().setName('zap').setDescription('Zaps your selected pet').addStringOption(option => option.setName('petname').setDescription('Enter pet name').setRequired(true)),
   //give a gift
-  new SlashCommandBuilder().setName('gift').setDescription('See your or a user\'s stats in NeoRPG').addUserOption(option => option.setName('user').setDescription('Select a user').setRequired(true)).addStringOption(option => option.setName('itemname').setDescription('Enter the item name exactly as it appears').setRequired(true)),
+  new SlashCommandBuilder().setName('gift').setDescription('Send a gift to another NeoRPG player').addUserOption(option => option.setName('user').setDescription('Select a user').setRequired(true)).addStringOption(option => option.setName('itemname').setDescription('Enter the item name exactly as it appears').setRequired(true)),
   //shows user own stats 
   new SlashCommandBuilder().setName('help').setDescription('Provides the user with general information about NeoRPG'),
   //shows stats of u or user
-  new SlashCommandBuilder().setName('getstats').setDescription('Give a gift in NeoRPG').addUserOption(option => option.setName('user').setDescription('Select a user')),
+  new SlashCommandBuilder().setName('getstats').setDescription('See your or a user\'s stats in NeoRPG').addUserOption(option => option.setName('user').setDescription('Select a user')),
     //magic shop 
   new SlashCommandBuilder().setName('kauvara').setDescription('Buy an item from Kauvara\'s Magic Shop! - NP Required'),
     //fruit machine
