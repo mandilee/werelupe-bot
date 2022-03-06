@@ -250,6 +250,8 @@ function NeoRPG() {
     await db.set(POUND, poundUser);
     //push the adopted pet to the user
     value.pets.push(adoptedPet[0]);
+    //adjust total pets
+    value.totalPets++;
     //set the adopted pet changes to the user
     await db.set(value.id, value);
     //set active pet to the newly adopted pet
