@@ -499,7 +499,7 @@ function NeoRPG() {
         return embed 
       }
       //ensure pet is not already full
-      if(value.pets[feedMeIndex].hunger < MAX_HUNGER){
+      if(value.pets[feedMeIndex].hunger >= MAX_HUNGER){
         return getPetEmbed(value.pets[feedMeIndex], `I can't eat anymore - I'm so full!`);
       }
       //check if there is a feedTime Integer
