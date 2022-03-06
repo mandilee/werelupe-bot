@@ -530,7 +530,8 @@ function NeoRPG() {
       }
        for(var i = 0; i <= MAX_HUNGER; i++){
          if(value.pets.hunger == MAX_HUNGER){
-           break;
+           await db.set(value.id, value);
+           return getPetEmbed(value.pets[feedMeIndex], `Thank you for feeding me!`);
          }
          value.pets[feedMeIndex].hunger++;
          if(value.np < FEED_COST){
