@@ -987,10 +987,10 @@
       ownerTag: 'In the **Pound**'
     },
     {
-      name: 'Devil',
-      species: 'Shoyru',
-      color: 'Halloween',
-      level: 1,
+      name: 'Lilac',
+      species: 'Pteri',
+      color: 'Faerie',
+      level: 2,
       strength: 1,
       defense: 1,
       hp: 10,

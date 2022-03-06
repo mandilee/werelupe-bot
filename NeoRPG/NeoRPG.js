@@ -528,7 +528,7 @@ function NeoRPG() {
       if(amountOfFeed > MAX_HUNGER){
         amountOfFeed = MAX_HUNGER
       }
-       for(var i = 0; i< MAX_HUNGER; i++){
+       for(var i = 0; value.pets[feedMeIndex].hunger <= MAX_HUNGER; i++){
          value.pets[feedMeIndex].hunger++;
          if(value.np < FEED_COST){
            embed.setTitle(`Sorry you do not have enough Neopoints to Feed Your Pet! ${amountOfFeed} times but you we able to feed them ${i} times! \nFeeding Cost: ${FEED_COST}\nYour NP:${value.np}`);
@@ -618,7 +618,7 @@ function NeoRPG() {
     //randoms that require an active pet
     if(rareRandom==0){//if rare random is exactly 0 then get a random event from this list
       let random = getRandomInt(6); 
-      random = 3;
+      //random = 3;
       //Boochi
       if(random == 0){
         //check for an active pet
@@ -1043,7 +1043,9 @@ function NeoRPG() {
     }
     //if we made it here then all the conditions are right to paint the pet
     //set the color to the right color
-    value.pets[paintIndex].color = color;
+    color = color.toLowerCase();
+    var colorCap = color.charAt(0).toUpperCase() + color.slice(1);
+    value.pets[paintIndex].color = colorCap;
     //remove the paint brush from the inventory
     value.inventory.splice(brushIndex, 1);
     embed.setTitle(`I love my new look!!`);
