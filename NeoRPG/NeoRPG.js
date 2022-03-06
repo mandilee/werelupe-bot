@@ -528,7 +528,7 @@ function NeoRPG() {
       if(amountOfFeed > MAX_HUNGER){
         amountOfFeed = MAX_HUNGER
       }
-       for(var i = 0; i<= MAX_HUNGER; i++){
+       for(var i = 0; i< MAX_HUNGER; i++){
          value.pets[feedMeIndex].hunger++;
          if(value.np < FEED_COST){
            embed.setTitle(`Sorry you do not have enough Neopoints to Feed Your Pet! ${amountOfFeed} times but you we able to feed them ${i} times! \nFeeding Cost: ${FEED_COST}\nYour NP:${value.np}`);
