@@ -493,7 +493,7 @@ function NeoRPG() {
       //ensure this pet is owned
       feedMeIndex = value.pets.findIndex(x => x.name.toLowerCase() === petName.toLowerCase());
      
-      if(value.pets[feedMeIndex]){
+      if(!value.pets[feedMeIndex]){
         embed.setTitle("You don't own " + petName + " - so you can't feed them :(");
         embed.setDescription("");
         return embed 
