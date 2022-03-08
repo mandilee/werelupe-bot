@@ -679,14 +679,13 @@ dateDiffInMinutes(timesUser.lastFruit, today);
     
     //very rare chance to get this
     if(fruits[random1] === fruits[random2] && fruits[random2] === fruits[random3]){
-      //push the pb to the inventory
-      let randomPB = getRandomInt(itemList.pbs.length);
-      value.inventory.push(itemList.pbs[randomPB]);
+      let randomPB = getRandomInt(itemList.rarepbs.length);
+      value.inventory.push(itemList.rarepbs[randomPB]);
       value.np += 25000;
       //adjust the embed
       embed.setTitle("WOW GRAPE! YOU WIN!!!");
-      embed.setDescription(`\nYour Spin:\n${fruits[random1]} | ${fruits[random2]} | ${fruits[random3]}\n You won a ${itemList.pbs[randomPB].name} and 25,000 NP!`);
-      embed.setImage(itemList.pbs[randomPB].url);
+      embed.setDescription(`\nYour Spin:\n${fruits[random1]} | ${fruits[random2]} | ${fruits[random3]}\n You won a ${itemList.rarepbs[randomPB].name} and 25,000 NP!`);
+      embed.setImage(itemList.rarepbs[randomPB].url);
       //adjust db
       await db.set(value.id, value);
       return embed;
@@ -697,6 +696,7 @@ dateDiffInMinutes(timesUser.lastFruit, today);
       //get random toys
       let randomToy = getRandomInt(itemList.toys.length);
       value.inventory.push(itemList.toys[randomToy]);
+      value.np+=1000;
       //adjust db
       await db.set(value.id, value);
       //set the embed
