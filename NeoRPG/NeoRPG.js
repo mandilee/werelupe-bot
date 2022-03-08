@@ -677,7 +677,7 @@ dateDiffInMinutes(timesUser.lastFruit, today);
       return embed;
     }
     
-    //very rare chance to get this
+    //very rare chance to get this so always get a rare pb
     if(fruits[random1] === fruits[random2] && fruits[random2] === fruits[random3]){
       let randomPB = getRandomInt(itemList.rarepbs.length);
       value.inventory.push(itemList.rarepbs[randomPB]);
@@ -1157,6 +1157,7 @@ dateDiffInMinutes(timesUser.lastFruit, today);
       embed.setDescription("");
       return embed
     }
+    
     //find the pet that the user wants to paint
     paintIndex = value.pets.findIndex(x => x.name.toLowerCase() === petName.toLowerCase());
     //find the color that the user wants to paint
@@ -1173,13 +1174,6 @@ dateDiffInMinutes(timesUser.lastFruit, today);
       embed.setDescription("");
       return embed
     }
-    //check to see if the pet is available at this color
-    let isAvail = await this.isPetColorAvailable(color, value.pets[paintIndex].species);
-    if(!isAvail){
-      embed.setTitle(`Sorry this color is not available for ${value.pets[paintIndex].species}s`);
-      embed.setDescription("");
-      return embed
-    }
     //check to see if the user has the right paintbrush
     brushIndex = value.inventory.findIndex(x => x.color?.toLowerCase() === color.toLowerCase() && x.category === "pb");
     if(brushIndex < 0){
@@ -1187,6 +1181,31 @@ dateDiffInMinutes(timesUser.lastFruit, today);
       embed.setDescription("");
       return embed
     }
+    
+    if(color.toLowerCase() == "royal"){
+      if(value.pets[paintIndex].gender.toLowerCase() == "male"){
+        color = "Royalboy";
+      }
+      else{
+        color ="Royalgirl";
+      }
+    }
+    if(color.toLowerCase() == "usuki"){
+      if(value.pets[paintIndex].gender.toLowerCase() == "male"){
+        color = "Usukiboy";
+      }
+      else{
+        color ="Usukigirl";
+      }
+    }
+    //check to see if the pet is available at this color
+    let isAvail = await this.isPetColorAvailable(color, value.pets[paintIndex].species);
+    if(!isAvail){
+      embed.setTitle(`Sorry this color is not available for ${value.pets[paintIndex].species}s`);
+      embed.setDescription("");
+      return embed
+    }
+    
     //if we made it here then all the conditions are right to paint the pet
     //set the color to the right color
     color = color.toLowerCase();
