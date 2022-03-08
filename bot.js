@@ -87,8 +87,9 @@ client.on('interactionCreate', async interaction => {
     await interaction.reply({ embeds: [content] });
     const petName = interaction.options.getString('petname');
     content = await neoRPG.create(interaction.user, petName);
-    await interaction.reply({ embeds: [content] });
+    await interaction.editReply({ embeds: [content] });
   }
+  
 
   //abandon a pet
   if (interaction.commandName === 'abandon') {
@@ -99,9 +100,12 @@ client.on('interactionCreate', async interaction => {
 
   //view a pet
   if (interaction.commandName === 'view') {
+    let content = new MessageEmbed();
+    content.setTitle("Working on it..");
+    await interaction.reply({ embeds: [content] });
     const petName = interaction.options.getString('petname');
     content = await neoRPG.view(interaction.user, petName);
-    await interaction.reply({ embeds: [content] });
+    await interaction.editReply({ embeds: [content] });
   }
   
 
