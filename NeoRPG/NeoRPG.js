@@ -31,7 +31,7 @@ const POUND = "pound";
 const ZAP_INTERVAL = 60;
 
 //Random Event
-const RANDOM_RARITY = 10;
+const RANDOM_RARITY = 15;
 const SHH_INTERVAL = 5;
 
 //Healing Springs Interval
@@ -42,11 +42,16 @@ const EXCITEMENT_INTERVAL = 30;
 const EXCITEMENT_COST = 150;
 
 //Kauvara Constants
-const BASICMP_COST = 8000;
-const RAREMP_COST = 20000;
+const BASICMP_COST = 5000;
+const RAREMP_COST = 15000;
 const KAU_RARITY = 8;
 const KAU_INTERVAL = 1;
-const KAU_PRICE_BUFFER = 5000;
+const KAU_PRICE_BUFFER = 8000;
+
+//Fruit Machine Constants
+const FRUIT_INTERVAL = 120;
+const FRUIT_RARITY = 10;
+const FRUIT_RAREPB = 3;
 
 //constructor
 function NeoRPG() {
@@ -424,7 +429,7 @@ function NeoRPG() {
      //initialize embed
       let embed = new MessageEmbed();
       embed.setTitle(`NeoRPG Help`);
-      embed.setDescription("\*\*Thanks for playing NeoRPG! Here are some helpful tips:\*\*\n\n `/join` - use this to join NeoRPG\n `/create` - use this to create a Neopet\n `/adopt` - use this to adopt a pet from the Neopian Pound\n `/setactive` - use this to set your active Neopet\n `/abandon` - use this to abandon a Neopet\n `/pound` - use this to view the Neopian Pound\n `/view` - use this to view the pet profile of the specified pet\n `/getstats` - use this to view a user profile\n `/feed` - use this to feed one of your Neopets\n `/excitement` - spin the Wheel of Excitement\n `/kauvara` - visit Kauvara's magic shop in hopes for a good morphing potion!\n `/zap` - use this to zap a Neopet\n `/shh` - use this receive a random event\n `/inventory` - use this to view your inventory\n `/gift` - use this to send a gift to someone\n `/giftnp` - use this to send NP to someone\n `/play` - play with your pet and increase their happiness (toy required)\n `/paint` - use this to paint a pet if you have the Paint Brush\n `/morph` - use this to morph the specified pet (Magic Potion Required)\n `/heal` - to visit the healing springs\n `/quit` - use this to quit NeoRPG and give up all your progress\n `/help` - use this to get a list of commands and help with NeoRPG");
+      embed.setDescription("\*\*Thanks for playing NeoRPG! Here are some helpful tips:\*\*\n\n `/join` - use this to join NeoRPG\n `/create` - use this to create a Neopet\n `/adopt` - use this to adopt a pet from the Neopian Pound\n `/setactive` - use this to set your active Neopet\n `/abandon` - use this to abandon a Neopet\n `/pound` - use this to view the Neopian Pound\n `/view` - use this to view the pet profile of the specified pet\n `/getstats` - use this to view a user profile\n `/feed` - use this to feed one of your Neopets\n `/excitement` - spin the Wheel of Excitement\n `/kauvara` - visit Kauvara's magic shop in hopes for a good morphing potion!\n `/zap` - use this to zap a Neopet\n `/shh` - use this receive a random event\n `/inventory` - use this to view your inventory\n `/gift` - use this to send a gift to someone\n `/giftnp` - use this to send NP to someone\n `/play` - play with your pet and increase their happiness (toy required)n `/fruits` - spin the fruit machine!\n `/paint` - use this to paint a pet if you have the Paint Brush\n `/morph` - use this to morph the specified pet (Magic Potion Required)\n `/heal` - to visit the healing springs\n `/quit` - use this to quit NeoRPG and give up all your progress\n `/help` - use this to get a list of commands and help with NeoRPG");
       return embed;
     } 
 
@@ -439,6 +444,7 @@ function NeoRPG() {
      if(!timesUser.lastKau) timesUser.lastKau = 0;
      if(!timesUser.lastSHH) timesUser.lastSHH = 0;
      if(!timesUser.lastHeal) timesUser.lastHeal = 0;
+     if(!timesUser.lastFruit) timesUser.lastFruit=0;
      var excitmentTime = EXCITEMENT_INTERVAL - dateDiffInMinutes(timesUser.lastExcitement, today);
      if(excitmentTime < 0) excitmentTime = 0;
      var zapTime = ZAP_INTERVAL - dateDiffInMinutes(timesUser.lastZap, today);
@@ -449,10 +455,13 @@ function NeoRPG() {
      if(healTime  < 0) healTime  = 0;
      var sshTime = SHH_INTERVAL - dateDiffInMinutes(timesUser.lastSHH, today);
      if(sshTime  < 0) sshTime  = 0;
+     var fruitTime = FRUIT_INTERVAL - 
+dateDiffInMinutes(timesUser.lastFruit, today);
+     if(fruitTime  < 0) fruitTime  = 0;
      
 
       embed.setTitle(`Time Remaining`);
-      embed.setDescription(`\n 🎡 ${excitmentTime} Minutes - For Wheel of Excitement\n ⚡ ${zapTime} Minutes - For Lab Zap\n 🔮 ${kauTime } Minutes - To Visit Kauvara\n ❤️‍🩹 ${healTime} Minutes - For Healing Springs\n 🎲 ${sshTime} Minutes - For A Random Event`);
+      embed.setDescription(`\n 🎡 ${excitmentTime} Minutes - For Wheel of Excitement\n ⚡ ${zapTime} Minutes - For Lab Zap\n 🔮 ${kauTime } Minutes - To Visit Kauvara\n ❤️‍🩹 ${healTime} Minutes - For Healing Springs\n 🎲 ${sshTime} Minutes - For A Random Event\n 🍇 ${fruitTime} Minutes - To Spin the Fruit Machine`);
       return embed;
     } 
   
@@ -594,6 +603,121 @@ function NeoRPG() {
       }
   }
 
+  //fruit machine
+  this.fruit = async function(user){
+    //retrieve user
+    value = await db.get(user.id);
+    //initialize embed
+    let embed = new MessageEmbed();
+    
+    //check that the user is playing
+    if(!value){
+      embed.setTitle("You can't have spin the fruit machine if you haven't joined NeoRPG!");
+      embed.setDescription("");
+      return embed;
+    } 
+    //Date and Time blocks are here
+    //get today's time
+    var today = new Date();
+    //if there is a value for last SHH (AKA The User got an SHH Before)
+    if(value.lastFruit){
+      //calcuate time remaining
+      const timeRemaining = dateDiffInMinutes(value.lastFruit, today)
+      //if more than designated minutes reset the last shh value
+      if(timeRemaining >=FRUIT_INTERVAL){
+        value.lastFruit = today;
+      }
+      //otherwise tell the user it is too soon
+      else{
+        embed.setTitle("Too Soon");
+        embed.setDescription(`You can get your next Fruit Machine Spin in ${FRUIT_INTERVAL-timeRemaining} minutes.`);
+        return embed;
+      }
+    }
+    //if never received a SHH set the value to now
+    else{
+      value.lastFruit = today;
+    }
+    //update the datebase
+    await db.set(value.id, value);
+    //Date and Time blocks finish here
+    var fruits = ["🍊","🍇", "🍉", "🍎", "🍋", "🥝","🍍"];
+    let random1 = getRandomInt(fruits.length); 
+    let random2 = getRandomInt(fruits.length); 
+    let random3 = getRandomInt(fruits.length); 
+
+    let randomWin = getRandomInt(FRUIT_RARITY); 
+
+    //adjustable odds for a random win
+    if(randomWin == 0){
+       let rarePB = getRandomInt(FRUIT_RAREPB);
+        //chances for a rare pb adjustable too
+        if (rarePB == 0){
+          let randomPB = getRandomInt(itemList.rarepbs.length);
+          value.inventory.push(itemList.rarepbs[randomPB]);
+          value.np += 25000;
+          //adjust the embed
+          embed.setTitle("WOW GRAPE! YOU WIN!!!");
+          embed.setDescription(`\nYour Spin:\n${fruits[random1]} | ${fruits[random1]} | ${fruits[random1]}\n You won a ${itemList.rarepbs[randomPB].name} and 25,000 NP!`);
+          embed.setImage(itemList.rarepbs[randomPB].url);
+          //adjust db
+          await db.set(value.id, value);
+          return embed;
+        }
+      //push the pb to the inventory
+      let randomPB = getRandomInt(itemList.pbs.length);
+      value.inventory.push(itemList.pbs[randomPB]);
+      value.np += 25000;
+      //adjust the embed
+      embed.setTitle("WOW GRAPE! YOU WIN!!!");
+      embed.setDescription(`\nYour Spin:\n${fruits[random1]} | ${fruits[random1]} | ${fruits[random1]}\n You won a ${itemList.pbs[randomPB].name} and 25,000 NP!`);
+      embed.setImage(itemList.pbs[randomPB].url);
+      //adjust db
+      await db.set(value.id, value);
+      return embed;
+    }
+    
+    //very rare chance to get this
+    if(fruits[random1] === fruits[random2] && fruits[random2] === fruits[random3]){
+      //push the pb to the inventory
+      let randomPB = getRandomInt(itemList.pbs.length);
+      value.inventory.push(itemList.pbs[randomPB]);
+      value.np += 25000;
+      //adjust the embed
+      embed.setTitle("WOW GRAPE! YOU WIN!!!");
+      embed.setDescription(`\nYour Spin:\n${fruits[random1]} | ${fruits[random2]} | ${fruits[random3]}\n You won a ${itemList.pbs[randomPB].name} and 25,000 NP!`);
+      embed.setImage(itemList.pbs[randomPB].url);
+      //adjust db
+      await db.set(value.id, value);
+      return embed;
+    }
+    //two matching
+    if(fruits[random1] === fruits[random2] || fruits[random2] === fruits[random3]){
+      //fruit machine with random toys for now
+      //get random toys
+      let randomToy = getRandomInt(itemList.toys.length);
+      value.inventory.push(itemList.toys[randomToy]);
+      //adjust db
+      await db.set(value.id, value);
+      //set the embed
+      embed.setTitle("GOOD SPIN!");
+      embed.setDescription(`\nYour Spin:\n${fruits[random1]} | ${fruits[random2]} | ${fruits[random3]}\n You won a ${itemList.toys[randomToy].name} and 1,000 NP!`);
+      embed.setImage(itemList.toys[randomToy].url);
+      return embed;
+    }
+    else{
+      embed.setTitle("No Win! Sorry! :(");
+      embed.setDescription(`\nYour Spin:\n${fruits[random1]} | ${fruits[random2]} | ${fruits[random3]}\nTry Again Next Time!`);
+    if(value.activePet >= 0){
+      embed.setImage(getSadPetURL(value.pets[value.activePet]));
+    }
+    else{
+      getSadPetURL({color: "Yellow", species: "Kacheek"});
+    }
+      return embed;
+    }
+    
+  }
   //random events
   this.randomEvent = async function(user){
     //retrieve user

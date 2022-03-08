@@ -82,6 +82,9 @@ client.on('interactionCreate', async interaction => {
   
   //create a pet
   if (interaction.commandName === 'create') {
+    let content = new MessageEmbed();
+    content.setTitle("Working on it..");
+    await interaction.reply({ embeds: [content] });
     const petName = interaction.options.getString('petname');
     content = await neoRPG.create(interaction.user, petName);
     await interaction.reply({ embeds: [content] });
@@ -144,6 +147,12 @@ client.on('interactionCreate', async interaction => {
   //wheel of excitement NeoRPG
   if (interaction.commandName === 'excitement') {
     content = await neoRPG.excitement(interaction.user);
+    await interaction.reply({ embeds: [content] });
+  }
+
+  //fruit machine NeoRPG
+  if (interaction.commandName === 'fruits') {
+    content = await neoRPG.fruit(interaction.user);
     await interaction.reply({ embeds: [content] });
   }
   
