@@ -998,7 +998,7 @@ dateDiffInMinutes(timesUser.lastFruit, today);
         }
         else{
          embed.setTitle("Something Has Happened");
-        embed.setDescription(`${value.pets[value.activePet].name} looks at you with wide eyes and says "**I love you**"!`);   embed.setImage(value.pets[value.activePet]));
+        embed.setDescription(`${value.pets[value.activePet].name} looks at you with wide eyes and says "**I love you**"!`);   embed.setImage(getPetURL(value.pets[value.activePet]));
         return embed;
         }
       }
