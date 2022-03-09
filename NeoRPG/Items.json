@@ -1,2986 +1,2968 @@
-{ 
-  "pbs":
-  [
-   {
-    	"name":"Baby Paint Brush", 
-    	"category": "pb", 
-    	"url": "https://neopetsclassic.com/images/items/2288_dn6C3Z2.png", 
-    	"color": "Baby" 
-    },
-    {
-    	"name":"Biscuit Paint Brush", 
-    	"category": "pb", 
-    	"url": "https://neopetsclassic.com/images/items/9415.gif", 
-    	"color": "Biscuit" 
-    },
-    {
-    	"name":"Blue Paint Brush", 
-    	"category": "pb", 
-    	"url": "https://neopetsclassic.com/images/items/92.gif", 
-    	"color": "Blue" 
-    },
-    {
-    	"name":"Camouflage Paint Brush", 
-    	"category": "pb", 
-    	"url": "https://neopetsclassic.com/images/items/2816.gif", 
-    	"color": "Camouflage" 
-    },
-    {
-    	"name":"Checkered Paint Brush", 
-    	"category": "pb", 
-    	"url": "https://neopetsclassic.com/images/items/3259.gif", 
-    	"color": "Checkered"
-    },
-    {
-    	"name":"Christmas Paint Brush", 
-    	"category": "pb", 
-    	"url": "https://neopetsclassic.com/images/items/481.gif", 
-    	"color": "Christmas"
-    },
-    {
-    	"name":"Cloud Paint Brush", 
-    	"category": "pb", 
-    	"url": "https://neopetsclassic.com/images/items/19298.gif", 
-    	"color": "Cloud"
-    },
-    {
-    	"name":"Disco Fever Paint Brush", 
-    	"category": "pb", 
-    	"url": "https://neopetsclassic.com/images/items/1722.gif", 
-    	"color": "Disco Fever" 
-    },
-    {
-    	"name":"Electric Blue Paint Brush", 
-    	"category": "pb", 
-    	"url": "https://neopetsclassic.com/images/items/14186.gif", 
-    	"color": "Electric"
-    },
-    {
-    	"name":"Fire, Fire, Your Pants On Fire Paint Brush", 
-    	"category": "pb", 
-    	"url": "https://neopetsclassic.com/images/items/8967.gif", 
-    	"color": "Fire"
-    },
-    {
-    	"name":"Glass Paint Brush", 
-    	"category": "pb", 
-    	"url": "https://neopetsclassic.com/images/items/gkasspntbrush_2x.png", 
-    	"color": "Glass" 
-    },
-    {
-    	"name":"Glowing Paint Brush", 
-    	"category": "pb", 
-    	"url": "https://neopetsclassic.com/images/items/94.gif", 
-    	"color": "Glowing" 
-    },
-    {
-    	"name":"Golden Paint Brush", 
-    	"category": "pb", 
-    	"url": "https://neopetsclassic.com/images/items/2815.gif", 
-    	"color": "Golden"
-    },
-    {
-    	"name":"Green Paint Brush", 
-    	"category": "pb", 
-    	"url": "https://neopetsclassic.com/images/items/91.gif", 
-    	"color": "Green" 
-    },
-    {
-    	"name":"Halloween Paint Brush", 
-    	"category": "pb", 
-    	"url": "https://neopetsclassic.com/images/items/2813.gif", 
-    	"color": "Halloween" 
-    },
-    {
-    	"name":"Lost Desert Paint Brush", 
-    	"category": "pb", 
-    	"url": "https://neopetsclassic.com/images/items/4493.gif", 
-    	"color": "Desert" 
-    },
-    {
-    	"name":"Mystery Island Paint Brush", 
-    	"category": "pb", 
-    	"url": "https://neopetsclassic.com/images/items/16166.gif", 
-    	"color": "Island"
-    },
-    {
-    	"name":"Orange Paint Brush", 
-    	"category": "pb", 
-    	"url": "https://neopetsclassic.com/images/items/17200.gif", 
-    	"color": "Orange"
-    },
-    {
-    	"name":"Pink Paint Brush", 
-    	"category": "pb", 
-    	"url": "https://neopetsclassic.com/images/items/18999.gif", 
-    	"color": "Pink"
-    },
-    {
-    	"name":"Purple Paint Brush", 
-    	"category": "pb", 
-    	"url": "https://neopetsclassic.com/images/items/88.gif", 
-    	"color": "Purple"
-    },
-    {
-    	"name":"Rainbow Paint Brush", 
-    	"category": "pb", 
-    	"url": "https://neopetsclassic.com/images/items/93.gif", 
-    	"color": "Rainbow"
-    },
-    {
-    	"name":"Shadow Paint Brush", 
-    	"category": "pb", 
-    	"url": "https://neopetsclassic.com/images/items/3258.gif", 
-    	"color": "Shadow"
-    },
-    {
-    	"name":"Silver Paint Brush", 
-    	"category": "pb", 
-    	"url": "https://neopetsclassic.com/images/items/2812_tndzDUH.gif", 
-    	"color": "Silver" 
-    },
-    {
-    	"name":"Skunk Paint Brush", 
-    	"category": "pb", 
-    	"url": "https://neopetsclassic.com/images/items/19300.gif", 
-    	"color": "Skunk"
-    },
-    {
-    	"name":"Speckled Paint Brush", 
-    	"category": "pb", 
-    	"url": "https://neopetsclassic.com/images/items/greenwhitedotspntbrush.gif", 
-    	"color": "Speckled" 
-    },
-    {
-    	"name":"Split Paint Brush", 
-    	"category": "pb", 
-    	"url": "https://neopetsclassic.com/images/items/19297.gif", 
-    	"color": "Split"
-    },
-    {
-    	"name":"Starry Paint Brush", 
-    	"category": "pb", 
-    	"url": "https://neopetsclassic.com/images/items/11000.gif", 
-    	"color": "Starry" 
-    },
-    {
-    	"name":"Stone Paint Brush", 
-    	"category": "pb", 
-    	"url": "https://neopetsclassic.com/images/items/202.gif", 
-    	"color": "Stone" 
-    },
-    {
-    	"name":"Strawberry Fields Forever Paint Brush", 
-    	"category": "pb", 
-    	"url": "https://neopetsclassic.com/images/items/4829.gif", 
-    	"color": "Strawberry"
-    },
-    {
-    	"name":"Striped Paint Brush", 
-    	"category": "pb", 
-    	"url": "https://neopetsclassic.com/images/items/19296.gif", 
-    	"color": "Striped" 
-    },
-    {
-    	"name":"Tyrannian Paint Brush", 
-    	"category": "pb", 
-    	"url": "https://neopetsclassic.com/images/items/2814.png", 
-    	"color": "Tyrannian"
-    }
-  ],
-  "rarepbs":
-  [
-    {
-    	"name":"Darigan Paint Brush", 
-    	"category": "pb", 
-    	"url": "https://neopetsclassic.com/images/items/4211.gif", 
-    	"color": "Darigan"
-    },
-    {
-    	"name":"Faerie Paint Brush", 
-    	"category": "pb", 
-    	"url": "https://neopetsclassic.com/images/items/faeriepntbrush.png", 
-    	"color": "Faerie"
-    },
-    {
-    	"name":"Grey Paint Brush", 
-    	"category": "pb", 
-    	"url": "https://neopetsclassic.com/images/items/19306.gif", 
-    	"color": "Grey" 
-    },
-    {
-    	"name":"Pirate Paint Brush", 
-    	"category": "pb", 
-    	"url": "https://neopetsclassic.com/images/items/19302.gif", 
-    	"color": "Pirate" 
-    },
-    {
-    	"name":"Plushie Paint Brush", 
-    	"category": "pb", 
-    	"url": "https://neopetsclassic.com/images/items/19304.gif", 
-    	"color": "Plushie" 
-    },
-    {
-    	"name":"Royal Paint Brush", 
-    	"category": "pb", 
-    	"url": "https://neopetsclassic.com/images/items/7280.png", 
-    	"color": "Royal"
-    },
-    {
-    	"name":"Snow Paint Brush", 
-    	"category": "pb", 
-    	"url": "https://neopetsclassic.com/images/items/19305.gif", 
-    	"color": "Snow"
-    },
-    {
-    	"name":"Usuki Paint Brush", 
-    	"category": "pb", 
-    	"url": "https://neopetsclassic.com/images/items/4321.gif", 
-    	"color": "Usuki"
-    },
-    {
-    	"name":"Valentines Paint Brush", 
-    	"category": "pb", 
-    	"url": "https://neopetsclassic.com/images/items/valentines_pb_2x.png", 
-    	"color": "Valentine" 
-    }
-  ],
-  "basicmps":
-  [
-	{
-		"name":"Green Elephante Morphing Potion", 
-		"category": "mp", 
-		"url": "https://neopetsclassic.com/images/items/14763.gif", 
-		"color": "Green", 
-		"species": "Elephante"
-	},
-	{
-		"name":"Red Aisha Morphing Potion", 
-		"category": "mp", 
-		"url": "https://neopetsclassic.com/images/items/3340.gif", 
-		"color": "Red ", 
-		"species": "Aisha"
-	},
-	{
-		"name":"Yellow Hissi Morphing Potion", 
-		"category": "mp", 
-		"url": "https://neopetsclassic.com/images/items/29197.gif", 
-		"color": "Yellow ", 
-		"species": "Hissi"
-	},
-	{
-		"name":"Yellow Elephante Morphing Potion", 
-		"category": "mp", 
-		"url": "https://neopetsclassic.com/images/items/15483.gif", 
-		"color": "Yellow ", 
-		"species": "Elephante"
-	},
-	{
-		"name":"Green Cybunny Morphing Potion", 
-		"category": "mp", 
-		"url": "https://neopetsclassic.com/images/items/21978.gif", 
-		"color": "Green ", 
-		"species": "Cybunny"
-	},
-	{
-		"name":"Red Cybunny Morphing Potion", 
-		"category": "mp", 
-		"url": "https://neopetsclassic.com/images/items/17894.gif", 
-		"color": "Red ", 
-		"species": "Cybunny"
-	},
-	{
-		"name":"Yellow Cybunny Morphing Potion", 
-		"category": "mp", 
-		"url": "https://neopetsclassic.com/images/items/21977.gif", 
-		"color": "Yellow ", 
-		"species": "Cybunny"
-	},
-	{
-		"name":"Green Usul Morphing Potion", 
-		"category": "mp", 
-		"url": "https://neopetsclassic.com/images/items/15697.gif", 
-		"color": "Green ", 
-		"species": "Usul"
-	},
-	{
-		"name":"Yellow Techo Morphing Potion", 
-		"category": "mp", 
-		"url": "https://neopetsclassic.com/images/items/13668.gif", 
-		"color": "Yellow ", 
-		"species": "Techo"
-	},
-	{
-		"name":"Red Chia Morphing Potion", 
-		"category": "mp", 
-		"url": "https://neopetsclassic.com/images/items/pot_chi_red_2x.png", 
-		"color": "Red ", 
-		"species": "Chia"
-	},
-	{
-		"name":"Blue Poogle Morphing Potion", 
-		"category": "mp", 
-		"url": "https://neopetsclassic.com/images/items/blue-poogle-morphing-potion.gif", 
-		"color": "Blue ", 
-		"species": "Poogle"
-	},
-	{
-		"name":"Blue Blumaroo Morphing Potion", 
-		"category": "mp", 
-		"url": "https://neopetsclassic.com/images/items/blue-blumaroo-morphing-potion.gif", 
-		"color": "Blue ", 
-		"species": "Blumaroo"
-	},
-	{
-		"name":"Green Grundo Morphing Potion", 
-		"category": "mp", 
-		"url": "https://neopetsclassic.com/images/items/17659.gif", 
-		"color": "Green ", 
-		"species": "Grundo"
-	},
-	{
-		"name":"Blue Pteri Morphing Potion", 
-		"category": "mp", 
-		"url": "https://neopetsclassic.com/images/items/blue-pteri-morphing-potion.gif", 
-		"color": "Blue ", 
-		"species": "Pteri"
-	},
-	{
-		"name":"Yellow Chia Morphing Potion", 
-		"category": "mp", 
-		"url": "https://neopetsclassic.com/images/items/15682.gif", 
-		"color": "Yellow ", 
-		"species": "Chia"
-	},
-	{
-		"name":"Red Kacheek Morphing Potion", 
-		"category": "mp", 
-		"url": "https://neopetsclassic.com/images/items/15692.gif", 
-		"color": "Red ", 
-		"species": "Kacheek"
-	},
-	{
-		"name":"Blue Kyrii Morphing Potion", 
-		"category": "mp", 
-		"url": "https://neopetsclassic.com/images/items/blue-kyrii-morphing-potion.gif", 
-		"color": "Blue ", 
-		"species": "Kyrii"
-	},
-	{
-		"name":"Red Kiko Morphing Potion", 
-		"category": "mp", 
-		"url": "https://neopetsclassic.com/images/items/potion66_2x.png", 
-		"color": "Red ", 
-		"species": "Kiko"
-	},
-	{
-		"name":"Blue Chia Morphing Potion", 
-		"category": "mp", 
-		"url": "https://neopetsclassic.com/images/items/blue-chia-morphing-potion.gif", 
-		"color": "Blue ", 
-		"species": "Chia"
-	},
-	{
-		"name":"Green Kiko Morphing Potion", 
-		"category": "mp", 
-		"url": "https://neopetsclassic.com/images/items/17663.gif", 
-		"color": "Green ", 
-		"species": "Kiko"
-	},
-	{
-		"name":"Red Hissi Morphing Potion", 
-		"category": "mp", 
-		"url": "https://neopetsclassic.com/images/items/pot_hissi_red.gif", 
-		"color": "Red ", 
-		"species": "Hissi"
-	},
-	{
-		"name":"Red Skeith Morphing Potion", 
-		"category": "mp", 
-		"url": "https://neopetsclassic.com/images/items/15046.gif", 
-		"color": "Red ", 
-		"species": "Skeith"
-	},
-	{
-		"name":"Yellow Wocky Morphing Potion", 
-		"category": "mp", 
-		"url": "https://neopetsclassic.com/images/items/15676.gif", 
-		"color": "Yellow ", 
-		"species": "Wocky"
-	},
-	{
-		"name":"Yellow Kiko Morphing Potion", 
-		"category": "mp", 
-		"url": "https://neopetsclassic.com/images/items/17989.gif", 
-		"color": "Yellow ", 
-		"species": "Kiko"
-	},
-	{
-		"name":"Yellow Quiggle Morphing Potion", 
-		"category": "mp", 
-		"url": "https://neopetsclassic.com/images/items/24527.gif", 
-		"color": "Yellow ", 
-		"species": "Quiggle"
-	},
-	{
-		"name":"Blue Kacheek Morphing Potion", 
-		"category": "mp", 
-		"url": "https://neopetsclassic.com/images/items/blue-kacheek-morphing-potion.gif", 
-		"color": "Blue ", 
-		"species": "Kacheek"
-	},
-	{
-		"name":"Blue Cybunny Morphing Potion", 
-		"category": "mp", 
-		"url": "https://neopetsclassic.com/images/items/blue-cybunny-morphing-potion.gif", 
-		"color": "Blue ", 
-		"species": "Cybunny"
-	},
-	{
-		"name":"Green Peophin Morphing Potion", 
-		"category": "mp", 
-		"url": "https://neopetsclassic.com/images/items/17729.gif", 
-		"color": "Green ", 
-		"species": "Peophin"
-	},
-	{
-		"name":"Yellow Blumaroo Morphing Potion", 
-		"category": "mp", 
-		"url": "https://neopetsclassic.com/images/items/14759.gif", 
-		"color": "Yellow ", 
-		"species": "Blumaroo"
-	},
-	{
-		"name":"Green Chomby Morphing Potion", 
-		"category": "mp", 
-		"url": "https://neopetsclassic.com/images/items/22536.gif", 
-		"color": "Green ", 
-		"species": "Chomby"
-	},
-	{
-		"name":"Green Flotsam Morphing Potion", 
-		"category": "mp", 
-		"url": "https://neopetsclassic.com/images/items/17646.gif", 
-		"color": "Green ", 
-		"species": "Flotsam"
-	},
-	{
-		"name":"Red Jetsam Morphing Potion", 
-		"category": "mp", 
-		"url": "https://neopetsclassic.com/images/items/pot_red_jet_2x.png", 
-		"color": "Red ", 
-		"species": "Jetsam"
-	},
-	{
-		"name":"Green Jetsam Morphing Potion", 
-		"category": "mp", 
-		"url": "https://neopetsclassic.com/images/items/17662.gif", 
-		"color": "Green ", 
-		"species": "Jetsam"
-	},
-	{
-		"name":"Green JubJub Morphing Potion", 
-		"category": "mp", 
-		"url": "https://neopetsclassic.com/images/items/14874.gif", 
-		"color": "Green ", 
-		"species": "JubJub"
-	},
-	{
-		"name":"Red Mynci Morphing Potion", 
-		"category": "mp", 
-		"url": "https://neopetsclassic.com/images/items/14734.gif", 
-		"color": "Red ", 
-		"species": "Mynci"
-	},
-	{
-		"name":"Blue Acara Morphing Potion", 
-		"category": "mp", 
-		"url": "https://neopetsclassic.com/images/items/blue-acara-morphing-potion.gif", 
-		"color": "Blue ", 
-		"species": "Acara"
-	},
-	{
-		"name":"Blue Koi Morphing Potion", 
-		"category": "mp", 
-		"url": "https://neopetsclassic.com/images/items/blue-koi-morphing-potion.gif", 
-		"color": "Blue ", 
-		"species": "Koi"
-	},
-	{
-		"name":"Yellow Bruce Morphing Potion", 
-		"category": "mp", 
-		"url": "https://neopetsclassic.com/images/items/21593.gif", 
-		"color": "Yellow ", 
-		"species": "Bruce"
-	},
-	{
-		"name":"Green Blumaroo Morphing Potion", 
-		"category": "mp", 
-		"url": "https://neopetsclassic.com/images/items/15055.gif", 
-		"color": "Green ", 
-		"species": "Blumaroo"
-	},
-	{
-		"name":"Green Buzz Morphing Potion", 
-		"category": "mp", 
-		"url": "https://neopetsclassic.com/images/items/15060.gif", 
-		"color": "Green ", 
-		"species": "Buzz"
-	},
-	{
-		"name":"Blue Grundo Morphing Potion", 
-		"category": "mp", 
-		"url": "https://neopetsclassic.com/images/items/blue-grundo-morphing-potion.gif", 
-		"color": "Blue ", 
-		"species": "Grundo"
-	},
-	{
-		"name":"Yellow Yurble Morphing Potion", 
-		"category": "mp", 
-		"url": "https://neopetsclassic.com/images/items/17998.gif", 
-		"color": "Yellow ", 
-		"species": "Yurble"
-	},
-	{
-		"name":"Blue Eyrie Morphing Potion", 
-		"category": "mp", 
-		"url": "https://neopetsclassic.com/images/items/blue-eyrie-morphing-potion.gif", 
-		"color": "Blue ", 
-		"species": "Eyrie"
-	},
-	{
-		"name":"Red Lupe Morphing Potion", 
-		"category": "mp", 
-		"url": "https://neopetsclassic.com/images/items/14710.gif", 
-		"color": "Red ", 
-		"species": "Lupe"
-	},
-	{
-		"name":"Blue Hissi Morphing Potion", 
-		"category": "mp", 
-		"url": "https://neopetsclassic.com/images/items/pot_hissi_blue.gif", 
-		"color": "Blue ", 
-		"species": "Hissi"
-	},
-	{
-		"name":"Green Bruce Morphing Potion", 
-		"category": "mp", 
-		"url": "https://neopetsclassic.com/images/items/21595.gif", 
-		"color": "Green ", 
-		"species": "Bruce"
-	},
-	{
-		"name":"Yellow Grundo Morphing Potion", 
-		"category": "mp", 
-		"url": "https://neopetsclassic.com/images/items/17987.gif", 
-		"color": "Yellow ", 
-		"species": "Grundo"
-	},
-	{
-		"name":"Red Blumaroo Morphing Potion", 
-		"category": "mp", 
-		"url": "https://neopetsclassic.com/images/items/15058.gif", 
-		"color": "Red ", 
-		"species": "Blumaroo"
-	},
-	{
-		"name":"Green Aisha Morphing Potion", 
-		"category": "mp", 
-		"url": "https://neopetsclassic.com/images/items/3337.gif", 
-		"color": "Green ", 
-		"species": "Aisha"
-	},
-	{
-		"name":"Blue Uni Morphing Potion", 
-		"category": "mp", 
-		"url": "https://neopetsclassic.com/images/items/blue-uni-morphing-potion.gif", 
-		"color": "Blue ", 
-		"species": "Uni"
-	},
-	{
-		"name":"Red Nimmo Morphing Potion", 
-		"category": "mp", 
-		"url": "https://neopetsclassic.com/images/items/14862.gif", 
-		"color": "Red ", 
-		"species": "Nimmo"
-	},
-	{
-		"name":"Red Eyrie Morphing Potion", 
-		"category": "mp", 
-		"url": "https://neopetsclassic.com/images/items/potion88_2x.png", 
-		"color": "Red ", 
-		"species": "Eyrie"
-	},
-	{
-		"name":"Green Koi Morphing Potion", 
-		"category": "mp", 
-		"url": "https://neopetsclassic.com/images/items/17725.gif", 
-		"color": "Green ", 
-		"species": "Koi"
-	},
-	{
-		"name":"Red Kau Morphing Potion", 
-		"category": "mp", 
-		"url": "https://neopetsclassic.com/images/items/pot_kau_red_2x.png", 
-		"color": "Red ", 
-		"species": "Kau"
-	},
-	{
-		"name":"Blue Yurble Morphing Potion", 
-		"category": "mp", 
-		"url": "https://neopetsclassic.com/images/items/blue-yurble-morphing-potion.gif", 
-		"color": "Blue ", 
-		"species": "Yurble"
-	}
-  ],
-  "mps":
-  [
-    	{
-		"name":"Baby Acara Morphing Potion", 
-		"category": "mp", 
-		"url": "https://neopetsclassic.com/images/items/3321.gif", 
-		"color": "Baby ", 
-		"species": "Acara"
-	},
-	{
-		"name":"Baby Aisha Morphing Potion", 
-		"category": "mp", 
-		"url": "https://neopetsclassic.com/images/items/3335.gif", 
-		"color": "Baby ", 
-		"species": "Aisha"
-	},
-	{
-		"name":"Baby Kacheek Morphing Potion", 
-		"category": "mp", 
-		"url": "https://neopetsclassic.com/images/items/21912.gif", 
-		"color": "Baby ", 
-		"species": "Kacheek"
-	},
-	{
-		"name":"Baby Meerca Morphing Potion", 
-		"category": "mp", 
-		"url": "https://neopetsclassic.com/images/items/14807.gif", 
-		"color": "Baby ", 
-		"species": "Meerca"
-	},
-	{
-		"name":"Blue Draik Morphing Potion", 
-		"category": "mp", 
-		"url": "https://neopetsclassic.com/images/items/blue-draik-morphing-potion.gif", 
-		"color": "Blue ", 
-		"species": "Draik"
-	},
-	{
-		"name":"Blue Krawk Morphing Potion", 
-		"category": "mp", 
-		"url": "https://neopetsclassic.com/images/items/blue-krawk-morphing-potion.gif", 
-		"color": "Blue ", 
-		"species": "Krawk"
-	},
-	{
-		"name":"Brown Bruce Morphing Potion", 
-		"category": "mp", 
-		"url": "https://neopetsclassic.com/images/items/pot_brown_bruce.gif", 
-		"color": "Brown ", 
-		"species": "Bruce"
-	},
-	{
-		"name":"Brown Grundo Morphing Potion", 
-		"category": "mp", 
-		"url": "https://neopetsclassic.com/images/items/pot_grundo_brown.gif", 
-		"color": "Brown ", 
-		"species": "Grundo"
-	},
-	{
-		"name":"Brown Ixi Morphing Potion", 
-		"category": "mp", 
-		"url": "https://neopetsclassic.com/images/items/potion_ixi_brown.gif", 
-		"color": "Brown ", 
-		"species": "Ixi"
-	},
-	{
-		"name":"Brown Ruki Morphing Potion", 
-		"category": "mp", 
-		"url": "https://neopetsclassic.com/images/items/pot_ruki_brown.gif", 
-		"color": "Brown ", 
-		"species": "Ruki"
-	},
-	{
-		"name":"Checkered Aisha Morphing Potion", 
-		"category": "mp", 
-		"url": "https://neopetsclassic.com/images/items/pot_checkered_aisha.gif", 
-		"color": "Checkered ", 
-		"species": "Aisha"
-	},
-	{
-		"name":"Checkered Bori Morphing Potion", 
-		"category": "mp", 
-		"url": "https://neopetsclassic.com/images/items/pot_bori_checkered.gif", 
-		"color": "Checkered ", 
-		"species": "Bori"
-	},
-	{
-		"name":"Checkered Kiko Morphing Potion", 
-		"category": "mp", 
-		"url": "https://neopetsclassic.com/images/items/pot_kiko_checkered.gif", 
-		"color": "Checkered ", 
-		"species": "Kiko"
-	},
-	{
-		"name":"Checkered Koi Morphing Potion", 
-		"category": "mp", 
-		"url": "https://neopetsclassic.com/images/items/pot_koi_checkered.gif", 
-		"color": "Checkered ", 
-		"species": "Koi"
-	},
-	{
-		"name":"Checkered Poogle Morphing Potion", 
-		"category": "mp", 
-		"url": "https://neopetsclassic.com/images/items/pot_poogle_checkered.gif", 
-		"color": "Checkered ", 
-		"species": "Poogle"
-	},
-	{
-		"name":"Checkered Shoyru Morphing Potion", 
-		"category": "mp", 
-		"url": "https://neopetsclassic.com/images/items/pot_shoyru_checkered.gif", 
-		"color": "Checkered ", 
-		"species": "Shoyru"
-	},
-	{
-		"name":"Christmas Blumaroo Morphing Potion", 
-		"category": "mp", 
-		"url": "https://neopetsclassic.com/images/items/potion_blum_chris.gif", 
-		"color": "Christmas ", 
-		"species": "Blumaroo"
-	},
-	{
-		"name":"Christmas Bori Morphing Potion", 
-		"category": "mp", 
-		"url": "https://neopetsclassic.com/images/items/pot_bori_christmas.gif", 
-		"color": "Christmas ", 
-		"species": "Bori"
-	},
-	{
-		"name":"Christmas Bruce Morphing Potion", 
-		"category": "mp", 
-		"url": "https://neopetsclassic.com/images/items/pot_bruce_christmas.gif", 
-		"color": "Christmas ", 
-		"species": "Bruce"
-	},
-	{
-		"name":"Christmas Grundo Morphing Potion", 
-		"category": "mp", 
-		"url": "https://neopetsclassic.com/images/items/pot_grundo_christmas.gif", 
-		"color": "Christmas ", 
-		"species": "Grundo"
-	},
-	{
-		"name":"Christmas Kiko Morphing Potion", 
-		"category": "mp", 
-		"url": "https://neopetsclassic.com/images/items/potion_kiko_chris.gif", 
-		"color": "Christmas ", 
-		"species": "Kiko"
-	},
-	{
-		"name":"Christmas Kougra Morphing Potion", 
-		"category": "mp", 
-		"url": "https://neopetsclassic.com/images/items/pot_kougra_christmas.gif", 
-		"color": "Christmas ", 
-		"species": "Kougra"
-	},
-	{
-		"name":"Cloud Bruce Morphing Potion", 
-		"category": "mp", 
-		"url": "https://neopetsclassic.com/images/items/pot_bruce_cloud.gif", 
-		"color": "Cloud ", 
-		"species": "Bruce"
-	},
-	{
-		"name":"Cloud Gelert Morphing Potion", 
-		"category": "mp", 
-		"url": "https://neopetsclassic.com/images/items/potion73.gif", 
-		"color": "Cloud ", 
-		"species": "Gelert"
-	},
-	{
-		"name":"Cloud Grundo Morphing Potion", 
-		"category": "mp", 
-		"url": "https://neopetsclassic.com/images/items/pot_grundo_cloud.gif", 
-		"color": "Cloud ", 
-		"species": "Grundo"
-	},
-	{
-		"name":"Cloud Ixi Morphing Potion", 
-		"category": "mp", 
-		"url": "https://neopetsclassic.com/images/items/potion_ixi_cloud.gif", 
-		"color": "Cloud ", 
-		"species": "Ixi"
-	},
-	{
-		"name":"Cloud Ruki Morphing Potion", 
-		"category": "mp", 
-		"url": "https://neopetsclassic.com/images/items/pot_ruki_cloud.gif", 
-		"color": "Cloud ", 
-		"species": "Ruki"
-	},
-	{
-		"name":"Cloud Scorchio Morphing Potion", 
-		"category": "mp", 
-		"url": "https://neopetsclassic.com/images/items/potion_scorchio_cloud.gif", 
-		"color": "Cloud ", 
-		"species": "Scorchio"
-	},
-	{
-		"name":"Darigan Aisha Morphing Potion", 
-		"category": "mp", 
-		"url": "https://neopetsclassic.com/images/items/pot_aisha_darigan.gif", 
-		"color": "Darigan ", 
-		"species": "Aisha"
-	},
-	{
-		"name":"Darigan Blumaroo Morphing Potion", 
-		"category": "mp", 
-		"url": "https://neopetsclassic.com/images/items/pot_blumaroo_darigan.gif", 
-		"color": "Darigan ", 
-		"species": "Blumaroo"
-	},
-	{
-		"name":"Darigan Bori Morphing Potion", 
-		"category": "mp", 
-		"url": "https://neopetsclassic.com/images/items/pot_bori_darigan.gif", 
-		"color": "Darigan ", 
-		"species": "Bori"
-	},
-	{
-		"name":"Darigan Eyrie Morphing Potion", 
-		"category": "mp", 
-		"url": "https://neopetsclassic.com/images/items/pot_eyriedarigan.gif", 
-		"color": "Darigan ", 
-		"species": "Eyrie"
-	},
-	{
-		"name":"Darigan Grundo Morphing Potion", 
-		"category": "mp", 
-		"url": "https://neopetsclassic.com/images/items/pot_grundo_darigan.gif", 
-		"color": "Darigan ", 
-		"species": "Grundo"
-	},
-	{
-		"name":"Darigan Kyrii Morphing Potion", 
-		"category": "mp", 
-		"url": "https://neopetsclassic.com/images/items/pot_kyrii_darigan.gif", 
-		"color": "Darigan ", 
-		"species": "Kyrii"
-	},
-	{
-		"name":"Desert Aisha Morphing Potion", 
-		"category": "mp", 
-		"url": "https://neopetsclassic.com/images/items/moprh_aish_des.gif", 
-		"color": "Desert ", 
-		"species": "Aisha"
-	},
-	{
-		"name":"Desert Blumaroo Morphing Potion", 
-		"category": "mp", 
-		"url": "https://neopetsclassic.com/images/items/morph_blu_des.gif", 
-		"color": "Desert ", 
-		"species": "Blumaroo"
-	},
-	{
-		"name":"Desert Poogle Morphing Potion", 
-		"category": "mp", 
-		"url": "https://neopetsclassic.com/images/items/pot_poog_des.gif", 
-		"color": "Desert ", 
-		"species": "Poogle"
-	},
-	{
-		"name":"Disco Bruce Morphing Potion", 
-		"category": "mp", 
-		"url": "https://neopetsclassic.com/images/items/pot_disco_bruce.gif", 
-		"color": "Disco ", 
-		"species": "Bruce"
-	},
-	{
-		"name":"Disco Moehog Morphing Potion", 
-		"category": "mp", 
-		"url": "https://neopetsclassic.com/images/items/pot_moehog_disco.gif", 
-		"color": "Disco ", 
-		"species": "Moehog"
-	},
-	{
-		"name":"Faerie Blumaroo Morphing Potion", 
-		"category": "mp", 
-		"url": "https://neopetsclassic.com/images/items/pot_blum_faerie.gif", 
-		"color": "Faerie ", 
-		"species": "Blumaroo"
-	},
-	{
-		"name":"Faerie Grundo Morphing Potion", 
-		"category": "mp", 
-		"url": "https://neopetsclassic.com/images/items/pot_grundo_faerie.gif", 
-		"color": "Faerie ", 
-		"species": "Grundo"
-	},
-	{
-		"name":"Faerie Ixi Morphing Potion", 
-		"category": "mp", 
-		"url": "https://neopetsclassic.com/images/items/pot_ixi_faerie.gif", 
-		"color": "Faerie ", 
-		"species": "Ixi"
-	},
-	{
-		"name":"Faerie Poogle Morphing Potion", 
-		"category": "mp", 
-		"url": "https://neopetsclassic.com/images/items/pot_poogle_faerie.gif", 
-		"color": "Faerie ", 
-		"species": "Poogle"
-	},
-	{
-		"name":"Faerie Shoyru Morphing Potion", 
-		"category": "mp", 
-		"url": "https://neopetsclassic.com/images/items/pot_shoyru_faerie.gif", 
-		"color": "Faerie ", 
-		"species": "Shoyru"
-	},
-	{
-		"name":"Faerie Tuskaninny Morphing Potion", 
-		"category": "mp", 
-		"url": "https://neopetsclassic.com/images/items/pot_tusk_faerie.gif", 
-		"color": "Faerie ", 
-		"species": "Tuskaninny"
-	},
-	{
-		"name":"Faerie Usul Morphing Potion", 
-		"category": "mp", 
-		"url": "https://neopetsclassic.com/images/items/potion69.gif", 
-		"color": "Faerie ", 
-		"species": "Usul"
-	},
-	{
-		"name":"Fire Acara Morphing Potion", 
-		"category": "mp", 
-		"url": "https://neopetsclassic.com/images/items/3328.gif", 
-		"color": "Fire ", 
-		"species": "Acara"
-	},
-	{
-		"name":"Fire Blumaroo Morphing Potion", 
-		"category": "mp", 
-		"url": "https://neopetsclassic.com/images/items/15054.gif", 
-		"color": "Fire ", 
-		"species": "Blumaroo"
-	},
-	{
-		"name":"Fire Chia Morphing Potion", 
-		"category": "mp", 
-		"url": "https://neopetsclassic.com/images/items/15681.gif", 
-		"color": "Fire ", 
-		"species": "Chia"
-	},
-	{
-		"name":"Fire Chomby Morphing Potion", 
-		"category": "mp", 
-		"url": "https://neopetsclassic.com/images/items/22538.gif", 
-		"color": "Fire ", 
-		"species": "Chomby"
-	},
-	{
-		"name":"Fire Kiko Morphing Potion", 
-		"category": "mp", 
-		"url": "https://neopetsclassic.com/images/items/14760.gif", 
-		"color": "Fire ", 
-		"species": "Kiko"
-	},
-	{
-		"name":"Fire Nimmo Morphing Potion", 
-		"category": "mp", 
-		"url": "https://neopetsclassic.com/images/items/14866.gif", 
-		"color": "Fire ", 
-		"species": "Nimmo"
-	},
-	{
-		"name":"Fire Skeith Morphing Potion", 
-		"category": "mp", 
-		"url": "https://neopetsclassic.com/images/items/14747.gif", 
-		"color": "Fire ", 
-		"species": "Skeith"
-	},
-	{
-		"name":"Ghost Draik Morphing Potion", 
-		"category": "mp", 
-		"url": "https://neopetsclassic.com/images/items/15620.gif", 
-		"color": "Ghost ", 
-		"species": "Draik"
-	},
-	{
-		"name":"Ghost Hissi Morphing Potion", 
-		"category": "mp", 
-		"url": "https://neopetsclassic.com/images/items/pot_hissi_ghost.gif", 
-		"color": "Ghost ", 
-		"species": "Hissi"
-	},
-	{
-		"name":"Glowing Korbat Morphing Potion", 
-		"category": "mp", 
-		"url": "https://neopetsclassic.com/images/items/15484.gif", 
-		"color": "Glowing ", 
-		"species": "Korbat"
-	},
-	{
-		"name":"Gold Tonu Morphing Potion", 
-		"category": "mp", 
-		"url": "https://neopetsclassic.com/images/items/22142.gif", 
-		"color": "Gold ", 
-		"species": "Tonu"
-	},
-	{
-		"name":"Green Draik Morphing Potion", 
-		"category": "mp", 
-		"url": "https://neopetsclassic.com/images/items/15615.gif", 
-		"color": "Green ", 
-		"species": "Draik"
-	},
-	{
-		"name":"Grey Techo Morphing Potion", 
-		"category": "mp", 
-		"url": "https://neopetsclassic.com/images/items/15696.gif", 
-		"color": "Grey ", 
-		"species": "Techo"
-	},
-	{
-		"name":"Grey Zafara Morphing Potion", 
-		"category": "mp", 
-		"url": "https://neopetsclassic.com/images/items/17735.gif", 
-		"color": "Grey ", 
-		"species": "Zafara"
-	},
-	{
-		"name":"Halloween Blumaroo Morphing Potion", 
-		"category": "mp", 
-		"url": "https://neopetsclassic.com/images/items/15056.gif", 
-		"color": "Halloween ", 
-		"species": "Blumaroo"
-	},
-	{
-		"name":"Halloween Grarrl Morphing Potion", 
-		"category": "mp", 
-		"url": "https://neopetsclassic.com/images/items/16904.gif", 
-		"color": "Halloween ", 
-		"species": "Grarrl"
-	},
-	{
-		"name":"Halloween Tonu Morphing Potion", 
-		"category": "mp", 
-		"url": "https://neopetsclassic.com/images/items/22141.gif", 
-		"color": "Halloween ", 
-		"species": "Tonu"
-	},
-	{
-		"name":"Maraquan Korbat Morphing Potion", 
-		"category": "mp", 
-		"url": "https://neopetsclassic.com/images/items/pot_korbat_maraquan_2x.png", 
-		"color": "Maraquan ", 
-		"species": "Korbat"
-	},
-	{
-		"name":"Pirate Eyrie Morphing Potion", 
-		"category": "mp", 
-		"url": "https://neopetsclassic.com/images/items/3319.gif", 
-		"color": "Pirate ", 
-		"species": "Eyrie"
-	},
-	{
-		"name":"Pirate Kacheek Morphing Potion", 
-		"category": "mp", 
-		"url": "https://neopetsclassic.com/images/items/14726.gif", 
-		"color": "Pirate ", 
-		"species": "Kacheek"
-	},
-	{
-		"name":"Plushie Flotsam Morphing Potion", 
-		"category": "mp", 
-		"url": "https://neopetsclassic.com/images/items/8100.gif", 
-		"color": "Plushie ", 
-		"species": "Flotsam"
-	},
-	{
-		"name":"Plushie Kiko Morphing Potion", 
-		"category": "mp", 
-		"url": "https://neopetsclassic.com/images/items/17743.gif", 
-		"color": "Plushie ", 
-		"species": "Kiko"
-	},
-	{
-		"name":"Plushie Poogle Morphing Potion", 
-		"category": "mp", 
-		"url": "https://neopetsclassic.com/images/items/17744.gif", 
-		"color": "Plushie ", 
-		"species": "Poogle"
-	},
-	{
-		"name":"Plushie Techo Morphing Potion", 
-		"category": "mp", 
-		"url": "https://neopetsclassic.com/images/items/15602.gif", 
-		"color": "Plushie ", 
-		"species": "Techo"
-	},
-	{
-		"name":"Plushie Yurble Morphing Potion", 
-		"category": "mp", 
-		"url": "https://neopetsclassic.com/images/items/17747.gif", 
-		"color": "Plushie ", 
-		"species": "Yurble"
-	},
-	{
-		"name":"Red Draik Morphing Potion", 
-		"category": "mp", 
-		"url": "https://neopetsclassic.com/images/items/pot_draik_red_2x.png", 
-		"color": "Red ", 
-		"species": "Draik"
-	},
-	{
-		"name":"Yellow Draik Morphing Potion", 
-		"category": "mp", 
-		"url": "https://neopetsclassic.com/images/items/15618.gif", 
-		"color": "Yellow ", 
-		"species": "Draik"
-	}
-  ],
-  "transpots":
-  [
-    {
-		"name":"Aisha Transmogrification Potion", 
-		"category": "mp", 
-		"url": "https://neopetsclassic.com/images/items/7951.gif", 
-		"color": "Mutant", 
-		"species": "Aisha" 
-	},
-	{
-		"name":"Blumaroo Transmogrification Potion", 
-		"category": "mp", 
-		"url": "https://neopetsclassic.com/images/items/2441.gif", 
-		"color": "Mutant", 
-		"species": "Blumaroo" 
-	},
-	{
-		"name":"Bruce Transmogrification Potion", 
-		"category": "mp", 
-		"url": "https://neopetsclassic.com/images/items/2448.gif", 
-		"color": "Mutant", 
-		"species": "Bruce" 
-	},
-	{
-		"name":"Chia Transmogrification Potion", 
-		"category": "mp", 
-		"url": "https://neopetsclassic.com/images/items/17090.gif", 
-		"color": "Mutant", 
-		"species": "Chia" 
-	},
-	{
-		"name":"Cybunny Transmogrification Potion", 
-		"category": "mp", 
-		"url": "https://neopetsclassic.com/images/items/2443.gif", 
-		"color": "Mutant", 
-		"species": "Cybunny" 
-	},
-	{
-		"name":"Draik Transmogrification Potion", 
-		"category": "mp", 
-		"url": "https://neopetsclassic.com/images/items/2454.gif", 
-		"color": "Mutant", 
-		"species": "Draik" 
-	},
-	{
-		"name":"Gnorbu Transmogrification Potion", 
-		"category": "mp", 
-		"url": "https://neopetsclassic.com/images/items/10391.gif", 
-		"color": "Mutant", 
-		"species": "Gnorbu" 
-	},
-	{
-		"name":"Grarrl Transmogrification Potion", 
-		"category": "mp", 
-		"url": "https://neopetsclassic.com/images/items/2445.gif", 
-		"color": "Mutant", 
-		"species": "Grarrl" 
-	},
-	{
-		"name":"Grundo Transmogrification Potion", 
-		"category": "mp", 
-		"url": "https://neopetsclassic.com/images/items/2440.gif", 
-		"color": "Mutant", 
-		"species": "Grundo"
-	},
-	{
-		"name":"Ixi Transmogrification Potion", 
-		"category": "mp", 
-		"url": "https://neopetsclassic.com/images/items/7196.gif", 
-		"color": "Mutant", 
-		"species": "Ixi" 
-	},
-	{
-		"name":"Jetsam Transmogrification Potion", 
-		"category": "mp", 
-		"url": "https://neopetsclassic.com/images/items/15607.gif", 
-		"color": "Mutant", 
-		"species": "Jetsam" 
-	},
-	{
-		"name":"Kacheek Transmogrification Potion", 
-		"category": "mp", 
-		"url": "https://neopetsclassic.com/images/items/2438.gif", 
-		"color": "Mutant", 
-		"species": "Kacheek" 
-	},
-	{
-		"name":"Kiko Transmogrification Potion", 
-		"category": "mp", 
-		"url": "https://neopetsclassic.com/images/items/2439.gif", 
-		"color": "Mutant", 
-		"species": "Kiko" 
-	},
-	{
-		"name":"Koi Transmogrification Potion", 
-		"category": "mp", 
-		"url": "https://neopetsclassic.com/images/items/2449.gif", 
-		"color": "Mutant", 
-		"species": "Koi"
-	},
-	{
-		"name":"Krawk Transmogrification Potion", 
-		"category": "mp", 
-		"url": "https://neopetsclassic.com/images/items/2452.gif", 
-		"color": "Mutant", 
-		"species": "Krawk"
-	},
-	{
-		"name":"Kyrii Transmogrification Potion", 
-		"category": "mp", 
-		"url": "https://neopetsclassic.com/images/items/2447.gif", 
-		"color": "Mutant", 
-		"species": "Kyrii" 
-	},
-	{
-		"name":"Moehog Transmogrification Potion", 
-		"category": "mp", 
-		"url": "https://neopetsclassic.com/images/items/7953.gif", 
-		"color": "Mutant", 
-		"species": "Moehog"
-	},
-	{
-		"name":"Quiggle Transmogrification Potion", 
-		"category": "mp", 
-		"url": "https://neopetsclassic.com/images/items/4884.gif", 
-		"color": "Mutant", 
-		"species": "Quiggle" 
-	},
-	{
-		"name":"Ruki Transmogrification Potion", 
-		"category": "mp", 
-		"url": "https://neopetsclassic.com/images/items/20402.gif", 
-		"color": "Mutant", 
-		"species": "Ruki"
-	},
-	{
-		"name":"Scorchio Transmogrification Potion", 
-		"category": "mp", 
-		"url": "https://neopetsclassic.com/images/items/17160.gif", 
-		"color": "Mutant", 
-		"species": "Scorchio"
-	},
-	{
-		"name":"Skeith Transmogrification Potion", 
-		"category": "mp", 
-		"url": "https://neopetsclassic.com/images/items/20421.gif", 
-		"color": "Mutant", 
-		"species": "Skeith"
-	},
-	{
-		"name":"Tonu Transmogrification Potion", 
-		"category": "mp", 
-		"url": "https://neopetsclassic.com/images/items/7197.gif", 
-		"color": "Mutant", 
-		"species": "Tonu"
-	},
-	{
-		"name":"Tuskaninny Transmogrification Potion", 
-		"category": "mp", 
-		"url": "https://neopetsclassic.com/images/items/13698.gif", 
-		"color": "Mutant", 
-		"species": "Tuskaninny" 
-	},
-	{
-		"name":"Usul Transmogrification Potion", 
-		"category": "mp", 
-		"url": "https://neopetsclassic.com/images/items/2442.gif", 
-		"color": "Mutant", 
-		"species": "Usul"
-	},
-	{
-		"name":"Xweetok Transmogrification Potion", 
-		"category": "mp", 
-		"url": "https://neopetsclassic.com/images/items/10393.gif", 
-		"color": "Mutant", 
-		"species": "Xweetok"
-	},
-	{
-		"name":"Zafara Transmogrification Potion", 
-		"category": "mp", 
-		"url": "https://neopetsclassic.com/images/items/20142.gif", 
-		"color": "Mutant", 
-		"species": "Zafara"
-	}
-  ],
-  "food":
-  [
-    
-  ],
-  "toys":
-  [
-      {
-    "name":"Red Bouncy Ball", 
-		"category": "toy", 
-		"url": "https://items.jellyneo.net/assets/imgs/items/2945.gif?165"
-    },
-    {
-    "name":"Red and White Toy Ball", 
-		"category": "toy", 
-		"url": "https://items.jellyneo.net/assets/imgs/old-versions/589.gif"
-    },
-    {
-    "name":"Maraquan Shoyru Float Ring", 
-		"category": "toy", 
-		"url": "https://items.jellyneo.net/assets/imgs/items/5982.gif?908"
-    },
-    {
-    "name":"Yellow Kiko Squeeze Toy", 
-		"category": "toy", 
-		"url": "https://items.jellyneo.net/assets/imgs/items/3961.gif?81"
-    },
-    {
-    "name":"Wind Up Florg", 
-		"category": "toy", 
-		"url": "https://items.jellyneo.net/assets/imgs/items/11425.gif?539"
-    },
-    {
-    "name":"Wind Up Geb", 
-		"category": "toy", 
-		"url": "https://items.jellyneo.net/assets/imgs/items/42667.gif?661"
-    },
-    {
-    "name":"Shoyru Boat Toy", 
-		"category": "toy", 
-		"url": "https://items.jellyneo.net/assets/imgs/items/33238.gif?853"
-    },
-    {
-    "name":"Pull Along Rock", 
-		"category": "toy", 
-		"url": "https://items.jellyneo.net/assets/imgs/items/18821.gif?655"
-    },
-    {
-    "name":"Origami Nova", 
-		"category": "toy", 
-		"url": "https://items.jellyneo.net/assets/imgs/items/29444.gif?704"
-    },
-    {
-    "name":"Origami Chomby", 
-		"category": "toy", 
-		"url": "https://items.jellyneo.net/assets/imgs/items/22527.gif?420"
-    },
-    {
-    "name":"Hannah Bobblehead", 
-		"category": "toy", 
-		"url": "https://items.jellyneo.net/assets/imgs/items/26396.gif?27"
-    }
-  ],
-  "basicplushies":
-  [
-    {
-    	"name": "Blue Acara Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/832.gif"
-    },
-    {
-    	"name": "Blue Aisha Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/toy_aisha_plushie1.gif"
-    },
-    {
-    	"name": "Blue Bruce Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/toy_bruce_plushie1.gif"
-    },
-    {
-    	"name": "Blue Chia Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/bluechiadoll.gif"
-    },
-    {
-    	"name": "Blue Chomby Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/chombyplush3.gif"
-    },
-    {
-    	"name": "Blue Doglefox Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/toy_doglefox_blue_2x.png"
-    },
-    {
-    	"name": "Blue Draik Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/toy_draik_plushblue_2x.png"
-    },
-    {
-    	"name": "Blue Eyrie Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/toy_eyire_plush.gif"
-    },
-    {
-    	"name": "Blue Flotsam Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/toy_blueflotsam.gif"
-    },
-    {
-    	"name": "Blue Fuzzle",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/toy_bluefuzzle.gif"
-    },
-    {
-    	"name": "Blue Gelert Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/gelert_plush_blue.gif"
-    },
-    {
-    	"name": "Blue Gnorbu Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/toy_gnorbu_blue.gif"
-    },
-    {
-    	"name": "Blue Grarrl Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/toy_grarrl_blue.gif"
-    },
-    {
-    	"name": "Blue Hissi Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/toy_hissi_blue.gif"
-    },
-    {
-    	"name": "Blue Ixi Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/1025.gif"
-    },
-    {
-    	"name": "Blue JubJub Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/toy_jubjub_plushie4.gif"
-    },
-    {
-    	"name": "Blue Kacheek Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/toy_kacheekblue.gif"
-    },
-    {
-    	"name": "Blue Koi Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/toy_koi_plush4.gif"
-    },
-    {
-    	"name": "Blue Kougra Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/toy_kougrablue.gif"
-    },
-    {
-    	"name": "Blue Krawk Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/plu_krawk_blue.gif"
-    },
-    {
-    	"name": "Blue Kyrii Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/toy_kyr_blue.gif"
-    },
-    {
-    	"name": "Blue Lenny Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/toy_lenny_plush3.gif"
-    },
-    {
-    	"name": "Blue Lupe Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/toy_lupe_plushblue.gif"
-    },
-    {
-    	"name": "Blue Lutari Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/plu_lutari_blue.gif"
-    },
-    {
-    	"name": "Blue Mynci Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/toy_mynci_plushie1.gif"
-    },
-    {
-    	"name": "Blue Nimmo Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/nimmoplush1.gif"
-    },
-    {
-    	"name": "Blue Ogrin Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/toy_ogrin_blue.gif"
-    },
-    {
-    	"name": "Blue Pteri Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/toy_pteri_blue.gif"
-    },
-    {
-    	"name": "Blue Quiggle Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/3553.gif"
-    },
-    {
-    	"name": "Blue Ruki Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/plushie_ruki_blue.gif"
-    },
-    {
-    	"name": "Blue Shoyru Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/shoyruplush4.gif"
-    },
-    {
-    	"name": "Blue Skeith Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/toy_blueskeith.gif"
-    },
-    {
-    	"name": "Blue Tonu Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/toy_tonu1.gif"
-    },
-    {
-    	"name": "Blue Tuskaninny Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/toy_bluetuskaninny.gif"
-    },
-    {
-    	"name": "Blue Uni Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/toy_uni_plushie1.gif"
-    },
-    {
-    	"name": "Blue Usul Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/toy_blueusul.gif"
-    },
-    {
-    	"name": "Blue Wocky Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/toy_bluewocky.gif"
-    },
-    {
-    	"name": "Blue Xweetok Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/toy_xweetok_blue.gif"
-    },
-    {
-    	"name": "Blue Yurble Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/toy_yurble_blueplushie.gif"
-    },
-    {
-    	"name": "Blue Zafara Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/toy_zaf_blue.gif"
-    },
-    {
-    	"name": "Green Acara Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/834.gif"
-    },
-    {
-    	"name": "Green Aisha Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/toy_aisha_plushie2.gif"
-    },
-    {
-    	"name": "Green Bori Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/toy_bori_green.gif"
-    },
-    {
-    	"name": "Green Bruce Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/toy_bruce_plushie2.gif"
-    },
-    {
-    	"name": "Green Buzz Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/toy_buzzgreen.gif"
-    },
-    {
-    	"name": "Green Chia Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/greenchiadoll.gif"
-    },
-    {
-    	"name": "Green Chomby Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/chombyplush5.gif"
-    },
-    {
-    	"name": "Green Cybunny Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/toy_green_cybunny.gif"
-    },
-    {
-    	"name": "Green Draik Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/toy_draik_plushgreen_2x.png"
-    },
-    {
-    	"name": "Green Elephante Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/plu_elephante_green.gif"
-    },
-    {
-    	"name": "Green Eyrie Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/toy_eyrie_green.gif"
-    },
-    {
-    	"name": "Green Flotsam Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/toy_greenflotsam.gif"
-    },
-    {
-    	"name": "Green Gelert Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/gelert_plush_green.gif"
-    },
-    {
-    	"name": "Green Gnorbu Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/toy_gnorbu_green.gif"
-    },
-    {
-    	"name": "Green Grarrl Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/toy_grarrl_green.gif"
-    },
-    {
-    	"name": "Green Grundo Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/toy_greengrundo.gif"
-    },
-    {
-    	"name": "Green Hissi Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/toy_hissi_green.gif"
-    },
-    {
-    	"name": "Green Ixi Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/toy_ixi_plushgreen.gif"
-    },
-    {
-    	"name": "Green JubJub Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/toy_jubjub_plushie3.gif"
-    },
-    {
-    	"name": "Green Kacheek Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/toy_kacheekgreen.gif"
-    },
-    {
-    	"name": "Green Koi Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/toy_koi_plush1.gif"
-    },
-    {
-    	"name": "Green Korbat Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/toy_korbat_plushie4.gif"
-    },
-    {
-    	"name": "Green Kougra Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/toy_kougragreen.gif"
-    },
-    {
-    	"name": "Green Krawk Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/plu_krawk_green.gif"
-    },
-    {
-    	"name": "Green Kyrii Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/toy_kyr_green.gif"
-    },
-    {
-    	"name": "Green Lenny Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/toy_lenny_plush4.gif"
-    },
-    {
-    	"name": "Green Lupe Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/toy_lupe_plushgreen.gif"
-    },
-    {
-    	"name": "Green Lutari Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/plu_lutari_green.gif"
-    },
-    {
-    	"name": "Green Mynci Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/toy_mynci_plushie4.gif"
-    },
-    {
-    	"name": "Green Ogrin Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/toy_ogrin_green.gif"
-    },
-    {
-    	"name": "Green Peophin Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/toy_peophin_green.gif"
-    },
-    {
-    	"name": "Green Pteri Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/toy_pteri_green.gif"
-    },
-    {
-    	"name": "Green Quiggle Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/2342.gif"
-    },
-    {
-    	"name": "Green Ruki Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/plushie_ruki_green.gif"
-    },
-    {
-    	"name": "Green Shoyru Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/shoyruplush2.gif"
-    },
-    {
-    	"name": "Green Skeith Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/toy_greenskeith.gif"
-    },
-    {
-    	"name": "Green Tonu Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/toy_tonu4.gif"
-    },
-    {
-    	"name": "Green Tuskaninny Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/toy_greentuskaninny.gif"
-    },
-    {
-    	"name": "Green Uni Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/toy_uni_plushie4.gif"
-    },
-    {
-    	"name": "Green Usul Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/toy_greenusul.gif"
-    },
-    {
-    	"name": "Green Wocky Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/toy_greenwocky.gif"
-    },
-    {
-    	"name": "Green Xweetok Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/toy_xweetok_green.gif"
-    },
-    {
-    	"name": "Green Yurble Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/toy_yurble_greenplushie.gif"
-    },
-    {
-    	"name": "Green Zafara Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/toy_zaf_green.gif"
-    },
-    {
-    	"name": "Red Aisha Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/toy_aisha_red.gif"
-    },
-    {
-    	"name": "Red Bruce Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/toy_bruce_plushie3.gif"
-    },
-    {
-    	"name": "Red Buzz Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/toy_buzzred.gif"
-    },
-    {
-    	"name": "Red Chia Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/redchiadoll.gif"
-    },
-    {
-    	"name": "Red Elephante Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/plu_elephante_red.gif"
-    },
-    {
-    	"name": "Red Flotsam Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/toy_redflotsam.gif"
-    },
-    {
-    	"name": "Red Gelert Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/gelert_plush_red.gif"
-    },
-    {
-    	"name": "Red Gnorbu Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/toy_gnorbu_red.gif"
-    },
-    {
-    	"name": "Red JubJub Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/toy_jubjub_plushie2.gif"
-    },
-    {
-    	"name": "Red Koi Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/toy_koi_plush2.gif"
-    },
-    {
-    	"name": "Red Kougra Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/toy_kougrared.gif"
-    },
-    {
-    	"name": "Red Kyrii Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/toy_kyr_red.gif"
-    },
-    {
-    	"name": "Red Lenny Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/toy_lenny_plush2.gif"
-    },
-    {
-    	"name": "Red Lupe Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/toy_lupe_plushred.gif"
-    },
-    {
-    	"name": "Red Lutari Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/plu_lutari_red.gif"
-    },
-    {
-    	"name": "Red Mynci Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/toy_mynci_plushie2.gif"
-    },
-    {
-    	"name": "Red Nimmo Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/nimmoplush3.gif"
-    },
-    {
-    	"name": "Red Ogrin Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/toy_ogrin_red.gif"
-    },
-    {
-    	"name": "Red Quiggle Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/11465.gif"
-    },
-    {
-    	"name": "Red Shoyru Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/shoyruplush5.gif"
-    },
-    {
-    	"name": "Red Uni Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/toy_uni_plushie3.gif"
-    },
-    {
-    	"name": "Red Xweetok Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/toy_xweetok_red.gif"
-    },
-    {
-    	"name": "Yellow Aisha Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/toy_aisha_plushie4.gif"
-    },
-    {
-    	"name": "Yellow Buzz Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/toy_buzzyellow.gif"
-    },
-    {
-    	"name": "Yellow Chia Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/yellowchiadoll.gif"
-    },
-    {
-    	"name": "Yellow Elephante Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/plu_elephante_yellow.gif"
-    },
-    {
-    	"name": "Yellow Flotsam Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/toy_yellowflotsam.gif"
-    },
-    {
-    	"name": "Yellow Gelert Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/gelert_plush_yellow.gif"
-    },
-    {
-    	"name": "Yellow Gnorbu Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/toy_gnorbu_yellow.gif"
-    },
-    {
-    	"name": "Yellow JubJub Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/toy_jubjub_plushie1.gif"
-    },
-    {
-    	"name": "Yellow Kacheek Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/toy_kacheekyellow.gif"
-    },
-    {
-    	"name": "Yellow Koi Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/toy_koi_plush3.gif"
-    },
-    {
-    	"name": "Yellow Kougra Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/toy_kougrayellow.gif"
-    },
-    {
-    	"name": "Yellow Kyrii Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/toy_kyr_yell.gif"
-    },
-    {
-    	"name": "Yellow Lenny Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/toy_lenny_plush1.gif"
-    },
-    {
-    	"name": "Yellow Lupe Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/toy_lupe_plushyellow.gif"
-    },
-    {
-    	"name": "Yellow Lutari Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/plu_lutari_yellow.gif"
-    },
-    {
-    	"name": "Yellow Nimmo Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/nimmoplush5.gif"
-    },
-    {
-    	"name": "Yellow Ogrin Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/toy_ogrin_yellow.gif"
-    },
-    {
-    	"name": "Yellow Pteri Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/toy_pteri_yellow.gif"
-    },
-    {
-    	"name": "Yellow Quiggle Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/408.gif"
-    },
-    {
-    	"name": "Yellow Shoyru Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/shoyruplush3.gif"
-    },
-    {
-    	"name": "Yellow Uni Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/toy_uni_plushie2.gif"
-    },
-    {
-    	"name": "Yellow Xweetok Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/toy_xweetok_yellow.gif"
-    },
-    
-    {
-    	"name": "Baby Aisha Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/toy_babyaisha.gif"
-    },
-    {
-    	"name": "Baby Blumaroo Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/toy_babyblumaroo.gif"
-    },
-    {
-    	"name": "Baby Bruce Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/toy_babybruce_2x.png"
-    },
-    {
-    	"name": "Baby Buzz Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/toy_babybuzz.png"
-    },
-    {
-    	"name": "Baby Eyrie Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/plush_baby_eyrie.gif"
-    },
-    {
-    	"name": "Baby Grarrl Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/toy_babygrarrl.gif"
-    },
-    {
-    	"name": "Baby Grundo Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/toy_babygrundo.gif"
-    },
-    {
-    	"name": "Baby Kougra Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/toy_babykougra.gif"
-    },
-    {
-    	"name": "Baby Lenny Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/toy_babylenny.gif"
-    },
-    {
-    	"name": "Baby Lupe Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/toy_babylupe.gif"
-    },
-    {
-    	"name": "Baby Paint Brush Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/plushie_baby_pb.gif"
-    },
-    {
-    	"name": "Baby Peophin Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/toy_peophin_baby_2x.png"
-    },
-    {
-    	"name": "Baby Quiggle Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/toy_quiggle_baby_2x.png"
-    },
-    {
-    	"name": "Baby Skeith Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/toy_babyskeith.gif"
-    },
-    {
-    	"name": "Baby Techo Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/toy_techo_baby.gif"
-    },
-    {
-    	"name": "Baby Usul Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/toy_babyusul.gif"
-    },
-    {
-    	"name": "Baby Wocky Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/toy_babywocky.gif"
-    },
-    {
-    	"name": "Baby Zafara Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/toy_babyzafara.gif"
-    },
-    {
-    	"name": "Brightvale Guard Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/17575.gif"
-    },
-    {
-    	"name": "Camouflage Krawk Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/plushie-krawk-camou-2x.gif"
-    },
-    {
-    	"name": "Checkered Kiko Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/toy_kiko_checkered.gif"
-    },
-    {
-    	"name": "Christmas Zafara Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/Christmas_Zafara_Plushie.gif"
-    },
-    {
-    	"name": "Cloud Kiko Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/toy_kiko_cloud.gif"
-    },
-    {
-    	"name": "Cloud Paint Brush Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/toy_cloud_pb.gif"
-    },
-    {
-    	"name": "Darigan Eyrie Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/toy_eyrie_darigan.png"
-    },
-    {
-    	"name": "Devilpuss Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/Devilpuss-Plushie.png"
-    },
-    {
-    	"name": "Disco Eyrie Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/plu_eyrie_disco.gif"
-    },
-    {
-    	"name": "Disco Kiko Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/toy_kiko_disco.gif"
-    },
-    {
-    	"name": "Disco Paint Brush Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/plushie_disco_pb.gif"
-    },
-    {
-    	"name": "Eo Codestone Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/25328.gif"
-    },
-    {
-    	"name": "Esophagor Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/toy_esophagor_plush.gif"
-    },
-    {
-    	"name": "Faerie Acara Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/5250.gif"
-    },
-    {
-    	"name": "Faerie Aisha Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/toy_aisha_plushie6.gif"
-    },
-    {
-    	"name": "Faerie Bruce Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/plu_bruce_faerie.gif"
-    },
-    {
-    	"name": "Faerie Grundo Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/plu_grundo_faerie.gif"
-    },
-    {
-    	"name": "Faerie Harris Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/toy_harris_faerie.gif"
-    },
-    {
-    	"name": "Faerie Ixi Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/toy_ixi_plushfaerie.gif"
-    },
-    {
-    	"name": "Faerie Kiko Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/toy_kiko_faerie.gif"
-    },
-    {
-    	"name": "Faerie Korbat Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/plu_korbat_faerie.gif"
-    },
-    {
-    	"name": "Faerie Kougra Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/faerie_kougra_plushie.gif"
-    },
-    {
-    	"name": "Faerie Lupe Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/toy_faerielupe.gif"
-    },
-    {
-    	"name": "Faerie Peophin Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/toy_peophin_faerie.gif"
-    },
-    {
-    	"name": "Faerie Pteri Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/toy_pteri_faerie.gif"
-    },
-    {
-    	"name": "Faerie Wocky Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/1892.gif"
-    },
-    {
-    	"name": "Fire Eyrie Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/toy_eyrie_plush.gif"
-    },
-    {
-    	"name": "Fire Paint Brush Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/toy_fire_pb.gif"
-    },
-    {
-    	"name": "Fire Peophin Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/toy_peophin_fire.gif"
-    },
-    {
-    	"name": "Fire Usul Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/toy_usul_fire_2x.png"
-    },
-    {
-    	"name": "Garlic Kiko Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/toy_kiko_garlic.gif"
-    },
-    {
-    	"name": "Ghost Hissi Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/toy_hissi_ghost.gif"
-    },
-    {
-    	"name": "Gold Chomby Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/chombyplush1.gif"
-    },
-    {
-    	"name": "Gold Draik Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/plu_gold_draik.gif"
-    },
-    {
-    	"name": "Gold Jetsam Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/toy_jetsamplush4_2x.png"
-    },
-    {
-    	"name": "Gold Meerca Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/toy_meerca_gold.gif"
-    },
-    {
-    	"name": "Gold Moehog Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/toy_moehoggold.gif"
-    },
-    {
-    	"name": "Golden Shoyru Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/shoyruplush6.gif"
-    },
-    {
-    	"name": "Halloween Bori Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/plu_bori_halloween.png"
-    },
-    {
-    	"name": "Halloween Bruce Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/toy_brucehallo.gif"
-    },
-    {
-    	"name": "Halloween Cybunny Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/plu_cybunny_halloween.gif"
-    },
-    {
-    	"name": "Halloween Draik Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/plu_draik_halloween.png"
-    },
-    {
-    	"name": "Halloween Ixi Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/toy_ixihallo.gif"
-    },
-    {
-    	"name": "Halloween Kacheek Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/toy_kacheekhallo.gif"
-    },
-    {
-    	"name": "Halloween Kau Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/toy_kauhalloween.gif"
-    },
-    {
-    	"name": "Halloween Kiko Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/toy_kiko_halloween.gif"
-    },
-    {
-    	"name": "Halloween Koi Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/toy_koihallo.gif"
-    },
-    {
-    	"name": "Halloween Lupe Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/toy_lupehalloween.png"
-    },
-    {
-    	"name": "Halloween Meerca Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/toy_meercahalloween.gif"
-    },
-    {
-    	"name": "Halloween Moehog Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/toy_moehog_halloween.png"
-    },
-    {
-    	"name": "Halloween Nimmo Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/toy_nimmo_hall.png"
-    },
-    {
-    	"name": "Halloween Slorg Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/plu_slorg_halloweenplushie.png"
-    },
-    {
-    	"name": "Halloween Uni Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/plu_uni_halloween.png"
-    },
-    {
-    	"name": "Halloween Wocky Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/toy_wockyhalloween.png"
-    },
-    {
-    	"name": "Halloween Yurble Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/plu_yurble_halloween.png"
-    },
-    {
-    	"name": "Headless Von Roo Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/spooky_toy_vonrooheadless.gif"
-    },
-    {
-    	"name": "Island Acara Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/toy_acara_island_2x.png"
-    },
-    {
-    	"name": "Island Chomby Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/plu_chomby_island.gif"
-    },
-    {
-    	"name": "Island Elephante Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/plu_elephante_island.gif"
-    },
-    {
-    	"name": "Island Flotsam Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/plu_flotsam_island.gif"
-    },
-    {
-    	"name": "Island Gelert Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/plu_gelert_island.gif"
-    },
-    {
-    	"name": "Island Grarrl Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/25973.gif"
-    },
-    {
-    	"name": "Island JubJub Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/toy_jubjub_island.gif"
-    },
-    {
-    	"name": "Island Kiko Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/toy_kiko_island.gif"
-    },
-    {
-    	"name": "Island Koi Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/plu_koi_island.gif"
-    },
-    {
-    	"name": "Island Meerca Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/plu_island_meerca.gif"
-    },
-    {
-    	"name": "Island Mystic Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/toy_plushie_mystic.gif"
-    },
-    {
-    	"name": "Island Paint Brush Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/plushie_island_pb.gif"
-    },
-    {
-    	"name": "Island Pteri Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/31410.gif"
-    },
-    {
-    	"name": "Island Skeith Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/35058.gif"
-    },
-    {
-    	"name": "Jubusul Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/spooky_toy_jubusul.gif"
-    },
-    {
-    	"name": "Kiko Lake Carpenter Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/plu_carpenter.png"
-    },
-    {
-    	"name": "Koibat Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/spooky_toy_koibat.png"
-    },
-    {
-    	"name": "Kougrachio Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/spooky_toy_kougscorch.gif"
-    },
-    {
-    	"name": "Lost Desert Paint Brush Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/plushie_desert_pb.gif"
-    },
-    {
-    	"name": "Lu Codestone Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/25291.gif"
-    },
-    {
-    	"name": "Magical Gold Chomby Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/plu_gold_chomby_magic.gif"
-    },
-    {
-    	"name": "Magical Gold Draik Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/plu_magical_gold_draik.gif"
-    },
-    {
-    	"name": "Mau Codestone Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/25289.gif"
-    },
-    {
-    	"name": "Mutant Aisha Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/toy_mutantaisha.gif"
-    },
-    {
-    	"name": "Mutant Blumaroo Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/toy_mutant_blumaroo.gif"
-    },
-    {
-    	"name": "Mutant Buzz Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/toy_mutant_buzz.gif"
-    },
-    {
-    	"name": "Mutant Cybunny Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/toy_mutantcybunny.gif"
-    },
-    {
-    	"name": "Mutant Draik Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/plu_draik_mutant.gif"
-    },
-    {
-    	"name": "Mutant Elephante Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/toy_mutant_elephante.png"
-    },
-    {
-    	"name": "Mutant Eyrie Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/plu_eyrie_mutant.gif"
-    },
-    {
-    	"name": "Mutant Grarrl Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/toy_mutant_grarrl.png"
-    },
-    {
-    	"name": "Mutant Grundo Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/toy_mutant_grundo.gif"
-    },
-    {
-    	"name": "Mutant Hissi Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/toy_hissi_mutant.gif"
-    },
-    {
-    	"name": "Mutant JubJub Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/toy_mutant_jubjub.gif"
-    },
-    {
-    	"name": "Mutant Kiko Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/toy_mutant_kiko.gif"
-    },
-    {
-    	"name": "Mutant Korbat Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/toy_mutant_korbat.png"
-    },
-    {
-    	"name": "Mutant Kougra Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/toy_mutant_kougra.png"
-    },
-    {
-    	"name": "Mutant Krawk Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/toy_mutant_krawk.gif"
-    },
-    {
-    	"name": "Mutant Kyrii Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/plush_kyrii_mutant.gif"
-    },
-    {
-    	"name": "Mutant Lenny Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/toy_mutantlenny.gif"
-    },
-    {
-    	"name": "Mutant Lupe Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/toy_mutantlupe.gif"
-    },
-    {
-    	"name": "Mutant Moehog Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/toy_mutant_moehog.png"
-    },
-    {
-    	"name": "Mutant Shoyru Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/toy_mutant_shoyru.png"
-    },
-    {
-    	"name": "Mutant Usul Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/toy_mutant_usul.gif"
-    },
-    {
-    	"name": "Orange Pteri Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/toy_pteri_orange.gif"
-    },
-    {
-    	"name": "Plumpy Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/plu_plumpy.gif"
-    },
-    {
-    	"name": "Plushie Clam",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/vor_plushie_clam.gif"
-    },
-    {
-    	"name": "Plushie Fungus",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/gar_plushie_fungus.gif"
-    },
-    {
-    	"name": "Plushie Kiko Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/toy_kiko_plushie.gif"
-    },
-    {
-    	"name": "Punchbag Bob Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/toy_bob_plushie1.png"
-    },
-    {
-    	"name": "Purple Hissi Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/toy_hissi_purple.gif"
-    },
-    {
-    	"name": "Quigquig Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/spooky_toy_quigglehalves.gif"
-    },
-    {
-    	"name": "Rainbow Gelert Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/gelert_plush_rainbow.gif"
-    },
-    {
-    	"name": "Rainbow Grundo Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/toy_rainbowgrundo.gif"
-    },
-    {
-    	"name": "Rainbow Hissi Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/toy_hissi_rainbow.gif"
-    },
-    {
-    	"name": "Rainbow Ixi Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/toy_ixi_rainbow.gif"
-    },
-    {
-    	"name": "Rainbow Pteri Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/toy_pteri_rainbow.gif"
-    },
-    {
-    	"name": "Royal Boy Draik Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/plu_draik_royalboy.gif"
-    },
-    {
-    	"name": "Royal Girl Draik Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/plu_draik_royalgirl.gif"
-    },
-    {
-    	"name": "Scorcie Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/spooky_toy_scorcheyrie.gif"
-    },
-    {
-    	"name": "Sloth Faerie Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/spooky_toy_slothfaerie.gif"
-    },
-    {
-    	"name": "Snowager Usuki",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/8634.gif"
-    },
-    {
-    	"name": "Space Blumfaerie Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/spooky_toy_blumfaerie.gif"
-    },
-    {
-    	"name": "Split Paint Brush Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/plushie_split_pb.gif"
-    },
-    {
-    	"name": "Spotted Kiko Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/toy_kiko_spotted.gif"
-    },
-    {
-    	"name": "Starry Paint Brush Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/plushie_starry_pb.gif"
-    },
-    {
-    	"name": "Taki Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/plu_taki.png"
-    },
-    {
-    	"name": "Tarla Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/plu_tarla.gif"
-    },
-    {
-    	"name": "Tiki Tack Man Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/plu_tiki_tack_man.gif"
-    },
-    {
-    	"name": "Usulbat Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/spooky_toy_usulbat.gif"
-    },
-    {
-    	"name": "Vo Codestone Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/25292.gif"
-    },
-    {
-    	"name": "Von Kougra Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/spooky_toy_vonkougra.gif"
-    },
-    {
-    	"name": "Zombie Draik Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/plu_zombie_draik.png"
-    }
-  ],
-  "rareplushies":
-  [
-    {
-    	"name": "Angel Kiko Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/Angel-Kiko-Plushie.png"
-    },
-    {
-    	"name": "Magical Blue Tonu Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/plu_tonu_blue_magic_2x.png"
-    },
-    {
-    	"name": "Magical Green Flotsam Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/plu_mag_green_flotsam.gif"
-    },
-    {
-    	"name": "Magical Green Krawk Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/plu_krawk_magical_green_2x.png"
-    },
-    {
-    	"name": "Magical Green Kyrii Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/toy_kyr_green_2x.png"
-    },
-    {
-    	"name": "Magical Green Tonu Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/plu_tonu_green_magic_2x.png"
-    },
-    {
-    	"name": "Magical Green Yurble Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/plu_mag_green_yurble.gif"
-    },
-    {
-    	"name": "Un-Valentines JubJub Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/plu_unvalentine_jubjub.gif"
-    },
-    {
-    	"name": "Un-Valentines Quiggle Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/plu_unvalentines_quiggle.gif"
-    },
-    {
-    	"name": "Un-Valentines Shoyru Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/plu_shoyru_unvalentines.gif"
-    },
-    {
-    	"name": "Un-Valentines Tonu Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/plu_unvalentines_tonu.gif"
-    },
-    {
-    	"name": "Valentine Grarrl Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/plu_valentines_grarrl.gif"
-    },
-    {
-    	"name": "Valentine JubJub Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/plu_vday_jubjub.gif"
-    },
-    {
-    	"name": "Valentine Meerca Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/plu_valentine_meerca.gif"
-    },
-    {
-    	"name": "Valentine Nimmo Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/plu_valentines_nimmo.gif"
-    },
-    {
-    	"name": "Valentines Blugar Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/plu_vday_blugar.gif"
-    },
-    {
-    	"name": "Valentines Bruce Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/toy_val_bruce.gif"
-    },
-    {
-    	"name": "Valentines Cybunny Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/toy_val_cybunny.gif"
-    },
-    {
-    	"name": "Valentines Faellie Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/plu_vday_faellie.gif"
-    },
-    {
-    	"name": "Valentines Grundo Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/toy_val_grundo.gif"
-    },
-    {
-    	"name": "Valentines Hasee Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/toy_val_hasee.gif"
-    },
-    {
-    	"name": "Valentines Kacheek Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/toy_val_kacheek.gif"
-    },
-    {
-    	"name": "Valentines Kadoatie Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/toy_val_kadoatie.gif"
-    },
-    {
-    	"name": "Valentines Kiko Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/toy_val_kiko.gif"
-    },
-    {
-    	"name": "Valentines Ona Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/plu_vday_ona.gif"
-    },
-    {
-    	"name": "Valentines Quiggle Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/17605.gif"
-    },
-    {
-    	"name": "Rainbow Reject Cybunny Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/toy_rain_rej_cyb.gif"
-    },
-    {
-    	"name": "Reject Gelert Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/gelert_plush_reject.png"
-    },
-    {
-    	"name": "Reject Valentine Lutari Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/plu_lutari_valentine.gif"
-    },
-    {
-    	"name": "Reject Valentine Xweetok Plushie",
-    	"category": "plushie",
-    	"url": "https://neopetsclassic.com/images/items/plu_xweetok_valentine.gif"
-    }
-  ],
-  "petpets":
-  [
-    
-  ],
-  "codestones":
-  [
-    {
-		"name":"Bri Codestone", 
-		"category": "codestone", 
-		"url": "https://neopetsclassic.com/images/items/codestone10.gif"
-	},
-	{
-		"name":"Lu Codestone", 
-		"category": "codestone", 
-		"url": "https://neopetsclassic.com/images/items/codestone3.gif" 
-	},
-	{
-		"name":"Orn Codestone", 
-		"category": "codestone", 
-		"url": "https://neopetsclassic.com/images/items/codestone8.gif"
-	},
-	{
-		"name":"Mau Codestone", 
-		"category": "codestone", 
-		"url": "https://neopetsclassic.com/images/items/codestone1.gif"
-	},
-	{
-		"name":"Zei Codestone", 
-		"category": "codestone", 
-		"url": "https://neopetsclassic.com/images/items/codestone7.gif" 
-	},
-	{
-		"name":"Main Codestone", 
-		"category": "codestone", 
-		"url": "https://neopetsclassic.com/images/items/codestone6.gif"
-	},
-	{
-		"name":"Eo Codestone", 
-		"category": "codestone", 
-		"url": "https://neopetsclassic.com/images/items/codestone5.gif"
-	},
-	{
-		"name":"Tai-Kai Codestone", 
-		"category": "codestone", 
-		"url": "https://neopetsclassic.com/images/items/codestone2.gif" 
-	},
-	{
-		"name":"Har Codestone", 
-		"category": "codestone", 
-		"url": "https://neopetsclassic.com/images/items/codestone9.gif"
-	},
-	{
-		"name":"Vo Codestone", 
-		"category": "codestone", 
-		"url": "https://neopetsclassic.com/images/items/codestone4.gif" 
-	}
-  ]
+{
+	"pbs": [{
+			"name": "Baby Paint Brush",
+			"category": "pb",
+			"url": "https://neopetsclassic.com/images/items/2288_dn6C3Z2.png",
+			"color": "Baby"
+		},
+		{
+			"name": "Biscuit Paint Brush",
+			"category": "pb",
+			"url": "https://neopetsclassic.com/images/items/9415.gif",
+			"color": "Biscuit"
+		},
+		{
+			"name": "Blue Paint Brush",
+			"category": "pb",
+			"url": "https://neopetsclassic.com/images/items/92.gif",
+			"color": "Blue"
+		},
+		{
+			"name": "Camouflage Paint Brush",
+			"category": "pb",
+			"url": "https://neopetsclassic.com/images/items/2816.gif",
+			"color": "Camouflage"
+		},
+		{
+			"name": "Checkered Paint Brush",
+			"category": "pb",
+			"url": "https://neopetsclassic.com/images/items/3259.gif",
+			"color": "Checkered"
+		},
+		{
+			"name": "Christmas Paint Brush",
+			"category": "pb",
+			"url": "https://neopetsclassic.com/images/items/481.gif",
+			"color": "Christmas"
+		},
+		{
+			"name": "Cloud Paint Brush",
+			"category": "pb",
+			"url": "https://neopetsclassic.com/images/items/19298.gif",
+			"color": "Cloud"
+		},
+		{
+			"name": "Disco Fever Paint Brush",
+			"category": "pb",
+			"url": "https://neopetsclassic.com/images/items/1722.gif",
+			"color": "Disco Fever"
+		},
+		{
+			"name": "Electric Blue Paint Brush",
+			"category": "pb",
+			"url": "https://neopetsclassic.com/images/items/14186.gif",
+			"color": "Electric"
+		},
+		{
+			"name": "Fire, Fire, Your Pants On Fire Paint Brush",
+			"category": "pb",
+			"url": "https://neopetsclassic.com/images/items/8967.gif",
+			"color": "Fire"
+		},
+		{
+			"name": "Glass Paint Brush",
+			"category": "pb",
+			"url": "https://neopetsclassic.com/images/items/gkasspntbrush_2x.png",
+			"color": "Glass"
+		},
+		{
+			"name": "Glowing Paint Brush",
+			"category": "pb",
+			"url": "https://neopetsclassic.com/images/items/94.gif",
+			"color": "Glowing"
+		},
+		{
+			"name": "Golden Paint Brush",
+			"category": "pb",
+			"url": "https://neopetsclassic.com/images/items/2815.gif",
+			"color": "Golden"
+		},
+		{
+			"name": "Green Paint Brush",
+			"category": "pb",
+			"url": "https://neopetsclassic.com/images/items/91.gif",
+			"color": "Green"
+		},
+		{
+			"name": "Halloween Paint Brush",
+			"category": "pb",
+			"url": "https://neopetsclassic.com/images/items/2813.gif",
+			"color": "Halloween"
+		},
+		{
+			"name": "Lost Desert Paint Brush",
+			"category": "pb",
+			"url": "https://neopetsclassic.com/images/items/4493.gif",
+			"color": "Desert"
+		},
+		{
+			"name": "Mystery Island Paint Brush",
+			"category": "pb",
+			"url": "https://neopetsclassic.com/images/items/16166.gif",
+			"color": "Island"
+		},
+		{
+			"name": "Orange Paint Brush",
+			"category": "pb",
+			"url": "https://neopetsclassic.com/images/items/17200.gif",
+			"color": "Orange"
+		},
+		{
+			"name": "Pink Paint Brush",
+			"category": "pb",
+			"url": "https://neopetsclassic.com/images/items/18999.gif",
+			"color": "Pink"
+		},
+		{
+			"name": "Purple Paint Brush",
+			"category": "pb",
+			"url": "https://neopetsclassic.com/images/items/88.gif",
+			"color": "Purple"
+		},
+		{
+			"name": "Rainbow Paint Brush",
+			"category": "pb",
+			"url": "https://neopetsclassic.com/images/items/93.gif",
+			"color": "Rainbow"
+		},
+		{
+			"name": "Shadow Paint Brush",
+			"category": "pb",
+			"url": "https://neopetsclassic.com/images/items/3258.gif",
+			"color": "Shadow"
+		},
+		{
+			"name": "Silver Paint Brush",
+			"category": "pb",
+			"url": "https://neopetsclassic.com/images/items/2812_tndzDUH.gif",
+			"color": "Silver"
+		},
+		{
+			"name": "Skunk Paint Brush",
+			"category": "pb",
+			"url": "https://neopetsclassic.com/images/items/19300.gif",
+			"color": "Skunk"
+		},
+		{
+			"name": "Speckled Paint Brush",
+			"category": "pb",
+			"url": "https://neopetsclassic.com/images/items/greenwhitedotspntbrush.gif",
+			"color": "Speckled"
+		},
+		{
+			"name": "Split Paint Brush",
+			"category": "pb",
+			"url": "https://neopetsclassic.com/images/items/19297.gif",
+			"color": "Split"
+		},
+		{
+			"name": "Starry Paint Brush",
+			"category": "pb",
+			"url": "https://neopetsclassic.com/images/items/11000.gif",
+			"color": "Starry"
+		},
+		{
+			"name": "Stone Paint Brush",
+			"category": "pb",
+			"url": "https://neopetsclassic.com/images/items/202.gif",
+			"color": "Stone"
+		},
+		{
+			"name": "Strawberry Fields Forever Paint Brush",
+			"category": "pb",
+			"url": "https://neopetsclassic.com/images/items/4829.gif",
+			"color": "Strawberry"
+		},
+		{
+			"name": "Striped Paint Brush",
+			"category": "pb",
+			"url": "https://neopetsclassic.com/images/items/19296.gif",
+			"color": "Striped"
+		},
+		{
+			"name": "Tyrannian Paint Brush",
+			"category": "pb",
+			"url": "https://neopetsclassic.com/images/items/2814.png",
+			"color": "Tyrannian"
+		}
+	],
+	"rarepbs": [{
+			"name": "Darigan Paint Brush",
+			"category": "pb",
+			"url": "https://neopetsclassic.com/images/items/4211.gif",
+			"color": "Darigan"
+		},
+		{
+			"name": "Faerie Paint Brush",
+			"category": "pb",
+			"url": "https://neopetsclassic.com/images/items/faeriepntbrush.png",
+			"color": "Faerie"
+		},
+		{
+			"name": "Grey Paint Brush",
+			"category": "pb",
+			"url": "https://neopetsclassic.com/images/items/19306.gif",
+			"color": "Grey"
+		},
+		{
+			"name": "Pirate Paint Brush",
+			"category": "pb",
+			"url": "https://neopetsclassic.com/images/items/19302.gif",
+			"color": "Pirate"
+		},
+		{
+			"name": "Plushie Paint Brush",
+			"category": "pb",
+			"url": "https://neopetsclassic.com/images/items/19304.gif",
+			"color": "Plushie"
+		},
+		{
+			"name": "Royal Paint Brush",
+			"category": "pb",
+			"url": "https://neopetsclassic.com/images/items/7280.png",
+			"color": "Royal"
+		},
+		{
+			"name": "Snow Paint Brush",
+			"category": "pb",
+			"url": "https://neopetsclassic.com/images/items/19305.gif",
+			"color": "Snow"
+		},
+		{
+			"name": "Usuki Paint Brush",
+			"category": "pb",
+			"url": "https://neopetsclassic.com/images/items/4321.gif",
+			"color": "Usuki"
+		},
+		{
+			"name": "Valentines Paint Brush",
+			"category": "pb",
+			"url": "https://neopetsclassic.com/images/items/valentines_pb_2x.png",
+			"color": "Valentine"
+		}
+	],
+	"basicmps": [{
+			"name": "Green Elephante Morphing Potion",
+			"category": "mp",
+			"url": "https://neopetsclassic.com/images/items/14763.gif",
+			"color": "Green",
+			"species": "Elephante"
+		},
+		{
+			"name": "Red Aisha Morphing Potion",
+			"category": "mp",
+			"url": "https://neopetsclassic.com/images/items/3340.gif",
+			"color": "Red ",
+			"species": "Aisha"
+		},
+		{
+			"name": "Yellow Hissi Morphing Potion",
+			"category": "mp",
+			"url": "https://neopetsclassic.com/images/items/29197.gif",
+			"color": "Yellow ",
+			"species": "Hissi"
+		},
+		{
+			"name": "Yellow Elephante Morphing Potion",
+			"category": "mp",
+			"url": "https://neopetsclassic.com/images/items/15483.gif",
+			"color": "Yellow ",
+			"species": "Elephante"
+		},
+		{
+			"name": "Green Cybunny Morphing Potion",
+			"category": "mp",
+			"url": "https://neopetsclassic.com/images/items/21978.gif",
+			"color": "Green ",
+			"species": "Cybunny"
+		},
+		{
+			"name": "Red Cybunny Morphing Potion",
+			"category": "mp",
+			"url": "https://neopetsclassic.com/images/items/17894.gif",
+			"color": "Red ",
+			"species": "Cybunny"
+		},
+		{
+			"name": "Yellow Cybunny Morphing Potion",
+			"category": "mp",
+			"url": "https://neopetsclassic.com/images/items/21977.gif",
+			"color": "Yellow ",
+			"species": "Cybunny"
+		},
+		{
+			"name": "Green Usul Morphing Potion",
+			"category": "mp",
+			"url": "https://neopetsclassic.com/images/items/15697.gif",
+			"color": "Green ",
+			"species": "Usul"
+		},
+		{
+			"name": "Yellow Techo Morphing Potion",
+			"category": "mp",
+			"url": "https://neopetsclassic.com/images/items/13668.gif",
+			"color": "Yellow ",
+			"species": "Techo"
+		},
+		{
+			"name": "Red Chia Morphing Potion",
+			"category": "mp",
+			"url": "https://neopetsclassic.com/images/items/pot_chi_red_2x.png",
+			"color": "Red ",
+			"species": "Chia"
+		},
+		{
+			"name": "Blue Poogle Morphing Potion",
+			"category": "mp",
+			"url": "https://neopetsclassic.com/images/items/blue-poogle-morphing-potion.gif",
+			"color": "Blue ",
+			"species": "Poogle"
+		},
+		{
+			"name": "Blue Blumaroo Morphing Potion",
+			"category": "mp",
+			"url": "https://neopetsclassic.com/images/items/blue-blumaroo-morphing-potion.gif",
+			"color": "Blue ",
+			"species": "Blumaroo"
+		},
+		{
+			"name": "Green Grundo Morphing Potion",
+			"category": "mp",
+			"url": "https://neopetsclassic.com/images/items/17659.gif",
+			"color": "Green ",
+			"species": "Grundo"
+		},
+		{
+			"name": "Blue Pteri Morphing Potion",
+			"category": "mp",
+			"url": "https://neopetsclassic.com/images/items/blue-pteri-morphing-potion.gif",
+			"color": "Blue ",
+			"species": "Pteri"
+		},
+		{
+			"name": "Yellow Chia Morphing Potion",
+			"category": "mp",
+			"url": "https://neopetsclassic.com/images/items/15682.gif",
+			"color": "Yellow ",
+			"species": "Chia"
+		},
+		{
+			"name": "Red Kacheek Morphing Potion",
+			"category": "mp",
+			"url": "https://neopetsclassic.com/images/items/15692.gif",
+			"color": "Red ",
+			"species": "Kacheek"
+		},
+		{
+			"name": "Blue Kyrii Morphing Potion",
+			"category": "mp",
+			"url": "https://neopetsclassic.com/images/items/blue-kyrii-morphing-potion.gif",
+			"color": "Blue ",
+			"species": "Kyrii"
+		},
+		{
+			"name": "Red Kiko Morphing Potion",
+			"category": "mp",
+			"url": "https://neopetsclassic.com/images/items/potion66_2x.png",
+			"color": "Red ",
+			"species": "Kiko"
+		},
+		{
+			"name": "Blue Chia Morphing Potion",
+			"category": "mp",
+			"url": "https://neopetsclassic.com/images/items/blue-chia-morphing-potion.gif",
+			"color": "Blue ",
+			"species": "Chia"
+		},
+		{
+			"name": "Green Kiko Morphing Potion",
+			"category": "mp",
+			"url": "https://neopetsclassic.com/images/items/17663.gif",
+			"color": "Green ",
+			"species": "Kiko"
+		},
+		{
+			"name": "Red Hissi Morphing Potion",
+			"category": "mp",
+			"url": "https://neopetsclassic.com/images/items/pot_hissi_red.gif",
+			"color": "Red ",
+			"species": "Hissi"
+		},
+		{
+			"name": "Red Skeith Morphing Potion",
+			"category": "mp",
+			"url": "https://neopetsclassic.com/images/items/15046.gif",
+			"color": "Red ",
+			"species": "Skeith"
+		},
+		{
+			"name": "Yellow Wocky Morphing Potion",
+			"category": "mp",
+			"url": "https://neopetsclassic.com/images/items/15676.gif",
+			"color": "Yellow ",
+			"species": "Wocky"
+		},
+		{
+			"name": "Yellow Kiko Morphing Potion",
+			"category": "mp",
+			"url": "https://neopetsclassic.com/images/items/17989.gif",
+			"color": "Yellow ",
+			"species": "Kiko"
+		},
+		{
+			"name": "Yellow Quiggle Morphing Potion",
+			"category": "mp",
+			"url": "https://neopetsclassic.com/images/items/24527.gif",
+			"color": "Yellow ",
+			"species": "Quiggle"
+		},
+		{
+			"name": "Blue Kacheek Morphing Potion",
+			"category": "mp",
+			"url": "https://neopetsclassic.com/images/items/blue-kacheek-morphing-potion.gif",
+			"color": "Blue ",
+			"species": "Kacheek"
+		},
+		{
+			"name": "Blue Cybunny Morphing Potion",
+			"category": "mp",
+			"url": "https://neopetsclassic.com/images/items/blue-cybunny-morphing-potion.gif",
+			"color": "Blue ",
+			"species": "Cybunny"
+		},
+		{
+			"name": "Green Peophin Morphing Potion",
+			"category": "mp",
+			"url": "https://neopetsclassic.com/images/items/17729.gif",
+			"color": "Green ",
+			"species": "Peophin"
+		},
+		{
+			"name": "Yellow Blumaroo Morphing Potion",
+			"category": "mp",
+			"url": "https://neopetsclassic.com/images/items/14759.gif",
+			"color": "Yellow ",
+			"species": "Blumaroo"
+		},
+		{
+			"name": "Green Chomby Morphing Potion",
+			"category": "mp",
+			"url": "https://neopetsclassic.com/images/items/22536.gif",
+			"color": "Green ",
+			"species": "Chomby"
+		},
+		{
+			"name": "Green Flotsam Morphing Potion",
+			"category": "mp",
+			"url": "https://neopetsclassic.com/images/items/17646.gif",
+			"color": "Green ",
+			"species": "Flotsam"
+		},
+		{
+			"name": "Red Jetsam Morphing Potion",
+			"category": "mp",
+			"url": "https://neopetsclassic.com/images/items/pot_red_jet_2x.png",
+			"color": "Red ",
+			"species": "Jetsam"
+		},
+		{
+			"name": "Green Jetsam Morphing Potion",
+			"category": "mp",
+			"url": "https://neopetsclassic.com/images/items/17662.gif",
+			"color": "Green ",
+			"species": "Jetsam"
+		},
+		{
+			"name": "Green JubJub Morphing Potion",
+			"category": "mp",
+			"url": "https://neopetsclassic.com/images/items/14874.gif",
+			"color": "Green ",
+			"species": "JubJub"
+		},
+		{
+			"name": "Red Mynci Morphing Potion",
+			"category": "mp",
+			"url": "https://neopetsclassic.com/images/items/14734.gif",
+			"color": "Red ",
+			"species": "Mynci"
+		},
+		{
+			"name": "Blue Acara Morphing Potion",
+			"category": "mp",
+			"url": "https://neopetsclassic.com/images/items/blue-acara-morphing-potion.gif",
+			"color": "Blue ",
+			"species": "Acara"
+		},
+		{
+			"name": "Blue Koi Morphing Potion",
+			"category": "mp",
+			"url": "https://neopetsclassic.com/images/items/blue-koi-morphing-potion.gif",
+			"color": "Blue ",
+			"species": "Koi"
+		},
+		{
+			"name": "Yellow Bruce Morphing Potion",
+			"category": "mp",
+			"url": "https://neopetsclassic.com/images/items/21593.gif",
+			"color": "Yellow ",
+			"species": "Bruce"
+		},
+		{
+			"name": "Green Blumaroo Morphing Potion",
+			"category": "mp",
+			"url": "https://neopetsclassic.com/images/items/15055.gif",
+			"color": "Green ",
+			"species": "Blumaroo"
+		},
+		{
+			"name": "Green Buzz Morphing Potion",
+			"category": "mp",
+			"url": "https://neopetsclassic.com/images/items/15060.gif",
+			"color": "Green ",
+			"species": "Buzz"
+		},
+		{
+			"name": "Blue Grundo Morphing Potion",
+			"category": "mp",
+			"url": "https://neopetsclassic.com/images/items/blue-grundo-morphing-potion.gif",
+			"color": "Blue ",
+			"species": "Grundo"
+		},
+		{
+			"name": "Yellow Yurble Morphing Potion",
+			"category": "mp",
+			"url": "https://neopetsclassic.com/images/items/17998.gif",
+			"color": "Yellow ",
+			"species": "Yurble"
+		},
+		{
+			"name": "Blue Eyrie Morphing Potion",
+			"category": "mp",
+			"url": "https://neopetsclassic.com/images/items/blue-eyrie-morphing-potion.gif",
+			"color": "Blue ",
+			"species": "Eyrie"
+		},
+		{
+			"name": "Red Lupe Morphing Potion",
+			"category": "mp",
+			"url": "https://neopetsclassic.com/images/items/14710.gif",
+			"color": "Red ",
+			"species": "Lupe"
+		},
+		{
+			"name": "Blue Hissi Morphing Potion",
+			"category": "mp",
+			"url": "https://neopetsclassic.com/images/items/pot_hissi_blue.gif",
+			"color": "Blue ",
+			"species": "Hissi"
+		},
+		{
+			"name": "Green Bruce Morphing Potion",
+			"category": "mp",
+			"url": "https://neopetsclassic.com/images/items/21595.gif",
+			"color": "Green ",
+			"species": "Bruce"
+		},
+		{
+			"name": "Yellow Grundo Morphing Potion",
+			"category": "mp",
+			"url": "https://neopetsclassic.com/images/items/17987.gif",
+			"color": "Yellow ",
+			"species": "Grundo"
+		},
+		{
+			"name": "Red Blumaroo Morphing Potion",
+			"category": "mp",
+			"url": "https://neopetsclassic.com/images/items/15058.gif",
+			"color": "Red ",
+			"species": "Blumaroo"
+		},
+		{
+			"name": "Green Aisha Morphing Potion",
+			"category": "mp",
+			"url": "https://neopetsclassic.com/images/items/3337.gif",
+			"color": "Green ",
+			"species": "Aisha"
+		},
+		{
+			"name": "Blue Uni Morphing Potion",
+			"category": "mp",
+			"url": "https://neopetsclassic.com/images/items/blue-uni-morphing-potion.gif",
+			"color": "Blue ",
+			"species": "Uni"
+		},
+		{
+			"name": "Red Nimmo Morphing Potion",
+			"category": "mp",
+			"url": "https://neopetsclassic.com/images/items/14862.gif",
+			"color": "Red ",
+			"species": "Nimmo"
+		},
+		{
+			"name": "Red Eyrie Morphing Potion",
+			"category": "mp",
+			"url": "https://neopetsclassic.com/images/items/potion88_2x.png",
+			"color": "Red ",
+			"species": "Eyrie"
+		},
+		{
+			"name": "Green Koi Morphing Potion",
+			"category": "mp",
+			"url": "https://neopetsclassic.com/images/items/17725.gif",
+			"color": "Green ",
+			"species": "Koi"
+		},
+		{
+			"name": "Red Kau Morphing Potion",
+			"category": "mp",
+			"url": "https://neopetsclassic.com/images/items/pot_kau_red_2x.png",
+			"color": "Red ",
+			"species": "Kau"
+		},
+		{
+			"name": "Blue Yurble Morphing Potion",
+			"category": "mp",
+			"url": "https://neopetsclassic.com/images/items/blue-yurble-morphing-potion.gif",
+			"color": "Blue ",
+			"species": "Yurble"
+		}
+	],
+	"mps": [{
+			"name": "Baby Acara Morphing Potion",
+			"category": "mp",
+			"url": "https://neopetsclassic.com/images/items/3321.gif",
+			"color": "Baby ",
+			"species": "Acara"
+		},
+		{
+			"name": "Baby Aisha Morphing Potion",
+			"category": "mp",
+			"url": "https://neopetsclassic.com/images/items/3335.gif",
+			"color": "Baby ",
+			"species": "Aisha"
+		},
+		{
+			"name": "Baby Kacheek Morphing Potion",
+			"category": "mp",
+			"url": "https://neopetsclassic.com/images/items/21912.gif",
+			"color": "Baby ",
+			"species": "Kacheek"
+		},
+		{
+			"name": "Baby Meerca Morphing Potion",
+			"category": "mp",
+			"url": "https://neopetsclassic.com/images/items/14807.gif",
+			"color": "Baby ",
+			"species": "Meerca"
+		},
+		{
+			"name": "Blue Draik Morphing Potion",
+			"category": "mp",
+			"url": "https://neopetsclassic.com/images/items/blue-draik-morphing-potion.gif",
+			"color": "Blue ",
+			"species": "Draik"
+		},
+		{
+			"name": "Blue Krawk Morphing Potion",
+			"category": "mp",
+			"url": "https://neopetsclassic.com/images/items/blue-krawk-morphing-potion.gif",
+			"color": "Blue ",
+			"species": "Krawk"
+		},
+		{
+			"name": "Brown Bruce Morphing Potion",
+			"category": "mp",
+			"url": "https://neopetsclassic.com/images/items/pot_brown_bruce.gif",
+			"color": "Brown ",
+			"species": "Bruce"
+		},
+		{
+			"name": "Brown Grundo Morphing Potion",
+			"category": "mp",
+			"url": "https://neopetsclassic.com/images/items/pot_grundo_brown.gif",
+			"color": "Brown ",
+			"species": "Grundo"
+		},
+		{
+			"name": "Brown Ixi Morphing Potion",
+			"category": "mp",
+			"url": "https://neopetsclassic.com/images/items/potion_ixi_brown.gif",
+			"color": "Brown ",
+			"species": "Ixi"
+		},
+		{
+			"name": "Brown Ruki Morphing Potion",
+			"category": "mp",
+			"url": "https://neopetsclassic.com/images/items/pot_ruki_brown.gif",
+			"color": "Brown ",
+			"species": "Ruki"
+		},
+		{
+			"name": "Checkered Aisha Morphing Potion",
+			"category": "mp",
+			"url": "https://neopetsclassic.com/images/items/pot_checkered_aisha.gif",
+			"color": "Checkered ",
+			"species": "Aisha"
+		},
+		{
+			"name": "Checkered Bori Morphing Potion",
+			"category": "mp",
+			"url": "https://neopetsclassic.com/images/items/pot_bori_checkered.gif",
+			"color": "Checkered ",
+			"species": "Bori"
+		},
+		{
+			"name": "Checkered Kiko Morphing Potion",
+			"category": "mp",
+			"url": "https://neopetsclassic.com/images/items/pot_kiko_checkered.gif",
+			"color": "Checkered ",
+			"species": "Kiko"
+		},
+		{
+			"name": "Checkered Koi Morphing Potion",
+			"category": "mp",
+			"url": "https://neopetsclassic.com/images/items/pot_koi_checkered.gif",
+			"color": "Checkered ",
+			"species": "Koi"
+		},
+		{
+			"name": "Checkered Poogle Morphing Potion",
+			"category": "mp",
+			"url": "https://neopetsclassic.com/images/items/pot_poogle_checkered.gif",
+			"color": "Checkered ",
+			"species": "Poogle"
+		},
+		{
+			"name": "Checkered Shoyru Morphing Potion",
+			"category": "mp",
+			"url": "https://neopetsclassic.com/images/items/pot_shoyru_checkered.gif",
+			"color": "Checkered ",
+			"species": "Shoyru"
+		},
+		{
+			"name": "Christmas Blumaroo Morphing Potion",
+			"category": "mp",
+			"url": "https://neopetsclassic.com/images/items/potion_blum_chris.gif",
+			"color": "Christmas ",
+			"species": "Blumaroo"
+		},
+		{
+			"name": "Christmas Bori Morphing Potion",
+			"category": "mp",
+			"url": "https://neopetsclassic.com/images/items/pot_bori_christmas.gif",
+			"color": "Christmas ",
+			"species": "Bori"
+		},
+		{
+			"name": "Christmas Bruce Morphing Potion",
+			"category": "mp",
+			"url": "https://neopetsclassic.com/images/items/pot_bruce_christmas.gif",
+			"color": "Christmas ",
+			"species": "Bruce"
+		},
+		{
+			"name": "Christmas Grundo Morphing Potion",
+			"category": "mp",
+			"url": "https://neopetsclassic.com/images/items/pot_grundo_christmas.gif",
+			"color": "Christmas ",
+			"species": "Grundo"
+		},
+		{
+			"name": "Christmas Kiko Morphing Potion",
+			"category": "mp",
+			"url": "https://neopetsclassic.com/images/items/potion_kiko_chris.gif",
+			"color": "Christmas ",
+			"species": "Kiko"
+		},
+		{
+			"name": "Christmas Kougra Morphing Potion",
+			"category": "mp",
+			"url": "https://neopetsclassic.com/images/items/pot_kougra_christmas.gif",
+			"color": "Christmas ",
+			"species": "Kougra"
+		},
+		{
+			"name": "Cloud Bruce Morphing Potion",
+			"category": "mp",
+			"url": "https://neopetsclassic.com/images/items/pot_bruce_cloud.gif",
+			"color": "Cloud ",
+			"species": "Bruce"
+		},
+		{
+			"name": "Cloud Gelert Morphing Potion",
+			"category": "mp",
+			"url": "https://neopetsclassic.com/images/items/potion73.gif",
+			"color": "Cloud ",
+			"species": "Gelert"
+		},
+		{
+			"name": "Cloud Grundo Morphing Potion",
+			"category": "mp",
+			"url": "https://neopetsclassic.com/images/items/pot_grundo_cloud.gif",
+			"color": "Cloud ",
+			"species": "Grundo"
+		},
+		{
+			"name": "Cloud Ixi Morphing Potion",
+			"category": "mp",
+			"url": "https://neopetsclassic.com/images/items/potion_ixi_cloud.gif",
+			"color": "Cloud ",
+			"species": "Ixi"
+		},
+		{
+			"name": "Cloud Ruki Morphing Potion",
+			"category": "mp",
+			"url": "https://neopetsclassic.com/images/items/pot_ruki_cloud.gif",
+			"color": "Cloud ",
+			"species": "Ruki"
+		},
+		{
+			"name": "Cloud Scorchio Morphing Potion",
+			"category": "mp",
+			"url": "https://neopetsclassic.com/images/items/potion_scorchio_cloud.gif",
+			"color": "Cloud ",
+			"species": "Scorchio"
+		},
+		{
+			"name": "Darigan Aisha Morphing Potion",
+			"category": "mp",
+			"url": "https://neopetsclassic.com/images/items/pot_aisha_darigan.gif",
+			"color": "Darigan ",
+			"species": "Aisha"
+		},
+		{
+			"name": "Darigan Blumaroo Morphing Potion",
+			"category": "mp",
+			"url": "https://neopetsclassic.com/images/items/pot_blumaroo_darigan.gif",
+			"color": "Darigan ",
+			"species": "Blumaroo"
+		},
+		{
+			"name": "Darigan Bori Morphing Potion",
+			"category": "mp",
+			"url": "https://neopetsclassic.com/images/items/pot_bori_darigan.gif",
+			"color": "Darigan ",
+			"species": "Bori"
+		},
+		{
+			"name": "Darigan Eyrie Morphing Potion",
+			"category": "mp",
+			"url": "https://neopetsclassic.com/images/items/pot_eyriedarigan.gif",
+			"color": "Darigan ",
+			"species": "Eyrie"
+		},
+		{
+			"name": "Darigan Grundo Morphing Potion",
+			"category": "mp",
+			"url": "https://neopetsclassic.com/images/items/pot_grundo_darigan.gif",
+			"color": "Darigan ",
+			"species": "Grundo"
+		},
+		{
+			"name": "Darigan Kyrii Morphing Potion",
+			"category": "mp",
+			"url": "https://neopetsclassic.com/images/items/pot_kyrii_darigan.gif",
+			"color": "Darigan ",
+			"species": "Kyrii"
+		},
+		{
+			"name": "Desert Aisha Morphing Potion",
+			"category": "mp",
+			"url": "https://neopetsclassic.com/images/items/moprh_aish_des.gif",
+			"color": "Desert ",
+			"species": "Aisha"
+		},
+		{
+			"name": "Desert Blumaroo Morphing Potion",
+			"category": "mp",
+			"url": "https://neopetsclassic.com/images/items/morph_blu_des.gif",
+			"color": "Desert ",
+			"species": "Blumaroo"
+		},
+		{
+			"name": "Desert Poogle Morphing Potion",
+			"category": "mp",
+			"url": "https://neopetsclassic.com/images/items/pot_poog_des.gif",
+			"color": "Desert ",
+			"species": "Poogle"
+		},
+		{
+			"name": "Disco Bruce Morphing Potion",
+			"category": "mp",
+			"url": "https://neopetsclassic.com/images/items/pot_disco_bruce.gif",
+			"color": "Disco ",
+			"species": "Bruce"
+		},
+		{
+			"name": "Disco Moehog Morphing Potion",
+			"category": "mp",
+			"url": "https://neopetsclassic.com/images/items/pot_moehog_disco.gif",
+			"color": "Disco ",
+			"species": "Moehog"
+		},
+		{
+			"name": "Faerie Blumaroo Morphing Potion",
+			"category": "mp",
+			"url": "https://neopetsclassic.com/images/items/pot_blum_faerie.gif",
+			"color": "Faerie ",
+			"species": "Blumaroo"
+		},
+		{
+			"name": "Faerie Grundo Morphing Potion",
+			"category": "mp",
+			"url": "https://neopetsclassic.com/images/items/pot_grundo_faerie.gif",
+			"color": "Faerie ",
+			"species": "Grundo"
+		},
+		{
+			"name": "Faerie Ixi Morphing Potion",
+			"category": "mp",
+			"url": "https://neopetsclassic.com/images/items/pot_ixi_faerie.gif",
+			"color": "Faerie ",
+			"species": "Ixi"
+		},
+		{
+			"name": "Faerie Poogle Morphing Potion",
+			"category": "mp",
+			"url": "https://neopetsclassic.com/images/items/pot_poogle_faerie.gif",
+			"color": "Faerie ",
+			"species": "Poogle"
+		},
+		{
+			"name": "Faerie Shoyru Morphing Potion",
+			"category": "mp",
+			"url": "https://neopetsclassic.com/images/items/pot_shoyru_faerie.gif",
+			"color": "Faerie ",
+			"species": "Shoyru"
+		},
+		{
+			"name": "Faerie Tuskaninny Morphing Potion",
+			"category": "mp",
+			"url": "https://neopetsclassic.com/images/items/pot_tusk_faerie.gif",
+			"color": "Faerie ",
+			"species": "Tuskaninny"
+		},
+		{
+			"name": "Faerie Usul Morphing Potion",
+			"category": "mp",
+			"url": "https://neopetsclassic.com/images/items/potion69.gif",
+			"color": "Faerie ",
+			"species": "Usul"
+		},
+		{
+			"name": "Fire Acara Morphing Potion",
+			"category": "mp",
+			"url": "https://neopetsclassic.com/images/items/3328.gif",
+			"color": "Fire ",
+			"species": "Acara"
+		},
+		{
+			"name": "Fire Blumaroo Morphing Potion",
+			"category": "mp",
+			"url": "https://neopetsclassic.com/images/items/15054.gif",
+			"color": "Fire ",
+			"species": "Blumaroo"
+		},
+		{
+			"name": "Fire Chia Morphing Potion",
+			"category": "mp",
+			"url": "https://neopetsclassic.com/images/items/15681.gif",
+			"color": "Fire ",
+			"species": "Chia"
+		},
+		{
+			"name": "Fire Chomby Morphing Potion",
+			"category": "mp",
+			"url": "https://neopetsclassic.com/images/items/22538.gif",
+			"color": "Fire ",
+			"species": "Chomby"
+		},
+		{
+			"name": "Fire Kiko Morphing Potion",
+			"category": "mp",
+			"url": "https://neopetsclassic.com/images/items/14760.gif",
+			"color": "Fire ",
+			"species": "Kiko"
+		},
+		{
+			"name": "Fire Nimmo Morphing Potion",
+			"category": "mp",
+			"url": "https://neopetsclassic.com/images/items/14866.gif",
+			"color": "Fire ",
+			"species": "Nimmo"
+		},
+		{
+			"name": "Fire Skeith Morphing Potion",
+			"category": "mp",
+			"url": "https://neopetsclassic.com/images/items/14747.gif",
+			"color": "Fire ",
+			"species": "Skeith"
+		},
+		{
+			"name": "Ghost Draik Morphing Potion",
+			"category": "mp",
+			"url": "https://neopetsclassic.com/images/items/15620.gif",
+			"color": "Ghost ",
+			"species": "Draik"
+		},
+		{
+			"name": "Ghost Hissi Morphing Potion",
+			"category": "mp",
+			"url": "https://neopetsclassic.com/images/items/pot_hissi_ghost.gif",
+			"color": "Ghost ",
+			"species": "Hissi"
+		},
+		{
+			"name": "Glowing Korbat Morphing Potion",
+			"category": "mp",
+			"url": "https://neopetsclassic.com/images/items/15484.gif",
+			"color": "Glowing ",
+			"species": "Korbat"
+		},
+		{
+			"name": "Gold Tonu Morphing Potion",
+			"category": "mp",
+			"url": "https://neopetsclassic.com/images/items/22142.gif",
+			"color": "Gold ",
+			"species": "Tonu"
+		},
+		{
+			"name": "Green Draik Morphing Potion",
+			"category": "mp",
+			"url": "https://neopetsclassic.com/images/items/15615.gif",
+			"color": "Green ",
+			"species": "Draik"
+		},
+		{
+			"name": "Grey Techo Morphing Potion",
+			"category": "mp",
+			"url": "https://neopetsclassic.com/images/items/15696.gif",
+			"color": "Grey ",
+			"species": "Techo"
+		},
+		{
+			"name": "Grey Zafara Morphing Potion",
+			"category": "mp",
+			"url": "https://neopetsclassic.com/images/items/17735.gif",
+			"color": "Grey ",
+			"species": "Zafara"
+		},
+		{
+			"name": "Halloween Blumaroo Morphing Potion",
+			"category": "mp",
+			"url": "https://neopetsclassic.com/images/items/15056.gif",
+			"color": "Halloween ",
+			"species": "Blumaroo"
+		},
+		{
+			"name": "Halloween Grarrl Morphing Potion",
+			"category": "mp",
+			"url": "https://neopetsclassic.com/images/items/16904.gif",
+			"color": "Halloween ",
+			"species": "Grarrl"
+		},
+		{
+			"name": "Halloween Tonu Morphing Potion",
+			"category": "mp",
+			"url": "https://neopetsclassic.com/images/items/22141.gif",
+			"color": "Halloween ",
+			"species": "Tonu"
+		},
+		{
+			"name": "Maraquan Korbat Morphing Potion",
+			"category": "mp",
+			"url": "https://neopetsclassic.com/images/items/pot_korbat_maraquan_2x.png",
+			"color": "Maraquan ",
+			"species": "Korbat"
+		},
+		{
+			"name": "Pirate Eyrie Morphing Potion",
+			"category": "mp",
+			"url": "https://neopetsclassic.com/images/items/3319.gif",
+			"color": "Pirate ",
+			"species": "Eyrie"
+		},
+		{
+			"name": "Pirate Kacheek Morphing Potion",
+			"category": "mp",
+			"url": "https://neopetsclassic.com/images/items/14726.gif",
+			"color": "Pirate ",
+			"species": "Kacheek"
+		},
+		{
+			"name": "Plushie Flotsam Morphing Potion",
+			"category": "mp",
+			"url": "https://neopetsclassic.com/images/items/8100.gif",
+			"color": "Plushie ",
+			"species": "Flotsam"
+		},
+		{
+			"name": "Plushie Kiko Morphing Potion",
+			"category": "mp",
+			"url": "https://neopetsclassic.com/images/items/17743.gif",
+			"color": "Plushie ",
+			"species": "Kiko"
+		},
+		{
+			"name": "Plushie Poogle Morphing Potion",
+			"category": "mp",
+			"url": "https://neopetsclassic.com/images/items/17744.gif",
+			"color": "Plushie ",
+			"species": "Poogle"
+		},
+		{
+			"name": "Plushie Techo Morphing Potion",
+			"category": "mp",
+			"url": "https://neopetsclassic.com/images/items/15602.gif",
+			"color": "Plushie ",
+			"species": "Techo"
+		},
+		{
+			"name": "Plushie Yurble Morphing Potion",
+			"category": "mp",
+			"url": "https://neopetsclassic.com/images/items/17747.gif",
+			"color": "Plushie ",
+			"species": "Yurble"
+		},
+		{
+			"name": "Red Draik Morphing Potion",
+			"category": "mp",
+			"url": "https://neopetsclassic.com/images/items/pot_draik_red_2x.png",
+			"color": "Red ",
+			"species": "Draik"
+		},
+		{
+			"name": "Yellow Draik Morphing Potion",
+			"category": "mp",
+			"url": "https://neopetsclassic.com/images/items/15618.gif",
+			"color": "Yellow ",
+			"species": "Draik"
+		}
+	],
+	"transpots": [{
+			"name": "Aisha Transmogrification Potion",
+			"category": "mp",
+			"url": "https://neopetsclassic.com/images/items/7951.gif",
+			"color": "Mutant",
+			"species": "Aisha"
+		},
+		{
+			"name": "Blumaroo Transmogrification Potion",
+			"category": "mp",
+			"url": "https://neopetsclassic.com/images/items/2441.gif",
+			"color": "Mutant",
+			"species": "Blumaroo"
+		},
+		{
+			"name": "Bruce Transmogrification Potion",
+			"category": "mp",
+			"url": "https://neopetsclassic.com/images/items/2448.gif",
+			"color": "Mutant",
+			"species": "Bruce"
+		},
+		{
+			"name": "Chia Transmogrification Potion",
+			"category": "mp",
+			"url": "https://neopetsclassic.com/images/items/17090.gif",
+			"color": "Mutant",
+			"species": "Chia"
+		},
+		{
+			"name": "Cybunny Transmogrification Potion",
+			"category": "mp",
+			"url": "https://neopetsclassic.com/images/items/2443.gif",
+			"color": "Mutant",
+			"species": "Cybunny"
+		},
+		{
+			"name": "Draik Transmogrification Potion",
+			"category": "mp",
+			"url": "https://neopetsclassic.com/images/items/2454.gif",
+			"color": "Mutant",
+			"species": "Draik"
+		},
+		{
+			"name": "Gnorbu Transmogrification Potion",
+			"category": "mp",
+			"url": "https://neopetsclassic.com/images/items/10391.gif",
+			"color": "Mutant",
+			"species": "Gnorbu"
+		},
+		{
+			"name": "Grarrl Transmogrification Potion",
+			"category": "mp",
+			"url": "https://neopetsclassic.com/images/items/2445.gif",
+			"color": "Mutant",
+			"species": "Grarrl"
+		},
+		{
+			"name": "Grundo Transmogrification Potion",
+			"category": "mp",
+			"url": "https://neopetsclassic.com/images/items/2440.gif",
+			"color": "Mutant",
+			"species": "Grundo"
+		},
+		{
+			"name": "Ixi Transmogrification Potion",
+			"category": "mp",
+			"url": "https://neopetsclassic.com/images/items/7196.gif",
+			"color": "Mutant",
+			"species": "Ixi"
+		},
+		{
+			"name": "Jetsam Transmogrification Potion",
+			"category": "mp",
+			"url": "https://neopetsclassic.com/images/items/15607.gif",
+			"color": "Mutant",
+			"species": "Jetsam"
+		},
+		{
+			"name": "Kacheek Transmogrification Potion",
+			"category": "mp",
+			"url": "https://neopetsclassic.com/images/items/2438.gif",
+			"color": "Mutant",
+			"species": "Kacheek"
+		},
+		{
+			"name": "Kiko Transmogrification Potion",
+			"category": "mp",
+			"url": "https://neopetsclassic.com/images/items/2439.gif",
+			"color": "Mutant",
+			"species": "Kiko"
+		},
+		{
+			"name": "Koi Transmogrification Potion",
+			"category": "mp",
+			"url": "https://neopetsclassic.com/images/items/2449.gif",
+			"color": "Mutant",
+			"species": "Koi"
+		},
+		{
+			"name": "Krawk Transmogrification Potion",
+			"category": "mp",
+			"url": "https://neopetsclassic.com/images/items/2452.gif",
+			"color": "Mutant",
+			"species": "Krawk"
+		},
+		{
+			"name": "Kyrii Transmogrification Potion",
+			"category": "mp",
+			"url": "https://neopetsclassic.com/images/items/2447.gif",
+			"color": "Mutant",
+			"species": "Kyrii"
+		},
+		{
+			"name": "Moehog Transmogrification Potion",
+			"category": "mp",
+			"url": "https://neopetsclassic.com/images/items/7953.gif",
+			"color": "Mutant",
+			"species": "Moehog"
+		},
+		{
+			"name": "Quiggle Transmogrification Potion",
+			"category": "mp",
+			"url": "https://neopetsclassic.com/images/items/4884.gif",
+			"color": "Mutant",
+			"species": "Quiggle"
+		},
+		{
+			"name": "Ruki Transmogrification Potion",
+			"category": "mp",
+			"url": "https://neopetsclassic.com/images/items/20402.gif",
+			"color": "Mutant",
+			"species": "Ruki"
+		},
+		{
+			"name": "Scorchio Transmogrification Potion",
+			"category": "mp",
+			"url": "https://neopetsclassic.com/images/items/17160.gif",
+			"color": "Mutant",
+			"species": "Scorchio"
+		},
+		{
+			"name": "Skeith Transmogrification Potion",
+			"category": "mp",
+			"url": "https://neopetsclassic.com/images/items/20421.gif",
+			"color": "Mutant",
+			"species": "Skeith"
+		},
+		{
+			"name": "Tonu Transmogrification Potion",
+			"category": "mp",
+			"url": "https://neopetsclassic.com/images/items/7197.gif",
+			"color": "Mutant",
+			"species": "Tonu"
+		},
+		{
+			"name": "Tuskaninny Transmogrification Potion",
+			"category": "mp",
+			"url": "https://neopetsclassic.com/images/items/13698.gif",
+			"color": "Mutant",
+			"species": "Tuskaninny"
+		},
+		{
+			"name": "Usul Transmogrification Potion",
+			"category": "mp",
+			"url": "https://neopetsclassic.com/images/items/2442.gif",
+			"color": "Mutant",
+			"species": "Usul"
+		},
+		{
+			"name": "Xweetok Transmogrification Potion",
+			"category": "mp",
+			"url": "https://neopetsclassic.com/images/items/10393.gif",
+			"color": "Mutant",
+			"species": "Xweetok"
+		},
+		{
+			"name": "Zafara Transmogrification Potion",
+			"category": "mp",
+			"url": "https://neopetsclassic.com/images/items/20142.gif",
+			"color": "Mutant",
+			"species": "Zafara"
+		}
+	],
+	"food": [
+
+	],
+	"toys": [{
+			"name": "Red Bouncy Ball",
+			"category": "toy",
+			"url": "https://items.jellyneo.net/assets/imgs/items/2945.gif?165"
+		},
+		{
+			"name": "Red and White Toy Ball",
+			"category": "toy",
+			"url": "https://items.jellyneo.net/assets/imgs/old-versions/589.gif"
+		},
+		{
+			"name": "Maraquan Shoyru Float Ring",
+			"category": "toy",
+			"url": "https://items.jellyneo.net/assets/imgs/items/5982.gif?908"
+		},
+		{
+			"name": "Yellow Kiko Squeeze Toy",
+			"category": "toy",
+			"url": "https://items.jellyneo.net/assets/imgs/items/3961.gif?81"
+		},
+		{
+			"name": "Wind Up Florg",
+			"category": "toy",
+			"url": "https://items.jellyneo.net/assets/imgs/items/11425.gif?539"
+		},
+		{
+			"name": "Wind Up Geb",
+			"category": "toy",
+			"url": "https://items.jellyneo.net/assets/imgs/items/42667.gif?661"
+		},
+		{
+			"name": "Shoyru Boat Toy",
+			"category": "toy",
+			"url": "https://items.jellyneo.net/assets/imgs/items/33238.gif?853"
+		},
+		{
+			"name": "Pull Along Rock",
+			"category": "toy",
+			"url": "https://items.jellyneo.net/assets/imgs/items/18821.gif?655"
+		},
+		{
+			"name": "Origami Nova",
+			"category": "toy",
+			"url": "https://items.jellyneo.net/assets/imgs/items/29444.gif?704"
+		},
+		{
+			"name": "Origami Chomby",
+			"category": "toy",
+			"url": "https://items.jellyneo.net/assets/imgs/items/22527.gif?420"
+		},
+		{
+			"name": "Hannah Bobblehead",
+			"category": "toy",
+			"url": "https://items.jellyneo.net/assets/imgs/items/26396.gif?27"
+		}
+	],
+	"basicplushies": [{
+			"name": "Blue Acara Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/832.gif"
+		},
+		{
+			"name": "Blue Aisha Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/toy_aisha_plushie1.gif"
+		},
+		{
+			"name": "Blue Bruce Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/toy_bruce_plushie1.gif"
+		},
+		{
+			"name": "Blue Chia Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/bluechiadoll.gif"
+		},
+		{
+			"name": "Blue Chomby Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/chombyplush3.gif"
+		},
+		{
+			"name": "Blue Doglefox Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/toy_doglefox_blue_2x.png"
+		},
+		{
+			"name": "Blue Draik Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/toy_draik_plushblue_2x.png"
+		},
+		{
+			"name": "Blue Eyrie Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/toy_eyire_plush.gif"
+		},
+		{
+			"name": "Blue Flotsam Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/toy_blueflotsam.gif"
+		},
+		{
+			"name": "Blue Fuzzle",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/toy_bluefuzzle.gif"
+		},
+		{
+			"name": "Blue Gelert Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/gelert_plush_blue.gif"
+		},
+		{
+			"name": "Blue Gnorbu Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/toy_gnorbu_blue.gif"
+		},
+		{
+			"name": "Blue Grarrl Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/toy_grarrl_blue.gif"
+		},
+		{
+			"name": "Blue Hissi Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/toy_hissi_blue.gif"
+		},
+		{
+			"name": "Blue Ixi Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/1025.gif"
+		},
+		{
+			"name": "Blue JubJub Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/toy_jubjub_plushie4.gif"
+		},
+		{
+			"name": "Blue Kacheek Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/toy_kacheekblue.gif"
+		},
+		{
+			"name": "Blue Koi Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/toy_koi_plush4.gif"
+		},
+		{
+			"name": "Blue Kougra Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/toy_kougrablue.gif"
+		},
+		{
+			"name": "Blue Krawk Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/plu_krawk_blue.gif"
+		},
+		{
+			"name": "Blue Kyrii Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/toy_kyr_blue.gif"
+		},
+		{
+			"name": "Blue Lenny Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/toy_lenny_plush3.gif"
+		},
+		{
+			"name": "Blue Lupe Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/toy_lupe_plushblue.gif"
+		},
+		{
+			"name": "Blue Lutari Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/plu_lutari_blue.gif"
+		},
+		{
+			"name": "Blue Mynci Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/toy_mynci_plushie1.gif"
+		},
+		{
+			"name": "Blue Nimmo Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/nimmoplush1.gif"
+		},
+		{
+			"name": "Blue Ogrin Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/toy_ogrin_blue.gif"
+		},
+		{
+			"name": "Blue Pteri Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/toy_pteri_blue.gif"
+		},
+		{
+			"name": "Blue Quiggle Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/3553.gif"
+		},
+		{
+			"name": "Blue Ruki Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/plushie_ruki_blue.gif"
+		},
+		{
+			"name": "Blue Shoyru Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/shoyruplush4.gif"
+		},
+		{
+			"name": "Blue Skeith Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/toy_blueskeith.gif"
+		},
+		{
+			"name": "Blue Tonu Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/toy_tonu1.gif"
+		},
+		{
+			"name": "Blue Tuskaninny Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/toy_bluetuskaninny.gif"
+		},
+		{
+			"name": "Blue Uni Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/toy_uni_plushie1.gif"
+		},
+		{
+			"name": "Blue Usul Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/toy_blueusul.gif"
+		},
+		{
+			"name": "Blue Wocky Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/toy_bluewocky.gif"
+		},
+		{
+			"name": "Blue Xweetok Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/toy_xweetok_blue.gif"
+		},
+		{
+			"name": "Blue Yurble Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/toy_yurble_blueplushie.gif"
+		},
+		{
+			"name": "Blue Zafara Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/toy_zaf_blue.gif"
+		},
+		{
+			"name": "Green Acara Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/834.gif"
+		},
+		{
+			"name": "Green Aisha Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/toy_aisha_plushie2.gif"
+		},
+		{
+			"name": "Green Bori Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/toy_bori_green.gif"
+		},
+		{
+			"name": "Green Bruce Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/toy_bruce_plushie2.gif"
+		},
+		{
+			"name": "Green Buzz Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/toy_buzzgreen.gif"
+		},
+		{
+			"name": "Green Chia Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/greenchiadoll.gif"
+		},
+		{
+			"name": "Green Chomby Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/chombyplush5.gif"
+		},
+		{
+			"name": "Green Cybunny Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/toy_green_cybunny.gif"
+		},
+		{
+			"name": "Green Draik Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/toy_draik_plushgreen_2x.png"
+		},
+		{
+			"name": "Green Elephante Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/plu_elephante_green.gif"
+		},
+		{
+			"name": "Green Eyrie Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/toy_eyrie_green.gif"
+		},
+		{
+			"name": "Green Flotsam Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/toy_greenflotsam.gif"
+		},
+		{
+			"name": "Green Gelert Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/gelert_plush_green.gif"
+		},
+		{
+			"name": "Green Gnorbu Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/toy_gnorbu_green.gif"
+		},
+		{
+			"name": "Green Grarrl Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/toy_grarrl_green.gif"
+		},
+		{
+			"name": "Green Grundo Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/toy_greengrundo.gif"
+		},
+		{
+			"name": "Green Hissi Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/toy_hissi_green.gif"
+		},
+		{
+			"name": "Green Ixi Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/toy_ixi_plushgreen.gif"
+		},
+		{
+			"name": "Green JubJub Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/toy_jubjub_plushie3.gif"
+		},
+		{
+			"name": "Green Kacheek Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/toy_kacheekgreen.gif"
+		},
+		{
+			"name": "Green Koi Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/toy_koi_plush1.gif"
+		},
+		{
+			"name": "Green Korbat Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/toy_korbat_plushie4.gif"
+		},
+		{
+			"name": "Green Kougra Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/toy_kougragreen.gif"
+		},
+		{
+			"name": "Green Krawk Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/plu_krawk_green.gif"
+		},
+		{
+			"name": "Green Kyrii Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/toy_kyr_green.gif"
+		},
+		{
+			"name": "Green Lenny Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/toy_lenny_plush4.gif"
+		},
+		{
+			"name": "Green Lupe Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/toy_lupe_plushgreen.gif"
+		},
+		{
+			"name": "Green Lutari Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/plu_lutari_green.gif"
+		},
+		{
+			"name": "Green Mynci Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/toy_mynci_plushie4.gif"
+		},
+		{
+			"name": "Green Ogrin Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/toy_ogrin_green.gif"
+		},
+		{
+			"name": "Green Peophin Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/toy_peophin_green.gif"
+		},
+		{
+			"name": "Green Pteri Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/toy_pteri_green.gif"
+		},
+		{
+			"name": "Green Quiggle Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/2342.gif"
+		},
+		{
+			"name": "Green Ruki Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/plushie_ruki_green.gif"
+		},
+		{
+			"name": "Green Shoyru Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/shoyruplush2.gif"
+		},
+		{
+			"name": "Green Skeith Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/toy_greenskeith.gif"
+		},
+		{
+			"name": "Green Tonu Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/toy_tonu4.gif"
+		},
+		{
+			"name": "Green Tuskaninny Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/toy_greentuskaninny.gif"
+		},
+		{
+			"name": "Green Uni Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/toy_uni_plushie4.gif"
+		},
+		{
+			"name": "Green Usul Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/toy_greenusul.gif"
+		},
+		{
+			"name": "Green Wocky Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/toy_greenwocky.gif"
+		},
+		{
+			"name": "Green Xweetok Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/toy_xweetok_green.gif"
+		},
+		{
+			"name": "Green Yurble Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/toy_yurble_greenplushie.gif"
+		},
+		{
+			"name": "Green Zafara Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/toy_zaf_green.gif"
+		},
+		{
+			"name": "Red Aisha Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/toy_aisha_red.gif"
+		},
+		{
+			"name": "Red Bruce Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/toy_bruce_plushie3.gif"
+		},
+		{
+			"name": "Red Buzz Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/toy_buzzred.gif"
+		},
+		{
+			"name": "Red Chia Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/redchiadoll.gif"
+		},
+		{
+			"name": "Red Elephante Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/plu_elephante_red.gif"
+		},
+		{
+			"name": "Red Flotsam Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/toy_redflotsam.gif"
+		},
+		{
+			"name": "Red Gelert Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/gelert_plush_red.gif"
+		},
+		{
+			"name": "Red Gnorbu Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/toy_gnorbu_red.gif"
+		},
+		{
+			"name": "Red JubJub Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/toy_jubjub_plushie2.gif"
+		},
+		{
+			"name": "Red Koi Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/toy_koi_plush2.gif"
+		},
+		{
+			"name": "Red Kougra Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/toy_kougrared.gif"
+		},
+		{
+			"name": "Red Kyrii Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/toy_kyr_red.gif"
+		},
+		{
+			"name": "Red Lenny Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/toy_lenny_plush2.gif"
+		},
+		{
+			"name": "Red Lupe Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/toy_lupe_plushred.gif"
+		},
+		{
+			"name": "Red Lutari Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/plu_lutari_red.gif"
+		},
+		{
+			"name": "Red Mynci Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/toy_mynci_plushie2.gif"
+		},
+		{
+			"name": "Red Nimmo Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/nimmoplush3.gif"
+		},
+		{
+			"name": "Red Ogrin Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/toy_ogrin_red.gif"
+		},
+		{
+			"name": "Red Quiggle Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/11465.gif"
+		},
+		{
+			"name": "Red Shoyru Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/shoyruplush5.gif"
+		},
+		{
+			"name": "Red Uni Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/toy_uni_plushie3.gif"
+		},
+		{
+			"name": "Red Xweetok Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/toy_xweetok_red.gif"
+		},
+		{
+			"name": "Yellow Aisha Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/toy_aisha_plushie4.gif"
+		},
+		{
+			"name": "Yellow Buzz Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/toy_buzzyellow.gif"
+		},
+		{
+			"name": "Yellow Chia Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/yellowchiadoll.gif"
+		},
+		{
+			"name": "Yellow Elephante Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/plu_elephante_yellow.gif"
+		},
+		{
+			"name": "Yellow Flotsam Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/toy_yellowflotsam.gif"
+		},
+		{
+			"name": "Yellow Gelert Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/gelert_plush_yellow.gif"
+		},
+		{
+			"name": "Yellow Gnorbu Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/toy_gnorbu_yellow.gif"
+		},
+		{
+			"name": "Yellow JubJub Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/toy_jubjub_plushie1.gif"
+		},
+		{
+			"name": "Yellow Kacheek Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/toy_kacheekyellow.gif"
+		},
+		{
+			"name": "Yellow Koi Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/toy_koi_plush3.gif"
+		},
+		{
+			"name": "Yellow Kougra Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/toy_kougrayellow.gif"
+		},
+		{
+			"name": "Yellow Kyrii Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/toy_kyr_yell.gif"
+		},
+		{
+			"name": "Yellow Lenny Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/toy_lenny_plush1.gif"
+		},
+		{
+			"name": "Yellow Lupe Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/toy_lupe_plushyellow.gif"
+		},
+		{
+			"name": "Yellow Lutari Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/plu_lutari_yellow.gif"
+		},
+		{
+			"name": "Yellow Nimmo Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/nimmoplush5.gif"
+		},
+		{
+			"name": "Yellow Ogrin Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/toy_ogrin_yellow.gif"
+		},
+		{
+			"name": "Yellow Pteri Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/toy_pteri_yellow.gif"
+		},
+		{
+			"name": "Yellow Quiggle Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/408.gif"
+		},
+		{
+			"name": "Yellow Shoyru Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/shoyruplush3.gif"
+		},
+		{
+			"name": "Yellow Uni Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/toy_uni_plushie2.gif"
+		},
+		{
+			"name": "Yellow Xweetok Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/toy_xweetok_yellow.gif"
+		}
+	],
+	"rareplushies": [
+
+		{
+			"name": "Baby Aisha Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/toy_babyaisha.gif"
+		},
+		{
+			"name": "Baby Blumaroo Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/toy_babyblumaroo.gif"
+		},
+		{
+			"name": "Baby Bruce Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/toy_babybruce_2x.png"
+		},
+		{
+			"name": "Baby Buzz Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/toy_babybuzz.png"
+		},
+		{
+			"name": "Baby Eyrie Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/plush_baby_eyrie.gif"
+		},
+		{
+			"name": "Baby Grarrl Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/toy_babygrarrl.gif"
+		},
+		{
+			"name": "Baby Grundo Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/toy_babygrundo.gif"
+		},
+		{
+			"name": "Baby Kougra Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/toy_babykougra.gif"
+		},
+		{
+			"name": "Baby Lenny Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/toy_babylenny.gif"
+		},
+		{
+			"name": "Baby Lupe Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/toy_babylupe.gif"
+		},
+		{
+			"name": "Baby Paint Brush Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/plushie_baby_pb.gif"
+		},
+		{
+			"name": "Baby Peophin Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/toy_peophin_baby_2x.png"
+		},
+		{
+			"name": "Baby Quiggle Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/toy_quiggle_baby_2x.png"
+		},
+		{
+			"name": "Baby Skeith Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/toy_babyskeith.gif"
+		},
+		{
+			"name": "Baby Techo Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/toy_techo_baby.gif"
+		},
+		{
+			"name": "Baby Usul Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/toy_babyusul.gif"
+		},
+		{
+			"name": "Baby Wocky Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/toy_babywocky.gif"
+		},
+		{
+			"name": "Baby Zafara Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/toy_babyzafara.gif"
+		},
+		{
+			"name": "Brightvale Guard Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/17575.gif"
+		},
+		{
+			"name": "Camouflage Krawk Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/plushie-krawk-camou-2x.gif"
+		},
+		{
+			"name": "Checkered Kiko Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/toy_kiko_checkered.gif"
+		},
+		{
+			"name": "Christmas Zafara Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/Christmas_Zafara_Plushie.gif"
+		},
+		{
+			"name": "Cloud Kiko Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/toy_kiko_cloud.gif"
+		},
+		{
+			"name": "Cloud Paint Brush Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/toy_cloud_pb.gif"
+		},
+		{
+			"name": "Darigan Eyrie Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/toy_eyrie_darigan.png"
+		},
+		{
+			"name": "Devilpuss Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/Devilpuss-Plushie.png"
+		},
+		{
+			"name": "Disco Eyrie Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/plu_eyrie_disco.gif"
+		},
+		{
+			"name": "Disco Kiko Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/toy_kiko_disco.gif"
+		},
+		{
+			"name": "Disco Paint Brush Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/plushie_disco_pb.gif"
+		},
+		{
+			"name": "Eo Codestone Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/25328.gif"
+		},
+		{
+			"name": "Esophagor Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/toy_esophagor_plush.gif"
+		},
+		{
+			"name": "Faerie Acara Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/5250.gif"
+		},
+		{
+			"name": "Faerie Aisha Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/toy_aisha_plushie6.gif"
+		},
+		{
+			"name": "Faerie Bruce Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/plu_bruce_faerie.gif"
+		},
+		{
+			"name": "Faerie Grundo Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/plu_grundo_faerie.gif"
+		},
+		{
+			"name": "Faerie Harris Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/toy_harris_faerie.gif"
+		},
+		{
+			"name": "Faerie Ixi Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/toy_ixi_plushfaerie.gif"
+		},
+		{
+			"name": "Faerie Kiko Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/toy_kiko_faerie.gif"
+		},
+		{
+			"name": "Faerie Korbat Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/plu_korbat_faerie.gif"
+		},
+		{
+			"name": "Faerie Kougra Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/faerie_kougra_plushie.gif"
+		},
+		{
+			"name": "Faerie Lupe Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/toy_faerielupe.gif"
+		},
+		{
+			"name": "Faerie Peophin Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/toy_peophin_faerie.gif"
+		},
+		{
+			"name": "Faerie Pteri Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/toy_pteri_faerie.gif"
+		},
+		{
+			"name": "Faerie Wocky Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/1892.gif"
+		},
+		{
+			"name": "Fire Eyrie Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/toy_eyrie_plush.gif"
+		},
+		{
+			"name": "Fire Paint Brush Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/toy_fire_pb.gif"
+		},
+		{
+			"name": "Fire Peophin Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/toy_peophin_fire.gif"
+		},
+		{
+			"name": "Fire Usul Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/toy_usul_fire_2x.png"
+		},
+		{
+			"name": "Garlic Kiko Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/toy_kiko_garlic.gif"
+		},
+		{
+			"name": "Ghost Hissi Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/toy_hissi_ghost.gif"
+		},
+		{
+			"name": "Gold Chomby Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/chombyplush1.gif"
+		},
+		{
+			"name": "Gold Draik Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/plu_gold_draik.gif"
+		},
+		{
+			"name": "Gold Jetsam Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/toy_jetsamplush4_2x.png"
+		},
+		{
+			"name": "Gold Meerca Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/toy_meerca_gold.gif"
+		},
+		{
+			"name": "Gold Moehog Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/toy_moehoggold.gif"
+		},
+		{
+			"name": "Golden Shoyru Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/shoyruplush6.gif"
+		},
+		{
+			"name": "Halloween Bori Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/plu_bori_halloween.png"
+		},
+		{
+			"name": "Halloween Bruce Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/toy_brucehallo.gif"
+		},
+		{
+			"name": "Halloween Cybunny Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/plu_cybunny_halloween.gif"
+		},
+		{
+			"name": "Halloween Draik Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/plu_draik_halloween.png"
+		},
+		{
+			"name": "Halloween Ixi Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/toy_ixihallo.gif"
+		},
+		{
+			"name": "Halloween Kacheek Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/toy_kacheekhallo.gif"
+		},
+		{
+			"name": "Halloween Kau Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/toy_kauhalloween.gif"
+		},
+		{
+			"name": "Halloween Kiko Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/toy_kiko_halloween.gif"
+		},
+		{
+			"name": "Halloween Koi Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/toy_koihallo.gif"
+		},
+		{
+			"name": "Halloween Lupe Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/toy_lupehalloween.png"
+		},
+		{
+			"name": "Halloween Meerca Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/toy_meercahalloween.gif"
+		},
+		{
+			"name": "Halloween Moehog Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/toy_moehog_halloween.png"
+		},
+		{
+			"name": "Halloween Nimmo Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/toy_nimmo_hall.png"
+		},
+		{
+			"name": "Halloween Slorg Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/plu_slorg_halloweenplushie.png"
+		},
+		{
+			"name": "Halloween Uni Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/plu_uni_halloween.png"
+		},
+		{
+			"name": "Halloween Wocky Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/toy_wockyhalloween.png"
+		},
+		{
+			"name": "Halloween Yurble Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/plu_yurble_halloween.png"
+		},
+		{
+			"name": "Headless Von Roo Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/spooky_toy_vonrooheadless.gif"
+		},
+		{
+			"name": "Island Acara Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/toy_acara_island_2x.png"
+		},
+		{
+			"name": "Island Chomby Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/plu_chomby_island.gif"
+		},
+		{
+			"name": "Island Elephante Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/plu_elephante_island.gif"
+		},
+		{
+			"name": "Island Flotsam Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/plu_flotsam_island.gif"
+		},
+		{
+			"name": "Island Gelert Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/plu_gelert_island.gif"
+		},
+		{
+			"name": "Island Grarrl Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/25973.gif"
+		},
+		{
+			"name": "Island JubJub Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/toy_jubjub_island.gif"
+		},
+		{
+			"name": "Island Kiko Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/toy_kiko_island.gif"
+		},
+		{
+			"name": "Island Koi Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/plu_koi_island.gif"
+		},
+		{
+			"name": "Island Meerca Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/plu_island_meerca.gif"
+		},
+		{
+			"name": "Island Mystic Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/toy_plushie_mystic.gif"
+		},
+		{
+			"name": "Island Paint Brush Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/plushie_island_pb.gif"
+		},
+		{
+			"name": "Island Pteri Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/31410.gif"
+		},
+		{
+			"name": "Island Skeith Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/35058.gif"
+		},
+		{
+			"name": "Jubusul Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/spooky_toy_jubusul.gif"
+		},
+		{
+			"name": "Kiko Lake Carpenter Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/plu_carpenter.png"
+		},
+		{
+			"name": "Koibat Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/spooky_toy_koibat.png"
+		},
+		{
+			"name": "Kougrachio Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/spooky_toy_kougscorch.gif"
+		},
+		{
+			"name": "Lost Desert Paint Brush Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/plushie_desert_pb.gif"
+		},
+		{
+			"name": "Lu Codestone Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/25291.gif"
+		},
+		{
+			"name": "Mau Codestone Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/25289.gif"
+		},
+		{
+			"name": "Mutant Aisha Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/toy_mutantaisha.gif"
+		},
+		{
+			"name": "Mutant Blumaroo Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/toy_mutant_blumaroo.gif"
+		},
+		{
+			"name": "Mutant Buzz Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/toy_mutant_buzz.gif"
+		},
+		{
+			"name": "Mutant Cybunny Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/toy_mutantcybunny.gif"
+		},
+		{
+			"name": "Mutant Draik Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/plu_draik_mutant.gif"
+		},
+		{
+			"name": "Mutant Elephante Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/toy_mutant_elephante.png"
+		},
+		{
+			"name": "Mutant Eyrie Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/plu_eyrie_mutant.gif"
+		},
+		{
+			"name": "Mutant Grarrl Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/toy_mutant_grarrl.png"
+		},
+		{
+			"name": "Mutant Grundo Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/toy_mutant_grundo.gif"
+		},
+		{
+			"name": "Mutant Hissi Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/toy_hissi_mutant.gif"
+		},
+		{
+			"name": "Mutant JubJub Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/toy_mutant_jubjub.gif"
+		},
+		{
+			"name": "Mutant Kiko Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/toy_mutant_kiko.gif"
+		},
+		{
+			"name": "Mutant Korbat Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/toy_mutant_korbat.png"
+		},
+		{
+			"name": "Mutant Kougra Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/toy_mutant_kougra.png"
+		},
+		{
+			"name": "Mutant Krawk Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/toy_mutant_krawk.gif"
+		},
+		{
+			"name": "Mutant Kyrii Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/plush_kyrii_mutant.gif"
+		},
+		{
+			"name": "Mutant Lenny Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/toy_mutantlenny.gif"
+		},
+		{
+			"name": "Mutant Lupe Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/toy_mutantlupe.gif"
+		},
+		{
+			"name": "Mutant Moehog Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/toy_mutant_moehog.png"
+		},
+		{
+			"name": "Mutant Shoyru Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/toy_mutant_shoyru.png"
+		},
+		{
+			"name": "Mutant Usul Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/toy_mutant_usul.gif"
+		},
+		{
+			"name": "Orange Pteri Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/toy_pteri_orange.gif"
+		},
+		{
+			"name": "Plumpy Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/plu_plumpy.gif"
+		},
+		{
+			"name": "Plushie Clam",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/vor_plushie_clam.gif"
+		},
+		{
+			"name": "Plushie Fungus",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/gar_plushie_fungus.gif"
+		},
+		{
+			"name": "Plushie Kiko Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/toy_kiko_plushie.gif"
+		},
+		{
+			"name": "Punchbag Bob Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/toy_bob_plushie1.png"
+		},
+		{
+			"name": "Purple Hissi Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/toy_hissi_purple.gif"
+		},
+		{
+			"name": "Quigquig Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/spooky_toy_quigglehalves.gif"
+		},
+		{
+			"name": "Rainbow Gelert Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/gelert_plush_rainbow.gif"
+		},
+		{
+			"name": "Rainbow Grundo Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/toy_rainbowgrundo.gif"
+		},
+		{
+			"name": "Rainbow Hissi Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/toy_hissi_rainbow.gif"
+		},
+		{
+			"name": "Rainbow Ixi Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/toy_ixi_rainbow.gif"
+		},
+		{
+			"name": "Rainbow Pteri Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/toy_pteri_rainbow.gif"
+		},
+		{
+			"name": "Royal Boy Draik Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/plu_draik_royalboy.gif"
+		},
+		{
+			"name": "Royal Girl Draik Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/plu_draik_royalgirl.gif"
+		},
+		{
+			"name": "Scorcie Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/spooky_toy_scorcheyrie.gif"
+		},
+		{
+			"name": "Sloth Faerie Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/spooky_toy_slothfaerie.gif"
+		},
+		{
+			"name": "Snowager Usuki",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/8634.gif"
+		},
+		{
+			"name": "Space Blumfaerie Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/spooky_toy_blumfaerie.gif"
+		},
+		{
+			"name": "Split Paint Brush Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/plushie_split_pb.gif"
+		},
+		{
+			"name": "Spotted Kiko Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/toy_kiko_spotted.gif"
+		},
+		{
+			"name": "Starry Paint Brush Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/plushie_starry_pb.gif"
+		},
+		{
+			"name": "Taki Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/plu_taki.png"
+		},
+		{
+			"name": "Tarla Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/plu_tarla.gif"
+		},
+		{
+			"name": "Tiki Tack Man Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/plu_tiki_tack_man.gif"
+		},
+		{
+			"name": "Usulbat Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/spooky_toy_usulbat.gif"
+		},
+		{
+			"name": "Vo Codestone Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/25292.gif"
+		},
+		{
+			"name": "Von Kougra Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/spooky_toy_vonkougra.gif"
+		},
+		{
+			"name": "Zombie Draik Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/plu_zombie_draik.png"
+		}
+	],
+	"rareplushies2": [{
+			"name": "Angel Kiko Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/Angel-Kiko-Plushie.png"
+		},
+		{
+			"name": "Magical Blue Tonu Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/plu_tonu_blue_magic_2x.png"
+		},
+    {
+			"name": "Magical Gold Chomby Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/plu_gold_chomby_magic.gif"
+		},
+		{
+			"name": "Magical Gold Draik Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/plu_magical_gold_draik.gif"
+		},
+		{
+			"name": "Magical Green Flotsam Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/plu_mag_green_flotsam.gif"
+		},
+		{
+			"name": "Magical Green Krawk Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/plu_krawk_magical_green_2x.png"
+		},
+		{
+			"name": "Magical Green Kyrii Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/toy_kyr_green_2x.png"
+		},
+		{
+			"name": "Magical Green Tonu Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/plu_tonu_green_magic_2x.png"
+		},
+		{
+			"name": "Magical Green Yurble Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/plu_mag_green_yurble.gif"
+		},
+		{
+			"name": "Un-Valentines JubJub Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/plu_unvalentine_jubjub.gif"
+		},
+		{
+			"name": "Un-Valentines Quiggle Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/plu_unvalentines_quiggle.gif"
+		},
+		{
+			"name": "Un-Valentines Shoyru Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/plu_shoyru_unvalentines.gif"
+		},
+		{
+			"name": "Un-Valentines Tonu Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/plu_unvalentines_tonu.gif"
+		},
+		{
+			"name": "Valentine Grarrl Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/plu_valentines_grarrl.gif"
+		},
+		{
+			"name": "Valentine JubJub Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/plu_vday_jubjub.gif"
+		},
+		{
+			"name": "Valentine Meerca Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/plu_valentine_meerca.gif"
+		},
+		{
+			"name": "Valentine Nimmo Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/plu_valentines_nimmo.gif"
+		},
+		{
+			"name": "Valentines Blugar Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/plu_vday_blugar.gif"
+		},
+		{
+			"name": "Valentines Bruce Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/toy_val_bruce.gif"
+		},
+		{
+			"name": "Valentines Cybunny Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/toy_val_cybunny.gif"
+		},
+		{
+			"name": "Valentines Faellie Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/plu_vday_faellie.gif"
+		},
+		{
+			"name": "Valentines Grundo Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/toy_val_grundo.gif"
+		},
+		{
+			"name": "Valentines Hasee Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/toy_val_hasee.gif"
+		},
+		{
+			"name": "Valentines Kacheek Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/toy_val_kacheek.gif"
+		},
+		{
+			"name": "Valentines Kadoatie Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/toy_val_kadoatie.gif"
+		},
+		{
+			"name": "Valentines Kiko Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/toy_val_kiko.gif"
+		},
+		{
+			"name": "Valentines Ona Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/plu_vday_ona.gif"
+		},
+		{
+			"name": "Valentines Quiggle Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/17605.gif"
+		},
+		{
+			"name": "Rainbow Reject Cybunny Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/toy_rain_rej_cyb.gif"
+		},
+		{
+			"name": "Reject Gelert Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/gelert_plush_reject.png"
+		},
+		{
+			"name": "Reject Valentine Lutari Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/plu_lutari_valentine.gif"
+		},
+		{
+			"name": "Reject Valentine Xweetok Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/plu_xweetok_valentine.gif"
+		}
+	],
+	"petpets": [
+
+	],
+	"codestones": [{
+			"name": "Bri Codestone",
+			"category": "codestone",
+			"url": "https://neopetsclassic.com/images/items/codestone10.gif"
+		},
+		{
+			"name": "Lu Codestone",
+			"category": "codestone",
+			"url": "https://neopetsclassic.com/images/items/codestone3.gif"
+		},
+		{
+			"name": "Orn Codestone",
+			"category": "codestone",
+			"url": "https://neopetsclassic.com/images/items/codestone8.gif"
+		},
+		{
+			"name": "Mau Codestone",
+			"category": "codestone",
+			"url": "https://neopetsclassic.com/images/items/codestone1.gif"
+		},
+		{
+			"name": "Zei Codestone",
+			"category": "codestone",
+			"url": "https://neopetsclassic.com/images/items/codestone7.gif"
+		},
+		{
+			"name": "Main Codestone",
+			"category": "codestone",
+			"url": "https://neopetsclassic.com/images/items/codestone6.gif"
+		},
+		{
+			"name": "Eo Codestone",
+			"category": "codestone",
+			"url": "https://neopetsclassic.com/images/items/codestone5.gif"
+		},
+		{
+			"name": "Tai-Kai Codestone",
+			"category": "codestone",
+			"url": "https://neopetsclassic.com/images/items/codestone2.gif"
+		},
+		{
+			"name": "Har Codestone",
+			"category": "codestone",
+			"url": "https://neopetsclassic.com/images/items/codestone9.gif"
+		},
+		{
+			"name": "Vo Codestone",
+			"category": "codestone",
+			"url": "https://neopetsclassic.com/images/items/codestone4.gif"
+		}
+	]
 }

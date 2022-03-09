@@ -31,7 +31,7 @@ const POUND = "pound";
 const ZAP_INTERVAL = 60;
 
 //Random Event
-const RANDOM_RARITY = 15;
+const RANDOM_RARITY = 20;
 const SHH_INTERVAL = 5;
 
 //Healing Springs Interval
@@ -43,15 +43,15 @@ const EXCITEMENT_COST = 150;
 
 //Kauvara Constants
 const BASICMP_COST = 5000;
-const RAREMP_COST = 15000;
+const RAREMP_COST = 20000;
 const KAU_RARITY = 8;
 const KAU_INTERVAL = 1;
 const KAU_PRICE_BUFFER = 8000;
 
 //Fruit Machine Constants
 const FRUIT_INTERVAL = 120;
-const FRUIT_RARITY = 10;
-const FRUIT_RAREPB = 3;
+const FRUIT_RARITY = 50;
+const FRUIT_RAREPB = 5;
 
 //constructor
 function NeoRPG() {
@@ -854,7 +854,7 @@ dateDiffInMinutes(timesUser.lastFruit, today);
     }
     else{
       //regular randoms
-      let random = getRandomInt(16);
+      let random = getRandomInt(17);
       //random = 15;
       //add NP
       if(random==0){
@@ -998,7 +998,7 @@ dateDiffInMinutes(timesUser.lastFruit, today);
         }
         else{
          embed.setTitle("Something Has Happened");
-        embed.setDescription(`${value.pets[value.activePet].name} looks at you with wide eyes and says "**I love you**"!`);   embed.setImage(value.pets[value.activePet].url);
+        embed.setDescription(`${value.pets[value.activePet].name} looks at you with wide eyes and says "**I love you**"!`);   embed.setImage(value.pets[value.activePet]));
         return embed;
         }
       }
@@ -1012,6 +1012,23 @@ dateDiffInMinutes(timesUser.lastFruit, today);
         embed.setDescription(`Santa Claus comes and gives you a ${itemList.toys[randomToy].name}!`);
         embed.setImage(itemList.toys[randomToy].url);
         return embed;
+      }
+      //turn red from bad mood
+      if(random==16){
+         if(value.activePet < 0) return nothingSHH();
+       //check baby is an avaialble color
+        isAvail = await this.isPetColorAvailable("Red",value.pets[value.activePet].species); 
+        if(isAvail && value.pets[value.activePet].mood == 0){
+          await this.paintPet(user, "Red", value.activePet)
+          embed.setTitle("Something Has Happened");
+          embed.setDescription(`${value.pets[value.activePet].name} is in such a bad mood, they threw a temper tantrum and turned **Red**! Try playing with your pets next time...`);   embed.setImage(getSadPetURL(value.pets[value.activePet]));
+          return embed;
+        }
+        else{
+         embed.setTitle("Something Has Happened");
+        embed.setDescription(`${value.pets[value.activePet].name} looks at you with wide eyes and says "**I love you**"!`);   embed.setImage(getPetURL(value.pets[value.activePet]));
+        return embed;
+        }
       }
       
     }
