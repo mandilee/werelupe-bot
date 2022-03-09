@@ -11,7 +11,7 @@ const fetch = (...args) => import('node-fetch').then(({ default: fetch }) => fet
 //import message embed functionality from node
 const { MessageEmbed } = require('discord.js');
 
-const db = new Database("https://kv.replit.com/v0/eyJhbGciOiJIUzUxMiIsImlzcyI6ImNvbm1hbiIsImtpZCI6InByb2Q6MSIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJjb25tYW4iLCJleHAiOjE2NDY3ODQ4MjgsImlhdCI6MTY0NjY3MzIyOCwiZGF0YWJhc2VfaWQiOiJkMzZkMzVkOC02OGQyLTQyMWUtYTZmMy05M2M5OTcxNTNkM2MifQ.nFmvZnAavd24nDKU4n4HmV9ftbefiSChbC5LrBuwbiWf5htluQ6Dpex7gVQPxPXg604OxP1FLD15_OSKvhUByw");
+const db = new Database("https://kv.replit.com/v0/eyJhbGciOiJIUzUxMiIsImlzcyI6ImNvbm1hbiIsImtpZCI6InByb2Q6MSIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJjb25tYW4iLCJleHAiOjE2NDY5MDIwMzYsImlhdCI6MTY0Njc5MDQzNiwiZGF0YWJhc2VfaWQiOiJkMzZkMzVkOC02OGQyLTQyMWUtYTZmMy05M2M5OTcxNTNkM2MifQ._jYLn2otuK_A66pjdz9xwK24cZMw6zUsOJrFQ4HUHmmPTDH4uYFh6if4LWWQQc7Qx6TK3DmFKkXXzN_13kguXQ");
 //const db = new Database();
 
 //declare constants
@@ -89,27 +89,27 @@ function NeoRPG() {
  //    }
  //    console.log("Done");
  //  }
-  // this.test = async function(message){
-  //   console.log(process.env.REPLIT_DB_URL)
-  //   userList = await db.list()
-  //   // userStrings = JSON.stringify(userList);
-  //   // const fs = require('fs');
-  //   // await fs.writeFile ("./backup.json", userStrings, function(err) {
-  //   // if (err) throw err;
-  //   // console.log('complete');
-  //   // });
+  this.test = async function(message){
+    console.log(process.env.REPLIT_DB_URL)
+    userList = await db.list()
+    // userStrings = JSON.stringify(userList);
+    // const fs = require('fs');
+    // await fs.writeFile ("./backup.json", userStrings, function(err) {
+    // if (err) throw err;
+    // console.log('complete');
+    // });
     
-  //    for(let i =2;i<4;i++){
-  //     user = await db.get(userList[i]); //get user
-  //     console.log(user);
+     for(let i =2;i<4;i++){
+      user = await db.get(userList[i]); //get user
+      //console.log(user);
        
-  //     }
+      }
       
-  //     for(let j=0;j<user.pets.length;j++){ 
+      for(let j=0;j<user.pets.length;j++){ 
       
-  //     }
-  //   console.log("Done");
-  // }
+      }
+    console.log("Done");
+  }
   
   //join NeoRPG takes in user information
   this.join = async function(user){
