@@ -2023,7 +2023,11 @@
 		}
 	],
 	"rareplushies": [
-
+    {
+			"name": "Angel Kiko Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/Angel-Kiko-Plushie.png"
+		},
 		{
 			"name": "Baby Aisha Plushie",
 			"category": "plushie",
@@ -2730,72 +2734,6 @@
 			"url": "https://neopetsclassic.com/images/items/plu_tiki_tack_man.gif"
 		},
 		{
-			"name": "Usulbat Plushie",
-			"category": "plushie",
-			"url": "https://neopetsclassic.com/images/items/spooky_toy_usulbat.gif"
-		},
-		{
-			"name": "Vo Codestone Plushie",
-			"category": "plushie",
-			"url": "https://neopetsclassic.com/images/items/25292.gif"
-		},
-		{
-			"name": "Von Kougra Plushie",
-			"category": "plushie",
-			"url": "https://neopetsclassic.com/images/items/spooky_toy_vonkougra.gif"
-		},
-		{
-			"name": "Zombie Draik Plushie",
-			"category": "plushie",
-			"url": "https://neopetsclassic.com/images/items/plu_zombie_draik.png"
-		}
-	],
-	"rareplushies2": [{
-			"name": "Angel Kiko Plushie",
-			"category": "plushie",
-			"url": "https://neopetsclassic.com/images/items/Angel-Kiko-Plushie.png"
-		},
-		{
-			"name": "Magical Blue Tonu Plushie",
-			"category": "plushie",
-			"url": "https://neopetsclassic.com/images/items/plu_tonu_blue_magic_2x.png"
-		},
-    {
-			"name": "Magical Gold Chomby Plushie",
-			"category": "plushie",
-			"url": "https://neopetsclassic.com/images/items/plu_gold_chomby_magic.gif"
-		},
-		{
-			"name": "Magical Gold Draik Plushie",
-			"category": "plushie",
-			"url": "https://neopetsclassic.com/images/items/plu_magical_gold_draik.gif"
-		},
-		{
-			"name": "Magical Green Flotsam Plushie",
-			"category": "plushie",
-			"url": "https://neopetsclassic.com/images/items/plu_mag_green_flotsam.gif"
-		},
-		{
-			"name": "Magical Green Krawk Plushie",
-			"category": "plushie",
-			"url": "https://neopetsclassic.com/images/items/plu_krawk_magical_green_2x.png"
-		},
-		{
-			"name": "Magical Green Kyrii Plushie",
-			"category": "plushie",
-			"url": "https://neopetsclassic.com/images/items/toy_kyr_green_2x.png"
-		},
-		{
-			"name": "Magical Green Tonu Plushie",
-			"category": "plushie",
-			"url": "https://neopetsclassic.com/images/items/plu_tonu_green_magic_2x.png"
-		},
-		{
-			"name": "Magical Green Yurble Plushie",
-			"category": "plushie",
-			"url": "https://neopetsclassic.com/images/items/plu_mag_green_yurble.gif"
-		},
-		{
 			"name": "Un-Valentines JubJub Plushie",
 			"category": "plushie",
 			"url": "https://neopetsclassic.com/images/items/plu_unvalentine_jubjub.gif"
@@ -2814,6 +2752,11 @@
 			"name": "Un-Valentines Tonu Plushie",
 			"category": "plushie",
 			"url": "https://neopetsclassic.com/images/items/plu_unvalentines_tonu.gif"
+		},
+    {
+			"name": "Usulbat Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/spooky_toy_usulbat.gif"
 		},
 		{
 			"name": "Valentine Grarrl Plushie",
@@ -2909,6 +2852,64 @@
 			"name": "Reject Valentine Xweetok Plushie",
 			"category": "plushie",
 			"url": "https://neopetsclassic.com/images/items/plu_xweetok_valentine.gif"
+		},
+		{
+			"name": "Vo Codestone Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/25292.gif"
+		},
+		{
+			"name": "Von Kougra Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/spooky_toy_vonkougra.gif"
+		},
+		{
+			"name": "Zombie Draik Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/plu_zombie_draik.png"
+		}
+	],
+	"magicplushies": [
+		{
+			"name": "Magical Blue Tonu Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/plu_tonu_blue_magic_2x.png"
+      
+		},
+    {
+			"name": "Magical Gold Chomby Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/plu_gold_chomby_magic.gif"
+		},
+		{
+			"name": "Magical Gold Draik Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/plu_magical_gold_draik.gif"
+		},
+		{
+			"name": "Magical Green Flotsam Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/plu_mag_green_flotsam.gif"
+		},
+		{
+			"name": "Magical Green Krawk Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/plu_krawk_magical_green_2x.png"
+		},
+		{
+			"name": "Magical Green Kyrii Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/toy_kyr_green_2x.png"
+		},
+		{
+			"name": "Magical Green Tonu Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/plu_tonu_green_magic_2x.png"
+		},
+		{
+			"name": "Magical Green Yurble Plushie",
+			"category": "plushie",
+			"url": "https://neopetsclassic.com/images/items/plu_mag_green_yurble.gif"
 		}
 	],
 	"petpets": [

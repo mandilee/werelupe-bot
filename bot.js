@@ -89,6 +89,34 @@ client.on('interactionCreate', async interaction => {
     content = await neoRPG.create(interaction.user, petName);
     await interaction.editReply({ embeds: [content] });
   }
+
+   //view plushie stats
+  if (interaction.commandName === 'plushiestats') {
+    let content = new MessageEmbed();
+    content.setTitle("Working on it..");
+    await interaction.reply({ embeds: [content] });
+    const petName = interaction.options.getString('petname');
+    content = await neoRPG.plushiestats(interaction.user, petName);
+    await interaction.editReply({ embeds: [content] });
+  }
+  
+  //view plushie hst
+  if (interaction.commandName === 'plushiehst') {
+    let content = new MessageEmbed();
+    content.setTitle("Working on it..");
+    await interaction.reply({ embeds: [content] });
+    content = await neoRPG.plushiehst(interaction.user);
+    await interaction.editReply({ embeds: [content] });
+  }
+
+  //buy a plushie
+  if (interaction.commandName === 'plushie') {
+    let content = new MessageEmbed();
+    content.setTitle("Working on it..");
+    await interaction.reply({ embeds: [content] });
+    content = await neoRPG.plushie(interaction.user);
+    await interaction.editReply({ embeds: [content] });
+  }
   
 
   //abandon a pet

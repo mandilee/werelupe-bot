@@ -68,10 +68,16 @@ const commands = [
   new SlashCommandBuilder().setName('getstats').setDescription('See your or a user\'s stats in NeoRPG').addUserOption(option => option.setName('user').setDescription('Select a user')),
     //magic shop 
   new SlashCommandBuilder().setName('kauvara').setDescription('Buy an item from Kauvara\'s Magic Shop! - NP Required'),
+  //plushie shop 
+  new SlashCommandBuilder().setName('plushie').setDescription('Buy an item from the plushie shop! - NP Required'),
+   //plushie shop 
+  new SlashCommandBuilder().setName('plushiehst').setDescription('View the plushies high score table!'),
+  //plushie shop 
+  new SlashCommandBuilder().setName('plushiestats').setDescription('View how many unique plushies a pet has played with!').addStringOption(option => option.setName('petname').setDescription('Enter pet name').setRequired(true)),
     //fruit machine
   new SlashCommandBuilder().setName('fruits').setDescription('Try your luck at the fruit machine'),
-    //buy a pet slot
-  new SlashCommandBuilder().setName('pettoken').setDescription('Buy a pet slot - NP Required'),
+  //   //buy a pet slot
+  // new SlashCommandBuilder().setName('pettoken').setDescription('Buy a pet slot - NP Required'),
      //buy a pet slot
   new SlashCommandBuilder().setName('checktimes').setDescription('Check how much time is left for each activity'),
   //gets a random event

@@ -48,6 +48,14 @@ const KAU_RARITY = 8;
 const KAU_INTERVAL = 1;
 const KAU_PRICE_BUFFER = 8000;
 
+//Plushie Constants
+const BASICPLUSHIE_COST = 500;
+const RAREPLUSHIE_COST = 5000;
+const PLUSHIE_RARITY = 10;
+const PLUSHIE_INTERVAL = 5;
+const PLUSHIE_PRICE_BUFFER = 1500;
+
+
 //Fruit Machine Constants
 const FRUIT_INTERVAL = 120;
 const FRUIT_RARITY = 50;
@@ -89,7 +97,7 @@ function NeoRPG() {
  //    }
  //    console.log("Done");
  //  }
-  this.test = async function(message){
+ this.test = async function(message){
     console.log(process.env.REPLIT_DB_URL)
     userList = await db.list()
     // userStrings = JSON.stringify(userList);
@@ -429,7 +437,7 @@ function NeoRPG() {
      //initialize embed
       let embed = new MessageEmbed();
       embed.setTitle(`NeoRPG Help`);
-      embed.setDescription("\*\*Thanks for playing NeoRPG! Here are some helpful tips:\*\*\n\n `/join` - use this to join NeoRPG\n `/create` - use this to create a Neopet\n `/adopt` - use this to adopt a pet from the Neopian Pound\n `/setactive` - use this to set your active Neopet\n `/abandon` - use this to abandon a Neopet\n `/pound` - use this to view the Neopian Pound\n `/view` - use this to view the pet profile of the specified pet\n `/getstats` - use this to view a user profile\n `/feed` - use this to feed one of your Neopets\n `/excitement` - spin the Wheel of Excitement\n `/kauvara` - visit Kauvara's magic shop in hopes for a good morphing potion!\n `/zap` - use this to zap a Neopet\n `/shh` - use this receive a random event\n `/inventory` - use this to view your inventory\n `/gift` - use this to send a gift to someone\n `/giftnp` - use this to send NP to someone\n `/play` - play with your pet and increase their happiness (toy required)n `/fruits` - spin the fruit machine!\n `/paint` - use this to paint a pet if you have the Paint Brush\n `/morph` - use this to morph the specified pet (Magic Potion Required)\n `/heal` - to visit the healing springs\n `/quit` - use this to quit NeoRPG and give up all your progress\n `/help` - use this to get a list of commands and help with NeoRPG");
+      embed.setDescription("\*\*Thanks for playing NeoRPG! Here are some helpful tips:\*\*\n\n `/join` - use this to join NeoRPG\n `/create` - use this to create a Neopet\n `/adopt` - use this to adopt a pet from the Neopian Pound\n `/setactive` - use this to set your active Neopet\n `/abandon` - use this to abandon a Neopet\n `/pound` - use this to view the Neopian Pound\n `/view` - use this to view the pet profile of the specified pet\n `/getstats` - use this to view a user profile\n `/feed` - use this to feed one of your Neopets\n `/excitement` - spin the Wheel of Excitement\n `/kauvara` - visit Kauvara's magic shop in hopes for a good morphing potion!\n `/plushie` - visit the plushie shop in hopes for a good plushie!\n `/plushiestats` - See how many plushies a pet has played with!\n `/zap` - use this to zap a Neopet\n `/shh` - use this receive a random event\n `/inventory` - use this to view your inventory\n `/gift` - use this to send a gift to someone\n `/giftnp` - use this to send NP to someone\n `/play` - play with your pet and increase their happiness (toy required)n `/fruits` - spin the fruit machine!\n `/paint` - use this to paint a pet if you have the Paint Brush\n `/morph` - use this to morph the specified pet (Magic Potion Required)\n `/heal` - to visit the healing springs\n `/quit` - use this to quit NeoRPG and give up all your progress\n `/help` - use this to get a list of commands and help with NeoRPG");
       return embed;
     } 
 
@@ -445,6 +453,7 @@ function NeoRPG() {
      if(!timesUser.lastSHH) timesUser.lastSHH = 0;
      if(!timesUser.lastHeal) timesUser.lastHeal = 0;
      if(!timesUser.lastFruit) timesUser.lastFruit=0;
+     if(!timesUser.lastPlushie) timesUser.lastPlushie=0;
      var excitmentTime = EXCITEMENT_INTERVAL - dateDiffInMinutes(timesUser.lastExcitement, today);
      if(excitmentTime < 0) excitmentTime = 0;
      var zapTime = ZAP_INTERVAL - dateDiffInMinutes(timesUser.lastZap, today);
@@ -458,10 +467,13 @@ function NeoRPG() {
      var fruitTime = FRUIT_INTERVAL - 
 dateDiffInMinutes(timesUser.lastFruit, today);
      if(fruitTime  < 0) fruitTime  = 0;
+      var plushTime = PLUSHIE_INTERVAL - 
+dateDiffInMinutes(timesUser.lastPlushie, today);
+     if(plushTime  < 0) plushTime  = 0;
      
 
       embed.setTitle(`Time Remaining`);
-      embed.setDescription(`\n 🎡 ${excitmentTime} Minutes - For Wheel of Excitement\n ⚡ ${zapTime} Minutes - For Lab Zap\n 🔮 ${kauTime } Minutes - To Visit Kauvara\n ❤️‍🩹 ${healTime} Minutes - For Healing Springs\n 🎲 ${sshTime} Minutes - For A Random Event\n 🍇 ${fruitTime} Minutes - To Spin the Fruit Machine`);
+      embed.setDescription(`\n 🎡 ${excitmentTime} Minutes - For Wheel of Excitement\n ⚡ ${zapTime} Minutes - For Lab Zap\n 🔮 ${kauTime } Minutes - To Visit Kauvara\n 🧸  ${plushTime} Minutes - To buy a plushie \n ❤️‍🩹 ${healTime} Minutes - For Healing Springs\n 🎲 ${sshTime} Minutes - For A Random Event\n 🍇 ${fruitTime} Minutes - To Spin the Fruit Machine`);
       return embed;
     } 
   
@@ -718,6 +730,7 @@ dateDiffInMinutes(timesUser.lastFruit, today);
     }
     
   }
+
   //random events
   this.randomEvent = async function(user){
     //retrieve user
@@ -854,7 +867,7 @@ dateDiffInMinutes(timesUser.lastFruit, today);
     }
     else{
       //regular randoms
-      let random = getRandomInt(17);
+      let random = getRandomInt(19);
       //random = 15;
       //add NP
       if(random==0){
@@ -949,8 +962,8 @@ dateDiffInMinutes(timesUser.lastFruit, today);
       }
       //hungry
       if(random==10){
-        //check for an active pet
-        if(value.activePet < 0) return nothingSHH();
+        //check for total pets
+        if(value.totalPets < 0) return nothingSHH();
         for(let j=0;j<value.pets.length;j++){ //look at users pets
           if(value.pets[j].mood != 0) value.pets[j].mood--;
           value.pets[j].hunger = 0;//set hunger to zero
@@ -1016,10 +1029,10 @@ dateDiffInMinutes(timesUser.lastFruit, today);
       //turn red from bad mood
       if(random==16){
          if(value.activePet < 0) return nothingSHH();
-       //check baby is an avaialble color
-        isAvail = await this.isPetColorAvailable("Red",value.pets[value.activePet].species); 
-        if(isAvail && value.pets[value.activePet].mood == 0){
-          await this.paintPet(user, "Red", value.activePet)
+       //check red is an avaialble color 
+        if(value.pets[value.activePet].mood == 0){
+          value.pets[value.activePet].color = "Red";
+          await db.set(value.id, value);
           embed.setTitle("Something Has Happened");
           embed.setDescription(`${value.pets[value.activePet].name} is in such a bad mood, they threw a temper tantrum and turned **Red**! Try playing with your pets next time...`);   embed.setImage(getSadPetURL(value.pets[value.activePet]));
           return embed;
@@ -1030,7 +1043,41 @@ dateDiffInMinutes(timesUser.lastFruit, today);
         return embed;
         }
       }
+
+      //turn red from bad mood - random pet
+      if(random==17){
+        //check for pets
+         if(value.totalPets < 0) return nothingSHH();
       
+        //get a random int in the size of total pets
+        let randoPet = getRandomInt(value.pets.length);
+       //check red is an avaialble color 
+        if(value.pets[randoPet].mood == 0){
+          value.pets[randoPet].color = "Red";
+          await db.set(value.id, value);
+          embed.setTitle("Something Has Happened");
+          embed.setDescription(`${value.pets[randoPet].name} is in such a bad mood, they threw a temper tantrum and turned **Red**! Try playing with your pets next time...`);   embed.setImage(getSadPetURL(value.pets[randoPet]));
+          return embed;
+        }
+        else{
+         embed.setTitle("Something Has Happened");
+        embed.setDescription(`${value.pets[randoPet].name} looks at you with wide eyes and says "**I love you**"!`);   embed.setImage(getPetURL(value.pets[randoPet]));
+        return embed;
+        }
+      }
+       //pets get in a bad mood
+      if(random==18){
+        //check for pets
+         if(value.activePet < 0) return nothingSHH();
+         for(let j=0;j<value.pets.length;j++){ //look at users pets
+          if(value.pets[j].hunger != 0) value.pets[j].hunger--;
+          value.pets[j].mood = 0;//set mood to zero
+        }
+        await db.set(value.id, value);
+        embed.setTitle("Something Has Happened");
+        embed.setDescription(`Your pets saw you give attention to another pet and got in a very bad mood :(`);   embed.setImage(getSadPetURL(value.pets[value.activePet]));
+        return embed;
+      }
     }
     
     function nothingSHH(){
@@ -1065,15 +1112,23 @@ dateDiffInMinutes(timesUser.lastFruit, today);
         return embed
       }
       //check to see if the user has any toys
-      toyIndex = value.inventory.findIndex(x => x.category === "toy");
+      toyIndex = value.inventory.findIndex(x => x.category === "toy" || x.category === "plushie");
       //if not toys - no play
       if(toyIndex < 0){
-      embed.setTitle(`Sorry you don't have any toys for your pets to play with! Try your luck with random events!`);
+      embed.setTitle(`Sorry you don't have any toys for your pets to play with! Try your luck with random events or buy a plushie from the plushie shop!`);
       embed.setDescription("");
       return embed
       }
      
       value.pets[playIndex].mood = MAX_HAPPINESS;
+      if(!value.pets[playIndex].plushies){
+        value.pets[playIndex].plushies = [];
+      }
+      plushIndex = value.pets[playIndex].plushies.findIndex(x => x === value.inventory[toyIndex].name);
+     
+      if(plushIndex < 0){
+       value.pets[playIndex].plushies.push(value.inventory[toyIndex].name);
+      }
       
       embed.setTitle(`Thank you for playing with me!!`);
       embed.setDescription(`*${value.pets[playIndex].name} broke your ${value.inventory[toyIndex].name} while playing...*`);
@@ -1086,9 +1141,6 @@ dateDiffInMinutes(timesUser.lastFruit, today);
      return embed;
     }
 
-
-
-  
   //Gifting User1 sends User 2 receives
   this.gift = async function(user1, user2, itemName){
     //get users
@@ -1236,7 +1288,7 @@ dateDiffInMinutes(timesUser.lastFruit, today);
     return embed;
   }//end paint function
 
-  //paints the specified pet the color specified
+  //morphs the specified pet the color specified
   this.morph = async function(user, petName, color, species){
     //get user
     value = await db.get(user.id);
@@ -1302,12 +1354,129 @@ dateDiffInMinutes(timesUser.lastFruit, today);
     value.pets[paintIndex].species = species;
     //remove the morphing potion from the inventory
     value.inventory.splice(mpIndex, 1);
-    embed.setTitle(`I love my new look!!`);
+    embed.setTitle(`${value.pets[paintIndex].name} says: \"I love my new look!!\"`);
     embed.setImage(getPetURL(value.pets[paintIndex]));
     await db.set(value.id, value);
     return embed;
-  }//end paint function
+  }//end morph function
 
+  //plushie shop
+  this.plushie = async function(user){
+    //get user
+    value = await db.get(user.id);
+    //initialize the embed
+    let embed = new MessageEmbed();
+    //start most functions with checking if the player is playing
+    if(!value){
+      embed.setTitle("You can't visit the plushie shop if you haven't joined NeoRPG!");
+      embed.setDescription("");
+      return embed;
+    }
+    //Date and Time blocks are here
+    //get today's time
+    var today = new Date();
+    //if there is a value for last SHH (AKA The User got an SHH Before)
+    if(value.lastPlushie){
+      //calcuate time remaining
+      const timeRemaining = dateDiffInMinutes(value.lastPlushie, today)
+      //if more than designated minutes reset the last shh value
+      if(timeRemaining >=PLUSHIE_INTERVAL){
+        value.lastPlushie = today;
+      }
+      //otherwise tell the user it is too soon
+      else{
+        embed.setTitle("Too Soon");
+        embed.setDescription(`You can visit the plushie shop again in ${PLUSHIE_INTERVAL-timeRemaining} minutes.`);
+        embed.setImage("https://neopetsclassic.com/images/shopkeepers/15.gif");
+        return embed;
+      }
+    }
+    //if never received a magic set the value to now
+    else{
+      value.lastPlushie = today;
+    }
+    //update the datebase
+    await db.set(value.id, value);
+    //Date and Time blocks finish here
+    //calculate Kauvara magic shop rarity
+    let random = getRandomInt(PLUSHIE_RARITY);
+    let randomPlushie = {};
+    let plushieCost = 0;
+    let priceBuffer = getRandomInt(PLUSHIE_PRICE_BUFFER);
+    if(random == 0){//the rare potions
+      plushieCost = RAREPLUSHIE_COST + priceBuffer;
+      let randomPlushieIndex = getRandomInt(itemList.rareplushies.length);
+      randomPlushie = itemList.rareplushies[randomPlushieIndex];
+      //return if not enough np
+      if(value.np < plushieCost){
+        embed.setTitle("No Money :(");
+        embed.setDescription(`You were going to receive a ${randomPlushie.name} in exchange for ${plushieCost} NP but you don't have enough np :(`); 
+        embed.setImage("https://neopetsclassic.com/images/shopkeepers/15.gif");
+        return embed;
+      }
+      value.np -= plushieCost;
+      value.inventory.push(randomPlushie)
+      embed.setTitle("Sold");
+      embed.setDescription(`The Plushie Shop Keeper hands you a ${randomPlushie.name} in exchange for ${plushieCost} NP`); 
+      embed.setImage(randomPlushie.url);
+    }
+    else{
+      plushieCost = BASICPLUSHIE_COST + priceBuffer;
+      let randomPlushieIndex = getRandomInt(itemList.basicplushies.length);
+      randomPlushie = itemList.basicplushies[randomPlushieIndex];
+      //return if not enough np
+      if(value.np < plushieCost){
+        embed.setTitle("No Money :(");
+        embed.setDescription(`You were going to receive a ${randomPlushie.name} in exchange for ${plushieCost} NP but you don't have enough np :(`); 
+        embed.setImage("https://neopetsclassic.com/images/shopkeepers/15.gif");
+        return embed;
+      }
+      value.np -= plushieCost;
+      value.inventory.push(randomPlushie)
+      embed.setTitle("Sold");
+      embed.setDescription(`The Plushie Shop Keeper hands you a ${randomPlushie.name} in exchange for ${plushieCost} NP`); 
+      embed.setImage(randomPlushie.url);
+    //adjust db
+    }
+    await db.set(value.id, value);
+    return embed;
+  }
+
+  //plushie high schores
+  this.plushiehst = async function(){
+      let embed = new MessageEmbed()
+      embed.setTitle("Too Soon");
+      embed.setDescription(`The Plushie High Score Table Will Be Revealed Soon - Keep Playing With Plushies`);
+      return embed;
+  }
+
+  //plushie high schores
+  this.plushiestats = async function(user, petName){
+    //initialize embed
+    let embed = new MessageEmbed();
+    //first get all the keys in the database
+    if(!NAME_REGEX.test(petName)){
+      embed.setTitle(`Sorry the name ${petName} is not a valid name :(`);
+      embed.setDescription("");
+      return embed;
+    }
+    userList = await db.list()
+    //traverse the db for all users
+    for(let i =0;i<userList.length;i++){
+      user = await db.get(userList[i]); //get user
+      for(let j=0;j<user.pets.length;j++){ //look at users pets
+          if(user.pets[j].name.toLowerCase() === petName.toLowerCase()){ 
+            return getPlushEmbed(user.pets[j],"Plushie Stats");//if pets name matches return the embed for that pet
+        }  
+      }
+    }
+
+    embed.setTitle(`${petName} does not exist...yet`);
+    embed.setDescription("");
+    return embed;
+  }
+
+  //kauvara
   this.kauvara = async function(user){
     //get user
     value = await db.get(user.id);
@@ -1386,6 +1555,7 @@ dateDiffInMinutes(timesUser.lastFruit, today);
     await db.set(value.id, value);
     return embed;
   }
+  
   //Wheel of excitement
   this.excitement = async function(user){
   //get user
@@ -2157,6 +2327,37 @@ function getSadPetURL(pet){
   return petUrl;
 }
 
+ //this gets the sad URL of the Pet 
+function getBeatenPetURL(pet){
+  //Capitalize Pet Names Appropriately
+  //first lowercase species
+  species = pet.species.toLowerCase();
+
+  //then capitalize
+  var petCap = species.charAt(0).toUpperCase() + species.slice(1);
+  //special case for JubJub
+  if (species === "jubjub") petCap = "JubJub";
+  //special case for Slushie Chia
+  if (species === "slushiechia") petCap = "SlushieChia";
+
+  //retrieve lowercase color
+  color = pet.color.toLowerCase();
+  
+  //Capitalize Color Name
+  var colorCap = color.charAt(0).toUpperCase() + color.slice(1);
+
+  //Create Pet URL
+  var petUrl = "http://neopetsclassic.com/images/pets/" + petCap + "/beaten/" + species + "_" + color + "_baby.gif";
+
+  //special URL for Nugget Chia
+  if(species === "chia" && color === "nugget") petUrl = "https://media.discordapp.net/attachments/911666334050451507/944090945287254066/Screen_Shot_2022-02-17_at_11.39.42_PM.png";
+
+  //special URL for Hoe Chia
+  if(species === "chia" && color === "hoe") petUrl = "https://media.discordapp.net/attachments/902529156653416458/944717611726409828/Screenshot_20220211-191754-309.png";
+
+  return petUrl;
+}
+
 //this gets the embed with the pet
 function getPetEmbed(pet, caption){
   petUrl = getPetURL(pet);
@@ -2170,9 +2371,41 @@ function getPetEmbed(pet, caption){
   if(pet.owner === "pound"){
     embed.setDescription(`Name: **${pet.name}**\nOwner: In the **Pound**\nHunger: ${hunger}\nMood: ${happiness}\nSpecies: ${pet.species} \nColor: ${pet.color}\nGender: ${pet.gender} \nHP: ${pet.hp}/${pet.maxhp} \nStrength: ${pet.strength} \nDefense: ${pet.defense} \nMovement:${pet.movement}`);
   }
+  
   //set the url to the pet image
   embed.setImage(petUrl);
+  if(pet.hp == 0){
+    embed.setImage(getBeatenPetURL(pet));
+  }
+  return embed;
+}
+
+function getPlushEmbed(pet, caption){
+  petUrl = getPetURL(pet);
+  embed = new MessageEmbed();
+  embed.setTitle(caption);
+  //translate pet hunger to an actual word
+  //fill out the pet section
+  let plushies = "";
+  if(!pet.plushies){
+    embed.setDescription(`Name: **${pet.name}**\nOwner: <@${pet.owner}>\n${pet.name} hasn't played with any plushies!`);
+    embed.setImage(petUrl);
+    return embed;
+  }
+  //if the player has pets fill out the pets part of the string
+  if(pet.plushies.length > 0){
+    for(let i = 0; i<pet.plushies.length;i++){
+      plushies = plushies + `${i})${pet.plushies[i]}\n`;
+    }
+  }
+  plushies = plushies + `${pet.name} has played with a total of ${pet.plushies.length} plushies!`;
+  embed.setDescription(`Name: **${pet.name}**\nOwner: <@${pet.owner}>\n` + plushies);
   
+  //set the url to the pet image
+  embed.setImage(petUrl);
+  if(pet.hp == 0){
+    embed.setImage(getBeatenPetURL(pet));
+  }
   return embed;
 }
 
