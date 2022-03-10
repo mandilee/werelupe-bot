@@ -473,7 +473,7 @@ dateDiffInMinutes(timesUser.lastPlushie, today);
      
 
       embed.setTitle(`Time Remaining`);
-      embed.setDescription(`\n 🎡 ${excitmentTime} Minutes - For Wheel of Excitement\n ⚡ ${zapTime} Minutes - For Lab Zap\n 🔮 ${kauTime } Minutes - To Visit Kauvara\n 🧸  ${plushTime} Minutes - To buy a plushie \n ❤️‍🩹 ${healTime} Minutes - For Healing Springs\n 🎲 ${sshTime} Minutes - For A Random Event\n 🍇 ${fruitTime} Minutes - To Spin the Fruit Machine`);
+      embed.setDescription(`\n 🎡 ${excitmentTime} Minutes - For Wheel of Excitement\n ⚡ ${zapTime} Minutes - For Lab Zap\n 🔮 ${kauTime } Minutes - To Visit Kauvara\n 🧸 ${plushTime} Minutes - To buy a plushie \n ❤️‍🩹 ${healTime} Minutes - For Healing Springs\n 🎲 ${sshTime} Minutes - For A Random Event\n 🍇 ${fruitTime} Minutes - To Spin the Fruit Machine`);
       return embed;
     } 
   
