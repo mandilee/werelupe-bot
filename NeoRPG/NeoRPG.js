@@ -1126,8 +1126,8 @@ dateDiffInMinutes(timesUser.lastPlushie, today);
       }
       plushIndex = value.pets[playIndex].plushies.findIndex(x => x === value.inventory[toyIndex].name);
      
-      if(plushIndex < 0){
-       value.pets[playIndex].plushies.push(value.inventory[toyIndex].name);
+      if(plushIndex < 0 && value.inventory[toyIndex].category == "plushie" ){
+value.pets[playIndex].plushies.push(value.inventory[toyIndex].name);
       }
       
       embed.setTitle(`Thank you for playing with me!!`);
@@ -1364,7 +1364,7 @@ dateDiffInMinutes(timesUser.lastPlushie, today);
   this.plushie = async function(user){
     //get user
     value = await db.get(user.id);
-    //initialize the embed
+    //initialize the embedx
     let embed = new MessageEmbed();
     //start most functions with checking if the player is playing
     if(!value){
