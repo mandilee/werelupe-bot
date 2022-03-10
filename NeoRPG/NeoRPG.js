@@ -2395,7 +2395,7 @@ function getPlushEmbed(pet, caption){
   //if the player has pets fill out the pets part of the string
   if(pet.plushies.length > 0){
     for(let i = 0; i<pet.plushies.length;i++){
-      plushies = plushies + `${i})${pet.plushies[i]}\n`;
+      plushies = plushies + `${i+1}) ${pet.plushies[i]}\n`;
     }
   }
   plushies = plushies + `${pet.name} has played with a total of ${pet.plushies.length} plushies!`;
