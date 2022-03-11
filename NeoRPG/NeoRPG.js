@@ -28,10 +28,10 @@ const FEED_COST = 50;
 const POUND = "pound";
 
 //interval between zaps
-const ZAP_INTERVAL = 60;
+const ZAP_INTERVAL = 10;
 
 //Random Event
-const RANDOM_RARITY = 20;
+const RANDOM_RARITY = 7;
 const SHH_INTERVAL = 5;
 
 //Healing Springs Interval
@@ -777,7 +777,7 @@ dateDiffInMinutes(timesUser.lastPlushie, today);
     //randoms that require an active pet
     if(rareRandom==0){//if rare random is exactly 0 then get a random event from this list
       let random = getRandomInt(6); 
-      //random = 3;
+      random = 2;
       //Boochi
       if(random == 0){
         //check for an active pet
@@ -821,9 +821,52 @@ dateDiffInMinutes(timesUser.lastPlushie, today);
       if(random==2){
         //if user already has lab access do a boochi miss lol
         if(value.labAccess){
-          embed.setTitle("Something Has Happened");
-          embed.setDescription(`Boochi takes aim at ${value.pets[value.activePet].name} but thankfully he misses!`);   embed.setImage("https://static.wikia.nocookie.net/guilds/images/5/52/BOOCHI.png/revision/latest/scale-to-width-down/246?cb=20160709191118");
-          return embed;
+          //Boochi Miss Code
+          // embed.setTitle("Something Has Happened");
+          // embed.setDescription(`Boochi takes aim at ${value.pets[value.activePet].name} but thankfully he misses!`);   embed.setImage("https://static.wikia.nocookie.net/guilds/images/5/52/BOOCHI.png/revision/latest/scale-to-width-down/246?cb=20160709191118");
+          // return embed;
+          //Lab Scientist Goes Mad
+          //check for an active pet
+          //check for an active pet
+          if(value.activePet < 0) return nothingSHH();
+          //flip a color or species change
+          let colorSpecies = getRandomInt(10);
+          //1/10th chance of Species Change
+          if(colorSpecies ==0){
+            let random = getRandomInt(5);//I want a 1/5 chance the species is limited edition
+            if(random == 0){
+              value.pets[value.activePet].species = neoList.limitedSpecies[getRandomInt(neoList.limitedSpecies.length)];
+            }
+            else{
+              value.pets[value.activePet].species = neoList.regularSpecies[getRandomInt(neoList.regularSpecies.length)];
+            } 
+            //change to a basic color
+            value.pets[value.activePet].color = neoList.basicColor[getRandomInt(neoList.basicColor.length)];
+            await db.set(value.id, value);
+            embed.setTitle(`Something Has Happened!`);
+            embed.setDescription(`The lab ray scientist fires his ray at ${value.pets[value.activePet].name} and they turned into a  ${value.pets[value.activePet].color} ${value.pets[value.activePet].species}`);
+            embed.setImage(getSadPetURL(value.pets[value.activePet]));
+            return embed;
+          }
+          else{
+            if(value.activePet < 0) return nothingSHH();
+            //asume the color is not available
+            let isAvail = false;
+            //init newColor
+            let newColor = "";
+           //while it's not available try a color until one works
+            while(!isAvail){
+              //generate a random color for this random event
+              newColor = generateColor();
+              //check this color is an avaialble color
+              isAvail = await this.isPetColorAvailable(newColor, value.pets[value.activePet].species);
+            }
+            await this.paintPet(user, newColor, value.activePet)
+            embed.setTitle("Something Has Happened");
+            embed.setDescription(`The Lab Ray Scientist fires his ray at ${value.pets[value.activePet].name} and they changed color to ${newColor}`);   
+            embed.setImage(getSadPetURL(value.pets[value.activePet]));
+            return embed;
+          }
         }
         //otherwise this code executes
         await this.grantLabAccess(user);
