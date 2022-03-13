@@ -58,7 +58,7 @@ const PLUSHIE_PRICE_BUFFER = 1500;
 
 //Fruit Machine Constants
 const FRUIT_INTERVAL = 120;
-const FRUIT_RARITY = 50;
+const FRUIT_RARITY = 100;
 const FRUIT_RAREPB = 5;
 
 //constructor
