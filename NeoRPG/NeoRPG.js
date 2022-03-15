@@ -11,7 +11,7 @@ const fetch = (...args) => import('node-fetch').then(({ default: fetch }) => fet
 //import message embed functionality from node
 const { MessageEmbed } = require('discord.js');
 
-const db = new Database("https://kv.replit.com/v0/eyJhbGciOiJIUzUxMiIsImlzcyI6ImNvbm1hbiIsImtpZCI6InByb2Q6MSIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJjb25tYW4iLCJleHAiOjE2NDcyOTc5NTksImlhdCI6MTY0NzE4NjM1OSwiZGF0YWJhc2VfaWQiOiJkMzZkMzVkOC02OGQyLTQyMWUtYTZmMy05M2M5OTcxNTNkM2MifQ.qwuBNNfKtbRBD1hea5J-KJ8fDib4uD9CIi4Ljay6T2bkNyGBCCaxylb5bjjo9YJu5eWn5OCqin0TZKHefseDQw");
+const db = new Database("https://kv.replit.com/v0/eyJhbGciOiJIUzUxMiIsImlzcyI6ImNvbm1hbiIsImtpZCI6InByb2Q6MSIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJjb25tYW4iLCJleHAiOjE2NDc0ODkyNjMsImlhdCI6MTY0NzM3NzY2MywiZGF0YWJhc2VfaWQiOiJkMzZkMzVkOC02OGQyLTQyMWUtYTZmMy05M2M5OTcxNTNkM2MifQ.hXEXM5FgZK_DxICKHh5FFx4_iNYOQ7jYtIKV_84lE4lcFqhMyZzoGjwZY2DVjGf9nJfIK0gn20ecUV4TdiZAag");
 //const db = new Database();
 
 //declare constants
@@ -74,7 +74,7 @@ function NeoRPG() {
  //    for(let i =0;i<userList.length;i++){
  //      user = await db.get(userList[i]); //get user
  //      //user.inventory = [];
- //      console.log(user);
+ //      //console.log(user);
  //      if(user.ownerTag.toLowerCase() === userChosen.toLowerCase()){
  //        //user.maxPets = 3; //adjusts specific user stats
  //        //user.np = 10000;
@@ -85,6 +85,14 @@ function NeoRPG() {
  //          //user.pets[j].mood = 0;//set hp to 10 //this adjusts all pets
  //          //user.pets[j].hunger = 0;//set every pet to max hunger to 10 //this adjusts all pets
  //          //user.pets[j].level = 1;
+ //        if(user.pets[j].plushies){
+ //          for(let k=0; k< user.pets[j].plushies.length; k++){
+ //            if((user.pets[j].plushies[k].toLowerCase().indexOf("plushie")) < 0){
+ //              console.log(user.pets[j].name);
+ //              user.pets[j].plushies.splice(k, 1);
+ //            }
+ //          }
+ //        }
         
  //          //adjusts one specific pet - pet Chosen
  //          if(user.pets[j].name.toLowerCase() === petChosen.toLowerCase()){
@@ -97,26 +105,10 @@ function NeoRPG() {
  //    }
  //    console.log("Done");
  //  }
+  
  this.test = async function(message){
     console.log(process.env.REPLIT_DB_URL)
-    userList = await db.list()
-    // userStrings = JSON.stringify(userList);
-    // const fs = require('fs');
-    // await fs.writeFile ("./backup.json", userStrings, function(err) {
-    // if (err) throw err;
-    // console.log('complete');
-    // });
-    
-     for(let i =2;i<4;i++){
-      user = await db.get(userList[i]); //get user
-      //console.log(user);
-       
-      }
-      
-      for(let j=0;j<user.pets.length;j++){ 
-      
-      }
-    console.log("Done");
+    //userList = await db.list() 
   }
   
   //join NeoRPG takes in user information
@@ -473,7 +465,7 @@ dateDiffInMinutes(timesUser.lastPlushie, today);
      
 
       embed.setTitle(`Time Remaining`);
-      embed.setDescription(`\n 🎡 ${excitmentTime} Minutes - For Wheel of Excitement\n ⚡ ${zapTime} Minutes - For Lab Zap\n 🔮 ${kauTime } Minutes - To Visit Kauvara\n 🧸 ${plushTime} Minutes - To buy a plushie \n ❤️‍🩹 ${healTime} Minutes - For Healing Springs\n 🎲 ${sshTime} Minutes - For A Random Event\n 🍇 ${fruitTime} Minutes - To Spin the Fruit Machine`);
+      embed.setDescription(`\n 🎡 ${excitmentTime} Minutes - For Wheel of Excitement\n ⚡ ${zapTime} Minutes - For Lab Zap\n 🔮 ${kauTime } Minutes - To Visit Kauvara\n 🧸 ${plushTime} Minutes - To Buy a Plushie \n ❤️‍🩹 ${healTime} Minutes - For Healing Springs\n 🎲 ${sshTime} Minutes - For A Random Event\n 🍇 ${fruitTime} Minutes - To Spin the Fruit Machine`);
       return embed;
     } 
   
@@ -1488,9 +1480,45 @@ value.pets[playIndex].plushies.push(value.inventory[toyIndex].name);
 
   //plushie high schores
   this.plushiehst = async function(){
-      let embed = new MessageEmbed()
-      embed.setTitle("Too Soon");
-      embed.setDescription(`The Plushie High Score Table Will Be Revealed Soon - Keep Playing With Plushies`);
+    let hst = [];
+    //get embed
+    let embed = new MessageEmbed()
+    //ger user list 
+    let userList = await db.list()
+    for(let i =0;i<userList.length;i++){
+      user = await db.get(userList[i]); //get all user keys
+      for(let j=0;j<user.pets.length;j++){ //look at users pets
+        if(user.pets[j].plushies){
+          console.log(user.id);
+          hst.push(
+            {"owner": user.id,
+             "score": user.pets[j].plushies.length,
+             "name": user.pets[j].name
+          })
+        }
+      }
+    }
+    //sort the list
+    hst.sort(function(a,b) {
+    return b.score - a.score;
+    });
+    let stringScores = "";
+    for(let l=0; l< 10; l++){ //Create the Embed
+      if(l==0){
+      stringScores = stringScores + `\n🥇<@${hst[l].owner}>'s: \n**${hst[l].name}** Played with: \n**${hst[l].score}** Plushies\n`
+      }
+      else if(l==1){
+      stringScores = stringScores + `\n🥈<@${hst[l].owner}>'s: \n**${hst[l].name}** Played with: \n**${hst[l].score}** Plushies\n`
+      }
+      else if(l==2){
+      stringScores = stringScores + `\n🥉<@${hst[l].owner}>'s: \n**${hst[l].name}** Played with: \n**${hst[l].score}** Plushies\n`
+      }
+      else{
+      stringScores = stringScores + `\n${l+1}) <@${hst[l].owner}>'s: \n**${hst[l].name}** Played with: \n**${hst[l].score}** Plushies\n`
+      }
+    }
+      embed.setTitle("Plushie High Score Table!");
+      embed.setDescription(stringScores);
       return embed;
   }
 
