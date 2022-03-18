@@ -1,6 +1,9 @@
 //how to back up use db url below
 
-https://kv.replit.com/v0/eyJhbGciOiJIUzUxMiIsImlzcyI6ImNvbm1hbiIsImtpZCI6InByb2Q6MSIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJjb25tYW4iLCJleHAiOjE2NDc0ODkyNjMsImlhdCI6MTY0NzM3NzY2MywiZGF0YWJhc2VfaWQiOiJkMzZkMzVkOC02OGQyLTQyMWUtYTZmMy05M2M5OTcxNTNkM2MifQ.hXEXM5FgZK_DxICKHh5FFx4_iNYOQ7jYtIKV_84lE4lcFqhMyZzoGjwZY2DVjGf9nJfIK0gn20ecUV4TdiZAag
+https://kv.replit.com/v0/eyJhbGciOiJIUzUxMiIsImlzcyI6ImNvbm1hbiIsImtpZCI6InByb2Q6MSIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJjb25tYW4iLCJleHAiOjE2NDc3MjIxMDksImlhdCI6MTY0NzYxMDUwOSwiZGF0YWJhc2VfaWQiOiJkMzZkMzVkOC02OGQyLTQyMWUtYTZmMy05M2M5OTcxNTNkM2MifQ.guRimGejx0PXHZb4h72JvWbRIU6PWcFgDUrfih6M4niFQOoZaQwsGxuJQHdfxET-gOWeSEfhqamKoltVEeixSA
 
 //then go here and copy and paste
 https://replit-database-admin-console.rbinfinity.repl.co/
+
+//copy all the info and then put it in the text file and we'll see later lol
+

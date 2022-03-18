@@ -11,7 +11,7 @@ const fetch = (...args) => import('node-fetch').then(({ default: fetch }) => fet
 //import message embed functionality from node
 const { MessageEmbed } = require('discord.js');
 
-const db = new Database("https://kv.replit.com/v0/eyJhbGciOiJIUzUxMiIsImlzcyI6ImNvbm1hbiIsImtpZCI6InByb2Q6MSIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJjb25tYW4iLCJleHAiOjE2NDc0ODkyNjMsImlhdCI6MTY0NzM3NzY2MywiZGF0YWJhc2VfaWQiOiJkMzZkMzVkOC02OGQyLTQyMWUtYTZmMy05M2M5OTcxNTNkM2MifQ.hXEXM5FgZK_DxICKHh5FFx4_iNYOQ7jYtIKV_84lE4lcFqhMyZzoGjwZY2DVjGf9nJfIK0gn20ecUV4TdiZAag");
+const db = new Database("https://kv.replit.com/v0/eyJhbGciOiJIUzUxMiIsImlzcyI6ImNvbm1hbiIsImtpZCI6InByb2Q6MSIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJjb25tYW4iLCJleHAiOjE2NDc3MjIxMDksImlhdCI6MTY0NzYxMDUwOSwiZGF0YWJhc2VfaWQiOiJkMzZkMzVkOC02OGQyLTQyMWUtYTZmMy05M2M5OTcxNTNkM2MifQ.guRimGejx0PXHZb4h72JvWbRIU6PWcFgDUrfih6M4niFQOoZaQwsGxuJQHdfxET-gOWeSEfhqamKoltVEeixSA");
 //const db = new Database();
 
 //declare constants
@@ -1483,13 +1483,13 @@ value.pets[playIndex].plushies.push(value.inventory[toyIndex].name);
     let hst = [];
     //get embed
     let embed = new MessageEmbed()
-    //ger user list 
+    //get user list 
     let userList = await db.list()
     for(let i =0;i<userList.length;i++){
       user = await db.get(userList[i]); //get all user keys
       for(let j=0;j<user.pets.length;j++){ //look at users pets
         if(user.pets[j].plushies){
-          console.log(user.id);
+          //console.log(user.id);
           hst.push(
             {"owner": user.id,
              "score": user.pets[j].plushies.length,
