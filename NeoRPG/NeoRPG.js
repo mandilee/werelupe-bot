@@ -11,7 +11,7 @@ const fetch = (...args) => import('node-fetch').then(({ default: fetch }) => fet
 //import message embed functionality from node
 const { MessageEmbed } = require('discord.js');
 
-const db = new Database("https://kv.replit.com/v0/eyJhbGciOiJIUzUxMiIsImlzcyI6ImNvbm1hbiIsImtpZCI6InByb2Q6MSIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJjb25tYW4iLCJleHAiOjE2NDc3MjIxMDksImlhdCI6MTY0NzYxMDUwOSwiZGF0YWJhc2VfaWQiOiJkMzZkMzVkOC02OGQyLTQyMWUtYTZmMy05M2M5OTcxNTNkM2MifQ.guRimGejx0PXHZb4h72JvWbRIU6PWcFgDUrfih6M4niFQOoZaQwsGxuJQHdfxET-gOWeSEfhqamKoltVEeixSA");
+const db = new Database("https://kv.replit.com/v0/eyJhbGciOiJIUzUxMiIsImlzcyI6ImNvbm1hbiIsImtpZCI6InByb2Q6MSIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJjb25tYW4iLCJleHAiOjE2NDc5OTY0NTQsImlhdCI6MTY0Nzg4NDg1NCwiZGF0YWJhc2VfaWQiOiJkMzZkMzVkOC02OGQyLTQyMWUtYTZmMy05M2M5OTcxNTNkM2MifQ.I48FOVst_7MSh3_EQ4pB8GUg_TiiLz2OdE7kYKpcyRy2zo1eG7rMF_aAq0KqZt9Q2ofCMYGh7OYYzjQ40MeRLQ");
 //const db = new Database();
 
 //declare constants
