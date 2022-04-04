@@ -29,6 +29,15 @@ function NeopetFetcher() {
         //special case for pineapple
         lowerCaseMessageContent = this.message.content.toLowerCase();
         if (lowerCaseMessageContent.indexOf("pineapple") >= 0) neopet[1] = "pineapple";
+
+        //checkered
+        lowerCaseMessageContent = this.message.content.toLowerCase();
+        if (lowerCaseMessageContent.indexOf("checkered") >= 0) neopet[1] = "checkered";
+
+        //sheared
+        lowerCaseMessageContent = this.message.content.toLowerCase();
+        if (lowerCaseMessageContent.indexOf("sheared") >= 0) neopet[1] = "sheared";
+
         
         //special case for usuki & quiguki
         if (lowerCaseMessageContent.indexOf("usukiboy") >= 0 || lowerCaseMessageContent.indexOf("usuki boy") >= 0  || lowerCaseMessageContent.indexOf("quigukiboy") >= 0  || lowerCaseMessageContent.indexOf("quiguki boy") >= 0  ){
