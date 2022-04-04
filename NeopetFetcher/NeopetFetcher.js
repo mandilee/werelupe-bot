@@ -93,6 +93,9 @@ function NeopetFetcher() {
         //special caption for aubergine chia
         if (this.petInfo.pet === "chia" && this.petInfo.color === "aubergine") finalCaption = "🍆🍆 Sexy Time 🍆🍆";
 
+        //special caption for sheared jub
+        if (this.petInfo.pet === "jubjub" && this.petInfo.color === "sheared") finalCaption = "That's definitely a testicle...";
+        
         //Send Message
         message.channel.send({
           embeds: [
