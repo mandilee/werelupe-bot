@@ -504,7 +504,58 @@ client.on("messageCreate", (message) => {//Do Not Close This Function Till Later
   }
 
 
+  //PR announcement
+  if (message.content === "!pr") {
+    message.channel.send({
+  "components": [
+    {
+      "type": 1,
+      "components": [
+        {
+          "style": 5,
+          "label": `Pound Surf`,
+          "url": `https://neopetsclassic.com/adopt/`,
+          "disabled": false,
+          "type": 2
+        },
+        {
+          "style": 5,
+          "label": `Quick Adopt Link`,
+          "url": `https://neopetsclassic.com/adopt_pet/?pet_name=`,
+          "disabled": false,
+          "type": 2
+        },
+        {
+          "style": 5,
+          "label": `Abandon a Pet`,
+          "url": `https://neopetsclassic.com/abandon/`,
+          "disabled": false,
+          "type": 2
+        }
+      ]
+    }
+  ],
+  "embeds": [
+    {
+      "type": "rich",
+      "title": `❗❗ POUND RELEASE ❗❗`,
+      "description": `It's ${message.guild.roles.cache.find(role => role.name == "Pound Release")} Time!`,
+      "color": 0xfbf01d,
+      "thumbnail": {
+        "url": `https://images.neopets.com/nt/ntimages/362_skeith_pound_escape.gif`,
+        "height": 0,
+        "width": 0
+      },
+      "footer": {
+        "text": `alert sent by ${message.member.displayName}`,
+        "icon_url": `http://cdn.discordapp.com/avatars/${message.author.id}/${message.author.avatar}.jpeg`
 
+      }
+    }
+  ]
+});
+
+  }
 
 }); //End bracket for 'do things when messages are sent to server'
 
