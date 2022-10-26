@@ -13,8 +13,10 @@ const client = new Client({
     "GUILD_MESSAGES", //Messages
     "GUILD_MESSAGE_REACTIONS",//need these for reactions
     "DIRECT_MESSAGES"
-  ]
+  ],
+  partials: ['MESSAGE', 'CHANNEL', 'REACTION'],
 })
+
 
 
 //import fetch functionality from node
@@ -39,7 +41,7 @@ const ig = require('./InsultGiver/InsultGiver.js');
 const rpg = require('./EpicRPG/EpicRPG.js');
 
 //import starboard
-const sb = require('./Starboard/starboard.js');
+const sb = require('./starboard.js');
 
 //import Neopet Fetcher
 const nf = require('./NeopetFetcher/NeopetFetcher.js');
@@ -287,6 +289,36 @@ client.on('interactionCreate', async interaction => {
   }
 });
 
+function sendToStarboard (id, message){
+  //WIP. right now just sends with 2+ react if a starboard emote.
+  if (message.content != "" || message.content != null){
+    client.channels.cache.get(id).send(message.content);
+  }
+  
+}
+
+//Listen for Reacts on messages
+client.on('messageReactionAdd', async (reaction, user) => {
+	// When a reaction is received, check if the structure is partial
+	if (reaction.partial) {
+		// If the message this reaction belongs to was removed, the fetching might result in an API error which should be handled
+		try {
+			await reaction.fetch();
+		} catch (error) {
+			console.error('Something went wrong when fetching the message:', error);
+			// Return as `reaction.message.author` may be undefined/null
+			return;
+		}
+	}
+	// Now the message has been cached and is fully available
+  //Check if a starboard react
+  if (sb.checkReact(reaction) != null){
+    sendToStarboard (sb.checkReact(reaction)[0], sb.checkReact(reaction)[1])
+  }
+  
+//End listen for reacts on messages  
+});
+
 //RoDaddy Stuff
 //initialize Game Runner
 gameRunner = new gameBot.GMBot();
@@ -446,7 +478,19 @@ client.on("messageCreate", (message) => {//Do Not Close This Function Till Later
   //panda react to panpan
   if (lowerCaseMessageContent.indexOf("panpan") >= 0) {
     message.react("931286481262215178");
+    
   }
+
+  //freak
+  if (lowerCaseMessageContent.indexOf("freak") >= 0) {
+    message.react("983135965411426324");
+  }
+
+  //wave
+    if (lowerCaseMessageContent.indexOf("wave") >= 0) {
+    message.react("983135948361584660");
+  }
+  
   //End Reactions Rules
 
   //Post message to specific channel
@@ -557,6 +601,13 @@ client.on("messageCreate", (message) => {//Do Not Close This Function Till Later
 
   }
 
+//Alexa's nonsense
+if (message.content === "$alexuh") {
+    //Replies
+    message.channel.send(" lalala ");
+    //Replies to User
+    message.reply("hellow");
+  }
 }); //End bracket for 'do things when messages are sent to server'
 
 

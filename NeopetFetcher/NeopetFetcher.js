@@ -23,9 +23,10 @@ function NeopetFetcher() {
       neopet = this.neopetEvaluator.exec(this.message.content);
       
       //this returns an array with the full Neopet name (0), color (1), species (2)
-      
+
       //special cases
       if(neopet){
+        
         //special case for pineapple
         lowerCaseMessageContent = this.message.content.toLowerCase();
         if (lowerCaseMessageContent.indexOf("pineapple") >= 0) neopet[1] = "pineapple";
@@ -59,12 +60,16 @@ function NeopetFetcher() {
       //if there is a Neopet in the content respond
       neopet = this.hasNeopet(message)
       //if message contains neopet
+      var npc = false;
+      //npc
+      lowerCaseMessageContent = this.message.content.toLowerCase();
+      if (lowerCaseMessageContent.indexOf("gross") >= 0) npc = true;
       if(neopet){
-        this.petInfo = getPetInfo(neopet);
+        this.petInfo = getPetInfo(neopet, npc);
         //run the check image function
     checkImage(this.petInfo.petUrl).then(d => {
       //if pet is not found 
-      if (d.indexOf("Not Found") >= 0) {
+      if (d.indexOf("Not Found") >= 0 || d.indexOf("Error") >= 0) {
         var notFoundText = this.petInfo.colorCap + " " + this.petInfo.petCap + " doesn't Exist...Yet";
       if(this.petInfo.color === "hoe") notFoundText = notFoundText + " but you should ask Amy to make it 😏"
         
@@ -135,7 +140,7 @@ function NeopetFetcher() {
   }
 
   //evaluate the colors and pets
-  function getPetInfo(rawPetInfo){
+  function getPetInfo(rawPetInfo, npc){
     
     //petInfo = rawPetInfo
     if (rawPetInfo) {
@@ -165,10 +170,16 @@ function NeopetFetcher() {
     var colorCap = color.charAt(0).toUpperCase() + color.slice(1);
 
     //Create Pet URL
-    var petUrl = "http://neopetsclassic.com/images/pets/" + petCap + "/circle/" + pet + "_" + color + "_baby.gif";
+      var petUrl = ""
+    if (npc){
+    petUrl = "http://neopetsclassic.com/images/pets/" + petCap + "/beaten/" + pet + "_" + color + "_baby.gif";
+    }
+      else{
+         petUrl = "https://neopialive.s3.us-west-1.amazonaws.com/pets/circle/" + pet + "_" + color + ".gif";
+      }
 
     //special URL for Nugget Chia
-    if(pet === "chia" && color === "nugget") petUrl = "https://media.discordapp.net/attachments/911666334050451507/944090945287254066/Screen_Shot_2022-02-17_at_11.39.42_PM.png";
+    // if(pet === "chia" && color === "nugget") petUrl = "https://media.discordapp.net/attachments/911666334050451507/944090945287254066/Screen_Shot_2022-02-17_at_11.39.42_PM.png";
 
     //special URL for Hoe Chia
     if(pet === "chia" && color === "hoe")petUrl = "https://media.discordapp.net/attachments/917538490118467624/943544804762075246/Screenshot_20220211-191754-309.png";
