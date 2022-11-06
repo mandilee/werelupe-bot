@@ -411,6 +411,25 @@ client.on("messageCreate", (message) => {//Do Not Close This Function Till Later
     });
   }
 
+  
+  //Vote Dani as a twist
+  if (lowerCaseMessageContent.indexOf("mystic") >= 0 && lowerCaseMessageContent.indexOf("calm") >= 0) {
+    //Response List
+    const response = [
+      "I WILL NEVER CALM DOWN",
+    ];
+
+    //RNG
+    var rng = getRandomInt(response.length);
+    message.channel.send({
+      embeds: [
+        {
+          title: response[rng]
+        }
+      ]
+    });
+  }
+
   if (lowerCaseMessageContent.indexOf("werelupe") >= 0) {
     console.log("Someone Said Werelupe!!");
     message.react("902357197382631514")
