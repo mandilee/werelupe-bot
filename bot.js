@@ -312,9 +312,9 @@ client.on('messageReactionAdd', async (reaction, user) => {
 	}
 	// Now the message has been cached and is fully available
   //Check if a starboard react
-  if (sb.checkReact(reaction) != null){
-    sendToStarboard (sb.checkReact(reaction)[0], sb.checkReact(reaction)[1])
-  }
+  // if (sb.checkReact(reaction) != null){
+  //   sendToStarboard (sb.checkReact(reaction)[0], sb.checkReact(reaction)[1])
+  // }
   
 //End listen for reacts on messages  
 });
@@ -506,7 +506,7 @@ client.on("messageCreate", (message) => {//Do Not Close This Function Till Later
   if (message.content === "?gamble") {
     var ppPhrase = random.peerPressure();
     message.channel.send({
-      "embeds": [
+      "embeds": [ 
         {
           "color": 0xffbb00,
           "author": {
