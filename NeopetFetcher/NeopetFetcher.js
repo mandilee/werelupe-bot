@@ -174,8 +174,8 @@ function NeopetFetcher() {
     if (npc){
     petUrl = "http://neopetsclassic.com/images/pets/" + petCap + "/beaten/" + pet + "_" + color + "_baby.gif";
     }
-      else{
-         petUrl = "https://neopialive.s3.us-west-1.amazonaws.com/pets/circle/" + pet + "_" + color + ".gif";
+    else{
+         petUrl = "https://grundoscafe.b-cdn.net/pets/circle/" + pet + "_" + color + ".gif";
       }
 
     //special URL for Nugget Chia
